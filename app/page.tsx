@@ -1,103 +1,165 @@
-import Image from "next/image";
+'use client'
 
-export default function Home() {
+import { useState, useMemo } from 'react'
+import Link from 'next/link'
+import { Search, ArrowRight } from 'lucide-react'
+import * as LucideIcons from 'lucide-react'
+import { TOOLS, getToolsByCategory } from '@/lib/tools'
+import { CATEGORIES, CATEGORY_ORDER } from '@/lib/constants'
+import { Category } from '@/lib/types'
+import ToolCard from '@/components/ui/ToolCard'
+
+export default function HomePage() {
+  const [query, setQuery] = useState('')
+
+  const searchResults = useMemo(() => {
+    if (!query.trim()) return []
+    const q = query.toLowerCase()
+    return TOOLS.filter(
+      (t) =>
+        t.name.toLowerCase().includes(q) ||
+        t.description.toLowerCase().includes(q) ||
+        t.keywords.some((k) => k.includes(q))
+    )
+  }, [query])
+
+  const isSearching = query.trim().length > 0
+
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12">
+      {/* Hero */}
+      <div className="text-center mb-14 relative">
+        {/* Subtle grid background */}
+        <div
+          className="absolute inset-0 -z-10 pointer-events-none"
+          style={{
+            backgroundImage:
+              'linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px)',
+            backgroundSize: '48px 48px',
+            maskImage: 'radial-gradient(ellipse 70% 60% at 50% 50%, black, transparent)',
+          }}
         />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+        {/* Glow */}
+        <div
+          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 w-96 h-48 blur-3xl pointer-events-none"
+          style={{ background: 'oklch(0.6 0.2 290 / 0.08)' }}
+        />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+        <div
+          className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium mb-6"
+          style={{
+            background: 'var(--color-dev-dim)',
+            border: '1px solid oklch(0.6 0.2 290 / 0.3)',
+            color: 'var(--color-dev)',
+          }}
+        >
+          <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: 'var(--color-dev)' }} />
+          {TOOLS.length} tools available
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+
+        <h1
+          className="text-6xl sm:text-7xl font-bold text-white mb-4"
+          style={{ fontFamily: 'var(--font-orbitron)', letterSpacing: '0.04em' }}
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+          Zen<span style={{ color: 'var(--color-dev)' }}>veel</span>
+        </h1>
+        <p className="text-xl mb-10" style={{ color: 'rgba(255,255,255,0.65)' }}>
+          Browser-based utility tools. No signup. No server.
+        </p>
+
+        {/* Search */}
+        <div className="relative max-w-lg mx-auto">
+          <Search
+            size={16}
+            className="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none"
+            style={{ color: 'rgba(255,255,255,0.3)' }}
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+          <input
+            type="text"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="Search tools…"
+            className="w-full pl-10 pr-4 py-3 rounded-xl text-base outline-none transition-all"
+            style={{
+              background: 'var(--surface)',
+              border: '1px solid var(--border)',
+              color: 'rgba(255,255,255,0.85)',
+            }}
+            onFocus={(e) => (e.currentTarget.style.borderColor = 'var(--border-focus)')}
+            onBlur={(e) => (e.currentTarget.style.borderColor = 'var(--border)')}
           />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        </div>
+      </div>
+
+      {/* Search results */}
+      {isSearching && (
+        <div className="mb-12">
+          <p className="text-sm font-medium uppercase tracking-widest mb-4" style={{ color: 'rgba(255,255,255,0.3)' }}>
+            {searchResults.length} result{searchResults.length !== 1 ? 's' : ''} for &ldquo;{query}&rdquo;
+          </p>
+          {searchResults.length > 0 ? (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 items-stretch">
+              {searchResults.map((tool) => (
+                <ToolCard key={tool.id} tool={tool} showCategory />
+              ))}
+            </div>
+          ) : (
+            <div
+              className="rounded-xl p-8 text-center"
+              style={{ background: 'var(--surface)', border: '1px solid var(--border)' }}
+            >
+              <p className="text-base" style={{ color: 'rgba(255,255,255,0.35)' }}>
+                No tools match &ldquo;{query}&rdquo;
+              </p>
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* Category sections */}
+      {!isSearching &&
+        CATEGORY_ORDER.map((category: Category) => {
+          const meta = CATEGORIES[category]
+          const tools = getToolsByCategory(category)
+          const featured = tools.slice(0, 4)
+          const IconComponent = (LucideIcons as unknown as Record<string, React.ComponentType<{ size?: number; style?: React.CSSProperties }>>)[meta.iconName]
+
+          return (
+            <section key={category} className="mb-14">
+              <div className="flex items-center justify-between mb-5">
+                <div className="flex items-center gap-3">
+                  <div
+                    className="w-8 h-8 rounded-lg flex items-center justify-center"
+                    style={{ background: meta.dimColor }}
+                  >
+                    {IconComponent && <IconComponent size={15} style={{ color: meta.color }} />}
+                  </div>
+                  <div>
+                    <h2 className="text-lg font-semibold text-white">{meta.label}</h2>
+                    <p className="text-sm" style={{ color: 'rgba(255,255,255,0.35)' }}>
+                      {tools.length} tools
+                    </p>
+                  </div>
+                </div>
+                <Link
+                  href={meta.href}
+                  className="flex items-center gap-1 text-sm font-medium transition-colors"
+                  style={{ color: meta.color }}
+                  onMouseEnter={(e) => (e.currentTarget.style.opacity = '0.7')}
+                  onMouseLeave={(e) => (e.currentTarget.style.opacity = '1')}
+                >
+                  View all <ArrowRight size={12} />
+                </Link>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 items-stretch">
+                {featured.map((tool) => (
+                  <ToolCard key={tool.id} tool={tool} />
+                ))}
+              </div>
+            </section>
+          )
+        })}
     </div>
-  );
+  )
 }
