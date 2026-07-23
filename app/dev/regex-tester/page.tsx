@@ -64,57 +64,86 @@ export default function RegexTesterPage() {
       toolId="regex-tester"
       title="Regex Tester"
       description="Test regular expressions with live match highlighting"
+      showAllCategory
       seoContent={
         <SeoSection
-          about="Test and debug regular expressions against real input with live match highlighting. Matches, capture groups, and match count update instantly as you type. Supports the g, i, m, and s flags. All matching runs locally in your browser."
+          about={`Regex Tester Online is a free browser-based tool that helps you test, debug, validate, and learn regular expressions (regex) in real time. Enter a regular expression and sample text to instantly highlight matches, inspect capture groups, view match counts, and verify whether your pattern behaves exactly as expected. Whether you're building validation rules, parsing text, extracting data, or debugging complex patterns, this tool makes working with regular expressions faster and easier.\n\nA regular expression (regex) is a pattern used to search, match, validate, and manipulate text. Regex is widely used in programming languages, databases, command-line tools, text editors, and web applications for tasks such as validating email addresses, parsing log files, extracting URLs, cleaning data, and performing search-and-replace operations.\n\nThis Regex Tester supports the JavaScript (ECMAScript) regular expression engine, making it ideal for frontend and Node.js development. You can test patterns using commonly used flags such as global (g), case-insensitive (i), multiline (m), and dotAll (s), while viewing live match highlighting, numbered and named capture groups, and match counts as you type.\n\nWhether you're a developer, QA engineer, data analyst, student, or cybersecurity professional, this Regex Tester Online provides a quick way to experiment with character classes, quantifiers, anchors, lookaheads, alternation, and other regex features without installing any software. All processing happens entirely inside your browser, so your text and patterns are never uploaded to a server, ensuring complete privacy.`}
           useCases={[
-            'Validating and debugging regex patterns before putting them in code',
-            'Testing email, phone, or URL validation patterns',
-            'Building patterns for find-and-replace in text editors',
-            'Learning how capture groups and lookaheads behave on real input',
-            'Verifying that a pattern matches only the intended strings',
+            'Test regular expressions before using them in production code.',
+            'Validate email addresses, phone numbers, and URLs.',
+            'Build username and password validation patterns.',
+            'Debug complex regular expressions with live match highlighting.',
+            'Learn how capture groups and named groups work.',
+            'Test lookaheads and lookbehinds for advanced pattern matching.',
+            'Extract data from log files and application output.',
+            'Parse CSV, JSON, XML, and plain text documents.',
+            'Find and replace text using regex-compatible editors.',
+            'Validate dates, times, ZIP codes, postal codes, and product IDs.',
+            'Test JavaScript regular expressions for web applications.',
+            'Build patterns for form validation in frontend frameworks.',
+            'Extract hashtags, mentions, or links from social media content.',
+            'Clean and transform large text datasets.',
+            'Verify webhook payloads, API responses, and configuration files.',
+            'Learn regex syntax while studying programming or computer science.',
+            'Debug patterns used in Visual Studio Code and other code editors.',
+            'Test multiline matching and case-insensitive searches.',
           ]}
           faqs={[
-            { q: 'Which regex flags are supported?', a: 'The g (global), i (case-insensitive), m (multiline), and s (dotAll) flags can be toggled individually.' },
-            { q: 'Are capture groups shown?', a: 'Yes. Named and numbered capture groups are listed below the match count for each match.' },
-            { q: 'What regex flavor is this?', a: 'JavaScript regex (ECMAScript), which is the flavor used in all browser-based JavaScript environments.' },
+            { q: 'What is a regular expression (regex)?', a: 'A regular expression, or regex, is a sequence of characters that defines a search pattern. It is commonly used to search, match, validate, extract, and replace text in programming languages, databases, text editors, and command-line tools.' },
+            { q: 'What is a Regex Tester?', a: 'A Regex Tester is a tool that allows you to write regular expressions and instantly see which parts of your input text match. It helps developers debug, validate, and improve regex patterns before using them in applications.' },
+            { q: 'Which regex flavor does this tool use?', a: 'This tool uses the JavaScript (ECMAScript) regular expression engine, which is supported by all modern web browsers and Node.js.' },
+            { q: 'Which regex flags are supported?', a: 'You can enable the following JavaScript regex flags: g (Global matching), i (Case-insensitive matching), m (Multiline mode), and s (DotAll mode). These flags can be enabled individually or combined depending on your matching requirements.' },
+            { q: 'Are capture groups displayed?', a: 'Yes. Both numbered capture groups and named capture groups are displayed for every successful match, making it easier to understand how your regular expression captures data.' },
+            { q: 'Does this tool support lookaheads and lookbehinds?', a: 'Yes. JavaScript regular expressions support positive and negative lookaheads, and modern JavaScript environments also support lookbehinds where available.' },
+            { q: 'What are character classes?', a: 'Character classes define sets of characters that can match a single position in text. Examples include \\d for digits, \\w for word characters, \\s for whitespace, and custom ranges such as [A-Z].' },
+            { q: 'What are quantifiers?', a: 'Quantifiers specify how many times a character or group may appear. Common examples include *, +, ?, and {n,m}, allowing patterns to match repeated text efficiently.' },
+            { q: 'What are anchors in regex?', a: 'Anchors match positions rather than characters. For example, ^ matches the beginning of a line, while $ matches the end of a line.' },
+            { q: 'Can I validate email addresses and URLs?', a: 'Yes. This tool is commonly used to test patterns for validating email addresses, URLs, phone numbers, usernames, passwords, dates, postal codes, and many other text formats.' },
+            { q: "Why isn't my regex matching?", a: 'A pattern may fail because of incorrect syntax, missing flags, greedy matching, character escaping, or differences between regex flavors. Testing your pattern with sample input can help identify the issue.' },
+            { q: 'Does this tool modify my text?', a: 'No. The Regex Tester only analyzes and highlights matches. Your original text remains unchanged.' },
+            { q: 'Does this tool support Unicode characters?', a: 'Yes. JavaScript regular expressions support Unicode, allowing you to test patterns against multilingual text, accented characters, emoji, and many international character sets.' },
+            { q: 'Is my data uploaded to a server?', a: 'No. All regular expression matching happens locally in your browser. Your text, regex patterns, and test data are never uploaded or stored on any server.' },
+            { q: 'Can I use this tool offline?', a: 'Yes. Once the webpage has loaded, all regex matching and highlighting run locally in your browser without requiring an internet connection.' },
+            { q: 'Who can benefit from this Regex Tester?', a: 'This tool is useful for web developers, backend developers, QA engineers, DevOps engineers, data analysts, cybersecurity professionals, students, educators, and anyone who works with text processing or regular expressions.' },
+            { q: 'Which programming languages use regular expressions?', a: 'Regular expressions are supported by JavaScript, TypeScript, Python, PHP, Java, C#, Go, Ruby, Rust, Kotlin, Swift, Perl, and many other programming languages. While syntax varies slightly between regex engines, the core concepts remain similar across platforms.' },
+            { q: 'Why should I test regex before using it?', a: 'Testing regular expressions helps prevent incorrect matches, reduces bugs, improves validation accuracy, simplifies debugging, and ensures your pattern behaves correctly before deploying it in production code.' },
           ]}
         />
       }
       category="dev"
       iconName="Search"
     >
-      <div className="space-y-4">
+      <div className="space-y-5">
         {/* Pattern input */}
         <div>
-          <label className="text-xs font-medium mb-1.5 block" style={{ color: 'rgba(255,255,255,0.45)' }}>
+          <label className="text-sm font-semibold mb-2 block" style={{ color: 'rgba(255,255,255,0.75)' }}>
             Pattern
           </label>
           <div
-            className="flex items-center gap-2 px-3 py-2.5 rounded-xl"
-            style={{ background: 'var(--surface)', border: `1px solid ${error ? 'rgba(239,68,68,0.4)' : 'var(--border)'}` }}
+            className="flex items-center gap-3 px-4 py-3 rounded-xl"
+            style={{ background: 'var(--surface)', border: `1.5px solid ${error ? 'rgba(239,68,68,0.6)' : 'var(--border-hover)'}` }}
           >
-            <span style={{ color: 'rgba(255,255,255,0.25)', fontFamily: 'var(--font-geist-mono)' }}>/</span>
+            <span className="text-lg font-mono" style={{ color: 'rgba(255,255,255,0.45)' }}>/</span>
             <input
               type="text"
               value={pattern}
               onChange={(e) => setPattern(e.target.value)}
               placeholder="[a-z]+"
-              className="flex-1 bg-transparent outline-none text-sm"
-              style={{ color: 'rgba(255,255,255,0.85)', fontFamily: 'var(--font-geist-mono), monospace' }}
+              className="flex-1 bg-transparent outline-none text-base"
+              style={{ color: 'rgba(255,255,255,0.95)', fontFamily: 'var(--font-geist-mono), monospace' }}
             />
-            <span style={{ color: 'rgba(255,255,255,0.25)', fontFamily: 'var(--font-geist-mono)' }}>/</span>
+            <span className="text-lg font-mono" style={{ color: 'rgba(255,255,255,0.45)' }}>/</span>
             {/* Flag toggles */}
-            <div className="flex gap-1">
+            <div className="flex gap-1.5">
               {FLAGS.map((f) => (
                 <button
                   key={f}
                   onClick={() => toggleFlag(f)}
-                  className="w-6 h-6 rounded text-xs font-mono font-bold transition-all"
+                  className="w-8 h-8 rounded-lg text-sm font-mono font-bold transition-all"
                   style={{
-                    background: flags.has(f) ? 'oklch(0.6 0.2 290 / 0.2)' : 'transparent',
-                    color: flags.has(f) ? 'var(--color-dev)' : 'rgba(255,255,255,0.3)',
-                    border: `1px solid ${flags.has(f) ? 'oklch(0.6 0.2 290 / 0.4)' : 'transparent'}`,
+                    background: flags.has(f) ? 'oklch(0.6 0.2 290 / 0.25)' : 'rgba(255,255,255,0.06)',
+                    color: flags.has(f) ? 'var(--color-dev)' : 'rgba(255,255,255,0.5)',
+                    border: `1.5px solid ${flags.has(f) ? 'oklch(0.6 0.2 290 / 0.6)' : 'rgba(255,255,255,0.12)'}`,
                   }}
                 >
                   {f}
@@ -122,26 +151,26 @@ export default function RegexTesterPage() {
               ))}
             </div>
           </div>
-          {error && <p className="text-xs mt-1" style={{ color: '#f87171' }}>{error}</p>}
+          {error && <p className="text-sm mt-1.5 font-medium" style={{ color: '#f87171' }}>{error}</p>}
         </div>
 
         {/* Test string */}
         <div>
-          <label className="text-xs font-medium mb-1.5 block" style={{ color: 'rgba(255,255,255,0.45)' }}>
+          <label className="text-sm font-semibold mb-2 block" style={{ color: 'rgba(255,255,255,0.75)' }}>
             Test string
           </label>
           <textarea
             value={testStr}
             onChange={(e) => setTestStr(e.target.value)}
-            rows={6}
+            rows={7}
             placeholder="Enter text to test against…"
-            className="w-full resize-y rounded-xl px-4 py-3 text-sm outline-none"
+            className="w-full resize-y rounded-xl px-4 py-3 text-base outline-none"
             style={{
               background: 'var(--surface)',
-              border: '1px solid var(--border)',
-              color: 'rgba(255,255,255,0.85)',
+              border: '1.5px solid var(--border-hover)',
+              color: 'rgba(255,255,255,0.95)',
               fontFamily: 'var(--font-geist-mono), monospace',
-              lineHeight: '1.6',
+              lineHeight: '1.7',
             }}
           />
         </div>
@@ -149,26 +178,28 @@ export default function RegexTesterPage() {
         {/* Highlighted result */}
         {testStr && (
           <div>
-            <div className="flex items-center justify-between mb-1.5">
-              <label className="text-xs font-medium" style={{ color: 'rgba(255,255,255,0.45)' }}>Matches</label>
+            <div className="flex items-center justify-between mb-2">
+              <label className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>Matches</label>
               <span
-                className="text-xs font-medium px-2 py-0.5 rounded-full"
+                className="text-sm font-semibold px-3 py-1 rounded-full"
                 style={{
-                  background: matchCount > 0 ? 'oklch(0.6 0.2 290 / 0.15)' : 'var(--surface)',
-                  color: matchCount > 0 ? 'var(--color-dev)' : 'rgba(255,255,255,0.3)',
+                  background: matchCount > 0 ? 'oklch(0.6 0.2 290 / 0.2)' : 'var(--surface)',
+                  color: matchCount > 0 ? 'var(--color-dev)' : 'rgba(255,255,255,0.4)',
+                  border: `1px solid ${matchCount > 0 ? 'oklch(0.6 0.2 290 / 0.35)' : 'var(--border)'}`,
                 }}
               >
                 {matchCount} match{matchCount !== 1 ? 'es' : ''}
               </span>
             </div>
             <pre
-              className="rounded-xl px-4 py-3 text-sm overflow-auto whitespace-pre-wrap break-words"
+              className="rounded-xl px-4 py-3 text-base overflow-auto whitespace-pre-wrap break-words"
               style={{
                 background: 'var(--surface)',
-                border: '1px solid var(--border)',
+                border: '1.5px solid var(--border-hover)',
                 fontFamily: 'var(--font-geist-mono), monospace',
-                lineHeight: '1.6',
-                maxHeight: '200px',
+                lineHeight: '1.7',
+                maxHeight: '240px',
+                color: 'rgba(255,255,255,0.85)',
               }}
               dangerouslySetInnerHTML={{ __html: highlighted }}
             />
@@ -178,18 +209,18 @@ export default function RegexTesterPage() {
         {/* Groups */}
         {groups.length > 0 && (
           <div>
-            <label className="text-xs font-medium mb-2 block" style={{ color: 'rgba(255,255,255,0.45)' }}>
+            <label className="text-sm font-semibold mb-2 block" style={{ color: 'rgba(255,255,255,0.75)' }}>
               Capture groups
             </label>
-            <div className="space-y-1">
+            <div className="space-y-1.5">
               {groups.map((g, i) => (
                 <div
                   key={i}
-                  className="flex items-center gap-3 px-3 py-2 rounded-lg text-xs"
-                  style={{ background: 'var(--surface)', border: '1px solid var(--border)' }}
+                  className="flex items-center gap-3 px-4 py-2.5 rounded-lg text-sm"
+                  style={{ background: 'var(--surface)', border: '1px solid var(--border-hover)' }}
                 >
-                  <span style={{ color: 'rgba(255,255,255,0.3)' }}>Match {g.match} · Group {g.group}</span>
-                  <code style={{ color: 'rgba(255,255,255,0.7)', fontFamily: 'var(--font-geist-mono)' }}>{g.value}</code>
+                  <span style={{ color: 'rgba(255,255,255,0.5)' }}>Match {g.match} · Group {g.group}</span>
+                  <code style={{ color: 'rgba(255,255,255,0.9)', fontFamily: 'var(--font-geist-mono)' }}>{g.value}</code>
                 </div>
               ))}
             </div>

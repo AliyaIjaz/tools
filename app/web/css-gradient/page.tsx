@@ -50,46 +50,157 @@ export default function CssGradientPage() {
       description="Build linear, radial, and conic CSS gradients visually"
       seoContent={
         <SeoSection
-          about="Build CSS gradients visually with a live preview and instant copy of the generated CSS. Supports linear, radial, and conic gradient types with unlimited color stops. The output is clean, standard CSS that works in all modern browsers."
+          aboutTitle="CSS Gradient Generator Online"
+          about={<>
+            <p className="text-base leading-relaxed">Create beautiful CSS gradients visually with a live preview and copy production-ready CSS instantly. This free CSS Gradient Generator lets you build linear, radial, and conic gradients, customize unlimited color stops, adjust angles and positions, and generate clean CSS that works in all modern browsers. Everything runs entirely in your browser, so your work stays private and updates instantly.</p>
+          </>}
+          extraSections={[
+            {
+              title: 'What Is a CSS Gradient?',
+              intro: 'A CSS gradient is a background created entirely with CSS instead of an image. Gradients smoothly transition between two or more colors, making them ideal for modern user interfaces, hero sections, buttons, cards, overlays, and decorative backgrounds. Because gradients are rendered by the browser, they eliminate the need for separate image files and can help reduce page requests.\n\nThis online gradient generator removes the need to write CSS manually. Simply choose your colors, adjust the gradient settings, preview the result in real time, and copy the generated CSS with a single click.',
+              items: [],
+            },
+            {
+              title: 'Features',
+              items: [
+                'Generate Linear Gradients',
+                'Create Radial Gradients',
+                'Build Conic Gradients',
+                'Unlimited color stops',
+                'Live visual preview',
+                'Adjust gradient angle',
+                'Customize color stop positions',
+                'Copy generated CSS instantly',
+                'Clean, standards-compliant CSS output',
+                'No registration required',
+                'Works in all modern browsers',
+                'Completely free — runs entirely in your browser',
+              ],
+            },
+            {
+              title: 'Supported Gradient Types',
+              items: [
+                <div key="linear" className="space-y-1.5">
+                  <p className="text-base font-medium text-white">Linear Gradient</p>
+                  <p className="text-base leading-relaxed">Linear gradients transition colors in a straight line. Commonly used for website backgrounds, buttons, hero banners, navigation bars, and call-to-action sections.</p>
+                  <p className="text-sm" style={{ color: 'rgba(255,255,255,0.5)' }}>Example:</p>
+                  <pre className="text-sm font-mono px-3 py-2 rounded-lg" style={{ background: 'rgba(255,255,255,0.05)', color: 'rgba(255,255,255,0.8)' }}>{`background: linear-gradient(90deg, #3b82f6 0%, #8b5cf6 100%);`}</pre>
+                </div>,
+                <div key="radial" className="space-y-1.5">
+                  <p className="text-base font-medium text-white">Radial Gradient</p>
+                  <p className="text-base leading-relaxed">Radial gradients spread outward from a central point. Perfect for spotlight effects, circular backgrounds, glowing elements, badges, and decorative UI components.</p>
+                  <p className="text-sm" style={{ color: 'rgba(255,255,255,0.5)' }}>Example:</p>
+                  <pre className="text-sm font-mono px-3 py-2 rounded-lg" style={{ background: 'rgba(255,255,255,0.05)', color: 'rgba(255,255,255,0.8)' }}>{`background: radial-gradient(circle, #ffffff 0%, #3b82f6 100%);`}</pre>
+                </div>,
+                <div key="conic" className="space-y-1.5">
+                  <p className="text-base font-medium text-white">Conic Gradient</p>
+                  <p className="text-base leading-relaxed">Conic gradients rotate colors around a center point. Useful for pie charts, progress indicators, loading animations, color wheels, and creative visual effects.</p>
+                  <p className="text-sm" style={{ color: 'rgba(255,255,255,0.5)' }}>Example:</p>
+                  <pre className="text-sm font-mono px-3 py-2 rounded-lg" style={{ background: 'rgba(255,255,255,0.05)', color: 'rgba(255,255,255,0.8)' }}>{`background: conic-gradient(#3b82f6, #8b5cf6, #ec4899, #3b82f6);`}</pre>
+                </div>,
+              ],
+            },
+            {
+              title: 'How to Use',
+              items: [
+                'Select the gradient type.',
+                'Add two or more colors.',
+                'Adjust the angle or direction (for linear gradients).',
+                'Move color stops to fine-tune transitions.',
+                'Preview the gradient instantly.',
+                'Copy the generated CSS.',
+                'Paste it directly into your stylesheet or project.',
+              ],
+              closing: 'No installation or account is required.',
+            },
+            {
+              title: 'Why Use CSS Gradients Instead of Images?',
+              intro: 'Using CSS gradients offers several advantages over image backgrounds:',
+              items: [
+                'Faster loading since no image file is required',
+                'Smaller page size',
+                'Fully scalable without quality loss',
+                'Easy to edit by changing CSS values',
+                'Responsive on every screen size',
+                'Smooth rendering in modern browsers',
+                'Ideal for dark mode and theme customization',
+              ],
+              closing: 'For many UI elements, gradients provide a cleaner and more flexible solution than static images.',
+            },
+            {
+              title: 'Browser Compatibility',
+              intro: 'The generated CSS uses standard gradient syntax supported by all major modern browsers, including:',
+              items: ['Google Chrome', 'Mozilla Firefox', 'Microsoft Edge', 'Safari', 'Opera'],
+              closing: 'Vendor prefixes are no longer necessary for modern browsers.',
+            },
+            {
+              title: 'Tips for Better Gradient Design',
+              items: [
+                'Limit gradients to two to four primary colors for a cleaner appearance.',
+                'Use subtle color transitions for professional interfaces.',
+                'Ensure sufficient contrast when placing text over gradients.',
+                'Choose complementary or analogous colors for smoother blends.',
+                'Avoid excessive saturation that can reduce readability.',
+                'Preview gradients on both desktop and mobile devices.',
+              ],
+            },
+          ]}
+          useCasesTitle="Common Use Cases"
           useCases={[
-            'Creating background gradients for hero sections and banners',
-            'Building subtle gradient overlays on top of images or cards',
-            'Generating conic gradients for pie charts or loading spinners',
-            'Experimenting with color palettes and gradient directions visually',
-            'Producing CSS background values for design systems or component libraries',
+            'Creating hero section backgrounds',
+            'Designing modern landing pages',
+            'Styling buttons and call-to-action elements',
+            'Building colorful cards and panels',
+            'Adding gradient overlays to images',
+            'Creating backgrounds for dashboards',
+            'Designing gradients for mobile apps',
+            'Producing CSS for component libraries',
+            'Building loading animations',
+            'Creating pie charts with conic gradients',
+            'Experimenting with color palettes',
+            'Developing responsive website themes',
           ]}
           faqs={[
-            { q: 'What gradient types are supported?', a: 'Linear (linear-gradient), radial (radial-gradient), and conic (conic-gradient) are all supported.' },
-            { q: 'Can I add more than two color stops?', a: 'Yes. You can add as many color stops as you need, each with its own color and position.' },
-            { q: 'Does the output include vendor prefixes?', a: 'No — vendor prefixes for gradients are not needed in any modern browser. The generated CSS uses standard syntax only.' },
+            { q: 'What is a CSS Gradient Generator?', a: 'A CSS Gradient Generator is a visual tool that creates CSS code for gradient backgrounds. Instead of writing CSS manually, you can customize colors, angles, and positions through an interactive interface and copy the generated code instantly.' },
+            { q: 'What gradient types are supported?', a: 'The tool supports linear gradients (linear-gradient), radial gradients (radial-gradient), and conic gradients (conic-gradient).' },
+            { q: 'Can I add more than two color stops?', a: 'Yes. You can add as many color stops as you need. Each stop can have its own color and position, allowing you to create simple or complex multi-color gradients.' },
+            { q: 'Does the generated CSS work in all browsers?', a: 'Yes. The generated CSS follows modern CSS standards and works in current versions of Chrome, Firefox, Edge, Safari, and other modern browsers.' },
+            { q: 'Are vendor prefixes included?', a: 'No. Vendor prefixes are no longer required for CSS gradients in modern browsers, so the generated CSS uses the standard syntax.' },
+            { q: 'Can I use gradients instead of background images?', a: 'Yes. CSS gradients are often a better alternative to image backgrounds because they are scalable, lightweight, and easier to customize without increasing page size.' },
+            { q: 'Can I create transparent gradients?', a: 'Yes. You can use transparent or semi-transparent colors to create overlays, fade effects, and layered backgrounds.' },
+            { q: 'Are CSS gradients responsive?', a: 'Yes. Since gradients are generated by CSS rather than fixed images, they automatically scale with the size of the element and work well on responsive websites.' },
+            { q: 'Can I edit the generated CSS?', a: 'Absolutely. After copying the CSS, you can modify colors, angles, positions, or gradient types directly in your stylesheet.' },
+            { q: 'Is this CSS Gradient Generator free?', a: 'Yes. The tool is completely free to use with no registration, downloads, or installation required.' },
           ]}
         />
       }
       category="web"
       iconName="Palette"
+      showAllCategory
+      compactRelated
     >
-      <div className="space-y-5">
+      <div className="space-y-6">
         {/* Preview */}
         <div
-          className="w-full h-48 rounded-xl"
+          className="w-full h-52 rounded-xl"
           style={{ background: css, border: '1px solid var(--border)' }}
         />
 
         {/* Controls */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
           {/* Type */}
-          <div>
-            <label className="text-xs font-medium mb-2 block" style={{ color: 'rgba(255,255,255,0.45)' }}>Type</label>
+          <div className="flex flex-col gap-2">
+            <label className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>Type</label>
             <div className="flex gap-2">
               {TYPES.map((t) => (
                 <button
                   key={t}
                   onClick={() => setType(t)}
-                  className="flex-1 py-2 rounded-lg text-sm font-medium capitalize transition-all"
+                  className="flex-1 py-2.5 rounded-lg text-base font-semibold capitalize transition-all"
                   style={{
                     background: type === t ? 'var(--color-web-dim)' : 'var(--surface)',
-                    border: `1px solid ${type === t ? 'var(--color-web)' : 'var(--border)'}`,
-                    color: type === t ? 'var(--color-web)' : 'rgba(255,255,255,0.5)',
+                    border: `1.5px solid ${type === t ? 'var(--color-web)' : 'var(--border)'}`,
+                    color: type === t ? 'var(--color-web)' : 'rgba(255,255,255,0.55)',
                   }}
                 >
                   {t}
@@ -100,9 +211,10 @@ export default function CssGradientPage() {
 
           {/* Angle */}
           {type !== 'radial' && (
-            <div>
-              <label className="text-xs font-medium mb-2 block" style={{ color: 'rgba(255,255,255,0.45)' }}>
-                Angle — {angle}°
+            <div className="flex flex-col gap-2">
+              <label className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>
+                Angle
+                <span className="ml-2 font-mono text-sm" style={{ color: 'rgba(255,255,255,0.5)' }}>{angle}°</span>
               </label>
               <div className="flex items-center gap-3">
                 <input
@@ -115,8 +227,8 @@ export default function CssGradientPage() {
                   type="number" min={0} max={360}
                   value={angle}
                   onChange={(e) => setAngle(Number(e.target.value))}
-                  className="w-16 px-2 py-1.5 rounded-lg text-sm text-center outline-none"
-                  style={{ background: 'var(--surface)', border: '1px solid var(--border)', color: 'rgba(255,255,255,0.8)', fontFamily: 'var(--font-geist-mono)' }}
+                  className="w-18 px-3 py-2 rounded-lg text-base text-center outline-none"
+                  style={{ background: 'var(--surface)', border: '1px solid var(--border)', color: 'rgba(255,255,255,0.9)', fontFamily: 'var(--font-geist-mono)' }}
                 />
               </div>
             </div>
@@ -124,15 +236,15 @@ export default function CssGradientPage() {
         </div>
 
         {/* Color stops */}
-        <div>
-          <div className="flex items-center justify-between mb-3">
-            <label className="text-xs font-medium" style={{ color: 'rgba(255,255,255,0.45)' }}>Color stops</label>
+        <div className="flex flex-col gap-2">
+          <div className="flex items-center justify-between">
+            <label className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>Color stops</label>
             <button
               onClick={addStop}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all"
-              style={{ background: 'var(--surface)', border: '1px solid var(--border)', color: 'rgba(255,255,255,0.5)' }}
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-all"
+              style={{ background: 'var(--surface)', border: '1px solid var(--border)', color: 'rgba(255,255,255,0.65)' }}
             >
-              <Plus size={12} /> Add stop
+              <Plus size={13} /> Add stop
             </button>
           </div>
 
@@ -140,17 +252,17 @@ export default function CssGradientPage() {
             {stops.map((stop) => (
               <div
                 key={stop.id}
-                className="flex items-center gap-3 px-3 py-2.5 rounded-xl"
+                className="flex items-center gap-3 px-4 py-3 rounded-xl"
                 style={{ background: 'var(--surface)', border: '1px solid var(--border)' }}
               >
                 <input
                   type="color"
                   value={stop.color}
                   onChange={(e) => updateStop(stop.id, 'color', e.target.value)}
-                  className="w-9 h-9 rounded-lg cursor-pointer flex-shrink-0"
+                  className="w-10 h-10 rounded-lg cursor-pointer flex-shrink-0"
                   style={{ padding: '2px', background: 'transparent', border: '1px solid var(--border)' }}
                 />
-                <code className="text-xs flex-shrink-0 w-16" style={{ color: 'rgba(255,255,255,0.6)', fontFamily: 'var(--font-geist-mono)' }}>
+                <code className="text-sm flex-shrink-0 w-18" style={{ color: 'rgba(255,255,255,0.75)', fontFamily: 'var(--font-geist-mono)' }}>
                   {stop.color}
                 </code>
                 <input
@@ -159,16 +271,16 @@ export default function CssGradientPage() {
                   onChange={(e) => updateStop(stop.id, 'position', Number(e.target.value))}
                   className="flex-1 accent-white"
                 />
-                <span className="text-xs w-8 text-right" style={{ color: 'rgba(255,255,255,0.4)', fontFamily: 'var(--font-geist-mono)' }}>
+                <span className="text-sm w-10 text-right font-mono" style={{ color: 'rgba(255,255,255,0.6)' }}>
                   {stop.position}%
                 </span>
                 <button
                   onClick={() => removeStop(stop.id)}
                   disabled={stops.length <= 2}
                   className="p-1.5 rounded-lg transition-colors disabled:opacity-25"
-                  style={{ color: 'rgba(255,255,255,0.3)' }}
+                  style={{ color: 'rgba(255,255,255,0.45)' }}
                 >
-                  <Trash2 size={13} />
+                  <Trash2 size={15} />
                 </button>
               </div>
             ))}
@@ -176,21 +288,23 @@ export default function CssGradientPage() {
         </div>
 
         {/* Output */}
-        <div>
-          <div className="flex items-center justify-between mb-2">
-            <label className="text-xs font-medium" style={{ color: 'rgba(255,255,255,0.45)' }}>CSS output</label>
+        <div className="flex flex-col gap-2">
+          <div className="flex items-center justify-between">
+            <label className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>CSS output</label>
             <div className="flex gap-2">
               <CopyButton text={`background: ${css};`} label="Copy CSS" />
               <CopyButton text={css} label="Copy value" />
             </div>
           </div>
           <pre
-            className="rounded-xl px-4 py-3 text-sm break-all whitespace-pre-wrap"
+            className="rounded-xl px-5 py-4 text-sm break-all whitespace-pre-wrap"
             style={{
               background: 'var(--surface)',
               border: '1px solid var(--border)',
-              color: 'rgba(255,255,255,0.75)',
+              color: 'rgba(255,255,255,0.85)',
               fontFamily: 'var(--font-geist-mono), monospace',
+              fontSize: '14px',
+              lineHeight: '1.7',
             }}
           >
             {`background: ${css};`}

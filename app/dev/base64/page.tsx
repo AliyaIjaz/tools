@@ -1,38 +1,43 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import ToolLayout from '@/components/ui/ToolLayout'
 import CopyButton from '@/components/ui/CopyButton'
-import Tabs from '@/components/ui/Tabs'
-import Textarea from '@/components/ui/Textarea'
 import SeoSection from '@/components/ui/SeoSection'
 
 export default function Base64Page() {
-  const [tab, setTab] = useState('Encode')
   const [input, setInput] = useState('')
   const [output, setOutput] = useState('')
   const [error, setError] = useState('')
+  const [mode, setMode] = useState<'encode' | 'decode' | null>(null)
 
-  useEffect(() => {
+  function encode() {
     setError('')
-    if (!input) { setOutput(''); return }
+    setOutput('')
+    if (!input) return
     try {
-      if (tab === 'Encode') {
-        // UTF-8 safe encode
-        const bytes = new TextEncoder().encode(input)
-        const binary = Array.from(bytes).map((b) => String.fromCharCode(b)).join('')
-        setOutput(btoa(binary))
-      } else {
-        // UTF-8 safe decode
-        const binary = atob(input)
-        const bytes = Uint8Array.from(binary, (c) => c.charCodeAt(0))
-        setOutput(new TextDecoder().decode(bytes))
-      }
+      const bytes = new TextEncoder().encode(input)
+      const binary = Array.from(bytes).map((b) => String.fromCharCode(b)).join('')
+      setOutput(btoa(binary))
+      setMode('encode')
     } catch {
-      setError(tab === 'Encode' ? 'Encoding error' : 'Invalid Base64 string')
-      setOutput('')
+      setError('Encoding error')
     }
-  }, [input, tab])
+  }
+
+  function decode() {
+    setError('')
+    setOutput('')
+    if (!input) return
+    try {
+      const binary = atob(input)
+      const bytes = Uint8Array.from(binary, (c) => c.charCodeAt(0))
+      setOutput(new TextDecoder().decode(bytes))
+      setMode('decode')
+    } catch {
+      setError('Invalid Base64 string')
+    }
+  }
 
   return (
     <ToolLayout
@@ -41,55 +46,138 @@ export default function Base64Page() {
       description="Encode and decode Base64 strings with UTF-8 support"
       seoContent={
         <SeoSection
-          about="Encode text or data to Base64 or decode a Base64 string back to plain text. The tool handles UTF-8 characters correctly, including emoji and non-ASCII text. All encoding and decoding happens client-side with no server round-trips."
+          about={<>
+            <p className="text-base leading-relaxed"><strong>Base64 Encoder Online</strong> is a free browser-based tool that lets you <strong>encode text to Base64</strong> and <strong>decode Base64 back to plain text</strong> instantly. Whether you&apos;re working with API credentials, configuration files, JSON payloads, email content, or application data, this tool provides a fast and reliable way to convert between plain text and Base64 encoding.</p>
+            <p className="text-base leading-relaxed">Base64 is a widely used encoding scheme that converts binary or text data into printable ASCII characters. It is commonly used when transmitting data through systems that only support text, embedding binary data inside JSON or XML, creating Data URIs, sending email attachments, handling HTTP Basic Authentication credentials, and exchanging data between web services.</p>
+            <p className="text-base leading-relaxed">This tool correctly handles <strong>UTF-8 encoded text</strong>, including Unicode characters, emoji, accented letters, and non-English languages. Simply paste your text to generate a Base64 string, or paste a Base64 string to decode it back into readable text. The original data remains unchanged—Base64 is an encoding method, not encryption.</p>
+            <p className="text-base leading-relaxed">All encoding and decoding are performed entirely <strong>inside your browser</strong> using modern JavaScript APIs. Your text is never uploaded to a server, ensuring your sensitive information remains private. Whether you&apos;re a developer, student, system administrator, or security researcher, this Base64 Encoder and Decoder helps simplify everyday development and debugging tasks.</p>
+          </>}
           useCases={[
-            'Encoding API credentials (username:password) for HTTP Basic Auth headers',
-            'Encoding binary data for embedding in JSON payloads',
-            'Decoding Base64-encoded tokens or configuration values',
-            'Inspecting Base64-encoded email attachments or MIME parts',
-            'Encoding strings before storing them in URLs or cookies',
+            'Encode plain text into Base64 for APIs and web services.',
+            'Decode Base64 strings back into readable text.',
+            'Generate HTTP Basic Authentication credentials (username:password).',
+            'Inspect Base64-encoded API tokens and configuration values.',
+            'Embed binary data inside JSON or XML documents.',
+            'Create Base64 Data URIs for HTML, CSS, and SVG assets.',
+            'Encode email attachments and MIME message parts.',
+            'Work with JWT payloads during application development.',
+            'Store encoded values inside cookies or Local Storage.',
+            'Encode text before including it in configuration files.',
+            'Debug webhook payloads and API responses.',
+            'Exchange data between frontend and backend applications.',
+            'Learn how Base64 encoding works while studying web development.',
+            'Verify encoded strings generated by other applications.',
+            'Convert Unicode text, emoji, and multilingual content to Base64.',
+            'Decode Base64 values copied from documentation or online services.',
+            'Test Base64 encoding during software development and QA.',
+            'Prepare encoded values for scripts, automation tools, or command-line utilities.',
           ]}
           faqs={[
-            { q: 'Does it handle Unicode and emoji?', a: 'Yes. The encoder uses TextEncoder to convert the string to UTF-8 bytes before encoding, so all Unicode characters are handled correctly.' },
-            { q: 'What is the difference between Base64 and URL-safe Base64?', a: 'Standard Base64 uses + and / characters which must be percent-encoded in URLs. URL-safe Base64 replaces those with - and _, making the output safe in query strings. This tool uses standard Base64.' },
-            { q: 'Is there a length limit?', a: 'No hard limit — the tool handles strings of any length your browser can hold in memory.' },
+            { q: 'What is Base64?', a: 'Base64 is a binary-to-text encoding scheme that converts binary or text data into a set of printable ASCII characters. It allows data to be safely transmitted through systems that only support plain text.' },
+            { q: 'What is a Base64 Encoder?', a: 'A Base64 Encoder converts plain text or binary data into a Base64-encoded string. This encoded representation is commonly used in APIs, email messages, authentication headers, configuration files, and web applications.' },
+            { q: 'What is a Base64 Decoder?', a: 'A Base64 Decoder converts a Base64-encoded string back into its original readable text or binary data, provided the original content was encoded correctly.' },
+            { q: 'Does Base64 encrypt my data?', a: 'No. Base64 is not encryption. It simply changes how data is represented. Anyone can decode Base64 back to its original form without a password or encryption key.' },
+            { q: 'What is the difference between encoding and encryption?', a: 'Encoding transforms data into another format for compatibility or transmission. Encryption protects data using cryptographic algorithms and requires a key to decrypt it. Base64 only performs encoding.' },
+            { q: 'Does this tool support Unicode and emoji?', a: 'Yes. The encoder uses UTF-8 encoding, allowing it to correctly process emoji, accented characters, Asian languages, Arabic, Cyrillic, and other Unicode text without data loss.' },
+            { q: 'What is the difference between standard Base64 and URL-safe Base64?', a: 'Standard Base64 uses the + and / characters, while URL-safe Base64 replaces them with - and _. URL-safe Base64 is designed for URLs and query parameters where certain characters have special meanings. This tool uses the standard Base64 format.' },
+            { q: 'Does Base64 increase the size of data?', a: 'Yes. Base64 encoding increases the size of the original data by approximately 33% because every three bytes of input are represented by four Base64 characters.' },
+            { q: 'Can I decode Base64 back to the original text?', a: 'Yes. As long as the Base64 string is valid and complete, decoding restores the original content exactly.' },
+            { q: 'Can this tool encode binary data?', a: "This version is designed primarily for text input. Binary files are typically encoded using dedicated Base64 file encoding tools that process file contents directly." },
+            { q: 'Is my data uploaded to a server?', a: 'No. All encoding and decoding happen locally in your browser. Your data never leaves your device, making the tool suitable for working with sensitive information.' },
+            { q: 'Can I use this tool offline?', a: "Yes. Once the webpage has loaded, the encoding and decoding logic runs locally in your browser and does not require an internet connection to process your data." },
+            { q: 'Is there a maximum input length?', a: "There is no fixed limit imposed by the tool itself. The maximum size depends on your browser's available memory and your device's hardware resources." },
+            { q: 'Why would developers use Base64?', a: 'Developers commonly use Base64 for HTTP Basic Authentication, Data URIs, email attachments (MIME), API communication, JSON payloads, XML documents, configuration files, JWT processing, webhooks, and data exchange between applications.' },
+            { q: 'Does Base64 preserve Unicode characters?', a: 'Yes. When UTF-8 encoding is used, Base64 preserves Unicode text exactly, including emoji, multilingual characters, and special symbols, ensuring the decoded output matches the original input.' },
+            { q: 'Is Base64 reversible?', a: 'Yes. Base64 encoding is completely reversible. Any valid Base64 string can be decoded back into its original data, which is why Base64 should never be used to protect sensitive information.' },
           ]}
         />
       }
       category="dev"
       iconName="Binary"
+      showAllCategory
     >
-      <div className="space-y-4">
-        <Tabs tabs={['Encode', 'Decode']} value={tab} onChange={(t) => { setTab(t); setInput(''); setOutput('') }} />
+      <div className="space-y-5">
+        {/* Input */}
+        <div
+          className="rounded-xl p-4"
+          style={{ background: 'var(--surface)', border: '1px solid rgba(255,255,255,0.1)' }}
+        >
+          <div className="flex items-center justify-between mb-3">
+            <label className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>
+              Input
+            </label>
+            <span className="text-sm" style={{ color: 'rgba(255,255,255,0.4)' }}>{input.length} chars</span>
+          </div>
+          <textarea
+            value={input}
+            onChange={(e) => { setInput(e.target.value); setOutput(''); setError(''); setMode(null) }}
+            placeholder="Enter text to encode or a Base64 string to decode…"
+            rows={7}
+            className="w-full resize-y rounded-lg px-3 py-3 text-sm outline-none transition-all duration-150 placeholder:text-white/45"
+            style={{
+              background: 'rgba(0,0,0,0.35)',
+              border: '1px solid rgba(255,255,255,0.12)',
+              color: 'rgba(255,255,255,0.92)',
+              fontFamily: 'var(--font-geist-mono), monospace',
+              lineHeight: '1.65',
+            }}
+            onFocus={(e) => { e.currentTarget.style.borderColor = 'var(--color-dev)' }}
+            onBlur={(e) => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.12)' }}
+          />
+        </div>
 
-        <Textarea
-          label={tab === 'Encode' ? 'Plain text' : 'Base64 string'}
-          value={input}
-          onChange={setInput}
-          placeholder={tab === 'Encode' ? 'Enter text to encode…' : 'Enter Base64 to decode…'}
-          mono={tab === 'Decode'}
-          rows={6}
-          showCount
-        />
+        {/* Actions */}
+        <div className="flex flex-wrap gap-2">
+          <button
+            onClick={encode}
+            className="px-5 py-2.5 rounded-lg text-sm font-semibold transition-all active:scale-95 active:brightness-90"
+            style={{ background: 'var(--color-dev)', color: '#fff' }}
+          >
+            Encode
+          </button>
+          <button
+            onClick={decode}
+            className="px-5 py-2.5 rounded-lg text-sm font-semibold transition-all active:scale-95 active:brightness-75"
+            style={{ background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.15)', color: 'rgba(255,255,255,0.85)' }}
+          >
+            Decode
+          </button>
+        </div>
 
         {error && (
           <div
-            className="rounded-lg px-4 py-2 text-xs"
-            style={{ background: 'rgba(239,68,68,0.1)', border: '1px solid rgba(239,68,68,0.25)', color: '#f87171' }}
+            className="rounded-lg px-4 py-3 text-sm font-mono leading-relaxed"
+            style={{ background: 'rgba(239,68,68,0.12)', border: '1px solid rgba(239,68,68,0.35)', color: '#fca5a5' }}
           >
             {error}
           </div>
         )}
 
+        {/* Output */}
         {output && (
-          <div>
-            <div className="flex items-center justify-between mb-2">
-              <label className="text-xs font-medium" style={{ color: 'rgba(255,255,255,0.45)' }}>
-                {tab === 'Encode' ? 'Base64 output' : 'Decoded text'}
+          <div
+            className="rounded-xl p-4"
+            style={{ background: 'var(--surface)', border: '1px solid rgba(255,255,255,0.1)' }}
+          >
+            <div className="flex items-center justify-between mb-3">
+              <label className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>
+                {mode === 'encode' ? 'Base64 output' : 'Decoded text'}
               </label>
               <CopyButton text={output} />
             </div>
-            <Textarea value={output} readOnly mono rows={6} />
+            <textarea
+              value={output}
+              readOnly
+              rows={7}
+              className="w-full resize-y rounded-lg px-3 py-3 text-sm outline-none"
+              style={{
+                background: 'rgba(0,0,0,0.35)',
+                border: '1px solid rgba(255,255,255,0.1)',
+                color: 'rgba(255,255,255,0.88)',
+                fontFamily: 'var(--font-geist-mono), monospace',
+                lineHeight: '1.65',
+              }}
+            />
           </div>
         )}
       </div>

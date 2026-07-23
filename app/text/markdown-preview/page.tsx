@@ -80,23 +80,51 @@ export default function MarkdownPreviewPage() {
       description="Write Markdown and see the rendered output live"
       seoContent={
         <SeoSection
-          about="Write or paste Markdown in the left pane and see the rendered HTML output in real time on the right. Supports standard Markdown syntax including headings, bold, italic, links, lists, code blocks, and tables. Rendering uses the marked library with DOMPurify sanitization."
+          aboutTitle="About this tool"
+          about={<>
+            <p className="text-base leading-relaxed">Markdown Preview Online is a free browser-based tool that lets you write or paste Markdown and instantly see the rendered HTML output in a live side-by-side preview. As you type, the preview updates in real time, making it easy to verify formatting, test Markdown syntax, and prepare content for publishing. The tool supports standard CommonMark features, including headings, bold, italic, links, images, blockquotes, ordered and unordered lists, fenced code blocks, inline code, tables, horizontal rules, and strikethrough text.</p>
+            <p className="text-base leading-relaxed">Rendering is powered by the <strong>Marked</strong> library, while the generated HTML is sanitized with <strong>DOMPurify</strong> to help prevent XSS attacks from malicious Markdown input. Everything runs locally in your browser, so your Markdown content is never uploaded to a server, ensuring your documents remain private.</p>
+            <p className="text-base leading-relaxed">Whether you&apos;re writing GitHub README files, technical documentation, blog posts, API guides, wiki pages, or project notes, this online Markdown preview tool provides a fast and reliable way to review formatting before publishing. No registration, installation, or file uploads are required.</p>
+          </>}
+          useCasesTitle="Common use cases"
           useCases={[
-            'Previewing README files before pushing to GitHub',
-            'Drafting blog posts or documentation in Markdown with a live preview',
-            'Learning Markdown syntax by seeing the rendered result immediately',
-            'Verifying that a Markdown snippet renders correctly before publishing',
-            'Converting Markdown to HTML to inspect the generated markup',
+            'Preview GitHub README.md files before committing or publishing them.',
+            'Write technical documentation with a live Markdown preview.',
+            'Draft blog posts and articles using Markdown formatting.',
+            'Learn Markdown syntax by seeing rendered output instantly.',
+            'Verify headings, lists, tables, links, and images before publishing.',
+            'Test fenced code blocks and inline code formatting.',
+            'Convert Markdown into rendered HTML for quick inspection.',
+            'Review documentation for static site generators before deployment.',
+            'Create knowledge base articles and internal documentation.',
+            'Check how blockquotes, horizontal rules, and emphasis are rendered.',
+            'Preview API documentation written in Markdown.',
+            'Experiment with Markdown formatting without installing an editor.',
           ]}
           faqs={[
-            { q: 'What Markdown flavors are supported?', a: 'Standard CommonMark Markdown is supported, including fenced code blocks, tables, and strikethrough text.' },
-            { q: 'Is the output sanitized?', a: 'Yes. The rendered HTML is sanitized using DOMPurify to prevent XSS attacks from malicious Markdown input.' },
-            { q: 'Can I copy the generated HTML?', a: 'Yes — click the copy button above the preview to copy the rendered HTML to your clipboard.' },
+            { q: 'Is this Markdown Preview tool free?', a: 'Yes. The tool is completely free to use with no registration, subscriptions, or hidden fees.' },
+            { q: 'Is my Markdown uploaded to a server?', a: 'No. All rendering happens locally in your browser. Your Markdown content is never uploaded, stored, or shared.' },
+            {
+              q: 'Which Markdown syntax is supported?',
+              a: 'The tool supports standard CommonMark syntax, including headings, bold and italic text, strikethrough, links, images, blockquotes, ordered and unordered lists, inline code, fenced code blocks, tables, and horizontal rules.',
+            },
+            { q: 'Does it support GitHub Flavored Markdown (GFM)?', a: 'Most commonly used GitHub Markdown features are supported, including fenced code blocks, tables, and strikethrough text. Rendering follows CommonMark with widely adopted extensions.' },
+            { q: 'How is the Markdown rendered?', a: 'Markdown is parsed using the Marked library, which converts Markdown into HTML in real time as you type or edit your content.' },
+            { q: 'Is the generated HTML safe?', a: 'Yes. The rendered HTML is sanitized using DOMPurify, which removes potentially unsafe content and helps protect against cross-site scripting (XSS) attacks.' },
+            { q: 'Can I copy the generated HTML?', a: 'Yes. Click the Copy HTML button above the preview to copy the rendered HTML directly to your clipboard.' },
+            { q: 'Does the preview update automatically?', a: 'Yes. The preview refreshes instantly whenever you type, paste, or edit your Markdown, allowing you to see formatting changes in real time.' },
+            { q: 'Can I preview images and links?', a: 'Yes. Images and hyperlinks included in your Markdown are rendered in the live preview so you can verify that they appear correctly before publishing.' },
+            { q: 'Can I use this tool for GitHub README files?', a: "Absolutely. It's ideal for previewing README.md files before pushing them to GitHub, helping you catch formatting issues early." },
+            { q: 'Do I need to install any software?', a: "No. The tool works entirely in your web browser. There's nothing to download or install." },
+            { q: 'Who is this tool designed for?', a: 'This tool is useful for developers, technical writers, documentation teams, open-source contributors, bloggers, students, DevOps engineers, and anyone who writes or edits Markdown.' },
+            { q: 'Why use a live Markdown preview?', a: 'A live Markdown preview lets you verify formatting as you write, reducing mistakes and saving time. Instead of switching between editing and rendering, you can immediately see how headings, tables, code blocks, images, and other Markdown elements will appear in the final HTML output.' },
           ]}
         />
       }
       category="text"
       iconName="FileText"
+      showAllCategory
+      compactRelated
     >
       {/* Markdown prose styles scoped to preview */}
       <style>{`

@@ -33,23 +33,52 @@ export default function WordCounterPage() {
       description="Count words, characters, sentences, paragraphs, and estimate reading time"
       seoContent={
         <SeoSection
-          about="Paste any text to instantly see word count, character count (with and without spaces), sentence count, paragraph count, and estimated reading time. Stats update live as you type. No character limits, no uploads."
+          aboutTitle="About this tool"
+          about={<>
+            <p className="text-base leading-relaxed">Word Counter Online is a free text analysis tool that instantly counts words, characters, characters without spaces, sentences, paragraphs, and estimated reading time. Simply paste or type your text, and all statistics update live as you edit. Whether you&apos;re writing an essay, blog post, report, email, resume, social media caption, or marketing copy, this tool helps you stay within word or character limits while understanding the overall structure of your content.</p>
+            <p className="text-base leading-relaxed">The tool runs entirely in your browser, so your text is never uploaded to a server, ensuring complete privacy. There are no sign-ups, downloads, or character limits, making it suitable for both short snippets and long documents. Writers, students, bloggers, copywriters, marketers, SEO professionals, and anyone working with text can use this online word counter to quickly analyze content before publishing or submitting it.</p>
+          </>}
+          useCasesTitle="Common use cases"
           useCases={[
-            'Checking word count for an essay, article, or assignment with a word limit',
-            'Estimating how long a blog post or speech will take to read or deliver',
-            'Counting characters before pasting into a platform with a character limit',
-            'Analyzing content density — paragraphs and sentence counts help gauge readability',
-            'Verifying that a meta description or ad copy fits within character constraints',
+            'Checking the word count of essays, assignments, research papers, and reports before submission.',
+            'Tracking the length of blog posts and articles to meet SEO or editorial guidelines.',
+            'Counting characters for social media posts, advertisements, and messaging platforms with character limits.',
+            'Measuring reading time to estimate how long an article, speech, or presentation will take to read.',
+            'Reviewing sentence and paragraph counts to improve readability and content structure.',
+            'Ensuring meta titles and meta descriptions stay within recommended character limits for search engines.',
+            'Monitoring document length while writing books, newsletters, or technical documentation.',
+            'Verifying translation length by comparing word and character counts.',
+            'Editing resumes, cover letters, and professional emails to keep them concise.',
+            'Optimizing landing pages, product descriptions, and website content for better user experience.',
+            'Proofreading drafts by identifying unusually long paragraphs or sentences.',
+            'Quickly analyzing text without installing software or creating an account.',
           ]}
           faqs={[
-            { q: 'How is reading time estimated?', a: 'Based on an average adult reading speed of 200 words per minute, which is a widely used benchmark for general-purpose text.' },
-            { q: 'Does character count include spaces?', a: 'Both are shown: characters with spaces and characters without spaces.' },
-            { q: 'How are sentences counted?', a: 'Sentences are split on . ! and ? punctuation marks. This is an approximation — abbreviations and ellipses may slightly affect the count.' },
+            { q: 'Is this Word Counter free?', a: 'Yes. The tool is completely free to use with no subscriptions, registrations, or hidden fees.' },
+            { q: 'Is my text uploaded to a server?', a: 'No. Everything is processed locally in your browser. Your text remains private and is never uploaded or stored.' },
+            {
+              q: 'What statistics does the tool provide?',
+              a: <><p className="text-base leading-relaxed mb-2">The tool displays: word count, character count (with spaces), character count (without spaces), sentence count, paragraph count, and estimated reading time.</p><p className="text-base leading-relaxed">All statistics update instantly as you type or edit your text.</p></>,
+            },
+            { q: 'How is word count calculated?', a: 'Words are identified by separating text using spaces and common word boundaries. This provides an accurate count for most everyday writing, including essays, articles, emails, and blog posts.' },
+            { q: 'Does character count include spaces?', a: 'Both values are shown. You can view the total number of characters including spaces as well as the count excluding spaces.' },
+            { q: 'How are sentences counted?', a: 'Sentences are estimated using common sentence-ending punctuation such as periods (.), question marks (?), and exclamation marks (!). Abbreviations, initials, and ellipses may occasionally affect the count.' },
+            { q: 'How are paragraphs counted?', a: 'Paragraphs are counted by detecting blocks of text separated by one or more blank lines. Each text block is treated as a separate paragraph.' },
+            { q: 'How is reading time estimated?', a: 'Reading time is calculated using an average adult reading speed of approximately 200 words per minute, which is a commonly accepted benchmark for general reading.' },
+            { q: 'Is there a maximum text length?', a: 'No fixed limit is imposed by the tool. You can analyze both short text and lengthy documents. Extremely large documents may take slightly longer to process depending on your browser and device.' },
+            { q: 'Can I use this tool on mobile devices?', a: 'Yes. The Word Counter works in modern desktop and mobile browsers without requiring any installation.' },
+            {
+              q: 'Who can use this tool?',
+              a: 'This tool is useful for students, writers, bloggers, journalists, copywriters, SEO professionals, digital marketers, editors, researchers, and anyone who needs quick text statistics.',
+            },
+            { q: 'Why should I use a word counter?', a: 'A word counter helps ensure your content meets assignment requirements, publishing guidelines, SEO recommendations, and platform character limits. It also provides valuable insights into document length, readability, and estimated reading time, making it easier to write clear and well-structured content.' },
           ]}
         />
       }
       category="text"
       iconName="AlignLeft"
+      showAllCategory
+      compactRelated
     >
       <div className="space-y-5">
         <div>

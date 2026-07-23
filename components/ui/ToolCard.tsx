@@ -10,9 +10,10 @@ import { AVAILABLE_HREFS } from '@/lib/tools'
 type Props = {
   tool: ToolDefinition
   showCategory?: boolean
+  compact?: boolean
 }
 
-export default function ToolCard({ tool, showCategory = false }: Props) {
+export default function ToolCard({ tool, showCategory = false, compact = false }: Props) {
   const available = AVAILABLE_HREFS.has(tool.href)
   const color = CATEGORIES[tool.category].color
   const dimColor = CATEGORIES[tool.category].dimColor
@@ -22,7 +23,7 @@ export default function ToolCard({ tool, showCategory = false }: Props) {
 
   const content = (
     <div
-      className="relative rounded-xl p-3 transition-all duration-200 h-full"
+      className={`relative rounded-xl transition-all duration-200 h-full ${compact ? 'p-2.5' : 'p-3'}`}
       style={{
         background: 'var(--surface)',
         border: '1px solid var(--border)',
@@ -63,14 +64,14 @@ export default function ToolCard({ tool, showCategory = false }: Props) {
 
       <div className={!available ? 'opacity-50' : ''}>
         <div
-          className="w-8 h-8 rounded-lg flex items-center justify-center mb-2"
+          className={`rounded-lg flex items-center justify-center mb-2 ${compact ? 'w-6 h-6' : 'w-8 h-8'}`}
           style={{ background: dimColor }}
         >
-          {IconComponent && <IconComponent size={14} style={{ color }} />}
+          {IconComponent && <IconComponent size={compact ? 11 : 14} style={{ color }} />}
         </div>
 
         <div className="flex items-center gap-2 mb-1">
-          <h3 className="text-sm font-medium text-white/90 leading-tight">{tool.name}</h3>
+          <h3 className={`font-medium text-white/90 leading-tight ${compact ? 'text-xs' : 'text-sm'}`}>{tool.name}</h3>
           {tool.new && (
             <span
               className="text-[10px] font-semibold px-1.5 py-0.5 rounded-full"
@@ -81,7 +82,7 @@ export default function ToolCard({ tool, showCategory = false }: Props) {
           )}
         </div>
 
-        <p className="text-xs leading-relaxed" style={{ color: 'rgba(255,255,255,0.65)' }}>
+        <p className={`leading-relaxed ${compact ? 'text-[11px]' : 'text-xs'}`} style={{ color: 'rgba(255,255,255,0.65)' }}>
           {tool.description}
         </p>
 

@@ -34,12 +34,13 @@ export default function FindReplacePage() {
   const inputStyle: React.CSSProperties = {
     background: 'var(--surface)',
     border: '1px solid var(--border)',
-    color: 'rgba(255,255,255,0.85)',
-    borderRadius: '10px',
-    padding: '8px 12px',
-    fontSize: '14px',
+    color: 'rgba(255,255,255,0.9)',
+    borderRadius: '12px',
+    padding: '12px 16px',
+    fontSize: '16px',
     outline: 'none',
     width: '100%',
+    lineHeight: '1.5',
   }
 
   return (
@@ -49,38 +50,88 @@ export default function FindReplacePage() {
       description="Bulk find and replace in text with optional regex support"
       seoContent={
         <SeoSection
-          about="Paste text and find-and-replace strings across it in bulk. Supports plain text matching and regular expressions with full JavaScript regex syntax. Changes are shown instantly. Useful for large text edits that would be tedious to do manually."
+          aboutTitle="About this tool"
+          about={<>
+            <p className="text-base leading-relaxed">Find and Replace Online is a free text editing tool that lets you quickly search for specific words, phrases, or patterns and replace them throughout your text in seconds. Simply paste your content, enter the text you want to find, specify the replacement, and see the updated result instantly. Whether you&apos;re editing plain text, source code, Markdown, HTML, CSV files, or documentation, this tool helps automate repetitive text changes and saves valuable time.</p>
+            <p className="text-base leading-relaxed">The tool supports both standard text matching and <strong>JavaScript regular expressions (regex)</strong>, allowing you to perform advanced search-and-replace operations using capture groups, pattern matching, and replacement references such as <strong>$1</strong>, <strong>$2</strong>, and more. This makes it useful for simple edits as well as complex text transformations.</p>
+            <p className="text-base leading-relaxed">Everything runs locally in your browser, so your text is never uploaded or stored. There are no registrations, downloads, or character limits, making the tool suitable for everything from short notes to large documents and code snippets. Whether you&apos;re a developer, writer, editor, student, SEO professional, or data analyst, this online Find and Replace tool provides a fast, secure, and efficient way to edit text in bulk.</p>
+          </>}
+          useCasesTitle="Common use cases"
           useCases={[
-            'Replacing all instances of an old domain name or URL in a document',
-            'Swapping variable names across a pasted code snippet',
-            'Cleaning up exported CSV or TSV data by replacing delimiters',
-            'Using regex to strip HTML tags, whitespace, or formatting characters',
-            'Normalizing inconsistent spelling or punctuation across a long text',
+            'Replace every occurrence of an old company name, product name, or URL in a document.',
+            'Update variable names or function names across pasted source code.',
+            'Rename CSS classes, HTML attributes, or JavaScript identifiers during development.',
+            'Clean imported CSV or TSV files by replacing delimiters or unwanted characters.',
+            'Remove extra whitespace, line breaks, or formatting using regular expressions.',
+            'Normalize inconsistent spelling, punctuation, or capitalization throughout long documents.',
+            'Replace email addresses, phone numbers, or placeholders in templates.',
+            'Update Markdown files before publishing documentation or GitHub README files.',
+            'Refactor code snippets using regex capture groups and replacement patterns.',
+            'Remove HTML tags or unwanted markup from copied content.',
+            'Format exported log files or machine-generated text.',
+            'Perform bulk search-and-replace operations without installing desktop software.',
           ]}
           faqs={[
-            { q: 'How do I use regex mode?', a: 'Toggle the regex switch and enter a valid JavaScript regular expression in the Find field. Use capture groups in the pattern and $1, $2, etc. in the Replace field to reference them.' },
-            { q: 'Is the replacement global (all occurrences)?', a: 'Yes. All occurrences of the search term are replaced, equivalent to using the g flag in JavaScript\'s String.replace().' },
-            { q: 'Is my text sent anywhere?', a: 'No. All find-and-replace operations run locally in your browser using JavaScript string methods.' },
+            { q: 'Is this Find and Replace tool free?', a: 'Yes. The tool is completely free to use with no subscriptions, registrations, or hidden fees.' },
+            { q: 'Is my text uploaded to a server?', a: 'No. All find-and-replace operations are performed locally in your browser. Your text is never uploaded, stored, or shared.' },
+            { q: 'How do I use Find and Replace?', a: 'Paste or type your text into the editor, enter the text or pattern you want to search for in the Find field, specify the replacement text in the Replace field, and the updated result is generated instantly.' },
+            { q: 'Does it replace every occurrence?', a: "Yes. All matching occurrences are replaced automatically, equivalent to using the global (g) flag in JavaScript's String.replace() method." },
+            { q: 'Does the tool support regular expressions (regex)?', a: 'Yes. Enable Regex Mode to use JavaScript regular expressions for advanced search-and-replace operations, including character classes, quantifiers, alternation, lookaheads (where supported), and capture groups.' },
+            { q: 'Can I use capture groups?', a: 'Yes. Capture groups created with parentheses can be referenced in the replacement text using $1, $2, $3, and so on. This is useful for reformatting dates, names, phone numbers, and other structured text.' },
+            { q: 'Does the tool support plain text matching?', a: 'Yes. If Regex Mode is disabled, the tool performs standard text matching and replaces all occurrences of the specified search term.' },
+            { q: 'Can I replace HTML, Markdown, or source code?', a: 'Yes. The tool works with any plain text, including HTML, CSS, JavaScript, JSON, Markdown, XML, SQL, CSV, TSV, configuration files, and programming code.' },
+            { q: 'Is there a limit on how much text I can process?', a: 'There is no fixed limit imposed by the tool. Performance depends mainly on your browser and device when working with very large documents.' },
+            { q: 'Can I use this tool on mobile devices?', a: 'Yes. The Find and Replace tool works in modern desktop and mobile browsers without requiring installation.' },
+            { q: 'Who can benefit from this tool?', a: 'This tool is useful for developers, programmers, technical writers, content editors, SEO professionals, students, researchers, data analysts, copywriters, and anyone editing large amounts of text.' },
+            { q: 'Why use an online Find and Replace tool?', a: 'Manually editing repeated words or phrases can be slow and error-prone. An online Find and Replace tool lets you update text instantly, ensuring consistent edits across documents, code, spreadsheets, and other text-based content. With regex support, you can perform powerful pattern-based replacements that would be difficult or impossible to do manually.' },
           ]}
         />
       }
       category="text"
       iconName="Replace"
+      showAllCategory
+      compactRelated
     >
-      <div className="space-y-5">
-        <Textarea
-          label="Input text"
-          value={text}
-          onChange={setText}
-          placeholder="Paste your text here…"
-          rows={7}
-          showCount
-        />
+      <div className="space-y-6">
+        {/* Input text */}
+        <div className="flex flex-col gap-2">
+          <div className="flex items-center justify-between">
+            <label className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>
+              Input text
+            </label>
+            <span className="text-sm" style={{ color: 'rgba(255,255,255,0.4)' }}>
+              {text.length} chars
+            </span>
+          </div>
+          <textarea
+            value={text}
+            onChange={(e) => setText(e.target.value)}
+            rows={8}
+            placeholder="Paste your text here…"
+            className="w-full resize-y rounded-xl outline-none transition-all duration-150 placeholder:text-white/20"
+            style={{
+              background: 'var(--surface)',
+              border: '1px solid var(--border)',
+              color: 'rgba(255,255,255,0.9)',
+              fontSize: '15px',
+              lineHeight: '1.7',
+              padding: '14px 16px',
+            }}
+            onFocus={(e) => {
+              e.currentTarget.style.borderColor = 'var(--border-focus)'
+              e.currentTarget.style.background = 'var(--surface-hover)'
+            }}
+            onBlur={(e) => {
+              e.currentTarget.style.borderColor = 'var(--border)'
+              e.currentTarget.style.background = 'var(--surface)'
+            }}
+          />
+        </div>
 
         {/* Find / Replace inputs */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <div>
-            <label className="text-sm font-medium mb-1.5 block" style={{ color: 'rgba(255,255,255,0.7)' }}>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="flex flex-col gap-2">
+            <label className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>
               Find
             </label>
             <input
@@ -89,10 +140,12 @@ export default function FindReplacePage() {
               onChange={(e) => setFind(e.target.value)}
               placeholder={useRegex ? 'Regular expression…' : 'Text to find…'}
               style={inputStyle}
+              onFocus={(e) => { e.currentTarget.style.borderColor = 'var(--border-focus)'; e.currentTarget.style.background = 'var(--surface-hover)' }}
+              onBlur={(e) => { e.currentTarget.style.borderColor = 'var(--border)'; e.currentTarget.style.background = 'var(--surface)' }}
             />
           </div>
-          <div>
-            <label className="text-sm font-medium mb-1.5 block" style={{ color: 'rgba(255,255,255,0.7)' }}>
+          <div className="flex flex-col gap-2">
+            <label className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>
               Replace with
             </label>
             <input
@@ -101,37 +154,46 @@ export default function FindReplacePage() {
               onChange={(e) => setReplace(e.target.value)}
               placeholder="Replacement text…"
               style={inputStyle}
+              onFocus={(e) => { e.currentTarget.style.borderColor = 'var(--border-focus)'; e.currentTarget.style.background = 'var(--surface-hover)' }}
+              onBlur={(e) => { e.currentTarget.style.borderColor = 'var(--border)'; e.currentTarget.style.background = 'var(--surface)' }}
             />
           </div>
         </div>
 
-        {/* Options */}
-        <div className="flex flex-wrap items-center gap-4">
+        {/* Options + match count */}
+        <div className="flex flex-wrap items-center gap-5">
           {[
-            { label: 'Regex', state: useRegex, toggle: () => setUseRegex((v) => !v) },
+            { label: 'Regex mode', state: useRegex, toggle: () => setUseRegex((v) => !v) },
             { label: 'Case sensitive', state: caseSensitive, toggle: () => setCaseSensitive((v) => !v) },
           ].map(({ label, state, toggle }) => (
             <button
               key={label}
               onClick={toggle}
-              className="flex items-center gap-2 text-sm transition-colors"
-              style={{ color: state ? 'var(--color-text-tool)' : 'rgba(255,255,255,0.6)' }}
+              className="flex items-center gap-2.5 transition-colors"
+              style={{ color: state ? 'var(--color-text-tool)' : 'rgba(255,255,255,0.65)' }}
             >
               <span
-                className="w-4 h-4 rounded flex items-center justify-center transition-all"
+                className="w-5 h-5 rounded flex items-center justify-center flex-shrink-0 transition-all"
                 style={{
                   background: state ? 'var(--color-text-tool-dim)' : 'var(--surface)',
-                  border: `1px solid ${state ? 'var(--color-text-tool)' : 'var(--border)'}`,
+                  border: `1.5px solid ${state ? 'var(--color-text-tool)' : 'rgba(255,255,255,0.2)'}`,
                 }}
               >
-                {state && <span style={{ color: 'var(--color-text-tool)', fontSize: '10px' }}>✓</span>}
+                {state && <span style={{ color: 'var(--color-text-tool)', fontSize: '11px', lineHeight: 1 }}>✓</span>}
               </span>
-              {label}
+              <span className="text-base font-medium">{label}</span>
             </button>
           ))}
 
           {find && text && (
-            <span className="text-sm ml-auto" style={{ color: 'rgba(255,255,255,0.6)' }}>
+            <span
+              className="ml-auto text-sm font-semibold px-3 py-1 rounded-full"
+              style={{
+                background: matchCount > 0 ? 'var(--color-text-tool-dim)' : 'rgba(255,255,255,0.06)',
+                color: matchCount > 0 ? 'var(--color-text-tool)' : 'rgba(255,255,255,0.4)',
+                border: `1px solid ${matchCount > 0 ? 'var(--color-text-tool)' : 'rgba(255,255,255,0.1)'}`,
+              }}
+            >
               {matchCount} match{matchCount !== 1 ? 'es' : ''}
             </span>
           )}
@@ -139,7 +201,7 @@ export default function FindReplacePage() {
 
         {error && (
           <div
-            className="rounded-lg px-4 py-2 text-sm"
+            className="rounded-xl px-5 py-3 text-base"
             style={{ background: 'rgba(239,68,68,0.1)', border: '1px solid rgba(239,68,68,0.25)', color: '#f87171' }}
           >
             {error}
@@ -147,12 +209,12 @@ export default function FindReplacePage() {
         )}
 
         {result && text && (
-          <div>
-            <div className="flex items-center justify-between mb-2">
-              <label className="text-sm font-medium" style={{ color: 'rgba(255,255,255,0.7)' }}>Result</label>
+          <div className="flex flex-col gap-2">
+            <div className="flex items-center justify-between">
+              <label className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>Result</label>
               <CopyButton text={result} />
             </div>
-            <Textarea value={result} readOnly rows={7} />
+            <Textarea value={result} readOnly rows={8} />
           </div>
         )}
       </div>

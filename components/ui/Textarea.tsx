@@ -30,12 +30,12 @@ export default function Textarea({
       {(label || showCount) && (
         <div className="flex items-center justify-between">
           {label && (
-            <label className="text-xs font-medium" style={{ color: 'rgba(255,255,255,0.45)' }}>
+            <label className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>
               {label}
             </label>
           )}
           {showCount && (
-            <span className="text-xs" style={{ color: 'rgba(255,255,255,0.25)' }}>
+            <span className="text-xs" style={{ color: 'rgba(255,255,255,0.5)' }}>
               {value.length} chars
             </span>
           )}
@@ -47,13 +47,13 @@ export default function Textarea({
         readOnly={readOnly}
         rows={rows}
         placeholder={placeholder}
-        className="w-full resize-y rounded-xl px-4 py-3 text-sm outline-none transition-all duration-150 placeholder:text-white/20"
+        className="w-full resize-y rounded-xl px-4 py-3 text-base outline-none transition-all duration-150 placeholder:text-white/40"
         style={{
           background: 'var(--surface)',
-          border: '1px solid var(--border)',
-          color: 'rgba(255,255,255,0.85)',
+          border: '1.5px solid var(--border-hover)',
+          color: 'rgba(255,255,255,0.95)',
           fontFamily: mono ? 'var(--font-geist-mono), monospace' : 'inherit',
-          lineHeight: '1.6',
+          lineHeight: '1.7',
         }}
         onFocus={(e) => {
           e.currentTarget.style.borderColor = 'var(--border-focus)'

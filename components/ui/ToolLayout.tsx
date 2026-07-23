@@ -16,9 +16,10 @@ type Props = {
   seoContent?: React.ReactNode
   relatedToolIds?: string[]
   showAllCategory?: boolean
+  compactRelated?: boolean
 }
 
-export default function ToolLayout({ toolId, title, description, category, iconName, children, seoContent, relatedToolIds, showAllCategory }: Props) {
+export default function ToolLayout({ toolId, title, description, category, iconName, children, seoContent, relatedToolIds, showAllCategory, compactRelated }: Props) {
   const related = showAllCategory
     ? TOOLS.filter((t) => t.category === category && t.id !== toolId)
     : relatedToolIds
@@ -34,17 +35,29 @@ export default function ToolLayout({ toolId, title, description, category, iconN
     <div className="min-h-screen">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
         {/* Breadcrumb */}
-        <nav className="flex items-center gap-1.5 text-sm mb-8" style={{ color: 'rgba(255,255,255,0.35)' }}>
-          <Link href="/" className="flex items-center gap-1 hover:text-white/60 transition-colors">
-            <Home size={12} />
+        <nav className="flex items-center gap-2 text-sm mb-8">
+          <Link
+            href="/"
+            className="flex items-center gap-1.5 font-medium transition-colors"
+            style={{ color: 'var(--color-dev)' }}
+            onMouseEnter={e => (e.currentTarget.style.opacity = '0.75')}
+            onMouseLeave={e => (e.currentTarget.style.opacity = '1')}
+          >
+            <Home size={13} />
             <span>Home</span>
           </Link>
-          <ChevronRight size={10} />
-          <Link href={categoryMeta.href} className="hover:text-white/60 transition-colors">
+          <ChevronRight size={12} style={{ color: 'rgba(255,255,255,0.25)' }} />
+          <Link
+            href={categoryMeta.href}
+            className="font-medium transition-colors"
+            style={{ color }}
+            onMouseEnter={e => (e.currentTarget.style.opacity = '0.75')}
+            onMouseLeave={e => (e.currentTarget.style.opacity = '1')}
+          >
             {categoryMeta.label}
           </Link>
-          <ChevronRight size={10} />
-          <span className="text-white/60">{title}</span>
+          <ChevronRight size={12} style={{ color: 'rgba(255,255,255,0.25)' }} />
+          <span className="font-semibold" style={{ color: 'rgba(255,255,255,0.9)' }}>{title}</span>
         </nav>
 
         {/* Tool header */}
@@ -79,7 +92,7 @@ export default function ToolLayout({ toolId, title, description, category, iconN
             </h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
               {related.map((t) => (
-                <ToolCard key={t.id} tool={t} />
+                <ToolCard key={t.id} tool={t} compact={compactRelated} />
               ))}
             </div>
           </div>

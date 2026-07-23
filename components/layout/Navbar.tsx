@@ -55,8 +55,16 @@ export default function Navbar() {
               height={44}
               className="transition-all duration-200 group-hover:scale-110 rounded-full"
             />
-            <span style={{ fontFamily: 'var(--font-orbitron)', fontWeight: 800, letterSpacing: '0.05em', fontSize: '1rem' }}>
-              <span className="text-white">Zen</span><span style={{ color: 'var(--color-dev)' }}>veel</span>
+            <span style={{
+              fontFamily: 'var(--font-orbitron)',
+              fontWeight: 800,
+              letterSpacing: '0.08em',
+              fontSize: '1rem',
+              background: 'linear-gradient(90deg, var(--color-dev), var(--color-image))',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+            }}>
+              Zenveel
             </span>
           </Link>
 
@@ -70,7 +78,7 @@ export default function Navbar() {
                   key={href}
                   href={href}
                   className={cn(
-                    'px-3 py-1.5 rounded-md text-base font-medium transition-all duration-150',
+                    'px-4 py-2 rounded-md text-lg font-medium transition-all duration-150',
                     active ? 'text-white' : 'text-white/70 hover:text-white/95'
                   )}
                   style={active ? { color, background: `${color}18` } : {}}
@@ -90,7 +98,7 @@ export default function Navbar() {
             <Link
               href={TYPING_HREF}
               className={cn(
-                'px-3 py-1.5 rounded-md text-base font-medium transition-all duration-150',
+                'px-4 py-2 rounded-md text-lg font-medium transition-all duration-150',
                 typingActive ? 'text-white' : 'text-white/70 hover:text-white/95'
               )}
               style={typingActive ? { color: TYPING_COLOR, background: TYPING_BG } : {}}
