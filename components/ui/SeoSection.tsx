@@ -56,8 +56,8 @@ export default function SeoSection({ about, aboutTitle = 'About this tool', useC
               ? benefits.intro.split('\n\n').map((para, i) => <p key={i} className="text-base leading-relaxed">{para}</p>)
               : benefits.intro)}
             <ul className="space-y-1.5">
-              {benefits.items.map((item) => (
-                <li key={item} className="text-base flex items-start gap-2">
+              {benefits.items.map((item, i) => (
+                <li key={i} className="text-base flex items-start gap-2">
                   <span className="mt-2 w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: 'rgba(255,255,255,0.5)' }} />
                   {item}
                 </li>

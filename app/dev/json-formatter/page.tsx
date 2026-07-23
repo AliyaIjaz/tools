@@ -4,7 +4,6 @@ import { useState } from 'react'
 import { CheckCircle, XCircle, Minimize2, Maximize2 } from 'lucide-react'
 import ToolLayout from '@/components/ui/ToolLayout'
 import CopyButton from '@/components/ui/CopyButton'
-import Textarea from '@/components/ui/Textarea'
 import SeoSection from '@/components/ui/SeoSection'
 
 export default function JsonFormatterPage() {

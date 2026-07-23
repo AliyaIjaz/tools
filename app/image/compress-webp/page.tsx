@@ -73,7 +73,7 @@ export default function CompressWebpPage() {
     if (!src) return
     const id = setTimeout(() => compress(quality), 120)
     return () => clearTimeout(id)
-  }, [quality, src]) // eslint-disable-line react-hooks/exhaustive-deps
+  }, [quality, src])
 
   const saved = origSize > 0 && outputSize > 0 ? Math.round((1 - outputSize / origSize) * 100) : 0
 
