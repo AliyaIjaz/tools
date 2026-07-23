@@ -6,7 +6,7 @@ type ContentSection = {
   title: string
   intro?: string | React.ReactNode
   items: (string | React.ReactNode)[]
-  closing?: string
+  closing?: string | React.ReactNode
 }
 
 type Props = {
@@ -18,7 +18,7 @@ type Props = {
   benefits?: ContentSection
   extraSections?: ContentSection[]
   faqs: Faq[]
-  closing?: string
+  closing?: string | React.ReactNode
 }
 
 export default function SeoSection({ about, aboutTitle = 'About this tool', useCasesTitle = 'Common use cases', useCasesIntro, useCases, benefits, extraSections, faqs, closing }: Props) {
