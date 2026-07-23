@@ -51,7 +51,7 @@ export default function BorderRadiusPage() {
           aboutTitle="Border Radius Generator Online"
           about={<>
             <p className="text-base leading-relaxed">Create custom rounded corners for your website with this free Border Radius Generator. Adjust the top-left, top-right, bottom-right, and bottom-left corner radius independently, preview the result instantly, and copy production-ready CSS with one click.</p>
-            <p className="text-base leading-relaxed">Whether you're designing buttons, cards, badges, forms, avatars, or modern user interfaces, this tool makes it easy to generate accurate CSS border-radius values without writing code manually.</p>
+            <p className="text-base leading-relaxed">Whether you&apos;re designing buttons, cards, badges, forms, avatars, or modern user interfaces, this tool makes it easy to generate accurate CSS border-radius values without writing code manually.</p>
             <p className="text-base leading-relaxed">Everything runs entirely in your browser. No data is uploaded or stored.</p>
             <h3 className="text-base font-semibold text-white mt-4 mb-1">What Is CSS border-radius?</h3>
             <p className="text-base leading-relaxed">The CSS <code className="text-sm font-mono px-1 rounded" style={{ background: 'rgba(255,255,255,0.1)' }}>border-radius</code> property rounds the corners of HTML elements. It is one of the most widely used CSS properties for creating modern user interfaces, allowing developers to soften sharp corners or create circles, pills, and custom organic shapes.</p>
