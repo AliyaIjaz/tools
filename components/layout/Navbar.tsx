@@ -49,7 +49,7 @@ export default function Navbar() {
             onClick={() => setOpen(false)}
           >
             <Image
-              src="/Z.png"
+              src="/z.png"
               alt="Zenveel logo"
               width={44}
               height={44}
