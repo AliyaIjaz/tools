@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/api/',
     },
-    sitemap: 'https://zenveel.com/sitemap.xml',
+    sitemap: 'https://freetools.zenveel.com/sitemap.xml',
   }
 }

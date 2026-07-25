@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next'
 import { TOOLS } from '@/lib/tools'
 
-const BASE_URL = 'https://zenveel.com'
+const BASE_URL = 'https://freetools.zenveel.com'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const toolRoutes = TOOLS.map((tool) => ({
