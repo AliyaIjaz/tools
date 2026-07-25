@@ -12,7 +12,7 @@ export type CategoryMeta = {
 export const CATEGORIES: Record<Category, CategoryMeta> = {
   image: {
     label: 'Image Tools Online',
-    description: 'Compress, resize, convert, and manipulate images in your browser.',
+    description: 'Compress, resize, convert, rotate, and edit images — no server upload, no registration.',
     iconName: 'Image',
     color: 'var(--color-image)',
     dimColor: 'var(--color-image-dim)',

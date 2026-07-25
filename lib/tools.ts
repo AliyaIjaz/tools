@@ -299,7 +299,7 @@ export const TOOLS: ToolDefinition[] = [
   {
     id: 'image-rotate',
     name: 'Image Rotator Online',
-    description: 'Rotate and flip images in your browser — no upload needed',
+    description: 'Rotate and flip images instantly — no server upload, no registration',
     href: '/image/rotate',
     category: 'image',
     iconName: 'RotateCw',
