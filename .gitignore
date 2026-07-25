@@ -42,3 +42,13 @@ next-env.d.ts
 
 # background removal model files (downloaded by postinstall)
 /public/bgremoval/
+
+# OpenNext
+.open-next
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+
+!.env.example
