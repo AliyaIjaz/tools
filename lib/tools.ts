@@ -297,6 +297,15 @@ export const TOOLS: ToolDefinition[] = [
     keywords: ['compress', 'webp', 'file size', 'optimize', 'reduce', 'modern'],
   },
   {
+    id: 'image-rotate',
+    name: 'Image Rotator Online',
+    description: 'Rotate and flip images in your browser — no upload needed',
+    href: '/image/rotate',
+    category: 'image',
+    iconName: 'RotateCw',
+    keywords: ['rotate', 'flip', 'image', 'mirror', 'orientation', 'turn'],
+  },
+  {
     id: 'image-metadata',
     name: 'Image Metadata Online',
     description: 'View EXIF and metadata from images',
@@ -419,6 +428,7 @@ export const AVAILABLE_HREFS = new Set([
   '/image/webp-to-jpg',
   '/image/crop',
   '/image/color-picker',
+  '/image/rotate',
   '/image/metadata',
   '/image/base64',
   '/typing/typing-practice',
