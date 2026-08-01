@@ -1,0 +1,73 @@
+TOOLS TO BUILD
+==============
+Ordered by priority. Check off each one as it's done.
+
+[x] 1. Token Counter
+      - Count tokens for GPT/Claude/Gemini models using gpt-tokenizer (npm, browser-safe)
+      - Show token count, character count, estimated API cost
+      - Category: dev
+      - Route: /dev/token-counter
+
+[x] 2. JSON Schema Generator
+      - Paste example JSON → auto-generate a JSON Schema (draft-07)
+      - Useful for OpenAI function calling / structured outputs
+      - Category: dev
+      - Route: /dev/json-schema-generator
+
+[x] 3. YAML ↔ JSON Converter
+      - Bidirectional: YAML → JSON and JSON → YAML
+      - Use js-yaml (npm, browser-safe)
+      - Category: dev
+      - Route: /dev/yaml-json
+
+[x] 4. Timestamp Converter
+      - Unix epoch ↔ human-readable date/time
+      - Support seconds and milliseconds, multiple timezones
+      - Category: dev
+      - Route: /dev/timestamp-converter
+
+[x] 5. Markdown to Plain Text (merged into Markdown Preview — added Plain Text tab)
+      - Strip markdown formatting from AI-generated output
+      - Paste and copy clean plain text
+      - Category: text
+      - Route: /text/markdown-to-text
+
+[x] 6. Readability Scorer
+      - Flesch Reading Ease, Flesch-Kincaid Grade Level
+      - Target audience: writers humanizing AI content
+      - Category: text
+      - Route: /text/readability-scorer
+
+[x] 7. Keyword Density Checker
+      - Paste text → see top keywords and their frequency/density %
+      - Category: text
+      - Route: /text/keyword-density
+
+[x] 8. Character Limit Checker
+      - Check text against Twitter (280), LinkedIn (3000), meta title (60), meta description (160) etc.
+      - Category: text
+      - Route: /text/character-limit
+
+[x] 9. Aspect Ratio Calculator
+      - Enter width/height → get ratio (e.g. 16:9, 4:3)
+      - Also: enter ratio + one dimension → calculate the other
+      - Useful for AI image generators (Midjourney, DALL-E, Stable Diffusion)
+      - Category: image
+      - Route: /image/aspect-ratio
+
+[x] 10. JSON Schema Validator
+      - Paste JSON + Schema → validate and show errors
+      - Companion to the JSON Schema Generator
+      - Category: dev
+      - Route: /dev/json-schema-validator
+
+[x] 11. Environment Variable Parser
+      - Paste a .env file → get a clean JSON/table view
+      - Category: dev
+      - Route: /dev/env-parser
+
+[x] 12. Prompt Formatter
+      - Format raw prompts into system/user/assistant message blocks
+      - Support OpenAI, Anthropic, Gemini formats
+      - Category: dev
+      - Route: /dev/prompt-formatter

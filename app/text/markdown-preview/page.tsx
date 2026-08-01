@@ -29,6 +29,26 @@ const greet = (name) => \`Hello, \${name}!\`
 [Link example](https://example.com)
 `
 
+function htmlToPlainText(html: string): string {
+  if (typeof document === 'undefined') return ''
+  const div = document.createElement('div')
+  div.innerHTML = html
+
+  // Replace block elements with newlines before stripping
+  div.querySelectorAll('p, h1, h2, h3, h4, h5, h6, li, blockquote, pre, tr, br').forEach((el) => {
+    el.insertAdjacentText('afterend', '\n')
+  })
+  div.querySelectorAll('th, td').forEach((el) => {
+    el.insertAdjacentText('afterend', '\t')
+  })
+
+  const text = (div.textContent ?? '')
+    .replace(/\n{3,}/g, '\n\n') // collapse excessive newlines
+    .trim()
+
+  return text
+}
+
 export default function MarkdownPreviewPage() {
   const [md, setMd] = useState(STARTER)
   const [html, setHtml] = useState('')
@@ -43,6 +63,8 @@ export default function MarkdownPreviewPage() {
     }
     render()
   }, [md])
+
+  const plainText = htmlToPlainText(html)
 
   const textareaStyle: React.CSSProperties = {
     width: '100%',
@@ -73,51 +95,46 @@ export default function MarkdownPreviewPage() {
     lineHeight: '1.75',
   }
 
+  const isPlainView = view === 'Plain Text'
+  const copyLabel = view === 'Edit' ? 'Copy MD' : view === 'Plain Text' ? 'Copy Plain Text' : 'Copy HTML'
+  const copyText = view === 'Edit' ? md : view === 'Plain Text' ? plainText : html
+
   return (
     <ToolLayout
       toolId="markdown-preview"
       title="Markdown Preview"
-      description="Write Markdown and see the rendered output live"
+      description="Write Markdown and see the rendered output — or strip it to plain text"
       seoContent={
         <SeoSection
           aboutTitle="About this tool"
           about={<>
-            <p className="text-base leading-relaxed">Markdown Preview Online is a free browser-based tool that lets you write or paste Markdown and instantly see the rendered HTML output in a live side-by-side preview. As you type, the preview updates in real time, making it easy to verify formatting, test Markdown syntax, and prepare content for publishing. The tool supports standard CommonMark features, including headings, bold, italic, links, images, blockquotes, ordered and unordered lists, fenced code blocks, inline code, tables, horizontal rules, and strikethrough text.</p>
-            <p className="text-base leading-relaxed">Rendering is powered by the <strong>Marked</strong> library, while the generated HTML is sanitized with <strong>DOMPurify</strong> to help prevent XSS attacks from malicious Markdown input. Everything runs locally in your browser, so your Markdown content is never uploaded to a server, ensuring your documents remain private.</p>
-            <p className="text-base leading-relaxed">Whether you&apos;re writing GitHub README files, technical documentation, blog posts, API guides, wiki pages, or project notes, this online Markdown preview tool provides a fast and reliable way to review formatting before publishing. No registration, installation, or file uploads are required.</p>
+            <p className="text-base leading-relaxed"><strong>Markdown Preview Online</strong> is a free browser-based tool that lets you write or paste Markdown and instantly see the rendered HTML output in a live side-by-side preview. It also includes a <strong>Plain Text</strong> mode that strips all Markdown formatting — headings, bold, italic, links, code blocks — down to clean readable text. This is especially useful for removing AI-generated Markdown before pasting into emails, Word documents, or CMS platforms that don&apos;t support Markdown.</p>
+            <p className="text-base leading-relaxed">Rendering is powered by the <strong>Marked</strong> library, while the generated HTML is sanitized with <strong>DOMPurify</strong> to help prevent XSS attacks. Everything runs locally in your browser — your Markdown content is never uploaded to a server.</p>
+            <p className="text-base leading-relaxed">Whether you&apos;re writing GitHub README files, technical documentation, blog posts, or stripping Markdown from AI-generated output, this tool handles it all in one place with no registration required.</p>
           </>}
           useCasesTitle="Common use cases"
           useCases={[
             'Preview GitHub README.md files before committing or publishing them.',
+            'Strip Markdown formatting from AI-generated output before pasting into Word or email.',
             'Write technical documentation with a live Markdown preview.',
+            'Remove asterisks, hashes, and backticks from LLM responses.',
             'Draft blog posts and articles using Markdown formatting.',
-            'Learn Markdown syntax by seeing rendered output instantly.',
+            'Convert AI chatbot output with Markdown to clean plain text for a CMS.',
             'Verify headings, lists, tables, links, and images before publishing.',
             'Test fenced code blocks and inline code formatting.',
-            'Convert Markdown into rendered HTML for quick inspection.',
             'Review documentation for static site generators before deployment.',
-            'Create knowledge base articles and internal documentation.',
             'Check how blockquotes, horizontal rules, and emphasis are rendered.',
             'Preview API documentation written in Markdown.',
-            'Experiment with Markdown formatting without installing an editor.',
           ]}
           faqs={[
-            { q: 'Is this Markdown Preview tool free?', a: 'Yes. The tool is completely free to use with no registration, subscriptions, or hidden fees.' },
+            { q: 'How does the Plain Text mode work?', a: 'The Plain Text tab renders your Markdown to HTML first, then strips all HTML tags using the browser\'s DOM — preserving the readable content (headings become plain lines, lists become bullet text, code blocks become plain code) while removing all formatting characters.' },
+            { q: 'Can I use this to remove Markdown from AI-generated text?', a: 'Yes. Paste any AI output that contains Markdown formatting (asterisks, hashes, backticks, brackets) into the editor, then switch to the Plain Text tab to get a clean, stripped version ready for pasting into any document.' },
             { q: 'Is my Markdown uploaded to a server?', a: 'No. All rendering happens locally in your browser. Your Markdown content is never uploaded, stored, or shared.' },
-            {
-              q: 'Which Markdown syntax is supported?',
-              a: 'The tool supports standard CommonMark syntax, including headings, bold and italic text, strikethrough, links, images, blockquotes, ordered and unordered lists, inline code, fenced code blocks, tables, and horizontal rules.',
-            },
-            { q: 'Does it support GitHub Flavored Markdown (GFM)?', a: 'Most commonly used GitHub Markdown features are supported, including fenced code blocks, tables, and strikethrough text. Rendering follows CommonMark with widely adopted extensions.' },
-            { q: 'How is the Markdown rendered?', a: 'Markdown is parsed using the Marked library, which converts Markdown into HTML in real time as you type or edit your content.' },
+            { q: 'Which Markdown syntax is supported?', a: 'The tool supports standard CommonMark syntax, including headings, bold and italic text, strikethrough, links, images, blockquotes, ordered and unordered lists, inline code, fenced code blocks, tables, and horizontal rules.' },
+            { q: 'Does it support GitHub Flavored Markdown (GFM)?', a: 'Most commonly used GitHub Markdown features are supported, including fenced code blocks, tables, and strikethrough text.' },
             { q: 'Is the generated HTML safe?', a: 'Yes. The rendered HTML is sanitized using DOMPurify, which removes potentially unsafe content and helps protect against cross-site scripting (XSS) attacks.' },
-            { q: 'Can I copy the generated HTML?', a: 'Yes. Click the Copy HTML button above the preview to copy the rendered HTML directly to your clipboard.' },
-            { q: 'Does the preview update automatically?', a: 'Yes. The preview refreshes instantly whenever you type, paste, or edit your Markdown, allowing you to see formatting changes in real time.' },
-            { q: 'Can I preview images and links?', a: 'Yes. Images and hyperlinks included in your Markdown are rendered in the live preview so you can verify that they appear correctly before publishing.' },
-            { q: 'Can I use this tool for GitHub README files?', a: "Absolutely. It's ideal for previewing README.md files before pushing them to GitHub, helping you catch formatting issues early." },
-            { q: 'Do I need to install any software?', a: "No. The tool works entirely in your web browser. There's nothing to download or install." },
-            { q: 'Who is this tool designed for?', a: 'This tool is useful for developers, technical writers, documentation teams, open-source contributors, bloggers, students, DevOps engineers, and anyone who writes or edits Markdown.' },
-            { q: 'Why use a live Markdown preview?', a: 'A live Markdown preview lets you verify formatting as you write, reducing mistakes and saving time. Instead of switching between editing and rendering, you can immediately see how headings, tables, code blocks, images, and other Markdown elements will appear in the final HTML output.' },
+            { q: 'Can I copy the generated HTML or plain text?', a: 'Yes. The copy button in the toolbar adapts to the active tab — it copies Markdown in Edit mode, HTML in Preview mode, and plain text in Plain Text mode.' },
+            { q: 'Does the preview update automatically?', a: 'Yes. The preview refreshes instantly whenever you type, paste, or edit your Markdown.' },
           ]}
         />
       }
@@ -181,31 +198,42 @@ export default function MarkdownPreviewPage() {
       `}</style>
 
       <div className="space-y-4">
-        <div className="flex items-center justify-between">
-          <Tabs tabs={['Split', 'Edit', 'Preview']} value={view} onChange={setView} />
-          <div className="flex items-center gap-2">
-            <CopyButton text={html} label="Copy HTML" />
-            <CopyButton text={md} label="Copy MD" />
-          </div>
+        <div className="flex items-center justify-between flex-wrap gap-2">
+          <Tabs tabs={['Split', 'Edit', 'Preview', 'Plain Text']} value={view} onChange={setView} />
+          <CopyButton text={copyText} label={copyLabel} />
         </div>
 
-        <div className={view === 'Split' ? 'grid grid-cols-1 md:grid-cols-2 gap-4' : ''}>
-          {(view === 'Split' || view === 'Edit') && (
-            <textarea
-              value={md}
-              onChange={(e) => setMd(e.target.value)}
-              style={textareaStyle}
-              spellCheck={false}
-            />
-          )}
-          {(view === 'Split' || view === 'Preview') && (
-            <div
-              className="md-preview"
-              style={previewStyle}
-              dangerouslySetInnerHTML={{ __html: html }}
-            />
-          )}
-        </div>
+        {/* Editor + Preview / Plain Text */}
+        {isPlainView ? (
+          <textarea
+            readOnly
+            value={plainText}
+            style={{
+              ...textareaStyle,
+              fontFamily: 'inherit',
+              color: 'rgba(255,255,255,0.82)',
+              cursor: 'default',
+            }}
+          />
+        ) : (
+          <div className={view === 'Split' ? 'grid grid-cols-1 md:grid-cols-2 gap-4' : ''}>
+            {(view === 'Split' || view === 'Edit') && (
+              <textarea
+                value={md}
+                onChange={(e) => setMd(e.target.value)}
+                style={textareaStyle}
+                spellCheck={false}
+              />
+            )}
+            {(view === 'Split' || view === 'Preview') && (
+              <div
+                className="md-preview"
+                style={previewStyle}
+                dangerouslySetInnerHTML={{ __html: html }}
+              />
+            )}
+          </div>
+        )}
       </div>
     </ToolLayout>
   )
