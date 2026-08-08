@@ -123,7 +123,7 @@ export default function JsonFormatterPage() {
         {/* Input */}
         <div
           className="rounded-xl p-4"
-          style={{ background: 'var(--surface)', border: '1px solid rgba(255,255,255,0.1)' }}
+          style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)' }}
         >
           <label className="block text-sm font-semibold mb-3" style={{ color: 'rgba(255,255,255,0.75)' }}>
             Input JSON
@@ -133,16 +133,16 @@ export default function JsonFormatterPage() {
             onChange={(e) => setInput(e.target.value)}
             placeholder='{"hello": "world"}'
             rows={12}
-            className="w-full resize-y rounded-lg px-3 py-3 text-sm outline-none transition-all duration-150 placeholder:text-white/20"
+            className="w-full resize-y rounded-lg px-3 py-3 text-sm outline-none transition-all duration-150 placeholder:text-white/50"
             style={{
               background: 'rgba(0,0,0,0.35)',
-              border: '1px solid rgba(255,255,255,0.12)',
+              border: '2px solid var(--border-dev)',
               color: 'rgba(255,255,255,0.92)',
               fontFamily: 'var(--font-geist-mono), monospace',
               lineHeight: '1.65',
             }}
             onFocus={(e) => { e.currentTarget.style.borderColor = 'var(--color-dev)' }}
-            onBlur={(e) => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.12)' }}
+            onBlur={(e) => { e.currentTarget.style.borderColor = 'var(--border-dev-idle)' }}
           />
         </div>
 
@@ -198,7 +198,7 @@ export default function JsonFormatterPage() {
         {output && (
           <div
             className="rounded-xl p-4"
-            style={{ background: 'var(--surface)', border: '1px solid rgba(255,255,255,0.1)' }}
+            style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)' }}
           >
             <div className="flex items-center justify-between mb-3">
               <label className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>Output</label>
@@ -208,7 +208,7 @@ export default function JsonFormatterPage() {
               className="rounded-lg px-3 py-3 text-sm overflow-auto leading-relaxed"
               style={{
                 background: 'rgba(0,0,0,0.35)',
-                border: '1px solid rgba(255,255,255,0.1)',
+                border: '2px solid var(--border-dev-idle)',
                 fontFamily: 'var(--font-geist-mono), monospace',
                 color: 'rgba(255,255,255,0.88)',
                 maxHeight: '480px',

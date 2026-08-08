@@ -154,7 +154,7 @@ export default function TokenCounterPage() {
         {/* Model selector */}
         <div
           className="rounded-xl p-4"
-          style={{ background: 'var(--surface)', border: '1px solid rgba(255,255,255,0.1)' }}
+          style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)' }}
         >
           <label className="block text-sm font-semibold mb-3" style={{ color: 'rgba(255,255,255,0.75)' }}>
             Model
@@ -168,7 +168,7 @@ export default function TokenCounterPage() {
                   className="px-3 py-1.5 rounded-lg text-sm font-medium transition-all"
                   style={selectedModel === m.name
                     ? { background: 'var(--color-dev)', color: '#fff' }
-                    : { background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.12)', color: 'rgba(255,255,255,0.6)' }}
+                    : { background: 'rgba(255,255,255,0.07)', border: '2px solid var(--border-dev)', color: 'rgba(255,255,255,0.6)' }}
                   onMouseEnter={(e) => { if (selectedModel !== m.name) { e.currentTarget.style.background = 'rgba(255,255,255,0.13)'; e.currentTarget.style.color = 'rgba(255,255,255,0.9)' } }}
                   onMouseLeave={(e) => { if (selectedModel !== m.name) { e.currentTarget.style.background = 'rgba(255,255,255,0.07)'; e.currentTarget.style.color = 'rgba(255,255,255,0.6)' } }}
                 >
@@ -182,7 +182,7 @@ export default function TokenCounterPage() {
         {/* Text input */}
         <div
           className="rounded-xl p-4"
-          style={{ background: 'var(--surface)', border: '1px solid rgba(255,255,255,0.1)' }}
+          style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)' }}
         >
           <div className="flex items-center justify-between mb-3">
             <label className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>
@@ -192,7 +192,7 @@ export default function TokenCounterPage() {
               <button
                 onClick={() => setText('')}
                 className="text-sm px-3 py-1 rounded-lg transition-all"
-                style={{ color: 'rgba(255,255,255,0.5)', background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.1)' }}
+                style={{ color: 'rgba(255,255,255,0.5)', background: 'rgba(255,255,255,0.06)', border: '2px solid var(--border-dev-idle)' }}
                 onMouseEnter={(e) => { e.currentTarget.style.color = 'rgba(255,255,255,0.85)'; e.currentTarget.style.background = 'rgba(255,255,255,0.12)' }}
                 onMouseLeave={(e) => { e.currentTarget.style.color = 'rgba(255,255,255,0.5)'; e.currentTarget.style.background = 'rgba(255,255,255,0.06)' }}
               >
@@ -205,15 +205,15 @@ export default function TokenCounterPage() {
             onChange={(e) => setText(e.target.value)}
             placeholder="Paste your prompt or text here…"
             rows={12}
-            className="w-full resize-y rounded-lg px-3 py-3 text-sm outline-none transition-all duration-150 placeholder:text-white/20"
+            className="w-full resize-y rounded-lg px-3 py-3 text-sm outline-none transition-all duration-150 placeholder:text-white/50"
             style={{
               background: 'rgba(0,0,0,0.35)',
-              border: '1px solid rgba(255,255,255,0.12)',
+              border: '2px solid var(--border-dev)',
               color: 'rgba(255,255,255,0.92)',
               lineHeight: '1.7',
             }}
             onFocus={(e) => { e.currentTarget.style.borderColor = 'var(--color-dev)' }}
-            onBlur={(e) => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.12)' }}
+            onBlur={(e) => { e.currentTarget.style.borderColor = 'var(--border-dev-idle)' }}
           />
         </div>
 
@@ -241,7 +241,7 @@ export default function TokenCounterPage() {
           {/* Context usage */}
           <div
             className="rounded-xl px-4 py-4 space-y-3"
-            style={{ background: 'var(--surface)', border: '1px solid rgba(255,255,255,0.08)' }}
+            style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)' }}
           >
             <div className="flex items-center justify-between">
               <span className="text-xs font-medium uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.4)' }}>
@@ -266,7 +266,7 @@ export default function TokenCounterPage() {
           {/* Cost estimate */}
           <div
             className="rounded-xl px-4 py-4 space-y-2"
-            style={{ background: 'var(--surface)', border: '1px solid rgba(255,255,255,0.08)' }}
+            style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)' }}
           >
             <span className="text-xs font-medium uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.4)' }}>
               Estimated Input Cost
@@ -284,7 +284,7 @@ export default function TokenCounterPage() {
         {tokens.length > 0 && (
           <div
             className="rounded-xl p-4"
-            style={{ background: 'var(--surface)', border: '1px solid rgba(255,255,255,0.08)' }}
+            style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)' }}
           >
             <div className="flex items-center justify-between mb-3">
               <span className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>
@@ -299,7 +299,7 @@ export default function TokenCounterPage() {
               className="rounded-lg px-3 py-3 text-xs font-mono overflow-auto leading-relaxed"
               style={{
                 background: 'rgba(0,0,0,0.35)',
-                border: '1px solid rgba(255,255,255,0.08)',
+                border: '2px solid var(--border-dev-idle)',
                 color: 'rgba(255,255,255,0.6)',
                 maxHeight: '120px',
               }}

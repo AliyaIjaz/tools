@@ -286,7 +286,7 @@ export default function ImageResizePage() {
                 </p>
               </div>
               <p className="text-sm px-6 py-2 rounded-full text-center"
-                style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', color: 'var(--color-image)' }}>
+                style={{ background: 'rgba(255,255,255,0.05)', border: '2px solid var(--border-image-idle)', color: 'var(--color-image)' }}>
                 Your images never leave your browser — 100% private
               </p>
             </div>
@@ -305,9 +305,9 @@ export default function ImageResizePage() {
               {images.map((entry) => {
                 const { w, h } = getOutputDims(entry)
                 return (
-                  <div key={entry.id} className="flex items-center gap-4 rounded-xl p-4" style={{ background: 'var(--surface)', border: '1px solid var(--border)' }}>
+                  <div key={entry.id} className="flex items-center gap-4 rounded-xl p-4" style={{ background: 'var(--surface)', border: '2px solid var(--border-image-idle)' }}>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={entry.src} alt="source" className="w-16 h-16 rounded-lg object-cover flex-shrink-0" style={{ border: '1px solid var(--border)' }} />
+                    <img src={entry.src} alt="source" className="w-16 h-16 rounded-lg object-cover flex-shrink-0" style={{ border: '2px solid var(--border-image-idle)' }} />
                     <div className="min-w-0 flex-1">
                       <p className="text-base font-semibold text-white truncate">{entry.fileName}</p>
                       <p className="text-base mt-1">
@@ -339,7 +339,7 @@ export default function ImageResizePage() {
             {images.length < MAX_IMAGES && (
               <button onClick={() => addMoreRef.current?.click()}
                 className="add-more-btn flex items-center gap-2 text-base font-semibold px-5 py-2.5 rounded-xl transition-all"
-                style={{ background: 'var(--surface)', border: '1px solid var(--border-hover)', color: 'rgba(255,255,255,0.85)' }}>
+                style={{ background: 'var(--surface)', border: '2px solid var(--border-image)', color: 'rgba(255,255,255,0.85)' }}>
                 <Plus size={16} /> Add more images
               </button>
             )}

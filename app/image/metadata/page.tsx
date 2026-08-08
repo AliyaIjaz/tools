@@ -198,9 +198,9 @@ export default function ImageMetadataPage() {
 
         {preview && (
           <>
-            <div className="flex items-start gap-4 rounded-xl p-3" style={{ background: 'var(--surface)', border: '1px solid var(--border)' }}>
+            <div className="flex items-start gap-4 rounded-xl p-3" style={{ background: 'var(--surface)', border: '2px solid var(--border-image-idle)' }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={preview} alt="preview" className="w-20 h-20 rounded-lg object-cover flex-shrink-0" style={{ border: '1px solid var(--border)' }} />
+              <img src={preview} alt="preview" className="w-20 h-20 rounded-lg object-cover flex-shrink-0" style={{ border: '2px solid var(--border-image-idle)' }} />
               <div className="min-w-0 flex-1">
                 <p className="text-base font-semibold text-white truncate">{fileName}</p>
                 <p className="text-sm mt-1" style={{ color: 'rgba(255,255,255,0.65)' }}>
@@ -227,7 +227,7 @@ export default function ImageMetadataPage() {
 
             <div className="space-y-4">
               {groups.map((group) => (
-                <div key={group.title} className="rounded-xl overflow-hidden" style={{ border: '1px solid var(--border)' }}>
+                <div key={group.title} className="rounded-xl overflow-hidden" style={{ border: '2px solid var(--border-image-idle)' }}>
                   <div className="px-4 py-2.5" style={{ background: 'var(--surface-hover)', borderBottom: '1px solid var(--border)' }}>
                     <p className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>{group.title}</p>
                   </div>

@@ -103,6 +103,48 @@ These values are the current standard across all `app/image/` tool pages and `co
 - Opacity below `0.6` for any readable text
 - `rgba(255,255,255,0.25–0.4)` — was the old standard, now replaced
 
+## Input & Textarea — Border & Placeholder Standards
+
+These values apply to **all tool pages** (dev, text, web, image). Match when adding or editing any tool with inputs or textareas.
+
+### CSS variables (globals.css)
+| Variable | Value | Use |
+|---|---|---|
+| `--border` | `rgba(255,255,255,0.2)` | Generic neutral idle border (avoid in tool pages) |
+| `--border-hover` | `rgba(255,255,255,0.32)` | Generic neutral active border (avoid in tool pages) |
+| `--border-focus` | `rgba(255,255,255,0.55)` | Generic sharp focus (avoid in tool pages) |
+| `--border-dev-idle` | `oklch(0.6 0.2 290 / 0.22)` | Dev tool idle borders |
+| `--border-dev` | `oklch(0.6 0.2 290 / 0.35)` | Dev tool active/input borders |
+| `--border-image-idle` | `oklch(0.6 0.2 240 / 0.22)` | Image tool idle borders |
+| `--border-image` | `oklch(0.6 0.2 240 / 0.35)` | Image tool active/input borders |
+| `--border-web-idle` | `oklch(0.6 0.18 160 / 0.22)` | Web tool idle borders |
+| `--border-web` | `oklch(0.6 0.18 160 / 0.35)` | Web tool active/input borders |
+| `--border-text-idle` | `oklch(0.7 0.18 80 / 0.22)` | Text tool idle borders |
+| `--border-text` | `oklch(0.7 0.18 80 / 0.35)` | Text tool active/input borders |
+
+### Textarea / input borders — per category
+Every tool's borders must use its category brand color, not neutral white. Pattern:
+
+| Category | Idle (container/card) | Input idle | onFocus | onBlur |
+|---|---|---|---|---|
+| dev | `var(--border-dev-idle)` | `var(--border-dev)` | `var(--color-dev)` | `var(--border-dev-idle)` |
+| text | `var(--border-text-idle)` | `var(--border-text)` | `var(--color-text-tool)` | `var(--border-text-idle)` |
+| web | `var(--border-web-idle)` | `var(--border-web)` | `var(--color-web)` | `var(--border-web-idle)` |
+| image | `var(--border-image-idle)` | `var(--border-image)` | `var(--color-image)` | `var(--border-image-idle)` |
+
+- Always use `2px solid` — never `1px solid` for interactive inputs
+- onBlur restores to the **idle** variant so borders stay visible when unfocused
+- Error/success borders stay as-is (red/green semantic colors)
+
+### Placeholder text
+- Tailwind class: `placeholder:text-white/50` — never below `/50`
+- Old values `/20`, `/15`, `/25`, `/30` are too dim — do not use
+
+### What NOT to use for inputs
+- `1px solid` borders on interactive inputs — too thin to see on dark backgrounds
+- `placeholder:text-white/20` or any value below `/50`
+- Neutral `rgba(255,255,255,...)` borders inside category tool pages — use the brand-colored CSS vars instead
+
 ### Server vs client components
 
 - Tool pages: always `'use client'` (interactive)

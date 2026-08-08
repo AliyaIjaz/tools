@@ -104,7 +104,7 @@ export default function ColorConverterPage() {
 
   const inputStyle: React.CSSProperties = {
     background: 'var(--surface)',
-    border: '1px solid var(--border)',
+    border: '2px solid var(--border-web-idle)',
     borderRadius: '10px',
     color: 'rgba(255,255,255,0.9)',
     padding: '10px 14px',
@@ -292,7 +292,7 @@ export default function ColorConverterPage() {
                 value={hex.length === 7 ? hex : '#6d28d9'}
                 onChange={(e) => { setHex(e.target.value); setError('') }}
                 className="w-11 h-11 rounded-lg cursor-pointer flex-shrink-0"
-                style={{ background: 'var(--surface)', border: '1px solid var(--border)', padding: '2px' }}
+                style={{ background: 'var(--surface)', border: '2px solid var(--border-web-idle)', padding: '2px' }}
               />
             </div>
             {error && <p className="text-sm mt-0.5" style={{ color: '#f87171' }}>{error}</p>}
@@ -301,7 +301,7 @@ export default function ColorConverterPage() {
 
         {/* RGB sliders */}
         {rgb && (
-          <div className="rounded-xl p-5 space-y-4" style={{ background: 'var(--surface)', border: '1px solid var(--border)' }}>
+          <div className="rounded-xl p-5 space-y-4" style={{ background: 'var(--surface)', border: '2px solid var(--border-web-idle)' }}>
             <p className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>RGB</p>
             {(['r', 'g', 'b'] as (keyof RGB)[]).map((ch) => (
               <div key={ch} className="flex items-center gap-3">
@@ -325,7 +325,7 @@ export default function ColorConverterPage() {
 
         {/* HSL sliders */}
         {hsl && (
-          <div className="rounded-xl p-5 space-y-4" style={{ background: 'var(--surface)', border: '1px solid var(--border)' }}>
+          <div className="rounded-xl p-5 space-y-4" style={{ background: 'var(--surface)', border: '2px solid var(--border-web-idle)' }}>
             <p className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>HSL</p>
             {([
               { ch: 'h' as keyof HSL, max: 360, unit: '°' },
@@ -351,7 +351,7 @@ export default function ColorConverterPage() {
         {/* All format outputs */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {formats.map(({ label, value }) => (
-            <div key={label} className="rounded-xl px-4 py-4" style={{ background: 'var(--surface)', border: '1px solid var(--border)' }}>
+            <div key={label} className="rounded-xl px-4 py-4" style={{ background: 'var(--surface)', border: '2px solid var(--border-web-idle)' }}>
               <div className="flex items-center justify-between mb-2">
                 <span className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>{label}</span>
                 <CopyButton text={value} />

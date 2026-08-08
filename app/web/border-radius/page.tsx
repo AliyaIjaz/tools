@@ -66,22 +66,22 @@ export default function BorderRadiusPage() {
             <h3 className="text-base font-semibold text-white mt-4 mb-2">CSS Shorthand Explained</h3>
             <p className="text-base leading-relaxed">The <code className="text-sm font-mono px-1 rounded" style={{ background: 'rgba(255,255,255,0.1)' }}>border-radius</code> property supports one to four values.</p>
             <p className="text-base font-medium text-white mt-3 mb-1">One Value — All four corners use the same radius.</p>
-            <pre className="text-sm rounded-lg p-3 overflow-x-auto" style={{ background: 'rgba(255,255,255,0.05)', color: 'rgba(255,255,255,0.8)', border: '1px solid var(--border)' }}>{`border-radius: 12px;`}</pre>
+            <pre className="text-sm rounded-lg p-3 overflow-x-auto" style={{ background: 'rgba(255,255,255,0.05)', color: 'rgba(255,255,255,0.8)', border: '2px solid var(--border-web-idle)' }}>{`border-radius: 12px;`}</pre>
             <p className="text-base font-medium text-white mt-3 mb-1">Two Values — First applies to top-left & bottom-right; second to top-right & bottom-left.</p>
-            <pre className="text-sm rounded-lg p-3 overflow-x-auto" style={{ background: 'rgba(255,255,255,0.05)', color: 'rgba(255,255,255,0.8)', border: '1px solid var(--border)' }}>{`border-radius: 12px 24px;`}</pre>
+            <pre className="text-sm rounded-lg p-3 overflow-x-auto" style={{ background: 'rgba(255,255,255,0.05)', color: 'rgba(255,255,255,0.8)', border: '2px solid var(--border-web-idle)' }}>{`border-radius: 12px 24px;`}</pre>
             <p className="text-base font-medium text-white mt-3 mb-1">Three Values — Top-left, then top-right & bottom-left, then bottom-right.</p>
-            <pre className="text-sm rounded-lg p-3 overflow-x-auto" style={{ background: 'rgba(255,255,255,0.05)', color: 'rgba(255,255,255,0.8)', border: '1px solid var(--border)' }}>{`border-radius: 12px 24px 8px;`}</pre>
+            <pre className="text-sm rounded-lg p-3 overflow-x-auto" style={{ background: 'rgba(255,255,255,0.05)', color: 'rgba(255,255,255,0.8)', border: '2px solid var(--border-web-idle)' }}>{`border-radius: 12px 24px 8px;`}</pre>
             <p className="text-base font-medium text-white mt-3 mb-1">Four Values — Each corner receives its own value (top-left, top-right, bottom-right, bottom-left).</p>
-            <pre className="text-sm rounded-lg p-3 overflow-x-auto" style={{ background: 'rgba(255,255,255,0.05)', color: 'rgba(255,255,255,0.8)', border: '1px solid var(--border)' }}>{`border-radius: 12px 24px 8px 16px;`}</pre>
+            <pre className="text-sm rounded-lg p-3 overflow-x-auto" style={{ background: 'rgba(255,255,255,0.05)', color: 'rgba(255,255,255,0.8)', border: '2px solid var(--border-web-idle)' }}>{`border-radius: 12px 24px 8px 16px;`}</pre>
             <h3 className="text-base font-semibold text-white mt-4 mb-2">Example CSS</h3>
             <p className="text-base font-medium text-white mb-1">Rounded Button</p>
-            <pre className="text-sm rounded-lg p-3 overflow-x-auto" style={{ background: 'rgba(255,255,255,0.05)', color: 'rgba(255,255,255,0.8)', border: '1px solid var(--border)' }}>{`button {\n  border-radius: 8px;\n}`}</pre>
+            <pre className="text-sm rounded-lg p-3 overflow-x-auto" style={{ background: 'rgba(255,255,255,0.05)', color: 'rgba(255,255,255,0.8)', border: '2px solid var(--border-web-idle)' }}>{`button {\n  border-radius: 8px;\n}`}</pre>
             <p className="text-base font-medium text-white mt-3 mb-1">Pill Button</p>
-            <pre className="text-sm rounded-lg p-3 overflow-x-auto" style={{ background: 'rgba(255,255,255,0.05)', color: 'rgba(255,255,255,0.8)', border: '1px solid var(--border)' }}>{`button {\n  border-radius: 9999px;\n}`}</pre>
+            <pre className="text-sm rounded-lg p-3 overflow-x-auto" style={{ background: 'rgba(255,255,255,0.05)', color: 'rgba(255,255,255,0.8)', border: '2px solid var(--border-web-idle)' }}>{`button {\n  border-radius: 9999px;\n}`}</pre>
             <p className="text-base font-medium text-white mt-3 mb-1">Card Component</p>
-            <pre className="text-sm rounded-lg p-3 overflow-x-auto" style={{ background: 'rgba(255,255,255,0.05)', color: 'rgba(255,255,255,0.8)', border: '1px solid var(--border)' }}>{`.card {\n  border-radius: 16px;\n}`}</pre>
+            <pre className="text-sm rounded-lg p-3 overflow-x-auto" style={{ background: 'rgba(255,255,255,0.05)', color: 'rgba(255,255,255,0.8)', border: '2px solid var(--border-web-idle)' }}>{`.card {\n  border-radius: 16px;\n}`}</pre>
             <p className="text-base font-medium text-white mt-3 mb-1">Asymmetrical Shape</p>
-            <pre className="text-sm rounded-lg p-3 overflow-x-auto" style={{ background: 'rgba(255,255,255,0.05)', color: 'rgba(255,255,255,0.8)', border: '1px solid var(--border)' }}>{`.box {\n  border-radius: 40px 8px 32px 12px;\n}`}</pre>
+            <pre className="text-sm rounded-lg p-3 overflow-x-auto" style={{ background: 'rgba(255,255,255,0.05)', color: 'rgba(255,255,255,0.8)', border: '2px solid var(--border-web-idle)' }}>{`.box {\n  border-radius: 40px 8px 32px 12px;\n}`}</pre>
             <h3 className="text-base font-semibold text-white mt-4 mb-2">Design Tips</h3>
           </>}
           useCasesTitle="Features"
@@ -172,7 +172,7 @@ export default function BorderRadiusPage() {
         {/* Preview */}
         <div
           className="flex items-center justify-center py-10 rounded-xl"
-          style={{ background: 'var(--surface)', border: '1px solid var(--border-hover)' }}
+          style={{ background: 'var(--surface)', border: '2px solid var(--border-web)' }}
         >
           <div
             className="w-52 h-52 transition-all duration-150"
@@ -187,7 +187,7 @@ export default function BorderRadiusPage() {
         {/* Options */}
         <div className="flex flex-wrap items-center gap-4">
           {/* Unit */}
-          <div className="flex gap-1 p-1 rounded-lg" style={{ background: 'var(--surface)', border: '1px solid var(--border-hover)' }}>
+          <div className="flex gap-1 p-1 rounded-lg" style={{ background: 'var(--surface)', border: '2px solid var(--border-web)' }}>
             {(['px', '%'] as const).map((u) => (
               <button
                 key={u}
@@ -229,7 +229,7 @@ export default function BorderRadiusPage() {
             <div
               key={key}
               className="rounded-xl p-4"
-              style={{ background: 'var(--surface)', border: '1px solid var(--border-hover)' }}
+              style={{ background: 'var(--surface)', border: '2px solid var(--border-web)' }}
             >
               <div className="flex items-center justify-between mb-3">
                 <label className="text-sm font-semibold text-white">{label}</label>
@@ -256,7 +256,7 @@ export default function BorderRadiusPage() {
           </div>
           <pre
             className="rounded-xl px-4 py-4 text-base"
-            style={{ background: 'var(--surface)', border: '1px solid var(--border-hover)', color: 'rgba(255,255,255,0.9)', fontFamily: 'var(--font-geist-mono), monospace' }}
+            style={{ background: 'var(--surface)', border: '2px solid var(--border-web)', color: 'rgba(255,255,255,0.9)', fontFamily: 'var(--font-geist-mono), monospace' }}
           >
             {css}
           </pre>

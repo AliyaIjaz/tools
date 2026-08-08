@@ -150,7 +150,7 @@ export default function PromptFormatterPage() {
 
   const currentProvider = PROVIDERS.find((p) => p.id === provider)!
 
-  const btnGhost = { background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.12)', color: 'rgba(255,255,255,0.65)' }
+  const btnGhost = { background: 'rgba(255,255,255,0.07)', border: '2px solid var(--border-dev)', color: 'rgba(255,255,255,0.65)' }
   const onHover = (e: React.MouseEvent<HTMLButtonElement>, enter: boolean) => {
     e.currentTarget.style.background = enter ? 'rgba(255,255,255,0.13)' : 'rgba(255,255,255,0.07)'
     e.currentTarget.style.color = enter ? 'rgba(255,255,255,0.9)' : 'rgba(255,255,255,0.65)'
@@ -289,7 +289,7 @@ export default function PromptFormatterPage() {
                     'Assistant response…'
                   }
                   rows={4}
-                  className="w-full resize-y px-3 py-2.5 text-sm outline-none transition-all placeholder:text-white/15"
+                  className="w-full resize-y px-3 py-2.5 text-sm outline-none transition-all placeholder:text-white/50"
                   style={{
                     background: 'transparent',
                     color: 'rgba(255,255,255,0.88)',
@@ -320,7 +320,7 @@ export default function PromptFormatterPage() {
           {/* Right: formatted output */}
           <div
             className="rounded-xl p-4 flex flex-col"
-            style={{ background: 'var(--surface)', border: '1px solid rgba(255,255,255,0.1)' }}
+            style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)' }}
           >
             <div className="flex items-center justify-between mb-3">
               <div>
@@ -372,7 +372,7 @@ export default function PromptFormatterPage() {
         {/* Quick reference */}
         <div
           className="rounded-xl p-4 space-y-3"
-          style={{ background: 'var(--surface)', border: '1px solid rgba(255,255,255,0.08)' }}
+          style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)' }}
         >
           <p className="text-xs font-medium uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.35)' }}>Format differences</p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">

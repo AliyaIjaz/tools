@@ -167,7 +167,7 @@ export default function RegexTesterPage() {
             className="w-full resize-y rounded-xl px-4 py-3 text-base outline-none"
             style={{
               background: 'var(--surface)',
-              border: '1.5px solid var(--border-hover)',
+              border: '2px solid var(--border-dev)',
               color: 'rgba(255,255,255,0.95)',
               fontFamily: 'var(--font-geist-mono), monospace',
               lineHeight: '1.7',
@@ -195,7 +195,7 @@ export default function RegexTesterPage() {
               className="rounded-xl px-4 py-3 text-base overflow-auto whitespace-pre-wrap break-words"
               style={{
                 background: 'var(--surface)',
-                border: '1.5px solid var(--border-hover)',
+                border: '2px solid var(--border-dev)',
                 fontFamily: 'var(--font-geist-mono), monospace',
                 lineHeight: '1.7',
                 maxHeight: '240px',
@@ -217,7 +217,7 @@ export default function RegexTesterPage() {
                 <div
                   key={i}
                   className="flex items-center gap-3 px-4 py-2.5 rounded-lg text-sm"
-                  style={{ background: 'var(--surface)', border: '1px solid var(--border-hover)' }}
+                  style={{ background: 'var(--surface)', border: '2px solid var(--border-dev)' }}
                 >
                   <span style={{ color: 'rgba(255,255,255,0.5)' }}>Match {g.match} · Group {g.group}</span>
                   <code style={{ color: 'rgba(255,255,255,0.9)', fontFamily: 'var(--font-geist-mono)' }}>{g.value}</code>

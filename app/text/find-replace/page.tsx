@@ -33,7 +33,7 @@ export default function FindReplacePage() {
 
   const inputStyle: React.CSSProperties = {
     background: 'var(--surface)',
-    border: '1px solid var(--border)',
+    border: '2px solid var(--border-text-idle)',
     color: 'rgba(255,255,255,0.9)',
     borderRadius: '12px',
     padding: '12px 16px',
@@ -108,21 +108,21 @@ export default function FindReplacePage() {
             onChange={(e) => setText(e.target.value)}
             rows={8}
             placeholder="Paste your text here…"
-            className="w-full resize-y rounded-xl outline-none transition-all duration-150 placeholder:text-white/20"
+            className="w-full resize-y rounded-xl outline-none transition-all duration-150 placeholder:text-white/50"
             style={{
               background: 'var(--surface)',
-              border: '1px solid var(--border)',
+              border: '2px solid var(--border-text-idle)',
               color: 'rgba(255,255,255,0.9)',
               fontSize: '15px',
               lineHeight: '1.7',
               padding: '14px 16px',
             }}
             onFocus={(e) => {
-              e.currentTarget.style.borderColor = 'var(--border-focus)'
+              e.currentTarget.style.borderColor = 'var(--color-text-tool)'
               e.currentTarget.style.background = 'var(--surface-hover)'
             }}
             onBlur={(e) => {
-              e.currentTarget.style.borderColor = 'var(--border)'
+              e.currentTarget.style.borderColor = 'var(--border-text-idle)'
               e.currentTarget.style.background = 'var(--surface)'
             }}
           />
@@ -140,8 +140,8 @@ export default function FindReplacePage() {
               onChange={(e) => setFind(e.target.value)}
               placeholder={useRegex ? 'Regular expression…' : 'Text to find…'}
               style={inputStyle}
-              onFocus={(e) => { e.currentTarget.style.borderColor = 'var(--border-focus)'; e.currentTarget.style.background = 'var(--surface-hover)' }}
-              onBlur={(e) => { e.currentTarget.style.borderColor = 'var(--border)'; e.currentTarget.style.background = 'var(--surface)' }}
+              onFocus={(e) => { e.currentTarget.style.borderColor = 'var(--color-text-tool)'; e.currentTarget.style.background = 'var(--surface-hover)' }}
+              onBlur={(e) => { e.currentTarget.style.borderColor = 'var(--border-text-idle)'; e.currentTarget.style.background = 'var(--surface)' }}
             />
           </div>
           <div className="flex flex-col gap-2">
@@ -154,8 +154,8 @@ export default function FindReplacePage() {
               onChange={(e) => setReplace(e.target.value)}
               placeholder="Replacement text…"
               style={inputStyle}
-              onFocus={(e) => { e.currentTarget.style.borderColor = 'var(--border-focus)'; e.currentTarget.style.background = 'var(--surface-hover)' }}
-              onBlur={(e) => { e.currentTarget.style.borderColor = 'var(--border)'; e.currentTarget.style.background = 'var(--surface)' }}
+              onFocus={(e) => { e.currentTarget.style.borderColor = 'var(--color-text-tool)'; e.currentTarget.style.background = 'var(--surface-hover)' }}
+              onBlur={(e) => { e.currentTarget.style.borderColor = 'var(--border-text-idle)'; e.currentTarget.style.background = 'var(--surface)' }}
             />
           </div>
         </div>

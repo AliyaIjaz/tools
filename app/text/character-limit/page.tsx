@@ -134,7 +134,7 @@ export default function CharacterLimitPage() {
         {/* Input */}
         <div
           className="rounded-xl p-4"
-          style={{ background: 'var(--surface)', border: '1px solid rgba(255,255,255,0.1)' }}
+          style={{ background: 'var(--surface)', border: '2px solid var(--border-text-idle)' }}
         >
           <div className="flex items-center justify-between mb-3">
             <label className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>Your Text</label>
@@ -146,7 +146,7 @@ export default function CharacterLimitPage() {
                 <button
                   onClick={() => setText('')}
                   className="text-sm px-3 py-1 rounded-lg transition-all"
-                  style={{ color: 'rgba(255,255,255,0.5)', background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.1)' }}
+                  style={{ color: 'rgba(255,255,255,0.5)', background: 'rgba(255,255,255,0.06)', border: '2px solid var(--border-text-idle)' }}
                   onMouseEnter={(e) => { e.currentTarget.style.color = 'rgba(255,255,255,0.85)'; e.currentTarget.style.background = 'rgba(255,255,255,0.12)' }}
                   onMouseLeave={(e) => { e.currentTarget.style.color = 'rgba(255,255,255,0.5)'; e.currentTarget.style.background = 'rgba(255,255,255,0.06)' }}
                 >
@@ -160,22 +160,22 @@ export default function CharacterLimitPage() {
             onChange={(e) => setText(e.target.value)}
             placeholder="Paste or type your text here to check it against all platform limits…"
             rows={6}
-            className="w-full resize-y rounded-lg px-3 py-3 text-sm outline-none transition-all duration-150 placeholder:text-white/20"
+            className="w-full resize-y rounded-lg px-3 py-3 text-sm outline-none transition-all duration-150 placeholder:text-white/50"
             style={{
               background: 'rgba(0,0,0,0.35)',
-              border: '1px solid rgba(255,255,255,0.12)',
+              border: '2px solid var(--border-text)',
               color: 'rgba(255,255,255,0.92)',
               lineHeight: '1.7',
             }}
             onFocus={(e) => { e.currentTarget.style.borderColor = 'var(--color-text-tool)' }}
-            onBlur={(e) => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.12)' }}
+            onBlur={(e) => { e.currentTarget.style.borderColor = 'var(--border-text-idle)' }}
           />
         </div>
 
         {/* Controls row */}
         <div className="flex flex-wrap items-center gap-3">
           {/* Category filter */}
-          <div className="flex rounded-lg overflow-hidden flex-shrink-0" style={{ border: '1px solid rgba(255,255,255,0.12)' }}>
+          <div className="flex rounded-lg overflow-hidden flex-shrink-0" style={{ border: '2px solid var(--border-text)' }}>
             {['All', ...CATEGORIES].map((cat) => (
               <button
                 key={cat}
@@ -201,14 +201,14 @@ export default function CharacterLimitPage() {
               value={customLimit}
               onChange={(e) => setCustomLimit(e.target.value)}
               placeholder="e.g. 500"
-              className="w-28 rounded-lg px-3 py-2 text-sm outline-none transition-all font-mono placeholder:text-white/20"
+              className="w-28 rounded-lg px-3 py-2 text-sm outline-none transition-all font-mono placeholder:text-white/50"
               style={{
                 background: 'rgba(0,0,0,0.3)',
-                border: '1px solid rgba(255,255,255,0.1)',
+                border: '2px solid var(--border-text-idle)',
                 color: 'rgba(255,255,255,0.85)',
               }}
               onFocus={(e) => { e.currentTarget.style.borderColor = 'var(--color-text-tool)' }}
-              onBlur={(e) => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)' }}
+              onBlur={(e) => { e.currentTarget.style.borderColor = 'var(--border-text-idle)' }}
             />
           </div>
         </div>

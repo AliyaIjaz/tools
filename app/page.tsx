@@ -82,7 +82,7 @@ export default function HomePage() {
             className="w-full pl-10 pr-4 py-3 rounded-xl text-base outline-none transition-all"
             style={{
               background: 'var(--surface)',
-              border: '1px solid var(--border)',
+              border: '2px solid var(--border)',
               color: 'rgba(255,255,255,0.85)',
             }}
             onFocus={(e) => (e.currentTarget.style.borderColor = 'var(--border-focus)')}
@@ -106,7 +106,7 @@ export default function HomePage() {
           ) : (
             <div
               className="rounded-xl p-8 text-center"
-              style={{ background: 'var(--surface)', border: '1px solid var(--border)' }}
+              style={{ background: 'var(--surface)', border: '2px solid var(--border)' }}
             >
               <p className="text-base" style={{ color: 'rgba(255,255,255,0.35)' }}>
                 No tools match &ldquo;{query}&rdquo;

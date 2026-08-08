@@ -189,7 +189,7 @@ export default function EnvParserPage() {
   const maskValue = (key: string, value: string) =>
     maskSecrets && isSecret(key) && value ? '•'.repeat(Math.min(value.length, 16)) : value
 
-  const btnGhost = { background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.12)', color: 'rgba(255,255,255,0.65)' }
+  const btnGhost = { background: 'rgba(255,255,255,0.07)', border: '2px solid var(--border-dev)', color: 'rgba(255,255,255,0.65)' }
   const onHover = (e: React.MouseEvent<HTMLButtonElement>, enter: boolean) => {
     e.currentTarget.style.background = enter ? 'rgba(255,255,255,0.13)' : 'rgba(255,255,255,0.07)'
     e.currentTarget.style.color = enter ? 'rgba(255,255,255,0.9)' : 'rgba(255,255,255,0.65)'
@@ -235,7 +235,7 @@ export default function EnvParserPage() {
         {/* Input */}
         <div
           className="rounded-xl p-4"
-          style={{ background: 'var(--surface)', border: '1px solid rgba(255,255,255,0.1)' }}
+          style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)' }}
           onDragOver={(e) => e.preventDefault()}
           onDrop={handleDrop}
         >
@@ -282,16 +282,16 @@ export default function EnvParserPage() {
             onChange={(e) => setInput(e.target.value)}
             placeholder={'# Paste your .env file here or drag-and-drop a file\nAPP_NAME=MyApp\nDATABASE_URL=postgres://...\nAPI_KEY=sk-...'}
             rows={9}
-            className="w-full resize-y rounded-lg px-3 py-3 text-sm outline-none transition-all placeholder:text-white/20"
+            className="w-full resize-y rounded-lg px-3 py-3 text-sm outline-none transition-all placeholder:text-white/50"
             style={{
               background: 'rgba(0,0,0,0.35)',
-              border: '1px solid rgba(255,255,255,0.12)',
+              border: '2px solid var(--border-dev)',
               color: 'rgba(255,255,255,0.92)',
               fontFamily: 'var(--font-geist-mono), monospace',
               lineHeight: '1.65',
             }}
             onFocus={(e) => { e.currentTarget.style.borderColor = 'var(--color-dev)' }}
-            onBlur={(e) => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.12)' }}
+            onBlur={(e) => { e.currentTarget.style.borderColor = 'var(--border-dev-idle)' }}
           />
         </div>
 
@@ -311,7 +311,7 @@ export default function EnvParserPage() {
                     className="px-2.5 py-1 rounded-lg text-xs font-medium"
                     style={{
                       background: 'rgba(255,255,255,0.07)',
-                      border: '1px solid rgba(255,255,255,0.1)',
+                      border: '2px solid var(--border-dev-idle)',
                       color: color ?? 'rgba(255,255,255,0.55)',
                     }}
                   >
@@ -338,7 +338,7 @@ export default function EnvParserPage() {
 
             {/* Format tabs + search + copy */}
             <div className="flex flex-wrap items-center gap-3">
-              <div className="flex rounded-lg overflow-hidden flex-shrink-0" style={{ border: '1px solid rgba(255,255,255,0.12)' }}>
+              <div className="flex rounded-lg overflow-hidden flex-shrink-0" style={{ border: '2px solid var(--border-dev)' }}>
                 {(['table', 'json', 'shell', 'docker'] as ExportFormat[]).map((f) => (
                   <button
                     key={f}
@@ -361,14 +361,14 @@ export default function EnvParserPage() {
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
                   placeholder="Search keys or values…"
-                  className="flex-1 min-w-36 rounded-lg px-3 py-2 text-sm outline-none transition-all placeholder:text-white/20"
+                  className="flex-1 min-w-36 rounded-lg px-3 py-2 text-sm outline-none transition-all placeholder:text-white/50"
                   style={{
                     background: 'rgba(0,0,0,0.3)',
-                    border: '1px solid rgba(255,255,255,0.1)',
+                    border: '2px solid var(--border-dev-idle)',
                     color: 'rgba(255,255,255,0.85)',
                   }}
                   onFocus={(e) => { e.currentTarget.style.borderColor = 'var(--color-dev)' }}
-                  onBlur={(e) => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)' }}
+                  onBlur={(e) => { e.currentTarget.style.borderColor = 'var(--border-dev-idle)' }}
                 />
               )}
 
@@ -379,7 +379,7 @@ export default function EnvParserPage() {
             {format === 'table' && (
               <div
                 className="rounded-xl overflow-hidden"
-                style={{ background: 'var(--surface)', border: '1px solid rgba(255,255,255,0.1)' }}
+                style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)' }}
               >
                 {/* Header */}
                 <div
@@ -452,13 +452,13 @@ export default function EnvParserPage() {
             {format !== 'table' && (
               <div
                 className="rounded-xl p-4"
-                style={{ background: 'var(--surface)', border: '1px solid rgba(255,255,255,0.1)' }}
+                style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)' }}
               >
                 <pre
                   className="text-sm overflow-auto leading-relaxed rounded-lg px-3 py-3"
                   style={{
                     background: 'rgba(0,0,0,0.35)',
-                    border: '1px solid rgba(255,255,255,0.08)',
+                    border: '2px solid var(--border-dev-idle)',
                     fontFamily: 'var(--font-geist-mono), monospace',
                     color: 'rgba(255,255,255,0.82)',
                     maxHeight: '480px',

@@ -90,21 +90,21 @@ export default function TextSorterPage() {
             onChange={(e) => setInput(e.target.value)}
             rows={7}
             placeholder="Paste lines to sort…"
-            className="w-full resize-y rounded-xl outline-none transition-all duration-150 placeholder:text-white/20"
+            className="w-full resize-y rounded-xl outline-none transition-all duration-150 placeholder:text-white/50"
             style={{
               background: 'var(--surface)',
-              border: '1px solid var(--border)',
+              border: '2px solid var(--border-text-idle)',
               color: 'rgba(255,255,255,0.9)',
               fontSize: '15px',
               lineHeight: '1.7',
               padding: '14px 16px',
             }}
             onFocus={(e) => {
-              e.currentTarget.style.borderColor = 'var(--border-focus)'
+              e.currentTarget.style.borderColor = 'var(--color-text-tool)'
               e.currentTarget.style.background = 'var(--surface-hover)'
             }}
             onBlur={(e) => {
-              e.currentTarget.style.borderColor = 'var(--border)'
+              e.currentTarget.style.borderColor = 'var(--border-text-idle)'
               e.currentTarget.style.background = 'var(--surface)'
             }}
           />

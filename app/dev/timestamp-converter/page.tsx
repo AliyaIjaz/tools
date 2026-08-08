@@ -91,7 +91,7 @@ export default function TimestampConverterPage() {
     }
   }
 
-  const btnGhost = { background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.12)', color: 'rgba(255,255,255,0.65)' }
+  const btnGhost = { background: 'rgba(255,255,255,0.07)', border: '2px solid var(--border-dev)', color: 'rgba(255,255,255,0.65)' }
   const onHover = (e: React.MouseEvent<HTMLButtonElement>, enter: boolean) => {
     e.currentTarget.style.background = enter ? 'rgba(255,255,255,0.13)' : 'rgba(255,255,255,0.07)'
     e.currentTarget.style.color = enter ? 'rgba(255,255,255,0.9)' : 'rgba(255,255,255,0.65)'
@@ -141,7 +141,7 @@ export default function TimestampConverterPage() {
         {/* Live clock */}
         <div
           className="rounded-xl px-5 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3"
-          style={{ background: 'var(--surface)', border: '1px solid rgba(255,255,255,0.1)' }}
+          style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)' }}
         >
           <div>
             <p className="text-xs font-medium uppercase tracking-widest mb-1" style={{ color: 'rgba(255,255,255,0.35)' }}>Current Unix Time</p>
@@ -167,7 +167,7 @@ export default function TimestampConverterPage() {
         {/* Timestamp → Date */}
         <div
           className="rounded-xl p-4 space-y-4"
-          style={{ background: 'var(--surface)', border: '1px solid rgba(255,255,255,0.1)' }}
+          style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)' }}
         >
           <div className="flex items-center gap-2">
             <ArrowDown size={14} style={{ color: 'var(--color-dev)' }} />
@@ -181,17 +181,17 @@ export default function TimestampConverterPage() {
               value={tsInput}
               onChange={(e) => setTsInput(e.target.value)}
               placeholder="e.g. 1700000000"
-              className="flex-1 min-w-0 rounded-lg px-3 py-2.5 text-sm outline-none transition-all font-mono placeholder:text-white/20"
+              className="flex-1 min-w-0 rounded-lg px-3 py-2.5 text-sm outline-none transition-all font-mono placeholder:text-white/50"
               style={{
                 background: 'rgba(0,0,0,0.35)',
-                border: '1px solid rgba(255,255,255,0.12)',
+                border: '2px solid var(--border-dev)',
                 color: 'rgba(255,255,255,0.92)',
               }}
               onFocus={(e) => { e.currentTarget.style.borderColor = 'var(--color-dev)' }}
-              onBlur={(e) => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.12)' }}
+              onBlur={(e) => { e.currentTarget.style.borderColor = 'var(--border-dev-idle)' }}
             />
             {/* Unit toggle */}
-            <div className="flex rounded-lg overflow-hidden flex-shrink-0" style={{ border: '1px solid rgba(255,255,255,0.12)' }}>
+            <div className="flex rounded-lg overflow-hidden flex-shrink-0" style={{ border: '2px solid var(--border-dev)' }}>
               {(['seconds', 'milliseconds'] as Unit[]).map((u) => (
                 <button
                   key={u}
@@ -241,7 +241,7 @@ export default function TimestampConverterPage() {
         {isValidTs && parsedDate && (
           <div
             className="rounded-xl p-4 space-y-3"
-            style={{ background: 'var(--surface)', border: '1px solid rgba(255,255,255,0.1)' }}
+            style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)' }}
           >
             <p className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>Timezone Breakdown</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
@@ -267,7 +267,7 @@ export default function TimestampConverterPage() {
         {/* Date → Timestamp */}
         <div
           className="rounded-xl p-4 space-y-4"
-          style={{ background: 'var(--surface)', border: '1px solid rgba(255,255,255,0.1)' }}
+          style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)' }}
         >
           <div className="flex items-center gap-2">
             <ArrowUp size={14} style={{ color: 'var(--color-dev)' }} />
@@ -281,12 +281,12 @@ export default function TimestampConverterPage() {
             className="w-full rounded-lg px-3 py-2.5 text-sm outline-none transition-all font-mono"
             style={{
               background: 'rgba(0,0,0,0.35)',
-              border: '1px solid rgba(255,255,255,0.12)',
+              border: '2px solid var(--border-dev)',
               color: 'rgba(255,255,255,0.92)',
               colorScheme: 'dark',
             }}
             onFocus={(e) => { e.currentTarget.style.borderColor = 'var(--color-dev)' }}
-            onBlur={(e) => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.12)' }}
+            onBlur={(e) => { e.currentTarget.style.borderColor = 'var(--border-dev-idle)' }}
           />
 
           {isValidDate && parsedFromDate && (

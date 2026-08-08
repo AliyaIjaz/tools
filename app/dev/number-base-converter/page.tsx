@@ -153,7 +153,7 @@ export default function NumberBaseConverterPage() {
                     onChange={(e) => handleChange(base, e.target.value)}
                     placeholder={`Enter ${label.toLowerCase()}…`}
                     spellCheck={false}
-                    className="flex-1 min-w-0 rounded-lg px-3 py-2.5 text-base font-mono outline-none transition-all placeholder:text-white/25"
+                    className="flex-1 min-w-0 rounded-lg px-3 py-2.5 text-base font-mono outline-none transition-all placeholder:text-white/50"
                     style={{
                       background: 'rgba(0,0,0,0.35)',
                       border: `1px solid ${isActive ? color : 'rgba(255,255,255,0.12)'}`,
@@ -164,7 +164,7 @@ export default function NumberBaseConverterPage() {
                       e.currentTarget.style.borderColor = color
                     }}
                     onBlur={(e) => {
-                      if (!isActive) e.currentTarget.style.borderColor = 'rgba(255,255,255,0.12)'
+                      if (!isActive) e.currentTarget.style.borderColor = 'var(--border-dev-idle)'
                     }}
                   />
                   {displayValue && <CopyButton text={displayValue} />}
@@ -192,7 +192,7 @@ export default function NumberBaseConverterPage() {
             <button
               onClick={clearAll}
               className="text-sm px-3 py-1.5 rounded-lg transition-all"
-              style={{ color: 'rgba(255,255,255,0.55)', background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.1)' }}
+              style={{ color: 'rgba(255,255,255,0.55)', background: 'rgba(255,255,255,0.06)', border: '2px solid var(--border-dev-idle)' }}
               onMouseEnter={(e) => { e.currentTarget.style.color = 'rgba(255,255,255,0.9)'; e.currentTarget.style.background = 'rgba(255,255,255,0.12)' }}
               onMouseLeave={(e) => { e.currentTarget.style.color = 'rgba(255,255,255,0.55)'; e.currentTarget.style.background = 'rgba(255,255,255,0.06)' }}
             >
@@ -204,7 +204,7 @@ export default function NumberBaseConverterPage() {
         {/* Reference table */}
         <div
           className="rounded-xl p-4 space-y-3"
-          style={{ background: 'var(--surface)', border: '1px solid rgba(255,255,255,0.08)' }}
+          style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)' }}
         >
           <p className="text-xs font-medium uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.55)' }}>Quick Reference — 0 to 15</p>
           <div className="overflow-x-auto">

@@ -229,14 +229,14 @@ export default function ColorPickerPage() {
                 alt="pick colors"
                 onLoad={handleImageLoad}
                 className="w-full block rounded-xl"
-                style={{ border: '1px solid var(--border)' }}
+                style={{ border: '2px solid var(--border-image-idle)' }}
                 draggable={false}
               />
             </div>
 
             {/* Picked color */}
             {picked && (
-              <div className="rounded-xl overflow-hidden" style={{ border: '1px solid var(--border)' }}>
+              <div className="rounded-xl overflow-hidden" style={{ border: '2px solid var(--border-image-idle)' }}>
                 <div className="h-16" style={{ background: picked.hex }} />
                 <div className="p-4 space-y-2" style={{ background: 'var(--surface)' }}>
                   <p className="text-sm mb-3" style={{ color: 'rgba(255,255,255,0.6)' }}>

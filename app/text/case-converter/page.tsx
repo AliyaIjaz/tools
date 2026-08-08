@@ -92,7 +92,7 @@ function CaseGrid({ cases, input }: { cases: typeof GENERAL_CASES; input: string
           <div
             key={label}
             className="rounded-xl p-4"
-            style={{ background: 'var(--surface)', border: '1px solid var(--border)' }}
+            style={{ background: 'var(--surface)', border: '2px solid var(--border-text-idle)' }}
           >
             <div className="flex items-center justify-between mb-2">
               <span className="text-sm font-medium" style={{ color: 'rgba(255,255,255,0.7)' }}>

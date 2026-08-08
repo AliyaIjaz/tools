@@ -268,7 +268,7 @@ export default function ImageRotatePage() {
                   className="flex items-center gap-1.5 text-sm font-medium px-4 py-2 rounded-lg transition-all active:scale-95"
                   style={{
                     background: hoveredBtn === 'reset' ? 'rgba(255,255,255,0.15)' : 'var(--surface-hover)',
-                    border: '1px solid var(--border-hover)',
+                    border: '2px solid var(--border-image)',
                     color: '#fff',
                   }}
                 >
@@ -294,7 +294,7 @@ export default function ImageRotatePage() {
             {/* Preview */}
             <div
               className="flex items-center justify-center rounded-xl overflow-hidden"
-              style={{ border: '1px solid var(--border)', background: 'var(--surface)', minHeight: '240px' }}
+              style={{ border: '2px solid var(--border-image-idle)', background: 'var(--surface)', minHeight: '240px' }}
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
@@ -429,7 +429,7 @@ export default function ImageRotatePage() {
                   src={output}
                   alt="rotated"
                   className="w-full rounded-xl object-contain"
-                  style={{ border: '1px solid var(--border)', maxHeight: '320px' }}
+                  style={{ border: '2px solid var(--border-image-idle)', maxHeight: '320px' }}
                 />
               </div>
             )}

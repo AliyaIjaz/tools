@@ -47,10 +47,10 @@ export default function Textarea({
         readOnly={readOnly}
         rows={rows}
         placeholder={placeholder}
-        className="w-full resize-y rounded-xl px-4 py-3 text-base outline-none transition-all duration-150 placeholder:text-white/40"
+        className="w-full resize-y rounded-xl px-4 py-3 text-base outline-none transition-all duration-150 placeholder:text-white/55"
         style={{
           background: 'var(--surface)',
-          border: '1.5px solid var(--border-hover)',
+          border: '2px solid var(--border-hover)',
           color: 'rgba(255,255,255,0.95)',
           fontFamily: mono ? 'var(--font-geist-mono), monospace' : 'inherit',
           lineHeight: '1.7',
@@ -60,7 +60,7 @@ export default function Textarea({
           e.currentTarget.style.background = 'var(--surface-hover)'
         }}
         onBlur={(e) => {
-          e.currentTarget.style.borderColor = 'var(--border)'
+          e.currentTarget.style.borderColor = 'var(--border-hover)'
           e.currentTarget.style.background = 'var(--surface)'
         }}
       />

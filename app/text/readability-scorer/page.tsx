@@ -164,7 +164,7 @@ export default function ReadabilityScorerPage() {
         {/* Input */}
         <div
           className="rounded-xl p-4"
-          style={{ background: 'var(--surface)', border: '1px solid rgba(255,255,255,0.1)' }}
+          style={{ background: 'var(--surface)', border: '2px solid var(--border-text-idle)' }}
         >
           <div className="flex items-center justify-between mb-3">
             <label className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.9)' }}>Your Text</label>
@@ -185,7 +185,7 @@ export default function ReadabilityScorerPage() {
             onChange={(e) => setText(e.target.value)}
             placeholder={PLACEHOLDER}
             rows={10}
-            className="w-full resize-y rounded-lg px-3 py-3 text-base outline-none transition-all duration-150 placeholder:text-white/30"
+            className="w-full resize-y rounded-lg px-3 py-3 text-base outline-none transition-all duration-150 placeholder:text-white/50"
             style={{
               background: 'rgba(0,0,0,0.35)',
               border: '1px solid rgba(255,255,255,0.15)',
@@ -193,7 +193,7 @@ export default function ReadabilityScorerPage() {
               lineHeight: '1.7',
             }}
             onFocus={(e) => { e.currentTarget.style.borderColor = 'var(--color-text-tool)' }}
-            onBlur={(e) => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.12)' }}
+            onBlur={(e) => { e.currentTarget.style.borderColor = 'var(--border-text-idle)' }}
           />
         </div>
 
@@ -205,7 +205,7 @@ export default function ReadabilityScorerPage() {
               {/* Flesch gauge */}
               <div
                 className="rounded-xl p-5 flex flex-col items-center gap-2"
-                style={{ background: 'var(--surface)', border: '1px solid rgba(255,255,255,0.1)' }}
+                style={{ background: 'var(--surface)', border: '2px solid var(--border-text-idle)' }}
               >
                 <p className="text-xs font-medium uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.6)' }}>Flesch Reading Ease</p>
                 <div className="relative w-32 h-32">
@@ -233,7 +233,7 @@ export default function ReadabilityScorerPage() {
               {/* Grade Level */}
               <div
                 className="rounded-xl p-5 flex flex-col justify-between"
-                style={{ background: 'var(--surface)', border: '1px solid rgba(255,255,255,0.1)' }}
+                style={{ background: 'var(--surface)', border: '2px solid var(--border-text-idle)' }}
               >
                 <p className="text-xs font-medium uppercase tracking-widest mb-3" style={{ color: 'rgba(255,255,255,0.6)' }}>FK Grade Level</p>
                 <div>
@@ -247,7 +247,7 @@ export default function ReadabilityScorerPage() {
               {/* Gunning Fog */}
               <div
                 className="rounded-xl p-5 flex flex-col justify-between"
-                style={{ background: 'var(--surface)', border: '1px solid rgba(255,255,255,0.1)' }}
+                style={{ background: 'var(--surface)', border: '2px solid var(--border-text-idle)' }}
               >
                 <p className="text-xs font-medium uppercase tracking-widest mb-3" style={{ color: 'rgba(255,255,255,0.6)' }}>Gunning Fog</p>
                 <div>
@@ -273,7 +273,7 @@ export default function ReadabilityScorerPage() {
                 <div
                   key={label}
                   className="rounded-xl px-4 py-3"
-                  style={{ background: 'var(--surface)', border: '1px solid rgba(255,255,255,0.08)' }}
+                  style={{ background: 'var(--surface)', border: '2px solid var(--border-text-idle)' }}
                 >
                   <p className="text-xs font-medium uppercase tracking-widest mb-1" style={{ color: 'rgba(255,255,255,0.6)' }}>{label}</p>
                   <p className="text-base font-semibold font-mono" style={{ color: 'rgba(255,255,255,0.95)' }}>{value}</p>
@@ -284,7 +284,7 @@ export default function ReadabilityScorerPage() {
             {/* Flesch scale legend */}
             <div
               className="rounded-xl p-4 space-y-3"
-              style={{ background: 'var(--surface)', border: '1px solid rgba(255,255,255,0.08)' }}
+              style={{ background: 'var(--surface)', border: '2px solid var(--border-text-idle)' }}
             >
               <p className="text-xs font-medium uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.6)' }}>Flesch Reading Ease Scale</p>
               <div className="space-y-1.5">

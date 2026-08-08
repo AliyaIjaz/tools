@@ -155,7 +155,7 @@ export default function JsonSchemaGeneratorPage() {
   }
 
   const btnBase = 'px-3 py-1.5 rounded-lg text-sm font-medium transition-all'
-  const btnGhost = { background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.12)', color: 'rgba(255,255,255,0.65)' }
+  const btnGhost = { background: 'rgba(255,255,255,0.07)', border: '2px solid var(--border-dev)', color: 'rgba(255,255,255,0.65)' }
   const btnHover = (e: React.MouseEvent<HTMLButtonElement>, enter: boolean) => {
     e.currentTarget.style.background = enter ? 'rgba(255,255,255,0.13)' : 'rgba(255,255,255,0.07)'
     e.currentTarget.style.color = enter ? 'rgba(255,255,255,0.9)' : 'rgba(255,255,255,0.65)'
@@ -204,7 +204,7 @@ export default function JsonSchemaGeneratorPage() {
         {/* Options bar */}
         <div
           className="rounded-xl overflow-hidden"
-          style={{ background: 'var(--surface)', border: '1px solid rgba(255,255,255,0.1)' }}
+          style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)' }}
         >
           <button
             onClick={() => setShowOptions((v) => !v)}
@@ -279,7 +279,7 @@ export default function JsonSchemaGeneratorPage() {
         {/* Input */}
         <div
           className="rounded-xl p-4"
-          style={{ background: 'var(--surface)', border: '1px solid rgba(255,255,255,0.1)' }}
+          style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)' }}
         >
           <div className="flex items-center justify-between mb-3">
             <label className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>
@@ -313,16 +313,16 @@ export default function JsonSchemaGeneratorPage() {
             onChange={(e) => handleInput(e.target.value)}
             placeholder={'{\n  "name": "Alice",\n  "age": 30,\n  "email": "alice@example.com"\n}'}
             rows={12}
-            className="w-full resize-y rounded-lg px-3 py-3 text-sm outline-none transition-all duration-150 placeholder:text-white/20"
+            className="w-full resize-y rounded-lg px-3 py-3 text-sm outline-none transition-all duration-150 placeholder:text-white/50"
             style={{
               background: 'rgba(0,0,0,0.35)',
-              border: '1px solid rgba(255,255,255,0.12)',
+              border: '2px solid var(--border-dev)',
               color: 'rgba(255,255,255,0.92)',
               fontFamily: 'var(--font-geist-mono), monospace',
               lineHeight: '1.65',
             }}
             onFocus={(e) => { e.currentTarget.style.borderColor = 'var(--color-dev)' }}
-            onBlur={(e) => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.12)' }}
+            onBlur={(e) => { e.currentTarget.style.borderColor = 'var(--border-dev-idle)' }}
           />
         </div>
 
@@ -346,7 +346,7 @@ export default function JsonSchemaGeneratorPage() {
         {output && (
           <div
             className="rounded-xl p-4"
-            style={{ background: 'var(--surface)', border: '1px solid rgba(255,255,255,0.1)' }}
+            style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)' }}
           >
             <div className="flex items-center justify-between mb-3">
               <label className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>
@@ -361,7 +361,7 @@ export default function JsonSchemaGeneratorPage() {
               className="rounded-lg px-3 py-3 text-sm overflow-auto leading-relaxed"
               style={{
                 background: 'rgba(0,0,0,0.35)',
-                border: '1px solid rgba(255,255,255,0.1)',
+                border: '2px solid var(--border-dev-idle)',
                 fontFamily: 'var(--font-geist-mono), monospace',
                 color: 'rgba(255,255,255,0.88)',
                 maxHeight: '520px',

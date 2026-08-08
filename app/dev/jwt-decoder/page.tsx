@@ -160,7 +160,7 @@ export default function JwtDecoderPage() {
                   className="rounded-xl px-4 py-3 text-sm overflow-auto"
                   style={{
                     background: 'var(--surface)',
-                    border: '1.5px solid var(--border-hover)',
+                    border: '2px solid var(--border-dev)',
                     fontFamily: 'var(--font-geist-mono), monospace',
                     lineHeight: '1.7',
                     maxHeight: '260px',
@@ -179,7 +179,7 @@ export default function JwtDecoderPage() {
                   className="rounded-xl px-4 py-3 text-sm overflow-auto"
                   style={{
                     background: 'var(--surface)',
-                    border: '1.5px solid var(--border-hover)',
+                    border: '2px solid var(--border-dev)',
                     fontFamily: 'var(--font-geist-mono), monospace',
                     lineHeight: '1.7',
                     maxHeight: '260px',
@@ -198,7 +198,7 @@ export default function JwtDecoderPage() {
                 className="px-4 py-3 rounded-xl text-sm break-all"
                 style={{
                   background: 'var(--surface)',
-                  border: '1.5px solid var(--border-hover)',
+                  border: '2px solid var(--border-dev)',
                   color: 'rgba(255,255,255,0.5)',
                   fontFamily: 'var(--font-geist-mono), monospace',
                   lineHeight: '1.7',

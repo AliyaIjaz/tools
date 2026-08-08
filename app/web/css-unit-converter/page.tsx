@@ -52,7 +52,7 @@ export default function CssUnitConverterPage() {
 
   const inputStyle: React.CSSProperties = {
     background: 'var(--surface)',
-    border: '1.5px solid var(--border)',
+    border: '2px solid var(--border-web-idle)',
     borderRadius: '10px',
     color: 'rgba(255,255,255,0.9)',
     padding: '10px 14px',
@@ -266,7 +266,7 @@ export default function CssUnitConverterPage() {
         </div>
 
         {/* Baselines */}
-        <div className="rounded-xl p-5" style={{ background: 'var(--surface)', border: '1.5px solid var(--border)' }}>
+        <div className="rounded-xl p-5" style={{ background: 'var(--surface)', border: '2px solid var(--border-web-idle)' }}>
           <p className="text-sm font-semibold mb-4" style={{ color: 'rgba(255,255,255,0.85)' }}>Baselines</p>
           <div className="flex flex-wrap gap-5">
             {[

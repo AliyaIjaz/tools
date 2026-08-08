@@ -216,7 +216,7 @@ export default function BoxShadowPage() {
         {/* Preview */}
         <div
           className="w-full h-52 rounded-xl flex items-center justify-center"
-          style={{ background: bg, border: '1px solid var(--border)' }}
+          style={{ background: bg, border: '2px solid var(--border-web-idle)' }}
         >
           <div
             className="w-28 h-28 rounded-xl transition-all duration-150"
@@ -229,12 +229,12 @@ export default function BoxShadowPage() {
           <div className="flex items-center gap-2.5">
             <label className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>Background</label>
             <input type="color" value={bg} onChange={(e) => setBg(e.target.value)}
-              className="w-9 h-9 rounded-lg cursor-pointer" style={{ padding: '2px', border: '1px solid var(--border)', background: 'transparent' }} />
+              className="w-9 h-9 rounded-lg cursor-pointer" style={{ padding: '2px', border: '2px solid var(--border-web-idle)', background: 'transparent' }} />
           </div>
           <div className="flex items-center gap-2.5">
             <label className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>Box color</label>
             <input type="color" value={boxColor} onChange={(e) => setBoxColor(e.target.value)}
-              className="w-9 h-9 rounded-lg cursor-pointer" style={{ padding: '2px', border: '1px solid var(--border)', background: 'transparent' }} />
+              className="w-9 h-9 rounded-lg cursor-pointer" style={{ padding: '2px', border: '2px solid var(--border-web-idle)', background: 'transparent' }} />
           </div>
         </div>
 
@@ -246,7 +246,7 @@ export default function BoxShadowPage() {
               <div
                 key={shadow.id}
                 className="rounded-xl overflow-hidden"
-                style={{ background: 'var(--surface)', border: '1px solid var(--border)' }}
+                style={{ background: 'var(--surface)', border: '2px solid var(--border-web-idle)' }}
               >
                 {/* Layer header */}
                 <div
@@ -311,7 +311,7 @@ export default function BoxShadowPage() {
                           value={shadow.color}
                           onChange={(e) => update(shadow.id, 'color', e.target.value)}
                           className="w-9 h-9 rounded-lg cursor-pointer"
-                          style={{ padding: '2px', border: '1px solid var(--border)', background: 'transparent' }}
+                          style={{ padding: '2px', border: '2px solid var(--border-web-idle)', background: 'transparent' }}
                         />
                         <code className="text-sm font-mono" style={{ color: 'rgba(255,255,255,0.6)' }}>
                           {shadow.color}
@@ -356,7 +356,7 @@ export default function BoxShadowPage() {
           </div>
           <pre
             className="rounded-xl px-5 py-4 whitespace-pre-wrap break-all"
-            style={{ background: 'var(--surface)', border: '1px solid var(--border)', color: 'rgba(255,255,255,0.85)', fontFamily: 'var(--font-geist-mono), monospace', fontSize: '14px', lineHeight: '1.7' }}
+            style={{ background: 'var(--surface)', border: '2px solid var(--border-web-idle)', color: 'rgba(255,255,255,0.85)', fontFamily: 'var(--font-geist-mono), monospace', fontSize: '14px', lineHeight: '1.7' }}
           >
             {fullCss}
           </pre>

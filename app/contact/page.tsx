@@ -36,7 +36,7 @@ export default function ContactPage() {
           className="rounded-xl p-6 flex items-start gap-4"
           style={{
             background: 'rgba(255,255,255,0.04)',
-            border: '1px solid rgba(255,255,255,0.08)',
+            border: '2px solid rgba(255,255,255,0.2)',
           }}
         >
           <div
@@ -74,7 +74,7 @@ export default function ContactPage() {
           className="rounded-xl p-6 flex items-start gap-4"
           style={{
             background: 'rgba(255,255,255,0.04)',
-            border: '1px solid rgba(255,255,255,0.08)',
+            border: '2px solid rgba(255,255,255,0.2)',
           }}
         >
           <div

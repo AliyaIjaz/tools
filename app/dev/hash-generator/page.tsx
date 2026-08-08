@@ -94,7 +94,7 @@ export default function HashGeneratorPage() {
         {/* Input */}
         <div
           className="rounded-xl p-4"
-          style={{ background: 'var(--surface)', border: '1px solid rgba(255,255,255,0.1)' }}
+          style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)' }}
         >
           <div className="flex items-center justify-between mb-3">
             <label className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>Input text</label>
@@ -108,12 +108,12 @@ export default function HashGeneratorPage() {
             className="w-full resize-y rounded-lg px-3 py-3 text-sm outline-none transition-all duration-150 placeholder:text-white/45"
             style={{
               background: 'rgba(0,0,0,0.35)',
-              border: '1px solid rgba(255,255,255,0.12)',
+              border: '2px solid var(--border-dev)',
               color: 'rgba(255,255,255,0.92)',
               lineHeight: '1.65',
             }}
             onFocus={(e) => { e.currentTarget.style.borderColor = 'var(--color-dev)' }}
-            onBlur={(e) => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.12)' }}
+            onBlur={(e) => { e.currentTarget.style.borderColor = 'var(--border-dev-idle)' }}
           />
         </div>
 
@@ -123,7 +123,7 @@ export default function HashGeneratorPage() {
             <div
               key={algo}
               className="rounded-xl p-4"
-              style={{ background: 'var(--surface)', border: '1px solid rgba(255,255,255,0.1)' }}
+              style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)' }}
             >
               <div className="flex items-center justify-between mb-3">
                 <label className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>{label}</label>
@@ -133,7 +133,7 @@ export default function HashGeneratorPage() {
                 className="px-3 py-3 rounded-lg text-sm leading-relaxed break-all"
                 style={{
                   background: 'rgba(0,0,0,0.35)',
-                  border: '1px solid rgba(255,255,255,0.08)',
+                  border: '2px solid var(--border-dev-idle)',
                   color: hashes[algo] ? 'rgba(255,255,255,0.92)' : 'rgba(255,255,255,0.35)',
                   fontFamily: 'var(--font-geist-mono), monospace',
                   minHeight: '2.75rem',

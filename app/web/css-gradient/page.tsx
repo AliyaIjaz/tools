@@ -183,7 +183,7 @@ export default function CssGradientPage() {
         {/* Preview */}
         <div
           className="w-full h-52 rounded-xl"
-          style={{ background: css, border: '1px solid var(--border)' }}
+          style={{ background: css, border: '2px solid var(--border-web-idle)' }}
         />
 
         {/* Controls */}
@@ -228,7 +228,7 @@ export default function CssGradientPage() {
                   value={angle}
                   onChange={(e) => setAngle(Number(e.target.value))}
                   className="w-18 px-3 py-2 rounded-lg text-base text-center outline-none"
-                  style={{ background: 'var(--surface)', border: '1px solid var(--border)', color: 'rgba(255,255,255,0.9)', fontFamily: 'var(--font-geist-mono)' }}
+                  style={{ background: 'var(--surface)', border: '2px solid var(--border-web-idle)', color: 'rgba(255,255,255,0.9)', fontFamily: 'var(--font-geist-mono)' }}
                 />
               </div>
             </div>
@@ -242,7 +242,7 @@ export default function CssGradientPage() {
             <button
               onClick={addStop}
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-all"
-              style={{ background: 'var(--surface)', border: '1px solid var(--border)', color: 'rgba(255,255,255,0.65)' }}
+              style={{ background: 'var(--surface)', border: '2px solid var(--border-web-idle)', color: 'rgba(255,255,255,0.65)' }}
             >
               <Plus size={13} /> Add stop
             </button>
@@ -253,14 +253,14 @@ export default function CssGradientPage() {
               <div
                 key={stop.id}
                 className="flex items-center gap-3 px-4 py-3 rounded-xl"
-                style={{ background: 'var(--surface)', border: '1px solid var(--border)' }}
+                style={{ background: 'var(--surface)', border: '2px solid var(--border-web-idle)' }}
               >
                 <input
                   type="color"
                   value={stop.color}
                   onChange={(e) => updateStop(stop.id, 'color', e.target.value)}
                   className="w-10 h-10 rounded-lg cursor-pointer flex-shrink-0"
-                  style={{ padding: '2px', background: 'transparent', border: '1px solid var(--border)' }}
+                  style={{ padding: '2px', background: 'transparent', border: '2px solid var(--border-web-idle)' }}
                 />
                 <code className="text-sm flex-shrink-0 w-18" style={{ color: 'rgba(255,255,255,0.75)', fontFamily: 'var(--font-geist-mono)' }}>
                   {stop.color}
@@ -300,7 +300,7 @@ export default function CssGradientPage() {
             className="rounded-xl px-5 py-4 text-sm break-all whitespace-pre-wrap"
             style={{
               background: 'var(--surface)',
-              border: '1px solid var(--border)',
+              border: '2px solid var(--border-web-idle)',
               color: 'rgba(255,255,255,0.85)',
               fontFamily: 'var(--font-geist-mono), monospace',
               fontSize: '14px',

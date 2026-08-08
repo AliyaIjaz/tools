@@ -195,9 +195,9 @@ Modern web browsers can display this string directly without requiring a separat
             {!dataUrl && <FileDropZone onFile={handleFile} />}
             {dataUrl && (
               <>
-                <div className="flex items-center gap-4 rounded-xl p-3" style={{ background: 'var(--surface)', border: '1px solid var(--border)' }}>
+                <div className="flex items-center gap-4 rounded-xl p-3" style={{ background: 'var(--surface)', border: '2px solid var(--border-image-idle)' }}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={imgSrc} alt="preview" className="w-16 h-16 rounded-lg object-cover flex-shrink-0" style={{ border: '1px solid var(--border)' }} />
+                  <img src={imgSrc} alt="preview" className="w-16 h-16 rounded-lg object-cover flex-shrink-0" style={{ border: '2px solid var(--border-image-idle)' }} />
                   <div className="min-w-0">
                     <p className="text-sm font-medium text-white truncate">{fileName}</p>
                     <p className="text-sm mt-0.5" style={{ color: 'rgba(255,255,255,0.65)' }}>{formatBytes(fileSize)}</p>
@@ -220,7 +220,7 @@ Modern web browsers can display this string directly without requiring a separat
                       <button
                         onClick={() => downloadBlob(new Blob([dataUrl], { type: 'text/plain' }), `${fileName}.txt`)}
                         className="text-sm font-medium px-3 py-1.5 rounded-md transition-all"
-                        style={{ background: 'var(--surface-hover)', border: '1px solid var(--border-hover)', color: 'rgba(255,255,255,0.75)' }}
+                        style={{ background: 'var(--surface-hover)', border: '2px solid var(--border-image)', color: 'rgba(255,255,255,0.75)' }}
                       >
                         Download .txt
                       </button>
@@ -234,7 +234,7 @@ Modern web browsers can display this string directly without requiring a separat
                     className="w-full rounded-xl px-4 py-3 text-sm resize-y outline-none"
                     style={{
                       background: 'var(--surface)',
-                      border: '1px solid var(--border)',
+                      border: '2px solid var(--border-image-idle)',
                       color: 'rgba(255,255,255,0.75)',
                       fontFamily: 'var(--font-geist-mono), monospace',
                       lineHeight: '1.6',
@@ -256,7 +256,7 @@ Modern web browsers can display this string directly without requiring a separat
                     className="w-full rounded-xl px-4 py-3 text-sm resize-y outline-none"
                     style={{
                       background: 'var(--surface)',
-                      border: '1px solid var(--border)',
+                      border: '2px solid var(--border-image-idle)',
                       color: 'rgba(255,255,255,0.75)',
                       fontFamily: 'var(--font-geist-mono), monospace',
                       lineHeight: '1.6',
@@ -279,10 +279,10 @@ Modern web browsers can display this string directly without requiring a separat
                 onChange={(e) => { setDecodeInput(e.target.value); setDecodeError(''); setDecodedSrc('') }}
                 rows={5}
                 placeholder="data:image/png;base64,iVBORw0KGgo… or raw base64"
-                className="w-full rounded-xl px-4 py-3 text-sm resize-y outline-none placeholder:text-white/20"
+                className="w-full rounded-xl px-4 py-3 text-sm resize-y outline-none placeholder:text-white/50"
                 style={{
                   background: 'var(--surface)',
-                  border: '1px solid var(--border)',
+                  border: '2px solid var(--border-image-idle)',
                   color: 'rgba(255,255,255,0.8)',
                   fontFamily: 'var(--font-geist-mono), monospace',
                   lineHeight: '1.6',
@@ -306,7 +306,7 @@ Modern web browsers can display this string directly without requiring a separat
             {decodedSrc && (
               <div className="space-y-3">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={decodedSrc} alt="decoded" className="max-w-full rounded-xl" style={{ border: '1px solid var(--border)', maxHeight: '320px', objectFit: 'contain' }} />
+                <img src={decodedSrc} alt="decoded" className="max-w-full rounded-xl" style={{ border: '2px solid var(--border-image-idle)', maxHeight: '320px', objectFit: 'contain' }} />
                 <button
                   onClick={downloadDecoded}
                   className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all"

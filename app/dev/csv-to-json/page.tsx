@@ -221,7 +221,7 @@ export default function CsvToJsonPage() {
             className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold transition-all"
             style={mode === 'csv-to-json'
               ? { background: 'var(--color-dev)', color: '#fff' }
-              : { background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.12)', color: 'rgba(255,255,255,0.65)' }}
+              : { background: 'rgba(255,255,255,0.07)', border: '2px solid var(--border-dev)', color: 'rgba(255,255,255,0.65)' }}
             onMouseEnter={(e) => { if (mode !== 'csv-to-json') e.currentTarget.style.background = 'rgba(255,255,255,0.13)' }}
             onMouseLeave={(e) => { if (mode !== 'csv-to-json') e.currentTarget.style.background = 'rgba(255,255,255,0.07)' }}
           >
@@ -232,7 +232,7 @@ export default function CsvToJsonPage() {
             className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold transition-all"
             style={mode === 'json-to-csv'
               ? { background: 'var(--color-dev)', color: '#fff' }
-              : { background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.12)', color: 'rgba(255,255,255,0.65)' }}
+              : { background: 'rgba(255,255,255,0.07)', border: '2px solid var(--border-dev)', color: 'rgba(255,255,255,0.65)' }}
             onMouseEnter={(e) => { if (mode !== 'json-to-csv') e.currentTarget.style.background = 'rgba(255,255,255,0.13)' }}
             onMouseLeave={(e) => { if (mode !== 'json-to-csv') e.currentTarget.style.background = 'rgba(255,255,255,0.07)' }}
           >
@@ -240,7 +240,7 @@ export default function CsvToJsonPage() {
           </button>
 
           {mode === 'csv-to-json' && (
-            <div className="ml-auto flex items-center gap-1 rounded-lg overflow-hidden" style={{ border: '1px solid rgba(255,255,255,0.12)' }}>
+            <div className="ml-auto flex items-center gap-1 rounded-lg overflow-hidden" style={{ border: '2px solid var(--border-dev)' }}>
               <button
                 onClick={() => handleStyleChange('array-of-objects')}
                 className="px-3 py-1.5 text-sm font-medium transition-all"
@@ -293,7 +293,7 @@ export default function CsvToJsonPage() {
               <button
                 onClick={() => fileRef.current?.click()}
                 className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-all"
-                style={{ background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.12)', color: 'rgba(255,255,255,0.65)' }}
+                style={{ background: 'rgba(255,255,255,0.07)', border: '2px solid var(--border-dev)', color: 'rgba(255,255,255,0.65)' }}
                 onMouseEnter={(e) => { e.currentTarget.style.background = 'rgba(255,255,255,0.13)'; e.currentTarget.style.color = 'rgba(255,255,255,0.9)' }}
                 onMouseLeave={(e) => { e.currentTarget.style.background = 'rgba(255,255,255,0.07)'; e.currentTarget.style.color = 'rgba(255,255,255,0.65)' }}
               >
@@ -303,7 +303,7 @@ export default function CsvToJsonPage() {
                 <button
                   onClick={clear}
                   className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-all"
-                  style={{ background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.12)', color: 'rgba(255,255,255,0.65)' }}
+                  style={{ background: 'rgba(255,255,255,0.07)', border: '2px solid var(--border-dev)', color: 'rgba(255,255,255,0.65)' }}
                   onMouseEnter={(e) => { e.currentTarget.style.background = 'rgba(255,255,255,0.13)'; e.currentTarget.style.color = 'rgba(255,255,255,0.9)' }}
                   onMouseLeave={(e) => { e.currentTarget.style.background = 'rgba(255,255,255,0.07)'; e.currentTarget.style.color = 'rgba(255,255,255,0.65)' }}
                 >
@@ -317,16 +317,16 @@ export default function CsvToJsonPage() {
             onChange={(e) => handleInput(e.target.value)}
             placeholder={placeholder}
             rows={10}
-            className="w-full resize-y rounded-lg px-3 py-3 text-sm outline-none transition-all duration-150 placeholder:text-white/20"
+            className="w-full resize-y rounded-lg px-3 py-3 text-sm outline-none transition-all duration-150 placeholder:text-white/50"
             style={{
               background: 'rgba(0,0,0,0.35)',
-              border: '1px solid rgba(255,255,255,0.12)',
+              border: '2px solid var(--border-dev)',
               color: 'rgba(255,255,255,0.92)',
               fontFamily: 'var(--font-geist-mono), monospace',
               lineHeight: '1.65',
             }}
             onFocus={(e) => { e.currentTarget.style.borderColor = 'var(--color-dev)' }}
-            onBlur={(e) => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.12)' }}
+            onBlur={(e) => { e.currentTarget.style.borderColor = 'var(--border-dev-idle)' }}
           />
           {isDragging && (
             <div className="mt-2 text-sm text-center" style={{ color: 'var(--color-dev)' }}>
@@ -357,7 +357,7 @@ export default function CsvToJsonPage() {
         {output && (
           <div
             className="rounded-xl p-4"
-            style={{ background: 'var(--surface)', border: '1px solid rgba(255,255,255,0.1)' }}
+            style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)' }}
           >
             <div className="flex items-center justify-between mb-3">
               <label className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>
@@ -367,7 +367,7 @@ export default function CsvToJsonPage() {
                 <button
                   onClick={downloadOutput}
                   className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-all"
-                  style={{ background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.12)', color: 'rgba(255,255,255,0.65)' }}
+                  style={{ background: 'rgba(255,255,255,0.07)', border: '2px solid var(--border-dev)', color: 'rgba(255,255,255,0.65)' }}
                   onMouseEnter={(e) => { e.currentTarget.style.background = 'rgba(255,255,255,0.13)'; e.currentTarget.style.color = 'rgba(255,255,255,0.9)' }}
                   onMouseLeave={(e) => { e.currentTarget.style.background = 'rgba(255,255,255,0.07)'; e.currentTarget.style.color = 'rgba(255,255,255,0.65)' }}
                 >
@@ -381,7 +381,7 @@ export default function CsvToJsonPage() {
               className="rounded-lg px-3 py-3 text-sm overflow-auto leading-relaxed"
               style={{
                 background: 'rgba(0,0,0,0.35)',
-                border: '1px solid rgba(255,255,255,0.1)',
+                border: '2px solid var(--border-dev-idle)',
                 fontFamily: 'var(--font-geist-mono), monospace',
                 color: 'rgba(255,255,255,0.88)',
                 maxHeight: '480px',

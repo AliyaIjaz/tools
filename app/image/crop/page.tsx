@@ -243,7 +243,7 @@ export default function ImageCropPage() {
               <div className="flex gap-2">
                 <button onClick={() => { setRect({ x: 0.1, y: 0.1, w: 0.8, h: 0.8 }); setActiveRatio(null) }}
                   className="flex items-center gap-1.5 text-sm font-medium px-4 py-2 rounded-lg transition-all"
-                  style={{ background: 'var(--surface-hover)', border: '1px solid var(--border-hover)', color: 'rgba(255,255,255,0.9)' }}>
+                  style={{ background: 'var(--surface-hover)', border: '2px solid var(--border-image)', color: 'rgba(255,255,255,0.9)' }}>
                   <RotateCcw size={13} /> Reset
                 </button>
                 <button onClick={() => { setSrc(''); setOutput('') }}
@@ -281,7 +281,7 @@ export default function ImageCropPage() {
               ref={containerRef}
               className="relative select-none rounded-xl overflow-hidden"
               style={{
-                border: '1px solid var(--border)',
+                border: '2px solid var(--border-image-idle)',
                 cursor: dragging === 'move' ? 'grabbing' : 'default',
                 maxWidth: naturalH > 0 ? `min(100%, calc(70vh * ${naturalW / naturalH}))` : '100%',
                 margin: '0 auto',
@@ -352,7 +352,7 @@ export default function ImageCropPage() {
                 </div>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={output} alt="cropped" className="w-full rounded-xl object-contain"
-                  style={{ border: '1px solid var(--border)', maxHeight: '320px' }} />
+                  style={{ border: '2px solid var(--border-image-idle)', maxHeight: '320px' }} />
               </div>
             )}
           </>

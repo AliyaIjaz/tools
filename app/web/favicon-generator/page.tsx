@@ -121,12 +121,12 @@ export default function FaviconGeneratorPage() {
             <p className="text-base leading-relaxed mt-2">No installation or registration is required.</p>
             <h3 className="text-base font-semibold text-white mt-4 mb-2">How to Add a Favicon to Your Website</h3>
             <p className="text-base leading-relaxed">After generating your favicon, upload it to your website and reference it in the <code className="text-sm font-mono px-1 rounded" style={{ background: 'rgba(255,255,255,0.1)' }}>&lt;head&gt;</code> section of your HTML document.</p>
-            <pre className="text-sm rounded-lg p-3 mt-2 overflow-x-auto" style={{ background: 'rgba(255,255,255,0.05)', color: 'rgba(255,255,255,0.8)', border: '1px solid var(--border)' }}>{`<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+            <pre className="text-sm rounded-lg p-3 mt-2 overflow-x-auto" style={{ background: 'rgba(255,255,255,0.05)', color: 'rgba(255,255,255,0.8)', border: '2px solid var(--border-web-idle)' }}>{`<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">`}</pre>
             <p className="text-base leading-relaxed mt-2">For Apple devices:</p>
-            <pre className="text-sm rounded-lg p-3 mt-2 overflow-x-auto" style={{ background: 'rgba(255,255,255,0.05)', color: 'rgba(255,255,255,0.8)', border: '1px solid var(--border)' }}>{`<link rel="apple-touch-icon" href="/apple-touch-icon.png">`}</pre>
+            <pre className="text-sm rounded-lg p-3 mt-2 overflow-x-auto" style={{ background: 'rgba(255,255,255,0.05)', color: 'rgba(255,255,255,0.8)', border: '2px solid var(--border-web-idle)' }}>{`<link rel="apple-touch-icon" href="/apple-touch-icon.png">`}</pre>
             <p className="text-base leading-relaxed mt-2">If your site uses a Web App Manifest:</p>
-            <pre className="text-sm rounded-lg p-3 mt-2 overflow-x-auto" style={{ background: 'rgba(255,255,255,0.05)', color: 'rgba(255,255,255,0.8)', border: '1px solid var(--border)' }}>{`{
+            <pre className="text-sm rounded-lg p-3 mt-2 overflow-x-auto" style={{ background: 'rgba(255,255,255,0.05)', color: 'rgba(255,255,255,0.8)', border: '2px solid var(--border-web-idle)' }}>{`{
   "icons": [
     {
       "src": "/favicon-192.png",
@@ -274,7 +274,7 @@ export default function FaviconGeneratorPage() {
                 <div
                   key={p.size}
                   className="rounded-xl p-4 flex flex-col items-center gap-3"
-                  style={{ background: 'var(--surface)', border: '1px solid var(--border-hover)' }}
+                  style={{ background: 'var(--surface)', border: '2px solid var(--border-web)' }}
                 >
                   <div
                     className="flex items-center justify-center rounded-lg"
@@ -282,7 +282,7 @@ export default function FaviconGeneratorPage() {
                       width: 80,
                       height: 80,
                       background: 'rgba(255,255,255,0.08)',
-                      border: '1px solid var(--border)',
+                      border: '2px solid var(--border-web-idle)',
                     }}
                   >
                     {/* eslint-disable-next-line @next/next/no-img-element */}

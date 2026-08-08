@@ -148,9 +148,9 @@ export default function CompressJpgPage() {
 
         {src && (
           <>
-            <div className="flex items-center gap-4 rounded-xl p-3" style={{ background: 'var(--surface)', border: '1px solid var(--border)' }}>
+            <div className="flex items-center gap-4 rounded-xl p-3" style={{ background: 'var(--surface)', border: '2px solid var(--border-image-idle)' }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={src} alt="source" className="w-16 h-16 rounded-lg object-cover flex-shrink-0" style={{ border: '1px solid var(--border)' }} />
+              <img src={src} alt="source" className="w-16 h-16 rounded-lg object-cover flex-shrink-0" style={{ border: '2px solid var(--border-image-idle)' }} />
               <div className="min-w-0 flex-1">
                 <p className="text-base font-semibold text-white truncate">{fileName}</p>
                 <p className="text-sm mt-1" style={{ color: 'rgba(255,255,255,0.65)' }}>
@@ -186,7 +186,7 @@ export default function CompressJpgPage() {
                     { label: 'Compressed', value: formatBytes(outputSize), color: 'var(--color-image)' },
                     { label: 'Saved', value: `${saved}%`, color: saved > 0 ? '#34d399' : '#f87171' },
                   ].map(({ label, value, color }) => (
-                    <div key={label} className="rounded-xl px-4 py-3 text-center" style={{ background: 'var(--surface)', border: '1px solid var(--border)' }}>
+                    <div key={label} className="rounded-xl px-4 py-3 text-center" style={{ background: 'var(--surface)', border: '2px solid var(--border-image-idle)' }}>
                       <div className="text-xl font-bold mb-0.5 font-mono" style={{ color }}>{value}</div>
                       <div className="text-sm" style={{ color: 'rgba(255,255,255,0.6)' }}>{label}</div>
                     </div>
@@ -203,7 +203,7 @@ export default function CompressJpgPage() {
 
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={output} alt="compressed" className="w-full rounded-xl object-contain"
-                  style={{ border: '1px solid var(--border)', maxHeight: '320px' }} />
+                  style={{ border: '2px solid var(--border-image-idle)', maxHeight: '320px' }} />
               </div>
             )}
           </>

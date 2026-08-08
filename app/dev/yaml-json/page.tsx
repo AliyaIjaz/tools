@@ -187,7 +187,7 @@ export default function YamlJsonPage() {
 
   const btnGhost = {
     background: 'rgba(255,255,255,0.07)',
-    border: '1px solid rgba(255,255,255,0.12)',
+    border: '2px solid var(--border-dev)',
     color: 'rgba(255,255,255,0.65)',
   }
   const onHover = (e: React.MouseEvent<HTMLButtonElement>, enter: boolean) => {
@@ -317,16 +317,16 @@ export default function YamlJsonPage() {
                 ? 'name: Alice\nage: 30\nenabled: true'
                 : '{\n  "name": "Alice",\n  "age": 30\n}'}
               rows={18}
-              className="w-full resize-y rounded-lg px-3 py-3 text-sm outline-none transition-all duration-150 placeholder:text-white/20"
+              className="w-full resize-y rounded-lg px-3 py-3 text-sm outline-none transition-all duration-150 placeholder:text-white/50"
               style={{
                 background: 'rgba(0,0,0,0.35)',
-                border: '1px solid rgba(255,255,255,0.12)',
+                border: '2px solid var(--border-dev)',
                 color: 'rgba(255,255,255,0.92)',
                 fontFamily: 'var(--font-geist-mono), monospace',
                 lineHeight: '1.65',
               }}
               onFocus={(e) => { e.currentTarget.style.borderColor = 'var(--color-dev)' }}
-              onBlur={(e) => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.12)' }}
+              onBlur={(e) => { e.currentTarget.style.borderColor = 'var(--border-dev-idle)' }}
             />
             {isDragging && (
               <p className="mt-2 text-sm text-center" style={{ color: 'var(--color-dev)' }}>Drop file to load</p>
@@ -336,7 +336,7 @@ export default function YamlJsonPage() {
           {/* Output panel */}
           <div
             className="rounded-xl p-4 flex flex-col"
-            style={{ background: 'var(--surface)', border: '1px solid rgba(255,255,255,0.1)' }}
+            style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)' }}
           >
             <div className="flex items-center justify-between mb-3">
               <div className="flex items-center gap-2">
@@ -384,7 +384,7 @@ export default function YamlJsonPage() {
                 className="flex-1 rounded-lg px-3 py-3 text-sm overflow-auto leading-relaxed"
                 style={{
                   background: 'rgba(0,0,0,0.35)',
-                  border: '1px solid rgba(255,255,255,0.08)',
+                  border: '2px solid var(--border-dev-idle)',
                   fontFamily: 'var(--font-geist-mono), monospace',
                   color: 'rgba(255,255,255,0.88)',
                   minHeight: '200px',

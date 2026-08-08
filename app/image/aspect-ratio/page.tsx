@@ -99,7 +99,7 @@ export default function AspectRatioPage() {
 
   const filteredPresets = activeTag === 'All' ? PRESETS : PRESETS.filter((p) => p.tag === activeTag)
 
-  const btnGhost = { background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.12)', color: 'rgba(255,255,255,0.65)' }
+  const btnGhost = { background: 'rgba(255,255,255,0.07)', border: '2px solid var(--border-image)', color: 'rgba(255,255,255,0.65)' }
   const onHover = (e: React.MouseEvent<HTMLButtonElement>, enter: boolean) => {
     e.currentTarget.style.background = enter ? 'rgba(255,255,255,0.13)' : 'rgba(255,255,255,0.07)'
     e.currentTarget.style.color = enter ? 'rgba(255,255,255,0.9)' : 'rgba(255,255,255,0.65)'
@@ -166,7 +166,7 @@ export default function AspectRatioPage() {
         {mode === 'dimensions' && (
           <div
             className="rounded-xl p-4 space-y-4"
-            style={{ background: 'var(--surface)', border: '1px solid rgba(255,255,255,0.1)' }}
+            style={{ background: 'var(--surface)', border: '2px solid var(--border-image-idle)' }}
           >
             <label className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>Enter Dimensions</label>
             <div className="flex items-center gap-3 flex-wrap">
@@ -176,10 +176,10 @@ export default function AspectRatioPage() {
                   type="number" min={1} value={width}
                   onChange={(e) => setWidth(e.target.value)}
                   placeholder="1920"
-                  className="w-32 rounded-lg px-3 py-2.5 text-sm outline-none font-mono placeholder:text-white/20 transition-all"
-                  style={{ background: 'rgba(0,0,0,0.35)', border: '1px solid rgba(255,255,255,0.12)', color: 'rgba(255,255,255,0.92)' }}
+                  className="w-32 rounded-lg px-3 py-2.5 text-sm outline-none font-mono placeholder:text-white/50 transition-all"
+                  style={{ background: 'rgba(0,0,0,0.35)', border: '2px solid var(--border-image)', color: 'rgba(255,255,255,0.92)' }}
                   onFocus={(e) => { e.currentTarget.style.borderColor = 'var(--color-image)' }}
-                  onBlur={(e) => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.12)' }}
+                  onBlur={(e) => { e.currentTarget.style.borderColor = 'var(--border-image-idle)' }}
                 />
               </div>
               <span className="mt-5 text-lg" style={{ color: 'rgba(255,255,255,0.3)' }}>×</span>
@@ -189,10 +189,10 @@ export default function AspectRatioPage() {
                   type="number" min={1} value={height}
                   onChange={(e) => setHeight(e.target.value)}
                   placeholder="1080"
-                  className="w-32 rounded-lg px-3 py-2.5 text-sm outline-none font-mono placeholder:text-white/20 transition-all"
-                  style={{ background: 'rgba(0,0,0,0.35)', border: '1px solid rgba(255,255,255,0.12)', color: 'rgba(255,255,255,0.92)' }}
+                  className="w-32 rounded-lg px-3 py-2.5 text-sm outline-none font-mono placeholder:text-white/50 transition-all"
+                  style={{ background: 'rgba(0,0,0,0.35)', border: '2px solid var(--border-image)', color: 'rgba(255,255,255,0.92)' }}
                   onFocus={(e) => { e.currentTarget.style.borderColor = 'var(--color-image)' }}
-                  onBlur={(e) => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.12)' }}
+                  onBlur={(e) => { e.currentTarget.style.borderColor = 'var(--border-image-idle)' }}
                 />
               </div>
               <ArrowRight size={16} className="mt-5" style={{ color: 'rgba(255,255,255,0.25)' }} />
@@ -244,7 +244,7 @@ export default function AspectRatioPage() {
         {mode === 'ratio' && (
           <div
             className="rounded-xl p-4 space-y-4"
-            style={{ background: 'var(--surface)', border: '1px solid rgba(255,255,255,0.1)' }}
+            style={{ background: 'var(--surface)', border: '2px solid var(--border-image-idle)' }}
           >
             <label className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>Enter Ratio &amp; Known Dimension</label>
             <div className="flex items-end gap-3 flex-wrap">
@@ -254,10 +254,10 @@ export default function AspectRatioPage() {
                 <input
                   type="number" min={1} value={ratioW}
                   onChange={(e) => setRatioW(e.target.value)}
-                  className="w-20 rounded-lg px-3 py-2.5 text-sm outline-none font-mono placeholder:text-white/20 transition-all"
-                  style={{ background: 'rgba(0,0,0,0.35)', border: '1px solid rgba(255,255,255,0.12)', color: 'rgba(255,255,255,0.92)' }}
+                  className="w-20 rounded-lg px-3 py-2.5 text-sm outline-none font-mono placeholder:text-white/50 transition-all"
+                  style={{ background: 'rgba(0,0,0,0.35)', border: '2px solid var(--border-image)', color: 'rgba(255,255,255,0.92)' }}
                   onFocus={(e) => { e.currentTarget.style.borderColor = 'var(--color-image)' }}
-                  onBlur={(e) => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.12)' }}
+                  onBlur={(e) => { e.currentTarget.style.borderColor = 'var(--border-image-idle)' }}
                 />
               </div>
               <span className="pb-2.5 text-lg font-bold" style={{ color: 'rgba(255,255,255,0.3)' }}>:</span>
@@ -266,10 +266,10 @@ export default function AspectRatioPage() {
                 <input
                   type="number" min={1} value={ratioH}
                   onChange={(e) => setRatioH(e.target.value)}
-                  className="w-20 rounded-lg px-3 py-2.5 text-sm outline-none font-mono placeholder:text-white/20 transition-all"
-                  style={{ background: 'rgba(0,0,0,0.35)', border: '1px solid rgba(255,255,255,0.12)', color: 'rgba(255,255,255,0.92)' }}
+                  className="w-20 rounded-lg px-3 py-2.5 text-sm outline-none font-mono placeholder:text-white/50 transition-all"
+                  style={{ background: 'rgba(0,0,0,0.35)', border: '2px solid var(--border-image)', color: 'rgba(255,255,255,0.92)' }}
                   onFocus={(e) => { e.currentTarget.style.borderColor = 'var(--color-image)' }}
-                  onBlur={(e) => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.12)' }}
+                  onBlur={(e) => { e.currentTarget.style.borderColor = 'var(--border-image-idle)' }}
                 />
               </div>
 
@@ -278,7 +278,7 @@ export default function AspectRatioPage() {
               {/* Known dim toggle */}
               <div className="flex flex-col gap-1">
                 <span className="text-xs" style={{ color: 'rgba(255,255,255,0.4)' }}>I know the</span>
-                <div className="flex rounded-lg overflow-hidden" style={{ border: '1px solid rgba(255,255,255,0.12)' }}>
+                <div className="flex rounded-lg overflow-hidden" style={{ border: '2px solid var(--border-image)' }}>
                   {(['w', 'h'] as const).map((d) => (
                     <button
                       key={d}
@@ -302,10 +302,10 @@ export default function AspectRatioPage() {
                   type="number" min={1} value={knownVal}
                   onChange={(e) => setKnownVal(e.target.value)}
                   placeholder="1920"
-                  className="w-32 rounded-lg px-3 py-2.5 text-sm outline-none font-mono placeholder:text-white/20 transition-all"
-                  style={{ background: 'rgba(0,0,0,0.35)', border: '1px solid rgba(255,255,255,0.12)', color: 'rgba(255,255,255,0.92)' }}
+                  className="w-32 rounded-lg px-3 py-2.5 text-sm outline-none font-mono placeholder:text-white/50 transition-all"
+                  style={{ background: 'rgba(0,0,0,0.35)', border: '2px solid var(--border-image)', color: 'rgba(255,255,255,0.92)' }}
                   onFocus={(e) => { e.currentTarget.style.borderColor = 'var(--color-image)' }}
-                  onBlur={(e) => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.12)' }}
+                  onBlur={(e) => { e.currentTarget.style.borderColor = 'var(--border-image-idle)' }}
                 />
               </div>
             </div>
@@ -332,7 +332,7 @@ export default function AspectRatioPage() {
         {mode === 'dimensions' && dimValid && scaledSizes.length > 0 && (
           <div
             className="rounded-xl overflow-hidden"
-            style={{ background: 'var(--surface)', border: '1px solid rgba(255,255,255,0.1)' }}
+            style={{ background: 'var(--surface)', border: '2px solid var(--border-image-idle)' }}
           >
             <div className="px-4 py-3" style={{ borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
               <span className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>
@@ -361,11 +361,11 @@ export default function AspectRatioPage() {
         {/* Presets */}
         <div
           className="rounded-xl p-4 space-y-3"
-          style={{ background: 'var(--surface)', border: '1px solid rgba(255,255,255,0.1)' }}
+          style={{ background: 'var(--surface)', border: '2px solid var(--border-image-idle)' }}
         >
           <div className="flex items-center justify-between flex-wrap gap-2">
             <span className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>Common Presets</span>
-            <div className="flex rounded-lg overflow-hidden" style={{ border: '1px solid rgba(255,255,255,0.1)' }}>
+            <div className="flex rounded-lg overflow-hidden" style={{ border: '2px solid var(--border-image-idle)' }}>
               {PRESET_TAGS.map((tag) => (
                 <button
                   key={tag}
@@ -389,7 +389,7 @@ export default function AspectRatioPage() {
                 key={`${p.label}-${p.ratio}`}
                 onClick={() => loadPreset(p)}
                 className="rounded-lg px-3 py-2.5 text-left transition-all space-y-0.5"
-                style={{ background: 'rgba(0,0,0,0.25)', border: '1px solid rgba(255,255,255,0.08)' }}
+                style={{ background: 'rgba(0,0,0,0.25)', border: '2px solid var(--border-image-idle)' }}
                 onMouseEnter={(e) => { e.currentTarget.style.background = 'rgba(59,130,246,0.1)'; e.currentTarget.style.borderColor = 'rgba(59,130,246,0.3)' }}
                 onMouseLeave={(e) => { e.currentTarget.style.background = 'rgba(0,0,0,0.25)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)' }}
               >

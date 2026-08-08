@@ -45,7 +45,7 @@ export default function MetaTagGeneratorPage() {
 
   const inputStyle: React.CSSProperties = {
     background: 'var(--surface)',
-    border: '1.5px solid var(--border)',
+    border: '2px solid var(--border-web-idle)',
     borderRadius: '10px',
     color: 'rgba(255,255,255,0.9)',
     padding: '10px 14px',
@@ -321,7 +321,7 @@ export default function MetaTagGeneratorPage() {
         {(title || description || image) && (
           <div>
             <p className="text-sm font-semibold mb-2.5" style={{ color: 'rgba(255,255,255,0.85)' }}>Social preview</p>
-            <div className="rounded-xl overflow-hidden" style={{ border: '1.5px solid var(--border)', maxWidth: '480px' }}>
+            <div className="rounded-xl overflow-hidden" style={{ border: '2px solid var(--border-web-idle)', maxWidth: '480px' }}>
               {image && (
                 <div className="h-44 bg-cover bg-center" style={{ backgroundImage: `url(${image})` }} />
               )}
@@ -345,7 +345,7 @@ export default function MetaTagGeneratorPage() {
               className="rounded-xl px-5 py-4 text-sm overflow-auto whitespace-pre-wrap"
               style={{
                 background: 'var(--surface)',
-                border: '1.5px solid var(--border)',
+                border: '2px solid var(--border-web-idle)',
                 color: 'rgba(255,255,255,0.85)',
                 fontFamily: 'var(--font-geist-mono), monospace',
                 lineHeight: '1.7',

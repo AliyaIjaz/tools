@@ -28,7 +28,7 @@ export default function DiffViewerPage() {
     fontSize: '13px',
     outline: 'none',
     background: 'var(--surface)',
-    border: '1px solid var(--border)',
+    border: '2px solid var(--border-dev-idle)',
     color: 'rgba(255,255,255,0.85)',
     fontFamily: 'var(--font-geist-mono), monospace',
     lineHeight: '1.6',
@@ -101,7 +101,7 @@ export default function DiffViewerPage() {
               style={{
                 ...textareaStyle,
                 fontSize: '14px',
-                border: '1.5px solid var(--border-hover)',
+                border: '2px solid var(--border-dev)',
                 color: 'rgba(255,255,255,0.95)',
                 lineHeight: '1.7',
               }}
@@ -119,7 +119,7 @@ export default function DiffViewerPage() {
               style={{
                 ...textareaStyle,
                 fontSize: '14px',
-                border: '1.5px solid var(--border-hover)',
+                border: '2px solid var(--border-dev)',
                 color: 'rgba(255,255,255,0.95)',
                 lineHeight: '1.7',
               }}
@@ -155,7 +155,7 @@ export default function DiffViewerPage() {
               className="rounded-xl overflow-auto"
               style={{
                 background: 'var(--surface)',
-                border: '1.5px solid var(--border-hover)',
+                border: '2px solid var(--border-dev)',
                 maxHeight: '440px',
                 fontFamily: 'var(--font-geist-mono), monospace',
                 fontSize: '14px',

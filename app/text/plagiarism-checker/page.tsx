@@ -47,7 +47,7 @@ function ScoreMeter({ score }: { score: number }) {
   const color = score < 20 ? '#4ade80' : score < 50 ? '#fbbf24' : '#f87171'
   const label = score < 20 ? 'Low Similarity' : score < 50 ? 'Moderate Similarity' : 'High Similarity — Possible Plagiarism'
   return (
-    <div className="rounded-xl p-6 text-center" style={{ background: 'var(--surface)', border: '1px solid var(--border)' }}>
+    <div className="rounded-xl p-6 text-center" style={{ background: 'var(--surface)', border: '2px solid var(--border-text-idle)' }}>
       <div className="text-6xl font-bold mb-2 tabular-nums" style={{ color }}>{score}%</div>
       <div className="text-sm font-medium mb-4" style={{ color }}>{label}</div>
       <div className="h-2 rounded-full overflow-hidden" style={{ background: 'var(--border)' }}>
@@ -75,7 +75,7 @@ export default function PlagiarismCheckerPage() {
 
   const textareaStyle: React.CSSProperties = {
     background: 'var(--surface)',
-    border: '1px solid var(--border)',
+    border: '2px solid var(--border-text-idle)',
     color: 'rgba(255,255,255,0.9)',
     lineHeight: '1.7',
     fontSize: '15px',
@@ -143,10 +143,10 @@ export default function PlagiarismCheckerPage() {
               onChange={(e) => setOriginal(e.target.value)}
               rows={10}
               placeholder="Paste the original / reference text here…"
-              className="w-full resize-y rounded-xl outline-none transition-all placeholder:text-white/20"
+              className="w-full resize-y rounded-xl outline-none transition-all placeholder:text-white/50"
               style={textareaStyle}
-              onFocus={(e) => { e.currentTarget.style.borderColor = 'var(--border-focus)'; e.currentTarget.style.background = 'var(--surface-hover)' }}
-              onBlur={(e) => { e.currentTarget.style.borderColor = 'var(--border)'; e.currentTarget.style.background = 'var(--surface)' }}
+              onFocus={(e) => { e.currentTarget.style.borderColor = 'var(--color-text-tool)'; e.currentTarget.style.background = 'var(--surface-hover)' }}
+              onBlur={(e) => { e.currentTarget.style.borderColor = 'var(--border-text-idle)'; e.currentTarget.style.background = 'var(--surface)' }}
             />
           </div>
           <div className="flex flex-col gap-2">
@@ -156,10 +156,10 @@ export default function PlagiarismCheckerPage() {
               onChange={(e) => setSuspect(e.target.value)}
               rows={10}
               placeholder="Paste the text you want to compare…"
-              className="w-full resize-y rounded-xl outline-none transition-all placeholder:text-white/20"
+              className="w-full resize-y rounded-xl outline-none transition-all placeholder:text-white/50"
               style={textareaStyle}
-              onFocus={(e) => { e.currentTarget.style.borderColor = 'var(--border-focus)'; e.currentTarget.style.background = 'var(--surface-hover)' }}
-              onBlur={(e) => { e.currentTarget.style.borderColor = 'var(--border)'; e.currentTarget.style.background = 'var(--surface)' }}
+              onFocus={(e) => { e.currentTarget.style.borderColor = 'var(--color-text-tool)'; e.currentTarget.style.background = 'var(--surface-hover)' }}
+              onBlur={(e) => { e.currentTarget.style.borderColor = 'var(--border-text-idle)'; e.currentTarget.style.background = 'var(--surface)' }}
             />
           </div>
         </div>
@@ -176,9 +176,9 @@ export default function PlagiarismCheckerPage() {
           <button
             onClick={handleClear}
             className="px-6 py-3 rounded-xl text-base font-medium transition-all"
-            style={{ background: 'var(--surface)', border: '1px solid var(--border)', color: 'rgba(255,255,255,0.65)' }}
-            onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'var(--border-hover)' }}
-            onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'var(--border)' }}
+            style={{ background: 'var(--surface)', border: '2px solid var(--border-text-idle)', color: 'rgba(255,255,255,0.65)' }}
+            onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'var(--border-text-idle)' }}
+            onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'var(--border-text-idle)' }}
           >
             Clear
           </button>
@@ -195,7 +195,7 @@ export default function PlagiarismCheckerPage() {
                 { label: 'Unique Phrases', value: result.uniquePhrases.toLocaleString() },
               ].map(({ label, value }) => (
                 <div key={label} className="rounded-xl px-4 py-4 text-center"
-                  style={{ background: 'var(--surface)', border: '1px solid var(--border)' }}>
+                  style={{ background: 'var(--surface)', border: '2px solid var(--border-text-idle)' }}>
                   <div className="text-2xl font-bold mb-1" style={{ color: 'var(--color-text-tool)' }}>{value}</div>
                   <div className="text-sm" style={{ color: 'rgba(255,255,255,0.5)' }}>{label}</div>
                 </div>
@@ -203,7 +203,7 @@ export default function PlagiarismCheckerPage() {
             </div>
 
             {result.matchingPhrases.length > 0 ? (
-              <div className="rounded-xl p-5" style={{ background: 'var(--surface)', border: '1px solid var(--border)' }}>
+              <div className="rounded-xl p-5" style={{ background: 'var(--surface)', border: '2px solid var(--border-text-idle)' }}>
                 <div className="text-sm font-semibold mb-3" style={{ color: 'rgba(255,255,255,0.55)' }}>
                   Matching phrases detected
                 </div>
@@ -218,7 +218,7 @@ export default function PlagiarismCheckerPage() {
               </div>
             ) : (
               <div className="rounded-xl p-5 text-base text-center"
-                style={{ color: 'rgba(255,255,255,0.45)', background: 'var(--surface)', border: '1px solid var(--border)' }}>
+                style={{ color: 'rgba(255,255,255,0.45)', background: 'var(--surface)', border: '2px solid var(--border-text-idle)' }}>
                 No matching phrases found.
               </div>
             )}

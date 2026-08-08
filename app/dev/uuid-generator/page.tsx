@@ -86,13 +86,13 @@ export default function UuidGeneratorPage() {
         {/* Controls */}
         <div
           className="rounded-xl p-4"
-          style={{ background: 'var(--surface)', border: '1px solid rgba(255,255,255,0.1)' }}
+          style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)' }}
         >
           <label className="block text-sm font-semibold mb-3" style={{ color: 'rgba(255,255,255,0.75)' }}>
             How many UUIDs?
           </label>
           <div className="flex flex-wrap items-center gap-3">
-            <div className="flex items-center gap-1 p-1 rounded-lg" style={{ background: 'rgba(0,0,0,0.3)', border: '1px solid rgba(255,255,255,0.1)' }}>
+            <div className="flex items-center gap-1 p-1 rounded-lg" style={{ background: 'rgba(0,0,0,0.3)', border: '2px solid var(--border-dev-idle)' }}>
               {AMOUNTS.map((n) => (
                 <button
                   key={n}
@@ -139,7 +139,7 @@ export default function UuidGeneratorPage() {
             <div
               key={i}
               className="flex items-center justify-between gap-3 px-4 py-3.5 rounded-xl"
-              style={{ background: 'var(--surface)', border: '1px solid rgba(255,255,255,0.1)' }}
+              style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)' }}
             >
               <code
                 className="text-sm flex-1 tracking-wide"

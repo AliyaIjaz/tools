@@ -306,7 +306,7 @@ export default function TypingPracticePage() {
             key={label}
             style={{
               background: 'var(--surface)',
-              border: '1px solid var(--border)',
+              border: '2px solid var(--border)',
               borderTop: `3px solid ${accent}`,
               borderRadius: '12px',
               padding: '18px 16px',
@@ -497,7 +497,7 @@ export default function TypingPracticePage() {
                   style={{
                     padding: '8px 18px',
                     borderRadius: '8px',
-                    border: '1px solid var(--border)',
+                    border: '2px solid var(--border)',
                     background: 'var(--surface)',
                     color: 'rgba(255,255,255,0.7)',
                     fontSize: '13px',
@@ -602,7 +602,7 @@ export default function TypingPracticePage() {
                 style={{
                   padding: '8px 18px',
                   borderRadius: '8px',
-                  border: '1px solid var(--border-hover)',
+                  border: '2px solid var(--border-hover)',
                   background: 'var(--surface)',
                   color: 'rgba(255,255,255,0.65)',
                   fontSize: '13px',
@@ -619,7 +619,7 @@ export default function TypingPracticePage() {
                 style={{
                   padding: '8px 18px',
                   borderRadius: '8px',
-                  border: '1px solid var(--border-hover)',
+                  border: '2px solid var(--border-hover)',
                   background: 'var(--surface)',
                   color: 'rgba(255,255,255,0.65)',
                   fontSize: '13px',
@@ -715,7 +715,7 @@ export default function TypingPracticePage() {
               width: '70%',
               margin: '0 auto',
               borderRadius: '14px',
-              border: '1px solid var(--border)',
+              border: '2px solid var(--border)',
               display: 'block',
             }}
           />

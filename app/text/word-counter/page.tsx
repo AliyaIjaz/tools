@@ -90,18 +90,18 @@ export default function WordCounterPage() {
             onChange={(e) => setText(e.target.value)}
             rows={10}
             placeholder="Type or paste text here…"
-            className="w-full resize-y rounded-xl px-4 py-3 text-sm outline-none transition-all placeholder:text-white/20"
+            className="w-full resize-y rounded-xl px-4 py-3 text-sm outline-none transition-all placeholder:text-white/50"
             style={{
               background: 'var(--surface)',
-              border: '1px solid var(--border)',
+              border: '2px solid var(--border-text-idle)',
               color: 'rgba(255,255,255,0.85)',
               lineHeight: '1.7',
             }}
             onFocus={(e) => {
-              e.currentTarget.style.borderColor = 'var(--border-focus)'
+              e.currentTarget.style.borderColor = 'var(--color-text-tool)'
             }}
             onBlur={(e) => {
-              e.currentTarget.style.borderColor = 'var(--border)'
+              e.currentTarget.style.borderColor = 'var(--border-text-idle)'
             }}
           />
         </div>
@@ -111,7 +111,7 @@ export default function WordCounterPage() {
             <div
               key={label}
               className="rounded-xl px-4 py-4 text-center"
-              style={{ background: 'var(--surface)', border: '1px solid var(--border)' }}
+              style={{ background: 'var(--surface)', border: '2px solid var(--border-text-idle)' }}
             >
               <div
                 className="text-2xl font-bold mb-1"

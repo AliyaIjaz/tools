@@ -107,7 +107,7 @@ export default function LoremIpsumPage() {
         <div className="flex flex-wrap items-center gap-3">
           <div
             className="flex items-center gap-1 p-1 rounded-lg"
-            style={{ background: 'var(--surface)', border: '1px solid var(--border)' }}
+            style={{ background: 'var(--surface)', border: '2px solid var(--border-text-idle)' }}
           >
             {TYPES.map((t) => (
               <button
@@ -136,7 +136,7 @@ export default function LoremIpsumPage() {
               className="w-16 px-2 py-1.5 rounded-lg text-sm text-center outline-none"
               style={{
                 background: 'var(--surface)',
-                border: '1px solid var(--border)',
+                border: '2px solid var(--border-text-idle)',
                 color: 'rgba(255,255,255,0.8)',
               }}
             />
@@ -167,7 +167,7 @@ export default function LoremIpsumPage() {
               className="rounded-xl px-4 py-4 text-sm leading-relaxed whitespace-pre-wrap"
               style={{
                 background: 'var(--surface)',
-                border: '1px solid var(--border)',
+                border: '2px solid var(--border-text-idle)',
                 color: 'rgba(255,255,255,0.75)',
                 maxHeight: '420px',
                 overflowY: 'auto',
