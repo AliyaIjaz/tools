@@ -71,3 +71,48 @@ Ordered by priority. Check off each one as it's done.
       - Support OpenAI, Anthropic, Gemini formats
       - Category: dev
       - Route: /dev/prompt-formatter
+
+[x] 13. Number Base Converter
+      - Convert between binary (base 2), octal (base 8), decimal (base 10), hexadecimal (base 16)
+      - Live conversion from any field, nibble grouping for binary, quick reference table
+      - Category: dev
+      - Route: /dev/number-base-converter
+
+[ ] 14. Bytes / Data Size Converter
+      - Convert between B, KB, MB, GB, TB, PB (SI) and KiB, MiB, GiB, TiB (IEC binary)
+      - Category: dev
+      - Route: /dev/data-size-converter
+
+[ ] 15. Time Duration Converter
+      - Convert between ms, seconds, minutes, hours, days, weeks, months, years
+      - Useful for API timeouts, TTLs, cache durations, cron intervals
+      - Category: dev
+      - Route: /dev/time-duration-converter
+
+[ ] 16. Unix Permissions Calculator
+      - Convert between numeric (755) and symbolic (rwxr-xr-x) Unix file permissions
+      - Show per-bit breakdown (owner/group/other read/write/execute)
+      - Category: dev
+      - Route: /dev/unix-permissions
+
+[ ] 17. Temperature Converter
+      - Convert between °C, °F, Kelvin, °Rankine
+      - Category: web (or new /units category)
+      - Route: /web/temperature-converter
+
+[ ] 18. Length Converter
+      - Convert between mm, cm, m, km, in, ft, yd, mi, nautical miles
+      - Category: web
+      - Route: /web/length-converter
+
+[ ] 19. DPI / PPI Calculator
+      - Input pixel dimensions + DPI → physical print size in inches and cm
+      - Useful for print design and image export
+      - Category: image
+      - Route: /image/dpi-calculator
+
+[ ] 20. Typography Unit Converter
+      - Convert between px, pt, em, rem, mm, cm for print/web type sizes
+      - Complements CSS Unit Converter but focused on typography
+      - Category: web
+      - Route: /web/typography-converter

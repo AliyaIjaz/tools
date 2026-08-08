@@ -177,7 +177,7 @@ export default function CsvToJsonPage() {
     <ToolLayout
       toolId="csv-to-json"
       title="CSV to JSON Converter"
-      description="Convert CSV to JSON or JSON to CSV instantly — no upload, no server"
+      description="Convert CSV to JSON or JSON to CSV instantly —  no server, no signup"
       category="dev"
       iconName="Table"
       showAllCategory

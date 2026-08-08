@@ -146,6 +146,15 @@ export const TOOLS: ToolDefinition[] = [
     iconName: 'Table',
     keywords: ['csv', 'json', 'convert', 'table', 'data', 'spreadsheet', 'excel', 'import', 'export'],
   },
+  {
+    id: 'number-base-converter',
+    name: 'Number Base Converter Online',
+    description: 'Convert numbers between binary, octal, decimal, and hexadecimal',
+    href: '/dev/number-base-converter',
+    category: 'dev',
+    iconName: 'Binary',
+    keywords: ['binary', 'octal', 'decimal', 'hexadecimal', 'hex', 'base', 'convert', 'number', 'bitfield', 'bitmask'],
+  },
   //Typing tool
   {
     id: 'typing-practice',
@@ -514,6 +523,7 @@ export const AVAILABLE_HREFS = new Set([
   '/dev/json-schema-generator',
   '/dev/token-counter',
   '/dev/csv-to-json',
+  '/dev/number-base-converter',
   '/text/case-converter',
   '/text/word-counter',
   '/text/markdown-preview',
