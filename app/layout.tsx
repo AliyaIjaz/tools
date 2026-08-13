@@ -22,11 +22,15 @@ const orbitron = Orbitron({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://freetools.zenveel.com'),
   title: {
     default: 'Zenveel',
     template: '%s — Zenveel',
   },
   description: 'Fast, free browser-based utility tools. No signup. No server.',
+  alternates: {
+    canonical: '/',
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
