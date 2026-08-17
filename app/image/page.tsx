@@ -3,7 +3,22 @@ import { getToolsByCategory } from '@/lib/tools'
 import { CATEGORIES } from '@/lib/constants'
 import ToolCard from '@/components/ui/ToolCard'
 
-export const metadata: Metadata = { title: 'Image Tools' }
+export const metadata: Metadata = {
+  title: 'Image Tools',
+  description: 'Free online image tools — resize, crop, convert, compress, rotate images and more. Supports PNG, JPG, WebP. Everything runs in your browser — no upload to server.',
+  openGraph: {
+    title: 'Image Tools — Zenveel',
+    description: 'Free online image tools — resize, crop, convert, compress, rotate images and more. Supports PNG, JPG, WebP. Everything runs in your browser — no upload to server.',
+    url: '/image',
+    siteName: 'Zenveel',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Image Tools — Zenveel',
+    description: 'Free online image tools — resize, crop, convert, compress, rotate images and more. Supports PNG, JPG, WebP. Everything runs in your browser — no upload to server.',
+  },
+}
 
 export default function ImagePage() {
   const tools = getToolsByCategory('image')

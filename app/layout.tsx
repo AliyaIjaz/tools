@@ -24,12 +24,26 @@ const orbitron = Orbitron({
 export const metadata: Metadata = {
   metadataBase: new URL('https://freetools.zenveel.com'),
   title: {
-    default: 'Zenveel',
+    default: 'Zenveel — Free Online Tools for Developers',
     template: '%s — Zenveel',
   },
-  description: 'Fast, free browser-based utility tools. No signup. No server.',
+  description: '55+ free browser-based utility tools for developers and creators. JSON formatter, image converter, CSS generators, text tools, and more. No signup. Nothing uploaded. Everything runs in your browser.',
   alternates: {
-    canonical: '/',
+    canonical: 'https://freetools.zenveel.com/',
+  },
+  openGraph: {
+    title: 'Zenveel — Free Online Tools for Developers',
+    description: '55+ free browser-based utility tools for developers and creators. JSON formatter, image converter, CSS generators, text tools, and more. No signup. Nothing uploaded. Everything runs in your browser.',
+    url: '/',
+    siteName: 'Zenveel',
+    type: 'website',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Zenveel — Free Online Tools' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Zenveel — Free Online Tools for Developers',
+    description: '55+ free browser-based utility tools for developers and creators. JSON formatter, image converter, CSS generators, text tools, and more. No signup. Nothing uploaded. Everything runs in your browser.',
+    images: ['/og-image.png'],
   },
 }
 

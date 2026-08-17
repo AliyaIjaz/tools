@@ -2,8 +2,20 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Diff Viewer Online — Compare Two Text Files',
-  description: 'Compare two blocks of text and highlight the differences side by side. Line-by-line diff viewer for code, documents, and plain text. Free, instant, browser-based.',
+  description: 'Compare two blocks of text and highlight the differences line by line. Side-by-side diff viewer for code, documents, and plain text. Free, instant, browser-based — no signup.',
   alternates: { canonical: '/dev/diff-viewer' },
+  openGraph: {
+    title: 'Diff Viewer Online — Compare Two Text Files',
+    description: 'Compare two blocks of text and highlight the differences line by line. Side-by-side diff viewer for code, documents, and plain text. Free, instant, browser-based — no signup.',
+    url: '/dev/diff-viewer',
+    siteName: 'Zenveel',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Diff Viewer Online — Compare Two Text Files',
+    description: 'Compare two blocks of text and highlight the differences line by line. Side-by-side diff viewer for code, documents, and plain text. Free, instant, browser-based — no signup.',
+  },
 }
 
 export default function Layout({ children }: { children: React.ReactNode }) {

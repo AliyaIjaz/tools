@@ -2,8 +2,20 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Keyword Density Checker Online',
-  description: 'Analyze keyword frequency and density in your text. Free SEO tool that runs entirely in your browser — no signup needed.',
+  description: 'Analyze keyword frequency and density in your text. Identify top words and phrases for SEO optimization. Free browser-based keyword density checker — no signup, no data sent.',
   alternates: { canonical: '/text/keyword-density' },
+  openGraph: {
+    title: 'Keyword Density Checker Online',
+    description: 'Analyze keyword frequency and density in your text. Identify top words and phrases for SEO optimization. Free browser-based keyword density checker — no signup, no data sent.',
+    url: '/text/keyword-density',
+    siteName: 'Zenveel',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Keyword Density Checker Online',
+    description: 'Analyze keyword frequency and density in your text. Identify top words and phrases for SEO optimization. Free browser-based keyword density checker — no signup, no data sent.',
+  },
 }
 
 export default function Layout({ children }: { children: React.ReactNode }) {

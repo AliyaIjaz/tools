@@ -5,6 +5,20 @@ export const metadata: Metadata = {
   description:
     'Practice typing and measure your WPM and accuracy with real-time feedback. Free online typing test — no signup required, works in all modern browsers.',
   alternates: { canonical: '/typing/typing-practice' },
+  openGraph: {
+    title: 'Typing Practice Online — Test & Improve Typing Speed',
+    description:
+      'Practice typing and measure your WPM and accuracy with real-time feedback. Free online typing test — no signup required, works in all modern browsers.',
+    url: '/typing/typing-practice',
+    siteName: 'Zenveel',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Typing Practice Online — Test & Improve Typing Speed',
+    description:
+      'Practice typing and measure your WPM and accuracy with real-time feedback. Free online typing test — no signup required, works in all modern browsers.',
+  },
 }
 
 export default function Layout({ children }: { children: React.ReactNode }) {

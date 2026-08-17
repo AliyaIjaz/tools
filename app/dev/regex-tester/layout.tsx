@@ -2,8 +2,20 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Regex Tester Online',
-  description: 'Test and debug regular expressions with live match highlighting. Supports JavaScript regex syntax with flags. Free online regex tester — no signup needed.',
+  description: 'Test and debug regular expressions with live match highlighting. Supports JavaScript regex syntax with all flags. Free online regex tester — instant results, no signup needed.',
   alternates: { canonical: '/dev/regex-tester' },
+  openGraph: {
+    title: 'Regex Tester Online',
+    description: 'Test and debug regular expressions with live match highlighting. Supports JavaScript regex syntax with all flags. Free online regex tester — instant results, no signup needed.',
+    url: '/dev/regex-tester',
+    siteName: 'Zenveel',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Regex Tester Online',
+    description: 'Test and debug regular expressions with live match highlighting. Supports JavaScript regex syntax with all flags. Free online regex tester — instant results, no signup needed.',
+  },
 }
 
 export default function Layout({ children }: { children: React.ReactNode }) {

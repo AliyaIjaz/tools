@@ -3,7 +3,22 @@ import { getToolsByCategory } from '@/lib/tools'
 import { CATEGORIES } from '@/lib/constants'
 import ToolCard from '@/components/ui/ToolCard'
 
-export const metadata: Metadata = { title: 'Developer Tools' }
+export const metadata: Metadata = {
+  title: 'Developer Tools',
+  description: 'Free online developer tools — JSON formatter, Base64 encoder, UUID generator, regex tester, JWT decoder, and more. All run in your browser, no signup needed.',
+  openGraph: {
+    title: 'Developer Tools — Zenveel',
+    description: 'Free online developer tools — JSON formatter, Base64 encoder, UUID generator, regex tester, JWT decoder, and more. All run in your browser, no signup needed.',
+    url: '/dev',
+    siteName: 'Zenveel',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Developer Tools — Zenveel',
+    description: 'Free online developer tools — JSON formatter, Base64 encoder, UUID generator, regex tester, JWT decoder, and more. All run in your browser, no signup needed.',
+  },
+}
 
 export default function DevPage() {
   const tools = getToolsByCategory('dev')

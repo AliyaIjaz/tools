@@ -5,6 +5,20 @@ export const metadata: Metadata = {
   description:
     'Count words, characters, sentences, paragraphs, and estimate reading time instantly. Free online word counter — no signup, no upload. Works on any text.',
   alternates: { canonical: '/text/word-counter' },
+  openGraph: {
+    title: 'Word Counter Online — Count Words, Characters & Reading Time',
+    description:
+      'Count words, characters, sentences, paragraphs, and estimate reading time instantly. Free online word counter — no signup, no upload. Works on any text.',
+    url: '/text/word-counter',
+    siteName: 'Zenveel',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Word Counter Online — Count Words, Characters & Reading Time',
+    description:
+      'Count words, characters, sentences, paragraphs, and estimate reading time instantly. Free online word counter — no signup, no upload. Works on any text.',
+  },
 }
 
 export default function Layout({ children }: { children: React.ReactNode }) {

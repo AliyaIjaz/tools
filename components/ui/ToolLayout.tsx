@@ -17,9 +17,10 @@ type Props = {
   relatedToolIds?: string[]
   showAllCategory?: boolean
   compactRelated?: boolean
+  href?: string
 }
 
-export default function ToolLayout({ toolId, title, description, category, iconName, children, seoContent, relatedToolIds, showAllCategory, compactRelated }: Props) {
+export default function ToolLayout({ toolId, title, description, category, iconName, children, seoContent, relatedToolIds, showAllCategory, compactRelated, href }: Props) {
   const related = showAllCategory
     ? TOOLS.filter((t) => t.category === category && t.id !== toolId)
     : relatedToolIds
@@ -31,8 +32,21 @@ export default function ToolLayout({ toolId, title, description, category, iconN
 
   const IconComponent = (LucideIcons as unknown as Record<string, React.ComponentType<{ size?: number; style?: React.CSSProperties }>>)[iconName]
 
+  const toolHref = href ?? TOOLS.find((t) => t.id === toolId)?.href ?? ''
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: `${title} Online`,
+    description,
+    url: `https://freetools.zenveel.com${toolHref}`,
+    applicationCategory: 'UtilitiesApplication',
+    operatingSystem: 'Web',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+  }
+
   return (
     <div className="min-h-screen">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
         {/* Breadcrumb */}
         <nav className="flex items-center gap-2 text-sm mb-8">

@@ -2,8 +2,20 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'WebP to JPG Converter Online — Free & Fast',
-  description: 'Convert WebP images to JPG format free and instantly in your browser. No upload to server, no signup required. Download the converted JPG image instantly.',
+  description: 'Convert WebP images to JPG format for maximum compatibility with older browsers and apps. Free and instant in your browser — no upload to server, no signup required.',
   alternates: { canonical: '/image/webp-to-jpg' },
+  openGraph: {
+    title: 'WebP to JPG Converter Online — Free & Fast',
+    description: 'Convert WebP images to JPG format for maximum compatibility with older browsers and apps. Free and instant in your browser — no upload to server, no signup required.',
+    url: '/image/webp-to-jpg',
+    siteName: 'Zenveel',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'WebP to JPG Converter Online — Free & Fast',
+    description: 'Convert WebP images to JPG format for maximum compatibility with older browsers and apps. Free and instant in your browser — no upload to server, no signup required.',
+  },
 }
 
 export default function Layout({ children }: { children: React.ReactNode }) {

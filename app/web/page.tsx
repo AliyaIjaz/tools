@@ -3,7 +3,22 @@ import { getToolsByCategory } from '@/lib/tools'
 import { CATEGORIES } from '@/lib/constants'
 import ToolCard from '@/components/ui/ToolCard'
 
-export const metadata: Metadata = { title: 'Web Dev Tools' }
+export const metadata: Metadata = {
+  title: 'Web Dev Tools',
+  description: 'Free online web development tools — CSS gradient generator, box shadow builder, color converter, favicon generator, meta tag generator, and more.',
+  openGraph: {
+    title: 'Web Dev Tools — Zenveel',
+    description: 'Free online web development tools — CSS gradient generator, box shadow builder, color converter, favicon generator, meta tag generator, and more.',
+    url: '/web',
+    siteName: 'Zenveel',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Web Dev Tools — Zenveel',
+    description: 'Free online web development tools — CSS gradient generator, box shadow builder, color converter, favicon generator, meta tag generator, and more.',
+  },
+}
 
 export default function WebPage() {
   const tools = getToolsByCategory('web')

@@ -3,7 +3,22 @@ import { getToolsByCategory } from '@/lib/tools'
 import { CATEGORIES } from '@/lib/constants'
 import ToolCard from '@/components/ui/ToolCard'
 
-export const metadata: Metadata = { title: 'Text Tools' }
+export const metadata: Metadata = {
+  title: 'Text Tools',
+  description: 'Free online text tools — word counter, case converter, markdown preview, lorem ipsum generator, find & replace, and more. Runs entirely in your browser.',
+  openGraph: {
+    title: 'Text Tools — Zenveel',
+    description: 'Free online text tools — word counter, case converter, markdown preview, lorem ipsum generator, find & replace, and more. Runs entirely in your browser.',
+    url: '/text',
+    siteName: 'Zenveel',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Text Tools — Zenveel',
+    description: 'Free online text tools — word counter, case converter, markdown preview, lorem ipsum generator, find & replace, and more. Runs entirely in your browser.',
+  },
+}
 
 export default function TextPage() {
   const tools = getToolsByCategory('text')

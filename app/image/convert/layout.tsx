@@ -2,8 +2,20 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Image Converter Online — PNG, JPEG & WebP',
-  description: 'Convert images between PNG, JPEG, and WebP formats instantly in your browser. Free online image converter — no signup, no server upload required.',
+  description: 'Convert images between PNG, JPEG, and WebP formats instantly in your browser. Adjust quality settings and download the result. Free online image converter — no signup, no server upload.',
   alternates: { canonical: '/image/convert' },
+  openGraph: {
+    title: 'Image Converter Online — PNG, JPEG & WebP',
+    description: 'Convert images between PNG, JPEG, and WebP formats instantly in your browser. Adjust quality settings and download the result. Free online image converter — no signup, no server upload.',
+    url: '/image/convert',
+    siteName: 'Zenveel',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Image Converter Online — PNG, JPEG & WebP',
+    description: 'Convert images between PNG, JPEG, and WebP formats instantly in your browser. Adjust quality settings and download the result. Free online image converter — no signup, no server upload.',
+  },
 }
 
 export default function Layout({ children }: { children: React.ReactNode }) {

@@ -2,8 +2,20 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Hash Generator Online — SHA-256 & SHA-512',
-  description: 'Generate SHA-256 and SHA-512 cryptographic hashes from any text. Runs locally in your browser using the Web Crypto API. Free and private — nothing is uploaded.',
+  description: 'Generate SHA-256 and SHA-512 cryptographic hashes from any text. Runs locally in your browser using the Web Crypto API — nothing is uploaded. Free, private, no signup required.',
   alternates: { canonical: '/dev/hash-generator' },
+  openGraph: {
+    title: 'Hash Generator Online — SHA-256 & SHA-512',
+    description: 'Generate SHA-256 and SHA-512 cryptographic hashes from any text. Runs locally in your browser using the Web Crypto API — nothing is uploaded. Free, private, no signup required.',
+    url: '/dev/hash-generator',
+    siteName: 'Zenveel',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Hash Generator Online — SHA-256 & SHA-512',
+    description: 'Generate SHA-256 and SHA-512 cryptographic hashes from any text. Runs locally in your browser using the Web Crypto API — nothing is uploaded. Free, private, no signup required.',
+  },
 }
 
 export default function Layout({ children }: { children: React.ReactNode }) {

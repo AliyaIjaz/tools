@@ -2,8 +2,20 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'YAML to JSON Converter Online',
-  description: 'Convert YAML to JSON and JSON to YAML instantly in your browser. Free, fast, runs entirely client-side.',
+  description: 'Convert YAML to JSON and JSON to YAML instantly in your browser. Supports multi-document YAML and nested structures. Free, fast, private — runs entirely client-side, no signup.',
   alternates: { canonical: '/dev/yaml-json' },
+  openGraph: {
+    title: 'YAML to JSON Converter Online',
+    description: 'Convert YAML to JSON and JSON to YAML instantly in your browser. Supports multi-document YAML and nested structures. Free, fast, private — runs entirely client-side, no signup.',
+    url: '/dev/yaml-json',
+    siteName: 'Zenveel',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'YAML to JSON Converter Online',
+    description: 'Convert YAML to JSON and JSON to YAML instantly in your browser. Supports multi-document YAML and nested structures. Free, fast, private — runs entirely client-side, no signup.',
+  },
 }
 
 export default function Layout({ children }: { children: React.ReactNode }) {
