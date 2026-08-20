@@ -78,12 +78,12 @@ Ordered by priority. Check off each one as it's done.
       - Category: dev
       - Route: /dev/number-base-converter
 
-[ ] 14. Bytes / Data Size Converter
+[x] 14. Bytes / Data Size Converter
       - Convert between B, KB, MB, GB, TB, PB (SI) and KiB, MiB, GiB, TiB (IEC binary)
       - Category: dev
       - Route: /dev/data-size-converter
 
-[ ] 15. Time Duration Converter
+[x] 15. Time Duration Converter
       - Convert between ms, seconds, minutes, hours, days, weeks, months, years
       - Useful for API timeouts, TTLs, cache durations, cron intervals
       - Category: dev

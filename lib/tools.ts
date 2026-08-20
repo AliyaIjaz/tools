@@ -155,6 +155,24 @@ export const TOOLS: ToolDefinition[] = [
     iconName: 'Binary',
     keywords: ['binary', 'octal', 'decimal', 'hexadecimal', 'hex', 'base', 'convert', 'number', 'bitfield', 'bitmask'],
   },
+  {
+    id: 'data-size-converter',
+    name: 'File Size Converter Online',
+    description: 'Convert between B, KB, MB, GB, TB (SI) and KiB, MiB, GiB, TiB (IEC binary)',
+    href: '/dev/data-size-converter',
+    category: 'dev',
+    iconName: 'HardDrive',
+    keywords: ['bytes', 'kb', 'mb', 'gb', 'tb', 'kib', 'mib', 'gib', 'tib', 'convert', 'data', 'size', 'storage', 'binary', 'si', 'iec', 'file size'],
+  },
+  {
+    id: 'time-duration-converter',
+    name: 'Milliseconds to Seconds Converter Online',
+    description: 'Convert between ms, seconds, minutes, hours, days, weeks, months, and years',
+    href: '/dev/time-duration-converter',
+    category: 'dev',
+    iconName: 'Timer',
+    keywords: ['time', 'duration', 'convert', 'milliseconds', 'ms', 'seconds', 'minutes', 'hours', 'days', 'weeks', 'months', 'years', 'ttl', 'timeout', 'cache', 'cron', 'interval', 'api', '3600', '86400', 'delay', 'sleep'],
+  },
   //Typing tool
   {
     id: 'typing-practice',
@@ -524,6 +542,8 @@ export const AVAILABLE_HREFS = new Set([
   '/dev/token-counter',
   '/dev/csv-to-json',
   '/dev/number-base-converter',
+  '/dev/data-size-converter',
+  '/dev/time-duration-converter',
   '/text/case-converter',
   '/text/word-counter',
   '/text/markdown-preview',

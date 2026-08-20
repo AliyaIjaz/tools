@@ -1,0 +1,26 @@
+import type { Metadata } from 'next'
+
+const title = 'Milliseconds to Seconds Converter — ms, Minutes, Hours, Days Online'
+const description = 'Convert between milliseconds, seconds, minutes, hours, days, weeks, months, and years instantly. Free browser-based tool for API timeouts, TTLs, cron intervals, and cache durations.'
+
+export const metadata: Metadata = {
+  title,
+  description,
+  alternates: { canonical: '/dev/time-duration-converter' },
+  openGraph: {
+    title,
+    description,
+    url: '/dev/time-duration-converter',
+    siteName: 'Zenveel',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary',
+    title,
+    description,
+  },
+}
+
+export default function Layout({ children }: { children: React.ReactNode }) {
+  return <>{children}</>
+}
