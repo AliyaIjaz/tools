@@ -89,30 +89,19 @@ Ordered by priority. Check off each one as it's done.
       - Category: dev
       - Route: /dev/time-duration-converter
 
-[ ] 16. Unix Permissions Calculator
+[x] 16. Unix Permissions Calculator
       - Convert between numeric (755) and symbolic (rwxr-xr-x) Unix file permissions
       - Show per-bit breakdown (owner/group/other read/write/execute)
       - Category: dev
       - Route: /dev/unix-permissions
 
-[ ] 17. Temperature Converter
+[x] 17. Temperature Converter
       - Convert between °C, °F, Kelvin, °Rankine
       - Category: web (or new /units category)
       - Route: /web/temperature-converter
 
-[ ] 18. Length Converter
+[x] 18. Length Converter
       - Convert between mm, cm, m, km, in, ft, yd, mi, nautical miles
       - Category: web
       - Route: /web/length-converter
 
-[ ] 19. DPI / PPI Calculator
-      - Input pixel dimensions + DPI → physical print size in inches and cm
-      - Useful for print design and image export
-      - Category: image
-      - Route: /image/dpi-calculator
-
-[ ] 20. Typography Unit Converter
-      - Convert between px, pt, em, rem, mm, cm for print/web type sizes
-      - Complements CSS Unit Converter but focused on typography
-      - Category: web
-      - Route: /web/typography-converter
