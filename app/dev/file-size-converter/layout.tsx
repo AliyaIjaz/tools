@@ -6,11 +6,11 @@ const description = 'Convert between MB, GB, TB, KB, bytes and binary units (MiB
 export const metadata: Metadata = {
   title,
   description,
-  alternates: { canonical: '/dev/data-size-converter' },
+  alternates: { canonical: '/dev/file-size-converter' },
   openGraph: {
     title,
     description,
-    url: '/dev/data-size-converter',
+    url: '/dev/file-size-converter',
     siteName: 'Zenveel',
     type: 'website',
   },

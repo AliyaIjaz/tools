@@ -116,7 +116,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/dev/data-size-converter</loc>
+    <loc>https://freetools.zenveel.com/dev/file-size-converter</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freetools.zenveel.com/dev/unix-permissions</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -314,5 +319,30 @@
     <loc>https://freetools.zenveel.com/web/border-radius</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freetools.zenveel.com/web/length-converter</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freetools.zenveel.com/web/temperature-converter</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freetools.zenveel.com/contact</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://freetools.zenveel.com/privacy</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://freetools.zenveel.com/terms</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
   </url>
 </urlset>
