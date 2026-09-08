@@ -2,7 +2,7 @@ import Link from 'next/link'
 import * as LucideIcons from 'lucide-react'
 import { ChevronRight, Home } from 'lucide-react'
 import { getRelatedTools, TOOLS } from '@/lib/tools'
-import { CATEGORIES } from '@/lib/constants'
+import { CATEGORIES, BASE_URL } from '@/lib/constants'
 import { Category } from '@/lib/types'
 import ToolCard from './ToolCard'
 
@@ -38,7 +38,7 @@ export default function ToolLayout({ toolId, title, description, category, iconN
     '@type': 'WebApplication',
     name: `${title} Online`,
     description,
-    url: `https://freetools.zenveel.com${toolHref}`,
+    url: `${BASE_URL}${toolHref}`,
     applicationCategory: 'UtilitiesApplication',
     operatingSystem: 'Web',
     offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },

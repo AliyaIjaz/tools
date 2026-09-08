@@ -1,5 +1,7 @@
 import { Category } from './types'
 
+export const BASE_URL = 'https://zenveel.com'
+
 export type CategoryMeta = {
   label: string
   description: string

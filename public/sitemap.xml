@@ -1,347 +1,347 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://freetools.zenveel.com/</loc>
+    <loc>https://zenveel.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/dev</loc>
+    <loc>https://zenveel.com/dev</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/text</loc>
+    <loc>https://zenveel.com/text</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/web</loc>
+    <loc>https://zenveel.com/web</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/image</loc>
+    <loc>https://zenveel.com/image</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/about</loc>
+    <loc>https://zenveel.com/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/dev/json-formatter</loc>
+    <loc>https://zenveel.com/dev/json-formatter</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/dev/base64</loc>
+    <loc>https://zenveel.com/dev/base64</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/dev/url-encoder</loc>
+    <loc>https://zenveel.com/dev/url-encoder</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/dev/uuid-generator</loc>
+    <loc>https://zenveel.com/dev/uuid-generator</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/dev/hash-generator</loc>
+    <loc>https://zenveel.com/dev/hash-generator</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/dev/regex-tester</loc>
+    <loc>https://zenveel.com/dev/regex-tester</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/dev/jwt-decoder</loc>
+    <loc>https://zenveel.com/dev/jwt-decoder</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/dev/diff-viewer</loc>
+    <loc>https://zenveel.com/dev/diff-viewer</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/dev/timestamp-converter</loc>
+    <loc>https://zenveel.com/dev/timestamp-converter</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/dev/yaml-json</loc>
+    <loc>https://zenveel.com/dev/yaml-json</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/dev/prompt-formatter</loc>
+    <loc>https://zenveel.com/dev/prompt-formatter</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/dev/env-parser</loc>
+    <loc>https://zenveel.com/dev/env-parser</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/dev/json-schema-validator</loc>
+    <loc>https://zenveel.com/dev/json-schema-validator</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/dev/json-schema-generator</loc>
+    <loc>https://zenveel.com/dev/json-schema-generator</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/dev/token-counter</loc>
+    <loc>https://zenveel.com/dev/token-counter</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/dev/csv-to-json</loc>
+    <loc>https://zenveel.com/dev/csv-to-json</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/dev/number-base-converter</loc>
+    <loc>https://zenveel.com/dev/number-base-converter</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/dev/file-size-converter</loc>
+    <loc>https://zenveel.com/dev/file-size-converter</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/dev/unix-permissions</loc>
+    <loc>https://zenveel.com/dev/unix-permissions</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/dev/time-duration-converter</loc>
+    <loc>https://zenveel.com/dev/time-duration-converter</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/typing/typing-practice</loc>
+    <loc>https://zenveel.com/typing/typing-practice</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/text/case-converter</loc>
+    <loc>https://zenveel.com/text/case-converter</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/text/word-counter</loc>
+    <loc>https://zenveel.com/text/word-counter</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/text/markdown-preview</loc>
+    <loc>https://zenveel.com/text/markdown-preview</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/text/lorem-ipsum</loc>
+    <loc>https://zenveel.com/text/lorem-ipsum</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/text/find-replace</loc>
+    <loc>https://zenveel.com/text/find-replace</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/text/string-escape</loc>
+    <loc>https://zenveel.com/text/string-escape</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/text/duplicate-remover</loc>
+    <loc>https://zenveel.com/text/duplicate-remover</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/text/text-sorter</loc>
+    <loc>https://zenveel.com/text/text-sorter</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/text/character-limit</loc>
+    <loc>https://zenveel.com/text/character-limit</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/text/keyword-density</loc>
+    <loc>https://zenveel.com/text/keyword-density</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/text/readability-scorer</loc>
+    <loc>https://zenveel.com/text/readability-scorer</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/text/plagiarism-checker</loc>
+    <loc>https://zenveel.com/text/plagiarism-checker</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/image/aspect-ratio</loc>
+    <loc>https://zenveel.com/image/aspect-ratio</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/image/resize</loc>
+    <loc>https://zenveel.com/image/resize</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/image/convert</loc>
+    <loc>https://zenveel.com/image/convert</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/image/png-to-jpg</loc>
+    <loc>https://zenveel.com/image/png-to-jpg</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/image/jpg-to-png</loc>
+    <loc>https://zenveel.com/image/jpg-to-png</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/image/png-to-webp</loc>
+    <loc>https://zenveel.com/image/png-to-webp</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/image/webp-to-png</loc>
+    <loc>https://zenveel.com/image/webp-to-png</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/image/jpg-to-webp</loc>
+    <loc>https://zenveel.com/image/jpg-to-webp</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/image/webp-to-jpg</loc>
+    <loc>https://zenveel.com/image/webp-to-jpg</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/image/crop</loc>
+    <loc>https://zenveel.com/image/crop</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/image/color-picker</loc>
+    <loc>https://zenveel.com/image/color-picker</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/image/compress</loc>
+    <loc>https://zenveel.com/image/compress</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/image/compress-jpg</loc>
+    <loc>https://zenveel.com/image/compress-jpg</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/image/compress-png</loc>
+    <loc>https://zenveel.com/image/compress-png</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/image/compress-webp</loc>
+    <loc>https://zenveel.com/image/compress-webp</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/image/rotate</loc>
+    <loc>https://zenveel.com/image/rotate</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/image/metadata</loc>
+    <loc>https://zenveel.com/image/metadata</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/image/base64</loc>
+    <loc>https://zenveel.com/image/base64</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/web/css-gradient</loc>
+    <loc>https://zenveel.com/web/css-gradient</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/web/box-shadow</loc>
+    <loc>https://zenveel.com/web/box-shadow</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/web/color-converter</loc>
+    <loc>https://zenveel.com/web/color-converter</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/web/css-unit-converter</loc>
+    <loc>https://zenveel.com/web/css-unit-converter</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/web/meta-tag-generator</loc>
+    <loc>https://zenveel.com/web/meta-tag-generator</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/web/favicon-generator</loc>
+    <loc>https://zenveel.com/web/favicon-generator</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/web/border-radius</loc>
+    <loc>https://zenveel.com/web/border-radius</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/web/length-converter</loc>
+    <loc>https://zenveel.com/web/length-converter</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/web/temperature-converter</loc>
+    <loc>https://zenveel.com/web/temperature-converter</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/contact</loc>
+    <loc>https://zenveel.com/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/privacy</loc>
+    <loc>https://zenveel.com/privacy</loc>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://freetools.zenveel.com/terms</loc>
+    <loc>https://zenveel.com/terms</loc>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>

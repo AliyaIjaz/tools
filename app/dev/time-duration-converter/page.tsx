@@ -4,6 +4,7 @@ import { useState } from 'react'
 import ToolLayout from '@/components/ui/ToolLayout'
 import CopyButton from '@/components/ui/CopyButton'
 import SeoSection from '@/components/ui/SeoSection'
+import { BASE_URL } from '@/lib/constants'
 
 type UnitId = 'ms' | 's' | 'min' | 'h' | 'd' | 'w' | 'mo' | 'yr'
 
@@ -114,7 +115,7 @@ export default function TimeDurationConverterPage() {
             '@context': 'https://schema.org',
             '@type': 'WebApplication',
             name: 'Milliseconds to Seconds Converter Online',
-            url: 'https://freetools.zenveel.com/dev/time-duration-converter',
+            url: `${BASE_URL}/dev/time-duration-converter`,
             featureList: ['Milliseconds to seconds', 'Seconds to minutes', 'Minutes to hours', 'Hours to days', 'Time unit converter', 'API timeout calculator', 'TTL converter', 'Cron interval converter'],
           }) }} />
           <SeoSection
