@@ -8,38 +8,63 @@
 PHASE 1 — FOUNDATION (Do these FIRST before any promotion)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-[ ] 1.1 — SEO: Add unique <title> and <meta description> to every tool page
+[x] 1.1 — SEO: Add unique <title> and <meta description> to every tool page
           - Format: "<Tool Name> — Free Online [Tool Type] | ToolKit"
           - Description: 1-2 sentences describing what the tool does + key benefit
+          >>> DONE (2026-09-09 audit): every tool has its own layout.tsx with unique
+              title/description. Brand is "Zenveel" not "ToolKit" — format differs from
+              the literal spec above but SEO intent is fully met.
 
-[ ] 1.2 — SEO: Add Open Graph + Twitter Card meta tags to every tool page
+[x] 1.2 — SEO: Add Open Graph + Twitter Card meta tags to every tool page
           - og:title, og:description, og:image (tool screenshot or branded card)
           - These are required for good-looking link previews on Reddit/Twitter/LinkedIn
+          >>> PARTIAL (2026-09-09 audit): title/description present on all 60 tool
+              layouts. og:image/twitter:image were missing — fixed 2026-09-09 by adding
+              images to each tool layout's openGraph/twitter objects.
 
-[ ] 1.3 — SEO: Add JSON-LD structured data (WebApplication schema) to each tool
+[x] 1.3 — SEO: Add JSON-LD structured data (WebApplication schema) to each tool
           - Helps Google understand the pages are interactive tools, not articles
           - Include: name, description, applicationCategory, operatingSystem: "Web"
+          >>> DONE (2026-09-09 audit): emitted centrally via components/ui/ToolLayout.tsx
+              for all tool pages.
 
-[ ] 1.4 — Verify sitemap.xml exists and covers all tool URLs
+[x] 1.4 — Verify sitemap.xml exists and covers all tool URLs
           - Submit sitemap to Google Search Console
           - Submit sitemap to Bing Webmaster Tools
+          >>> DONE (2026-09-09): sitemap.xml covers all 61 tool URLs + category + static
+              pages; submitted to both GSC and Bing Webmaster Tools, site registered/
+              verified on Bing. Automated same day: replaced the hand-maintained
+              public/sitemap.xml with app/sitemap.ts (dynamic = 'force-static'), which
+              regenerates from lib/tools.ts on every `npm run build` — confirmed working
+              under output: 'export' (produces a real static out/sitemap.xml, same
+              /sitemap.xml URL, no change needed in GSC/Bing/robots.txt). New tools no
+              longer require a manual sitemap edit.
 
-[ ] 1.5 — Set up Google Search Console
+[x] 1.5 — Set up Google Search Console
           - Verify domain ownership
           - Monitor which queries are driving impressions
           - Watch for crawl errors
+          >>> DONE (2026-09-09): GSC ownership confirmed verified by user (no meta tag
+              needed in code — verified via domain property/DNS, not URL-prefix HTML tag).
+              Bing not yet registered — plan is to use Bing's "Import from Google Search
+              Console" flow, which auto-verifies via the existing GSC connection.
 
-[ ] 1.6 — Create a short, memorable domain (if not already done)
+[x] 1.6 — Create a short, memorable domain (if not already done)
           - Something like toolkit.dev, devutils.app, freetools.io, etc.
           - A clean domain helps with word-of-mouth and link sharing
+          >>> DONE: zenveel.com, migrated from freetools.zenveel.com with a 301 redirect.
 
-[ ] 1.7 — Add a footer "Share this tool" row to each tool page
+[x] 1.7 — Add a footer "Share this tool" row to each tool page
           - Twitter/X, LinkedIn, Reddit share buttons (just URL-share, no JS SDK needed)
           - Makes it frictionless for happy users to share
+          >>> NOT DONE as of audit — implemented 2026-09-09 in ToolLayout.tsx.
 
-[ ] 1.8 — Create a branded OG image template
+[x] 1.8 — Create a branded OG image template
           - 1200×630px, dark background, tool name + short description + site logo
           - Use for all tool pages so link previews look polished everywhere
+          >>> PARTIAL (2026-09-09 audit): public/og-image.png exists at correct 1200x630
+              size but was only wired to the root layout. Fixed 2026-09-09 by wiring it
+              into every tool layout's openGraph/twitter images (see 1.2).
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 PHASE 2 — LAUNCH BLAST (One-time high-impact submissions)

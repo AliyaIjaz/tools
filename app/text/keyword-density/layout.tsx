@@ -10,9 +10,11 @@ export const metadata: Metadata = {
     url: '/text/keyword-density',
     siteName: 'Zenveel',
     type: 'website',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Zenveel — Free Online Tools' }],
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
+    images: ['/og-image.png'],
     title: 'Keyword Density Checker Online',
     description: 'Analyze keyword frequency and density in your text. Identify top words and phrases for SEO optimization. Free browser-based keyword density checker — no signup, no data sent.',
   },

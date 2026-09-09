@@ -10,9 +10,11 @@ export const metadata: Metadata = {
     url: '/image/convert',
     siteName: 'Zenveel',
     type: 'website',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Zenveel — Free Online Tools' }],
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
+    images: ['/og-image.png'],
     title: 'Image Converter Online — PNG, JPEG & WebP',
     description: 'Convert images between PNG, JPEG, and WebP formats instantly in your browser. Adjust quality settings and download the result. Free online image converter — no signup, no server upload.',
   },

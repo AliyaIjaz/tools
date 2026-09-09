@@ -10,9 +10,11 @@ export const metadata: Metadata = {
     url: '/dev/prompt-formatter',
     siteName: 'Zenveel',
     type: 'website',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Zenveel — Free Online Tools' }],
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
+    images: ['/og-image.png'],
     title: 'Prompt Formatter Online',
     description: 'Format AI prompts into OpenAI, Anthropic Claude, and Gemini message structures. Preview JSON output instantly. Free browser-based tool — no signup, no server upload required.',
   },

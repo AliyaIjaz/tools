@@ -10,9 +10,11 @@ export const metadata: Metadata = {
     url: '/dev/yaml-json',
     siteName: 'Zenveel',
     type: 'website',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Zenveel — Free Online Tools' }],
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
+    images: ['/og-image.png'],
     title: 'YAML to JSON Converter Online',
     description: 'Convert YAML to JSON and JSON to YAML instantly in your browser. Supports multi-document YAML and nested structures. Free, fast, private — runs entirely client-side, no signup.',
   },

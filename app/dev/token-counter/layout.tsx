@@ -10,9 +10,11 @@ export const metadata: Metadata = {
     url: '/dev/token-counter',
     siteName: 'Zenveel',
     type: 'website',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Zenveel — Free Online Tools' }],
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
+    images: ['/og-image.png'],
     title: 'Token Counter Online — Count LLM Tokens Free',
     description: 'Count tokens for GPT-4, Claude, and Gemini models instantly. Estimate API costs and context window usage with our free browser-based token counter — no signup, no data sent.',
   },

@@ -10,9 +10,11 @@ export const metadata: Metadata = {
     url: '/dev/json-schema-generator',
     siteName: 'Zenveel',
     type: 'website',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Zenveel — Free Online Tools' }],
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
+    images: ['/og-image.png'],
     title: 'JSON Schema Generator Online',
     description: 'Generate a JSON Schema from sample JSON automatically. Infer types, required fields, and structure in one click. Free browser-based tool — no signup, no server upload required.',
   },

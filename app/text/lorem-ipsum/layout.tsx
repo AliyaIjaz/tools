@@ -12,9 +12,11 @@ export const metadata: Metadata = {
     url: '/text/lorem-ipsum',
     siteName: 'Zenveel',
     type: 'website',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Zenveel — Free Online Tools' }],
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
+    images: ['/og-image.png'],
     title: 'Lorem Ipsum Generator Online — Placeholder Text Generator',
     description:
       'Generate Lorem Ipsum placeholder text by words, sentences, or paragraphs instantly. Free online lorem ipsum generator — no signup or installation required.',

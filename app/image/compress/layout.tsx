@@ -10,9 +10,11 @@ export const metadata: Metadata = {
     url: '/image/compress',
     siteName: 'Zenveel',
     type: 'website',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Zenveel — Free Online Tools' }],
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
+    images: ['/og-image.png'],
     title: 'Image Compressor Online — Reduce Image File Size',
     description: 'Compress images and reduce file size in your browser. Supports PNG, JPEG, and WebP with adjustable quality. Download optimized images instantly — free, no upload to server, no signup.',
   },

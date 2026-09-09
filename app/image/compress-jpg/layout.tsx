@@ -10,9 +10,11 @@ export const metadata: Metadata = {
     url: '/image/compress-jpg',
     siteName: 'Zenveel',
     type: 'website',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Zenveel — Free Online Tools' }],
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
+    images: ['/og-image.png'],
     title: 'Compress JPG Online — Reduce JPEG File Size Free',
     description: 'Reduce JPG and JPEG file size in your browser without losing quality. Free online JPG compressor — no upload to server, no signup required.',
   },

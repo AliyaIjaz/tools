@@ -10,9 +10,11 @@ export const metadata: Metadata = {
     url: '/image/metadata',
     siteName: 'Zenveel',
     type: 'website',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Zenveel — Free Online Tools' }],
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
+    images: ['/og-image.png'],
     title: 'Image Metadata Viewer Online — View EXIF Data',
     description: 'View EXIF metadata, camera settings, GPS location, dimensions, and image properties from any photo. Free online EXIF viewer — runs in your browser, nothing is uploaded to a server.',
   },

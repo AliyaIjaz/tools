@@ -10,9 +10,11 @@ export const metadata: Metadata = {
     url: '/image/jpg-to-webp',
     siteName: 'Zenveel',
     type: 'website',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Zenveel — Free Online Tools' }],
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
+    images: ['/og-image.png'],
     title: 'JPG to WebP Converter Online — Free & Fast',
     description: 'Convert JPG images to WebP format and reduce file size by up to 30% without visible quality loss. Free and instant in your browser — no upload to server, no signup required.',
   },

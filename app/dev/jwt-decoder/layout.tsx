@@ -10,9 +10,11 @@ export const metadata: Metadata = {
     url: '/dev/jwt-decoder',
     siteName: 'Zenveel',
     type: 'website',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Zenveel — Free Online Tools' }],
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
+    images: ['/og-image.png'],
     title: 'JWT Decoder Online',
     description: 'Decode and inspect JWT tokens instantly — view the header, payload, and signature in a readable format. Free online JWT decoder, browser-based, nothing sent to a server.',
   },

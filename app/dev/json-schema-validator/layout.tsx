@@ -10,9 +10,11 @@ export const metadata: Metadata = {
     url: '/dev/json-schema-validator',
     siteName: 'Zenveel',
     type: 'website',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Zenveel — Free Online Tools' }],
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
+    images: ['/og-image.png'],
     title: 'JSON Schema Validator Online',
     description: 'Validate JSON against a JSON Schema instantly in your browser. Get detailed error messages per field. Free, fast, runs entirely client-side — no data sent to a server, no signup.',
   },

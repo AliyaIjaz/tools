@@ -10,9 +10,11 @@ export const metadata: Metadata = {
     url: '/image/webp-to-png',
     siteName: 'Zenveel',
     type: 'website',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Zenveel — Free Online Tools' }],
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
+    images: ['/og-image.png'],
     title: 'WebP to PNG Converter Online — Free & Fast',
     description: 'Convert WebP images to lossless PNG format for full quality and transparency support. Free and instant in your browser — no upload to server, no signup required. Download in one click.',
   },

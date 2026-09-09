@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import * as LucideIcons from 'lucide-react'
-import { ChevronRight, Home } from 'lucide-react'
+import { ChevronRight, Home, Twitter, Linkedin } from 'lucide-react'
 import { getRelatedTools, TOOLS } from '@/lib/tools'
 import { CATEGORIES, BASE_URL } from '@/lib/constants'
 import { Category } from '@/lib/types'
@@ -33,6 +33,25 @@ export default function ToolLayout({ toolId, title, description, category, iconN
   const IconComponent = (LucideIcons as unknown as Record<string, React.ComponentType<{ size?: number; style?: React.CSSProperties }>>)[iconName]
 
   const toolHref = href ?? TOOLS.find((t) => t.id === toolId)?.href ?? ''
+  const shareUrl = `${BASE_URL}${toolHref}`
+  const shareText = `${title} Online — free tool on Zenveel`
+  const shareLinks = [
+    {
+      label: 'Share on X',
+      href: `https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareText)}`,
+      Icon: Twitter,
+    },
+    {
+      label: 'Share on LinkedIn',
+      href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`,
+      Icon: Linkedin,
+    },
+    {
+      label: 'Share on Reddit',
+      href: `https://www.reddit.com/submit?url=${encodeURIComponent(shareUrl)}&title=${encodeURIComponent(shareText)}`,
+      Icon: null,
+    },
+  ]
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'WebApplication',
@@ -97,6 +116,38 @@ export default function ToolLayout({ toolId, title, description, category, iconN
             {seoContent}
           </div>
         )}
+
+        {/* Share this tool */}
+        <div
+          className="mt-16 flex flex-wrap items-center gap-3 pt-8"
+          style={{ borderTop: '1px solid rgba(255,255,255,0.1)' }}
+        >
+          <span className="text-sm font-medium" style={{ color: 'rgba(255,255,255,0.7)' }}>
+            Share this tool
+          </span>
+          {shareLinks.map(({ label, href: shareHref, Icon }) => (
+            <a
+              key={label}
+              href={shareHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={label}
+              title={label}
+              className="flex items-center justify-center w-9 h-9 rounded-lg transition-colors"
+              style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', color: 'rgba(255,255,255,0.65)' }}
+              onMouseEnter={e => { e.currentTarget.style.color = color; e.currentTarget.style.borderColor = `${color}40` }}
+              onMouseLeave={e => { e.currentTarget.style.color = 'rgba(255,255,255,0.65)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)' }}
+            >
+              {Icon ? (
+                <Icon size={16} />
+              ) : (
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M22 11.5c0-1.1-.9-2-2-2-.5 0-1 .2-1.35.5-1.3-.9-3.1-1.5-5.1-1.6l.9-4 2.9.65a1.5 1.5 0 102.15-1.9 1.5 1.5 0 00-2.3.65l-3.25-.7a.5.5 0 00-.6.4l-1 4.5c-2 .1-3.8.7-5.1 1.6-.35-.3-.85-.5-1.35-.5-1.1 0-2 .9-2 2 0 .8.5 1.5 1.15 1.85a3.6 3.6 0 00-.05.65c0 2.8 3.2 5.1 7.15 5.1s7.15-2.3 7.15-5.1c0-.2 0-.45-.05-.65.65-.35 1.15-1.05 1.15-1.85zM8.3 13a1.3 1.3 0 112.6 0 1.3 1.3 0 01-2.6 0zm6.6 3.2c-.75.75-2.1.85-2.9.85s-2.15-.1-2.9-.85a.35.35 0 01.5-.5c.5.5 1.55.65 2.4.65s1.9-.15 2.4-.65a.35.35 0 11.5.5zm-.3-1.9a1.3 1.3 0 110-2.6 1.3 1.3 0 010 2.6z" />
+                </svg>
+              )}
+            </a>
+          ))}
+        </div>
 
         {/* Related tools */}
         {related.length > 0 && (

@@ -12,9 +12,11 @@ export const metadata: Metadata = {
     url: '/text/text-sorter',
     siteName: 'Zenveel',
     type: 'website',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Zenveel — Free Online Tools' }],
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
+    images: ['/og-image.png'],
     title: 'Text Sorter Online — Sort Lines Alphabetically or by Length',
     description:
       'Sort lines of text alphabetically, reverse alphabetically, by length, or randomly. Free online text sorter — no signup, no installation, runs in your browser.',

@@ -10,9 +10,11 @@ export const metadata: Metadata = {
     url: '/text/find-replace',
     siteName: 'Zenveel',
     type: 'website',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Zenveel — Free Online Tools' }],
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
+    images: ['/og-image.png'],
     title: 'Find & Replace Online — Bulk Text Editor with Regex',
     description: 'Find and replace text in bulk with optional regex support. Replace all occurrences instantly, use capture groups, and edit any plain text online. Free, browser-based, no signup.',
   },

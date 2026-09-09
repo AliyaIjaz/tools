@@ -10,9 +10,11 @@ export const metadata: Metadata = {
     url: '/image/rotate',
     siteName: 'Zenveel',
     type: 'website',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Zenveel — Free Online Tools' }],
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
+    images: ['/og-image.png'],
     title: 'Image Rotator Online — Rotate Images Free',
     description: 'Rotate images 90°, 180°, or 270° and flip horizontally or vertically in your browser. Download the result instantly. Free online image rotator — no server upload, no registration.',
   },
