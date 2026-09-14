@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 
-const title = 'Celsius to Fahrenheit Converter — °C, °F, Kelvin, Rankine Online'
+const title = 'Temperature Converter — °C, °F, Kelvin, Rankine'
 const description = 'Free Celsius to Fahrenheit converter — instantly convert °C, °F, Kelvin, and Rankine. Type in any field and all others update live. No signup required.'
 
 export const metadata: Metadata = {
