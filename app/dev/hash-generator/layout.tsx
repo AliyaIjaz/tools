@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Hash Generator Online — SHA-256 & SHA-512',
-  description: 'Generate SHA-256 and SHA-512 cryptographic hashes from any text. Runs locally in your browser using the Web Crypto API — nothing is uploaded. Free, private, no signup required.',
+  description: 'Generate SHA-256 and SHA-512 cryptographic hashes from any text. Runs locally in your browser using the Web Crypto API. Free, private, no signup.',
   alternates: { canonical: '/dev/hash-generator' },
   openGraph: {
     title: 'Hash Generator Online — SHA-256 & SHA-512',
-    description: 'Generate SHA-256 and SHA-512 cryptographic hashes from any text. Runs locally in your browser using the Web Crypto API — nothing is uploaded. Free, private, no signup required.',
+    description: 'Generate SHA-256 and SHA-512 cryptographic hashes from any text. Runs locally in your browser using the Web Crypto API. Free, private, no signup.',
     url: '/dev/hash-generator',
     siteName: 'Zenveel',
     type: 'website',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     images: ['/og-image.png'],
     title: 'Hash Generator Online — SHA-256 & SHA-512',
-    description: 'Generate SHA-256 and SHA-512 cryptographic hashes from any text. Runs locally in your browser using the Web Crypto API — nothing is uploaded. Free, private, no signup required.',
+    description: 'Generate SHA-256 and SHA-512 cryptographic hashes from any text. Runs locally in your browser using the Web Crypto API. Free, private, no signup.',
   },
 }
 

@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Image Compressor Online — Reduce Image File Size',
-  description: 'Compress images and reduce file size in your browser. Supports PNG, JPEG, and WebP with adjustable quality. Download optimized images instantly — free, no upload to server, no signup.',
+  description: 'Compress images and reduce file size in your browser. Supports PNG, JPEG, and WebP with adjustable quality. Free, no upload, no signup.',
   alternates: { canonical: '/image/compress' },
   openGraph: {
     title: 'Image Compressor Online — Reduce Image File Size',
-    description: 'Compress images and reduce file size in your browser. Supports PNG, JPEG, and WebP with adjustable quality. Download optimized images instantly — free, no upload to server, no signup.',
+    description: 'Compress images and reduce file size in your browser. Supports PNG, JPEG, and WebP with adjustable quality. Free, no upload, no signup.',
     url: '/image/compress',
     siteName: 'Zenveel',
     type: 'website',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     images: ['/og-image.png'],
     title: 'Image Compressor Online — Reduce Image File Size',
-    description: 'Compress images and reduce file size in your browser. Supports PNG, JPEG, and WebP with adjustable quality. Download optimized images instantly — free, no upload to server, no signup.',
+    description: 'Compress images and reduce file size in your browser. Supports PNG, JPEG, and WebP with adjustable quality. Free, no upload, no signup.',
   },
 }
 

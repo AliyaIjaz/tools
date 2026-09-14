@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'WebP to PNG Converter Online — Free & Fast',
-  description: 'Convert WebP images to lossless PNG format for full quality and transparency support. Free and instant in your browser — no upload to server, no signup required. Download in one click.',
+  description: 'Convert WebP images to lossless PNG format for full quality and transparency support. Free, instant, no upload, no signup.',
   alternates: { canonical: '/image/webp-to-png' },
   openGraph: {
     title: 'WebP to PNG Converter Online — Free & Fast',
-    description: 'Convert WebP images to lossless PNG format for full quality and transparency support. Free and instant in your browser — no upload to server, no signup required. Download in one click.',
+    description: 'Convert WebP images to lossless PNG format for full quality and transparency support. Free, instant, no upload, no signup.',
     url: '/image/webp-to-png',
     siteName: 'Zenveel',
     type: 'website',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     images: ['/og-image.png'],
     title: 'WebP to PNG Converter Online — Free & Fast',
-    description: 'Convert WebP images to lossless PNG format for full quality and transparency support. Free and instant in your browser — no upload to server, no signup required. Download in one click.',
+    description: 'Convert WebP images to lossless PNG format for full quality and transparency support. Free, instant, no upload, no signup.',
   },
 }
 

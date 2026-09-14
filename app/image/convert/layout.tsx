@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Image Converter Online — PNG, JPEG & WebP',
-  description: 'Convert images between PNG, JPEG, and WebP formats instantly in your browser. Adjust quality settings and download the result. Free online image converter — no signup, no server upload.',
+  description: 'Convert images between PNG, JPEG, and WebP formats instantly in your browser. Adjust quality and download the result. Free, no signup.',
   alternates: { canonical: '/image/convert' },
   openGraph: {
     title: 'Image Converter Online — PNG, JPEG & WebP',
-    description: 'Convert images between PNG, JPEG, and WebP formats instantly in your browser. Adjust quality settings and download the result. Free online image converter — no signup, no server upload.',
+    description: 'Convert images between PNG, JPEG, and WebP formats instantly in your browser. Adjust quality and download the result. Free, no signup.',
     url: '/image/convert',
     siteName: 'Zenveel',
     type: 'website',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     images: ['/og-image.png'],
     title: 'Image Converter Online — PNG, JPEG & WebP',
-    description: 'Convert images between PNG, JPEG, and WebP formats instantly in your browser. Adjust quality settings and download the result. Free online image converter — no signup, no server upload.',
+    description: 'Convert images between PNG, JPEG, and WebP formats instantly in your browser. Adjust quality and download the result. Free, no signup.',
   },
 }
 

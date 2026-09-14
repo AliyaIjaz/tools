@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'YAML to JSON Converter Online',
-  description: 'Convert YAML to JSON and JSON to YAML instantly in your browser. Supports multi-document YAML and nested structures. Free, fast, private — runs entirely client-side, no signup.',
+  description: 'Convert YAML to JSON and JSON to YAML instantly in your browser. Supports multi-document YAML and nested structures. Free, private, no signup.',
   alternates: { canonical: '/dev/yaml-json' },
   openGraph: {
     title: 'YAML to JSON Converter Online',
-    description: 'Convert YAML to JSON and JSON to YAML instantly in your browser. Supports multi-document YAML and nested structures. Free, fast, private — runs entirely client-side, no signup.',
+    description: 'Convert YAML to JSON and JSON to YAML instantly in your browser. Supports multi-document YAML and nested structures. Free, private, no signup.',
     url: '/dev/yaml-json',
     siteName: 'Zenveel',
     type: 'website',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     images: ['/og-image.png'],
     title: 'YAML to JSON Converter Online',
-    description: 'Convert YAML to JSON and JSON to YAML instantly in your browser. Supports multi-document YAML and nested structures. Free, fast, private — runs entirely client-side, no signup.',
+    description: 'Convert YAML to JSON and JSON to YAML instantly in your browser. Supports multi-document YAML and nested structures. Free, private, no signup.',
   },
 }
 

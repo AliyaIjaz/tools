@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Image Resizer Online — Resize Images Free',
-  description: 'Resize images to exact pixel dimensions in your browser. Preserve aspect ratio or set custom width and height. Download instantly. Free, fast, private — no upload to server needed.',
+  description: 'Resize images to exact pixel dimensions in your browser. Preserve aspect ratio or set custom width and height. Free, fast, no upload needed.',
   alternates: { canonical: '/image/resize' },
   openGraph: {
     title: 'Image Resizer Online — Resize Images Free',
-    description: 'Resize images to exact pixel dimensions in your browser. Preserve aspect ratio or set custom width and height. Download instantly. Free, fast, private — no upload to server needed.',
+    description: 'Resize images to exact pixel dimensions in your browser. Preserve aspect ratio or set custom width and height. Free, fast, no upload needed.',
     url: '/image/resize',
     siteName: 'Zenveel',
     type: 'website',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     images: ['/og-image.png'],
     title: 'Image Resizer Online — Resize Images Free',
-    description: 'Resize images to exact pixel dimensions in your browser. Preserve aspect ratio or set custom width and height. Download instantly. Free, fast, private — no upload to server needed.',
+    description: 'Resize images to exact pixel dimensions in your browser. Preserve aspect ratio or set custom width and height. Free, fast, no upload needed.',
   },
 }
 

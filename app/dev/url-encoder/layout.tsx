@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'URL Encoder & Decoder Online',
-  description: 'Encode and decode URL components online. Convert special characters to percent-encoding or decode percent-encoded URLs back to readable text instantly. Free, browser-based, no signup.',
+  description: 'Encode and decode URL components online. Convert special characters to percent-encoding or decode URLs back to readable text. Free, browser-based, no signup.',
   alternates: { canonical: '/dev/url-encoder' },
   openGraph: {
     title: 'URL Encoder & Decoder Online',
-    description: 'Encode and decode URL components online. Convert special characters to percent-encoding or decode percent-encoded URLs back to readable text instantly. Free, browser-based, no signup.',
+    description: 'Encode and decode URL components online. Convert special characters to percent-encoding or decode URLs back to readable text. Free, browser-based, no signup.',
     url: '/dev/url-encoder',
     siteName: 'Zenveel',
     type: 'website',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     images: ['/og-image.png'],
     title: 'URL Encoder & Decoder Online',
-    description: 'Encode and decode URL components online. Convert special characters to percent-encoding or decode percent-encoded URLs back to readable text instantly. Free, browser-based, no signup.',
+    description: 'Encode and decode URL components online. Convert special characters to percent-encoding or decode URLs back to readable text. Free, browser-based, no signup.',
   },
 }
 

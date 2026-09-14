@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'WebP to JPG Converter Online — Free & Fast',
-  description: 'Convert WebP images to JPG format for maximum compatibility with older browsers and apps. Free and instant in your browser — no upload to server, no signup required.',
+  description: 'Convert WebP images to JPG format for maximum compatibility with older browsers and apps. Free, instant, no upload, no signup.',
   alternates: { canonical: '/image/webp-to-jpg' },
   openGraph: {
     title: 'WebP to JPG Converter Online — Free & Fast',
-    description: 'Convert WebP images to JPG format for maximum compatibility with older browsers and apps. Free and instant in your browser — no upload to server, no signup required.',
+    description: 'Convert WebP images to JPG format for maximum compatibility with older browsers and apps. Free, instant, no upload, no signup.',
     url: '/image/webp-to-jpg',
     siteName: 'Zenveel',
     type: 'website',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     images: ['/og-image.png'],
     title: 'WebP to JPG Converter Online — Free & Fast',
-    description: 'Convert WebP images to JPG format for maximum compatibility with older browsers and apps. Free and instant in your browser — no upload to server, no signup required.',
+    description: 'Convert WebP images to JPG format for maximum compatibility with older browsers and apps. Free, instant, no upload, no signup.',
   },
 }
 

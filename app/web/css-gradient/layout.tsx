@@ -3,12 +3,12 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'CSS Gradient Generator Online — Linear, Radial & Conic',
   description:
-    'Generate CSS gradients visually with a live preview. Build linear, radial, and conic gradients with unlimited color stops. Copy production-ready CSS instantly. Free, browser-based.',
+    'Generate CSS gradients visually with a live preview. Build linear, radial, and conic gradients with unlimited color stops. Free, browser-based.',
   alternates: { canonical: '/web/css-gradient' },
   openGraph: {
     title: 'CSS Gradient Generator Online — Linear, Radial & Conic',
     description:
-      'Generate CSS gradients visually with a live preview. Build linear, radial, and conic gradients with unlimited color stops. Copy production-ready CSS instantly. Free, browser-based.',
+      'Generate CSS gradients visually with a live preview. Build linear, radial, and conic gradients with unlimited color stops. Free, browser-based.',
     url: '/web/css-gradient',
     siteName: 'Zenveel',
     type: 'website',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     images: ['/og-image.png'],
     title: 'CSS Gradient Generator Online — Linear, Radial & Conic',
     description:
-      'Generate CSS gradients visually with a live preview. Build linear, radial, and conic gradients with unlimited color stops. Copy production-ready CSS instantly. Free, browser-based.',
+      'Generate CSS gradients visually with a live preview. Build linear, radial, and conic gradients with unlimited color stops. Free, browser-based.',
   },
 }
 

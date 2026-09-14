@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'JSON Schema Validator Online',
-  description: 'Validate JSON against a JSON Schema instantly in your browser. Get detailed error messages per field. Free, fast, runs entirely client-side — no data sent to a server, no signup.',
+  description: 'Validate JSON against a JSON Schema instantly in your browser. Get detailed error messages per field. Free, runs entirely client-side, no signup.',
   alternates: { canonical: '/dev/json-schema-validator' },
   openGraph: {
     title: 'JSON Schema Validator Online',
-    description: 'Validate JSON against a JSON Schema instantly in your browser. Get detailed error messages per field. Free, fast, runs entirely client-side — no data sent to a server, no signup.',
+    description: 'Validate JSON against a JSON Schema instantly in your browser. Get detailed error messages per field. Free, runs entirely client-side, no signup.',
     url: '/dev/json-schema-validator',
     siteName: 'Zenveel',
     type: 'website',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     images: ['/og-image.png'],
     title: 'JSON Schema Validator Online',
-    description: 'Validate JSON against a JSON Schema instantly in your browser. Get detailed error messages per field. Free, fast, runs entirely client-side — no data sent to a server, no signup.',
+    description: 'Validate JSON against a JSON Schema instantly in your browser. Get detailed error messages per field. Free, runs entirely client-side, no signup.',
   },
 }
 

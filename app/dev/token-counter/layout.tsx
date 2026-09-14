@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Token Counter Online — Count LLM Tokens Free',
-  description: 'Count tokens for GPT-4, Claude, and Gemini models instantly. Estimate API costs and context window usage with our free browser-based token counter — no signup, no data sent.',
+  description: 'Count tokens for GPT-4, Claude, and Gemini models instantly. Estimate API costs and context window usage. Free, browser-based, no signup.',
   alternates: { canonical: '/dev/token-counter' },
   openGraph: {
     title: 'Token Counter Online — Count LLM Tokens Free',
-    description: 'Count tokens for GPT-4, Claude, and Gemini models instantly. Estimate API costs and context window usage with our free browser-based token counter — no signup, no data sent.',
+    description: 'Count tokens for GPT-4, Claude, and Gemini models instantly. Estimate API costs and context window usage. Free, browser-based, no signup.',
     url: '/dev/token-counter',
     siteName: 'Zenveel',
     type: 'website',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     images: ['/og-image.png'],
     title: 'Token Counter Online — Count LLM Tokens Free',
-    description: 'Count tokens for GPT-4, Claude, and Gemini models instantly. Estimate API costs and context window usage with our free browser-based token counter — no signup, no data sent.',
+    description: 'Count tokens for GPT-4, Claude, and Gemini models instantly. Estimate API costs and context window usage. Free, browser-based, no signup.',
   },
 }
 

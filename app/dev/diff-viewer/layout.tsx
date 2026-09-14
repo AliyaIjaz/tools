@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Diff Viewer Online — Compare Two Text Files',
-  description: 'Compare two blocks of text and highlight the differences line by line. Side-by-side diff viewer for code, documents, and plain text. Free, instant, browser-based — no signup.',
+  description: 'Compare two blocks of text and highlight the differences line by line. Side-by-side diff viewer for code and plain text. Free, browser-based, no signup.',
   alternates: { canonical: '/dev/diff-viewer' },
   openGraph: {
     title: 'Diff Viewer Online — Compare Two Text Files',
-    description: 'Compare two blocks of text and highlight the differences line by line. Side-by-side diff viewer for code, documents, and plain text. Free, instant, browser-based — no signup.',
+    description: 'Compare two blocks of text and highlight the differences line by line. Side-by-side diff viewer for code and plain text. Free, browser-based, no signup.',
     url: '/dev/diff-viewer',
     siteName: 'Zenveel',
     type: 'website',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     images: ['/og-image.png'],
     title: 'Diff Viewer Online — Compare Two Text Files',
-    description: 'Compare two blocks of text and highlight the differences line by line. Side-by-side diff viewer for code, documents, and plain text. Free, instant, browser-based — no signup.',
+    description: 'Compare two blocks of text and highlight the differences line by line. Side-by-side diff viewer for code and plain text. Free, browser-based, no signup.',
   },
 }
 

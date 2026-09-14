@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Keyword Density Checker Online',
-  description: 'Analyze keyword frequency and density in your text. Identify top words and phrases for SEO optimization. Free browser-based keyword density checker — no signup, no data sent.',
+  description: 'Analyze keyword frequency and density in your text. Identify top words and phrases for SEO. Free, browser-based, no signup, no data sent.',
   alternates: { canonical: '/text/keyword-density' },
   openGraph: {
     title: 'Keyword Density Checker Online',
-    description: 'Analyze keyword frequency and density in your text. Identify top words and phrases for SEO optimization. Free browser-based keyword density checker — no signup, no data sent.',
+    description: 'Analyze keyword frequency and density in your text. Identify top words and phrases for SEO. Free, browser-based, no signup, no data sent.',
     url: '/text/keyword-density',
     siteName: 'Zenveel',
     type: 'website',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     images: ['/og-image.png'],
     title: 'Keyword Density Checker Online',
-    description: 'Analyze keyword frequency and density in your text. Identify top words and phrases for SEO optimization. Free browser-based keyword density checker — no signup, no data sent.',
+    description: 'Analyze keyword frequency and density in your text. Identify top words and phrases for SEO. Free, browser-based, no signup, no data sent.',
   },
 }
 

@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Readability Scorer Online',
-  description: 'Check Flesch-Kincaid, Gunning Fog, and other readability scores for your text. Understand reading level and complexity instantly. Free browser-based tool — no signup required.',
+  description: 'Check Flesch-Kincaid, Gunning Fog, and other readability scores for your text. Understand reading level instantly. Free, no signup required.',
   alternates: { canonical: '/text/readability-scorer' },
   openGraph: {
     title: 'Readability Scorer Online',
-    description: 'Check Flesch-Kincaid, Gunning Fog, and other readability scores for your text. Understand reading level and complexity instantly. Free browser-based tool — no signup required.',
+    description: 'Check Flesch-Kincaid, Gunning Fog, and other readability scores for your text. Understand reading level instantly. Free, no signup required.',
     url: '/text/readability-scorer',
     siteName: 'Zenveel',
     type: 'website',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     images: ['/og-image.png'],
     title: 'Readability Scorer Online',
-    description: 'Check Flesch-Kincaid, Gunning Fog, and other readability scores for your text. Understand reading level and complexity instantly. Free browser-based tool — no signup required.',
+    description: 'Check Flesch-Kincaid, Gunning Fog, and other readability scores for your text. Understand reading level instantly. Free, no signup required.',
   },
 }
 

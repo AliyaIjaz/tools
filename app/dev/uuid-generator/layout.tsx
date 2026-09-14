@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'UUID Generator Online',
-  description: 'Generate UUID v4 values instantly in your browser. Bulk generate unique IDs, copy to clipboard, and use in your projects. Cryptographically random, free, no signup required.',
+  description: 'Generate UUID v4 values instantly in your browser. Bulk generate unique IDs and copy to clipboard. Cryptographically random, free, no signup.',
   alternates: { canonical: '/dev/uuid-generator' },
   openGraph: {
     title: 'UUID Generator Online',
-    description: 'Generate UUID v4 values instantly in your browser. Bulk generate unique IDs, copy to clipboard, and use in your projects. Cryptographically random, free, no signup required.',
+    description: 'Generate UUID v4 values instantly in your browser. Bulk generate unique IDs and copy to clipboard. Cryptographically random, free, no signup.',
     url: '/dev/uuid-generator',
     siteName: 'Zenveel',
     type: 'website',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     images: ['/og-image.png'],
     title: 'UUID Generator Online',
-    description: 'Generate UUID v4 values instantly in your browser. Bulk generate unique IDs, copy to clipboard, and use in your projects. Cryptographically random, free, no signup required.',
+    description: 'Generate UUID v4 values instantly in your browser. Bulk generate unique IDs and copy to clipboard. Cryptographically random, free, no signup.',
   },
 }
 

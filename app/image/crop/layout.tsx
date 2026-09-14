@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Image Cropper Online — Crop Images Free',
-  description: 'Crop images interactively in your browser — select your crop region, adjust the boundaries, and download the result instantly. Free online image cropper — no upload to server needed.',
+  description: 'Crop images interactively in your browser — select the region, adjust boundaries, and download instantly. Free image cropper, no upload needed.',
   alternates: { canonical: '/image/crop' },
   openGraph: {
     title: 'Image Cropper Online — Crop Images Free',
-    description: 'Crop images interactively in your browser — select your crop region, adjust the boundaries, and download the result instantly. Free online image cropper — no upload to server needed.',
+    description: 'Crop images interactively in your browser — select the region, adjust boundaries, and download instantly. Free image cropper, no upload needed.',
     url: '/image/crop',
     siteName: 'Zenveel',
     type: 'website',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     images: ['/og-image.png'],
     title: 'Image Cropper Online — Crop Images Free',
-    description: 'Crop images interactively in your browser — select your crop region, adjust the boundaries, and download the result instantly. Free online image cropper — no upload to server needed.',
+    description: 'Crop images interactively in your browser — select the region, adjust boundaries, and download instantly. Free image cropper, no upload needed.',
   },
 }
 

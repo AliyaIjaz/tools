@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Color Picker Online — Pick Colors from Any Image',
-  description: 'Click any pixel on an image to extract its exact HEX, RGB, and HSL color values instantly. Free online color picker from image — no upload to server, no signup needed.',
+  description: 'Click any pixel on an image to extract its exact HEX, RGB, and HSL color values instantly. Free color picker — no upload, no signup.',
   alternates: { canonical: '/image/color-picker' },
   openGraph: {
     title: 'Color Picker Online — Pick Colors from Any Image',
-    description: 'Click any pixel on an image to extract its exact HEX, RGB, and HSL color values instantly. Free online color picker from image — no upload to server, no signup needed.',
+    description: 'Click any pixel on an image to extract its exact HEX, RGB, and HSL color values instantly. Free color picker — no upload, no signup.',
     url: '/image/color-picker',
     siteName: 'Zenveel',
     type: 'website',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     images: ['/og-image.png'],
     title: 'Color Picker Online — Pick Colors from Any Image',
-    description: 'Click any pixel on an image to extract its exact HEX, RGB, and HSL color values instantly. Free online color picker from image — no upload to server, no signup needed.',
+    description: 'Click any pixel on an image to extract its exact HEX, RGB, and HSL color values instantly. Free color picker — no upload, no signup.',
   },
 }
 

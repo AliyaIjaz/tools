@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'CSV to JSON Converter Online',
-  description: 'Convert CSV files to JSON instantly in your browser. Paste or upload CSV data and get clean, formatted JSON output. Supports custom delimiters. Free, fast, no upload required.',
+  description: 'Convert CSV files to JSON instantly in your browser. Paste or upload CSV data and get clean, formatted JSON. Supports custom delimiters. Free, no upload.',
   alternates: { canonical: '/dev/csv-to-json' },
   openGraph: {
     title: 'CSV to JSON Converter Online',
-    description: 'Convert CSV files to JSON instantly in your browser. Paste or upload CSV data and get clean, formatted JSON output. Supports custom delimiters. Free, fast, no upload required.',
+    description: 'Convert CSV files to JSON instantly in your browser. Paste or upload CSV data and get clean, formatted JSON. Supports custom delimiters. Free, no upload.',
     url: '/dev/csv-to-json',
     siteName: 'Zenveel',
     type: 'website',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     images: ['/og-image.png'],
     title: 'CSV to JSON Converter Online',
-    description: 'Convert CSV files to JSON instantly in your browser. Paste or upload CSV data and get clean, formatted JSON output. Supports custom delimiters. Free, fast, no upload required.',
+    description: 'Convert CSV files to JSON instantly in your browser. Paste or upload CSV data and get clean, formatted JSON. Supports custom delimiters. Free, no upload.',
   },
 }
 

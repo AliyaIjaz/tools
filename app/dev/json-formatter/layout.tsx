@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'JSON Formatter Online',
-  description: 'Format, validate, and minify JSON online. Paste your JSON and instantly get beautified, syntax-highlighted output with error detection. Free, fast, runs entirely in your browser — no signup.',
+  description: 'Format, validate, and minify JSON online. Get beautified, syntax-highlighted output with error detection. Free, runs entirely in your browser.',
   alternates: { canonical: '/dev/json-formatter' },
   openGraph: {
     title: 'JSON Formatter Online',
-    description: 'Format, validate, and minify JSON online. Paste your JSON and instantly get beautified, syntax-highlighted output with error detection. Free, fast, runs entirely in your browser — no signup.',
+    description: 'Format, validate, and minify JSON online. Get beautified, syntax-highlighted output with error detection. Free, runs entirely in your browser.',
     url: '/dev/json-formatter',
     siteName: 'Zenveel',
     type: 'website',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     images: ['/og-image.png'],
     title: 'JSON Formatter Online',
-    description: 'Format, validate, and minify JSON online. Paste your JSON and instantly get beautified, syntax-highlighted output with error detection. Free, fast, runs entirely in your browser — no signup.',
+    description: 'Format, validate, and minify JSON online. Get beautified, syntax-highlighted output with error detection. Free, runs entirely in your browser.',
   },
 }
 

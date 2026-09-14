@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Prompt Formatter Online',
-  description: 'Format AI prompts into OpenAI, Anthropic Claude, and Gemini message structures. Preview JSON output instantly. Free browser-based tool — no signup, no server upload required.',
+  description: 'Format AI prompts into OpenAI, Anthropic Claude, and Gemini message structures. Preview JSON output instantly. Free, browser-based, no signup.',
   alternates: { canonical: '/dev/prompt-formatter' },
   openGraph: {
     title: 'Prompt Formatter Online',
-    description: 'Format AI prompts into OpenAI, Anthropic Claude, and Gemini message structures. Preview JSON output instantly. Free browser-based tool — no signup, no server upload required.',
+    description: 'Format AI prompts into OpenAI, Anthropic Claude, and Gemini message structures. Preview JSON output instantly. Free, browser-based, no signup.',
     url: '/dev/prompt-formatter',
     siteName: 'Zenveel',
     type: 'website',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     images: ['/og-image.png'],
     title: 'Prompt Formatter Online',
-    description: 'Format AI prompts into OpenAI, Anthropic Claude, and Gemini message structures. Preview JSON output instantly. Free browser-based tool — no signup, no server upload required.',
+    description: 'Format AI prompts into OpenAI, Anthropic Claude, and Gemini message structures. Preview JSON output instantly. Free, browser-based, no signup.',
   },
 }
 

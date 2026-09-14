@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'JPG to PNG Converter Online — Free & Fast',
-  description: 'Convert JPG images to lossless PNG format free in your browser. PNG preserves transparency and full quality — ideal for graphics and editing. No upload to server, no signup required.',
+  description: 'Convert JPG images to lossless PNG format free in your browser. PNG preserves transparency and full quality. No upload to server, no signup.',
   alternates: { canonical: '/image/jpg-to-png' },
   openGraph: {
     title: 'JPG to PNG Converter Online — Free & Fast',
-    description: 'Convert JPG images to lossless PNG format free in your browser. PNG preserves transparency and full quality — ideal for graphics and editing. No upload to server, no signup required.',
+    description: 'Convert JPG images to lossless PNG format free in your browser. PNG preserves transparency and full quality. No upload to server, no signup.',
     url: '/image/jpg-to-png',
     siteName: 'Zenveel',
     type: 'website',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     images: ['/og-image.png'],
     title: 'JPG to PNG Converter Online — Free & Fast',
-    description: 'Convert JPG images to lossless PNG format free in your browser. PNG preserves transparency and full quality — ideal for graphics and editing. No upload to server, no signup required.',
+    description: 'Convert JPG images to lossless PNG format free in your browser. PNG preserves transparency and full quality. No upload to server, no signup.',
   },
 }
 

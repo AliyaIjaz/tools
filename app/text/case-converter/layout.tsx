@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Case Converter Online — All Case Formats',
-  description: 'Convert text to UPPERCASE, lowercase, Title Case, camelCase, PascalCase, snake_case, kebab-case, and more — instantly in your browser. Free online case converter, no signup needed.',
+  description: 'Convert text to UPPERCASE, lowercase, Title Case, camelCase, PascalCase, snake_case, kebab-case, and more instantly. Free, no signup needed.',
   alternates: { canonical: '/text/case-converter' },
   openGraph: {
     title: 'Case Converter Online — All Case Formats',
-    description: 'Convert text to UPPERCASE, lowercase, Title Case, camelCase, PascalCase, snake_case, kebab-case, and more — instantly in your browser. Free online case converter, no signup needed.',
+    description: 'Convert text to UPPERCASE, lowercase, Title Case, camelCase, PascalCase, snake_case, kebab-case, and more instantly. Free, no signup needed.',
     url: '/text/case-converter',
     siteName: 'Zenveel',
     type: 'website',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     images: ['/og-image.png'],
     title: 'Case Converter Online — All Case Formats',
-    description: 'Convert text to UPPERCASE, lowercase, Title Case, camelCase, PascalCase, snake_case, kebab-case, and more — instantly in your browser. Free online case converter, no signup needed.',
+    description: 'Convert text to UPPERCASE, lowercase, Title Case, camelCase, PascalCase, snake_case, kebab-case, and more instantly. Free, no signup needed.',
   },
 }
 

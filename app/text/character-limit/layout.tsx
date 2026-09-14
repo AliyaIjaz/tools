@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Character Limit Checker Online',
-  description: 'Check character counts against Twitter, Instagram, LinkedIn, SMS, meta title, meta description, and other platform limits. Free browser-based tool — no signup, instant results.',
+  description: 'Check character counts against Twitter, Instagram, LinkedIn, SMS, and meta tag limits. Free browser-based tool, no signup, instant results.',
   alternates: { canonical: '/text/character-limit' },
   openGraph: {
     title: 'Character Limit Checker Online',
-    description: 'Check character counts against Twitter, Instagram, LinkedIn, SMS, meta title, meta description, and other platform limits. Free browser-based tool — no signup, instant results.',
+    description: 'Check character counts against Twitter, Instagram, LinkedIn, SMS, and meta tag limits. Free browser-based tool, no signup, instant results.',
     url: '/text/character-limit',
     siteName: 'Zenveel',
     type: 'website',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     images: ['/og-image.png'],
     title: 'Character Limit Checker Online',
-    description: 'Check character counts against Twitter, Instagram, LinkedIn, SMS, meta title, meta description, and other platform limits. Free browser-based tool — no signup, instant results.',
+    description: 'Check character counts against Twitter, Instagram, LinkedIn, SMS, and meta tag limits. Free browser-based tool, no signup, instant results.',
   },
 }
 

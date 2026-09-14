@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Aspect Ratio Calculator Online',
-  description: 'Calculate and convert image aspect ratios instantly. Scale dimensions proportionally for any resolution or screen size. Free browser-based tool — no upload to server, no signup required.',
+  description: 'Calculate and convert image aspect ratios instantly. Scale dimensions proportionally for any resolution or screen size. Free, no upload, no signup.',
   alternates: { canonical: '/image/aspect-ratio' },
   openGraph: {
     title: 'Aspect Ratio Calculator Online',
-    description: 'Calculate and convert image aspect ratios instantly. Scale dimensions proportionally for any resolution or screen size. Free browser-based tool — no upload to server, no signup required.',
+    description: 'Calculate and convert image aspect ratios instantly. Scale dimensions proportionally for any resolution or screen size. Free, no upload, no signup.',
     url: '/image/aspect-ratio',
     siteName: 'Zenveel',
     type: 'website',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     images: ['/og-image.png'],
     title: 'Aspect Ratio Calculator Online',
-    description: 'Calculate and convert image aspect ratios instantly. Scale dimensions proportionally for any resolution or screen size. Free browser-based tool — no upload to server, no signup required.',
+    description: 'Calculate and convert image aspect ratios instantly. Scale dimensions proportionally for any resolution or screen size. Free, no upload, no signup.',
   },
 }
 

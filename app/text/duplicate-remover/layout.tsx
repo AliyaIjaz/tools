@@ -3,12 +3,12 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Remove Duplicate Lines Online — Deduplicate Text Instantly',
   description:
-    'Remove duplicate lines from any list instantly. Supports case-insensitive matching and whitespace trimming. Free online duplicate line remover — no signup needed.',
+    'Remove duplicate lines from any list instantly. Supports case-insensitive matching and whitespace trimming. Free, no signup needed.',
   alternates: { canonical: '/text/duplicate-remover' },
   openGraph: {
     title: 'Remove Duplicate Lines Online — Deduplicate Text Instantly',
     description:
-      'Remove duplicate lines from any list instantly. Supports case-insensitive matching and whitespace trimming. Free online duplicate line remover — no signup needed.',
+      'Remove duplicate lines from any list instantly. Supports case-insensitive matching and whitespace trimming. Free, no signup needed.',
     url: '/text/duplicate-remover',
     siteName: 'Zenveel',
     type: 'website',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     images: ['/og-image.png'],
     title: 'Remove Duplicate Lines Online — Deduplicate Text Instantly',
     description:
-      'Remove duplicate lines from any list instantly. Supports case-insensitive matching and whitespace trimming. Free online duplicate line remover — no signup needed.',
+      'Remove duplicate lines from any list instantly. Supports case-insensitive matching and whitespace trimming. Free, no signup needed.',
   },
 }
 

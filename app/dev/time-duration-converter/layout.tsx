@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 const title = 'Milliseconds to Seconds Converter — ms, Minutes, Hours, Days Online'
-const description = 'Convert between milliseconds, seconds, minutes, hours, days, weeks, months, and years instantly. Free browser-based tool for API timeouts, TTLs, cron intervals, and cache durations.'
+const description = 'Convert between milliseconds, seconds, minutes, hours, days, weeks, months, and years instantly. Free tool for API timeouts and cron intervals.'
 
 export const metadata: Metadata = {
   title,
