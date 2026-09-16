@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono, Orbitron } from 'next/font/google'
-import './globals.css'
+// import './globals.css'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import AdSlot from '@/components/ui/AdSlot'
@@ -28,13 +28,13 @@ export const metadata: Metadata = {
     default: 'Zenveel — Free Online Tools for Developers',
     template: '%s — Zenveel',
   },
-  description: '60+ free browser-based utility tools for developers and creators. JSON formatter, image converter, CSS generators, text tools, and more. No signup. Nothing uploaded. Everything runs in your browser.',
+  description: '60+ free browser-based utility tools for developers and creators. No signup. Everything runs in your browser.',
   alternates: {
     canonical: `${BASE_URL}/`,
   },
   openGraph: {
     title: 'Zenveel — Free Online Tools for Developers',
-    description: '60+ free browser-based utility tools for developers and creators. JSON formatter, image converter, CSS generators, text tools, and more. No signup. Nothing uploaded. Everything runs in your browser.',
+    description: '60+ free browser-based utility tools for developers and creators. No signup. Everything runs in your browser.',
     url: '/',
     siteName: 'Zenveel',
     type: 'website',
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Zenveel — Free Online Tools for Developers',
-    description: '60+ free browser-based utility tools for developers and creators. JSON formatter, image converter, CSS generators, text tools, and more. No signup. Nothing uploaded. Everything runs in your browser.',
+    description: '60+ free browser-based utility tools for developers and creators. No signup. Everything runs in your browser.',
     images: ['/og-image.png'],
   },
 }
