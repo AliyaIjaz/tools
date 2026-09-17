@@ -8,6 +8,7 @@ import { TOOLS, getToolsByCategory } from '@/lib/tools'
 import { CATEGORIES, CATEGORY_ORDER } from '@/lib/constants'
 import { Category } from '@/lib/types'
 import ToolCard from '@/components/ui/ToolCard'
+import SeoSection from '@/components/ui/SeoSection'
 
 export default function HomePage() {
   const [query, setQuery] = useState('')
@@ -160,6 +161,38 @@ export default function HomePage() {
             </section>
           )
         })}
+
+      {!isSearching && (
+        <div className="mt-4 space-y-6 max-w-3xl" style={{ color: 'rgba(255,255,255,0.8)' }}>
+          <SeoSection
+            aboutTitle="About Zenveel"
+            about={<>
+              <p className="text-base leading-relaxed">
+                <strong>Zenveel</strong> is a collection of {TOOLS.length}+ free online utility tools for developers, designers, and anyone who needs a quick task done without installing software. Every tool — from JSON formatters to image compressors — runs entirely inside your browser using JavaScript and the Web APIs built into modern browsers.
+              </p>
+              <p className="text-base leading-relaxed">
+                That means your files, text, and data are never uploaded to a server. Nothing is stored, logged, or transmitted anywhere. Close the tab and everything you processed is gone — Zenveel simply has no backend to send it to.
+              </p>
+              <p className="text-base leading-relaxed">
+                There&apos;s no signup, no account, and no paywall. Tools are organized into categories — Developer, Text, Web, Image, and Typing — so you can jump straight to what you need or use the search bar above to find a specific tool by name or keyword.
+              </p>
+            </>}
+            useCasesTitle="Why use browser-based tools"
+            useCases={[
+              'Your data stays private — nothing leaves your device, which matters for sensitive JSON, API keys, or personal images.',
+              'No installation or account creation — open a tool and start using it immediately.',
+              'Works offline once a page has loaded, since processing happens locally rather than on a remote server.',
+              'Consistent, fast results without upload/download wait times for file-based tools like image compression.',
+            ]}
+            faqs={[
+              { q: 'Is Zenveel free to use?', a: 'Yes. Every tool on Zenveel is free, with no signup, subscription, or usage limits.' },
+              { q: 'Do I need to create an account?', a: 'No account is required for any tool. Just open a tool page and use it.' },
+              { q: 'Is my data uploaded to a server?', a: 'No. All processing happens locally in your browser. Files and text you work with are never sent to Zenveel or any third party.' },
+              { q: 'How many tools does Zenveel have?', a: `Zenveel currently offers ${TOOLS.length}+ tools across developer, text, web, image, and typing categories, with more added regularly.` },
+            ]}
+          />
+        </div>
+      )}
     </div>
   )
 }
