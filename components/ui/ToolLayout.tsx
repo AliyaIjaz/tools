@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import * as LucideIcons from 'lucide-react'
 import { ChevronRight, Home, Twitter, Linkedin } from 'lucide-react'
 import { getRelatedTools, TOOLS } from '@/lib/tools'
@@ -51,6 +52,11 @@ export default function ToolLayout({ toolId, title, description, category, iconN
       href: `https://www.reddit.com/submit?url=${encodeURIComponent(shareUrl)}&title=${encodeURIComponent(shareText)}`,
       Icon: null,
     },
+  ]
+  const trustBadges = [
+    { src: '/easyToUse.jpeg', label: 'Easy to Use' },
+    { src: '/fast.jpeg', label: 'Fast' },
+    { src: '/privacy.jpeg', label: '100% Private' },
   ]
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -109,6 +115,28 @@ export default function ToolLayout({ toolId, title, description, category, iconN
 
         {/* Tool content */}
         <div>{children}</div>
+
+        {/* Trust badges */}
+        <div className="mt-10 grid grid-cols-3 gap-3">
+          {trustBadges.map(({ src, label }) => (
+            <div
+              key={label}
+              className="flex items-center gap-3 rounded-xl px-3 py-3"
+              style={{ background: dimColor, border: `1px solid ${color}40` }}
+            >
+              <Image
+                src={src}
+                alt={label}
+                width={40}
+                height={40}
+                className="w-10 h-10 rounded-lg object-cover flex-shrink-0"
+              />
+              <span className="text-sm font-medium" style={{ color: 'rgba(255,255,255,0.7)' }}>
+                {label}
+              </span>
+            </div>
+          ))}
+        </div>
 
         {/* Share this tool */}
         <div
