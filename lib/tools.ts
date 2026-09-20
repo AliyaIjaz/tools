@@ -552,6 +552,7 @@ export const TOOLS: ToolDefinition[] = [
 ]
 
 export const AVAILABLE_HREFS = new Set([
+  '/all-tools',
   '/dev/json-formatter',
   '/dev/base64',
   '/dev/url-encoder',

@@ -31,6 +31,7 @@ export default function Footer() {
 
           <div className="flex items-center flex-wrap justify-center gap-x-4 gap-y-1">
             {[
+              { href: '/all-tools', label: 'All Tools' },
               { href: '/about', label: 'About' },
               { href: '/contact', label: 'Contact' },
               { href: '/privacy', label: 'Privacy Policy' },
