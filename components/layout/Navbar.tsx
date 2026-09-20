@@ -24,7 +24,7 @@ const TYPING_BG = 'rgba(239, 68, 68, 0.15)'
 
 const LucideIconMap = LucideIcons as unknown as Record<
   string,
-  React.ComponentType<{ size?: number; style?: React.CSSProperties }>
+  React.ComponentType<{ size?: number; style?: React.CSSProperties; className?: string }>
 >
 
 export default function Navbar() {
