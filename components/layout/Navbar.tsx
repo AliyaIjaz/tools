@@ -4,10 +4,12 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
+import * as LucideIcons from 'lucide-react'
 import Image from 'next/image'
 import { CATEGORIES } from '@/lib/constants'
 import { Category } from '@/lib/types'
 import { cn } from '@/lib/utils'
+import { getToolsByCategory, AVAILABLE_HREFS } from '@/lib/tools'
 
 const NAV_LINKS: { category: Category; label: string; href: string }[] = [
   { category: 'image', label: 'Image', href: '/image' },
@@ -20,9 +22,15 @@ const TYPING_HREF = '/typing/typing-practice'
 const TYPING_COLOR = '#ef4444'
 const TYPING_BG = 'rgba(239, 68, 68, 0.15)'
 
+const LucideIconMap = LucideIcons as unknown as Record<
+  string,
+  React.ComponentType<{ size?: number; style?: React.CSSProperties }>
+>
+
 export default function Navbar() {
   const pathname = usePathname()
   const [open, setOpen] = useState(false)
+  const [hoveredCategory, setHoveredCategory] = useState<Category | null>(null)
 
   function isActive(href: string) {
     return pathname === href || pathname.startsWith(href + '/')
@@ -73,24 +81,70 @@ export default function Navbar() {
             {NAV_LINKS.map(({ category, label, href }) => {
               const active = isActive(href) && pathname !== TYPING_HREF
               const color = CATEGORIES[category].color
+              const dimColor = CATEGORIES[category].dimColor
+              const tools = getToolsByCategory(category).filter((t) => AVAILABLE_HREFS.has(t.href))
+              const showMenu = hoveredCategory === category
+
               return (
-                <Link
+                <div
                   key={href}
-                  href={href}
-                  className={cn(
-                    'px-4 py-2 rounded-md text-lg font-medium transition-all duration-150',
-                    active ? 'text-white' : 'text-white/70 hover:text-white/95'
-                  )}
-                  style={active ? { color, background: `${color}18` } : {}}
-                  onMouseEnter={(e) => {
-                    if (!active) (e.currentTarget as HTMLElement).style.color = color
-                  }}
-                  onMouseLeave={(e) => {
-                    if (!active) (e.currentTarget as HTMLElement).style.color = ''
-                  }}
+                  className="relative"
+                  onMouseEnter={() => setHoveredCategory(category)}
+                  onMouseLeave={() => setHoveredCategory((c) => (c === category ? null : c))}
                 >
-                  {label}
-                </Link>
+                  <Link
+                    href={href}
+                    className={cn(
+                      'px-4 py-2 rounded-md text-lg font-medium transition-all duration-150 inline-block',
+                      active ? 'text-white' : 'text-white/70 hover:text-white/95'
+                    )}
+                    style={active ? { color, background: `${color}18` } : (showMenu ? { color } : {})}
+                  >
+                    {label}
+                  </Link>
+
+                  {/* Hover dropdown showing tools in this category */}
+                  {showMenu && tools.length > 0 && (
+                    <div
+                      className="absolute left-1/2 -translate-x-1/2 top-full pt-2 z-50"
+                      style={{ width: '480px' }}
+                    >
+                      <div
+                        className="rounded-xl p-3 grid grid-cols-2 gap-1.5 max-h-[70vh] overflow-y-auto"
+                        style={{
+                          background: 'rgba(15,15,15,0.98)',
+                          border: '1px solid var(--border)',
+                          boxShadow: '0 12px 32px rgba(0,0,0,0.45)',
+                          backdropFilter: 'blur(12px)',
+                          WebkitBackdropFilter: 'blur(12px)',
+                        }}
+                      >
+                        {tools.map((tool) => {
+                          const Icon = LucideIconMap[tool.iconName]
+                          return (
+                            <Link
+                              key={tool.href}
+                              href={tool.href}
+                              className="flex items-center gap-2 px-2.5 py-2 rounded-lg text-sm transition-colors"
+                              style={{ color: 'rgba(255,255,255,0.85)' }}
+                              onMouseEnter={(e) => {
+                                (e.currentTarget as HTMLElement).style.background = dimColor
+                                ;(e.currentTarget as HTMLElement).style.color = color
+                              }}
+                              onMouseLeave={(e) => {
+                                (e.currentTarget as HTMLElement).style.background = 'transparent'
+                                ;(e.currentTarget as HTMLElement).style.color = 'rgba(255,255,255,0.85)'
+                              }}
+                            >
+                              {Icon && <Icon size={14} style={{ color }} className="shrink-0" />}
+                              <span className="leading-snug">{tool.name.replace(/ Online$/, '')}</span>
+                            </Link>
+                          )
+                        })}
+                      </div>
+                    </div>
+                  )}
+                </div>
               )
             })}
 
