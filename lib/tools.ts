@@ -549,6 +549,26 @@ export const TOOLS: ToolDefinition[] = [
     iconName: 'RectangleHorizontal',
     keywords: ['border', 'radius', 'css', 'rounded', 'corners'],
   },
+  {
+    id: 'convertor-epub-to-pdf',
+    name: 'EPUB to PDF Converter Online',
+    description: 'Convert EPUB eBooks to PDF in your browser — no server, no registration',
+    href: '/convertor/epub-to-pdf',
+    category: 'convertor',
+    iconName: 'BookOpen',
+    keywords: ['epub', 'pdf', 'ebook', 'convert', 'book', 'reader', 'converter'],
+    new: true,
+  },
+  {
+    id: 'convertor-pdf-to-epub',
+    name: 'PDF to EPUB Converter Online',
+    description: 'Turn PDF files into reflowable EPUB eBooks — no server, no registration',
+    href: '/convertor/pdf-to-epub',
+    category: 'convertor',
+    iconName: 'BookText',
+    keywords: ['pdf', 'epub', 'ebook', 'convert', 'book', 'kindle', 'reader', 'converter'],
+    new: true,
+  },
 ]
 
 export const AVAILABLE_HREFS = new Set([
@@ -613,6 +633,8 @@ export const AVAILABLE_HREFS = new Set([
   '/image/metadata',
   '/image/base64',
   '/typing/typing-practice',
+  '/convertor/epub-to-pdf',
+  '/convertor/pdf-to-epub',
 ])
 
 export function getToolsByCategory(category: string) {

@@ -5,10 +5,10 @@ import { CATEGORIES, CATEGORY_ORDER } from '@/lib/constants'
 
 export const metadata: Metadata = {
   title: 'All Tools',
-  description: `Browse all ${TOOLS.length} free online tools on Zenveel — developer, text, web, image, and typing utilities. All run in your browser, no signup needed.`,
+  description: `Browse all ${TOOLS.length} free online tools on Zenveel — developer, text, web, image, convertor, and typing utilities. All run in your browser, no signup needed.`,
   openGraph: {
     title: 'All Tools — Zenveel',
-    description: `Browse all ${TOOLS.length} free online tools on Zenveel — developer, text, web, image, and typing utilities. All run in your browser, no signup needed.`,
+    description: `Browse all ${TOOLS.length} free online tools on Zenveel — developer, text, web, image, convertor, and typing utilities. All run in your browser, no signup needed.`,
     url: '/all-tools',
     siteName: 'Zenveel',
     type: 'website',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary',
     title: 'All Tools — Zenveel',
-    description: `Browse all ${TOOLS.length} free online tools on Zenveel — developer, text, web, image, and typing utilities.`,
+    description: `Browse all ${TOOLS.length} free online tools on Zenveel — developer, text, web, image, convertor, and typing utilities.`,
   },
 }
 

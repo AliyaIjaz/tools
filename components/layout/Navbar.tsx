@@ -16,6 +16,7 @@ const NAV_LINKS: { category: Category; label: string; href: string }[] = [
   { category: 'text', label: 'Text', href: '/text' },
   { category: 'web', label: 'Web Dev', href: '/web' },
   { category: 'dev', label: 'Developer', href: '/dev' },
+  { category: 'convertor', label: 'Convertor', href: '/convertor' },
 ]
 
 const TYPING_HREF = '/typing/typing-practice'

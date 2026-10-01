@@ -13,7 +13,9 @@
   --color-dev: oklch(0.6 0.2 290);
   --color-web: oklch(0.6 0.18 160);
   --color-text-tool: oklch(0.7 0.18 80);
+  --color-convertor: oklch(0.68 0.2 350);
 
+  --color-convertor-dim: oklch(0.68 0.2 350 / 0.15);
   --color-image-dim: oklch(0.6 0.2 240 / 0.15);
   --color-dev-dim: oklch(0.6 0.2 290 / 0.15);
   --color-web-dim: oklch(0.6 0.18 160 / 0.15);
@@ -28,6 +30,8 @@
   --border-web-idle: oklch(0.6 0.18 160 / 0.22);
   --border-text: oklch(0.7 0.18 80 / 0.35);
   --border-text-idle: oklch(0.7 0.18 80 / 0.22);
+  --border-convertor: oklch(0.68 0.2 350 / 0.35);
+  --border-convertor-idle: oklch(0.68 0.2 350 / 0.22);
 }
 
 @theme inline {

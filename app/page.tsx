@@ -174,7 +174,7 @@ export default function HomePage() {
                 That means your files, text, and data are never uploaded to a server. Nothing is stored, logged, or transmitted anywhere. Close the tab and everything you processed is gone — Zenveel simply has no backend to send it to.
               </p>
               <p className="text-base leading-relaxed">
-                There&apos;s no signup, no account, and no paywall. Tools are organized into categories — Developer, Text, Web, Image, and Typing — so you can jump straight to what you need or use the search bar above to find a specific tool by name or keyword.
+                There&apos;s no signup, no account, and no paywall. Tools are organized into categories — Developer, Text, Web, Image, Convertor, and Typing — so you can jump straight to what you need or use the search bar above to find a specific tool by name or keyword.
               </p>
             </>}
             useCasesTitle="Why use browser-based tools"
@@ -188,7 +188,7 @@ export default function HomePage() {
               { q: 'Is Zenveel free to use?', a: 'Yes. Every tool on Zenveel is free, with no signup, subscription, or usage limits.' },
               { q: 'Do I need to create an account?', a: 'No account is required for any tool. Just open a tool page and use it.' },
               { q: 'Is my data uploaded to a server?', a: 'No. All processing happens locally in your browser. Files and text you work with are never sent to Zenveel or any third party.' },
-              { q: 'How many tools does Zenveel have?', a: `Zenveel currently offers ${TOOLS.length}+ tools across developer, text, web, image, and typing categories, with more added regularly.` },
+              { q: 'How many tools does Zenveel have?', a: `Zenveel currently offers ${TOOLS.length}+ tools across developer, text, web, image, convertor, and typing categories, with more added regularly.` },
             ]}
           />
         </div>

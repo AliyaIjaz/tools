@@ -21,7 +21,8 @@ No test suite is configured yet.
 - **clsx + tailwind-merge** → `cn()` helper in `lib/utils.ts`
 - **marked + dompurify** for Markdown (text tools)
 - **diff** npm package for line diffing (diff-viewer)
-- **jszip** for zip downloads (favicon generator, future)
+- **jszip** for zip downloads (favicon generator) and EPUB read/write (convertor)
+- **jspdf** (EPUB→PDF) and **pdfjs-dist** (PDF→EPUB), both dynamically imported in `lib/convertors/`
 
 ## Architecture
 
@@ -56,6 +57,7 @@ app/
   text/           ← Text Tools (planned, not built yet)
   web/            ← Web Dev Tools (planned, not built yet)
   image/          ← Image Tools (planned, not built yet)
+  convertor/      ← Convertor Tools (EPUB↔PDF; logic in lib/convertors/, jspdf + pdfjs-dist + jszip)
 ```
 
 ### Adding a new tool
@@ -69,7 +71,7 @@ app/
 
 Dark-always (no system preference). CSS custom properties in `globals.css`:
 - `--background` / `--foreground` / `--surface` / `--surface-hover` / `--border` / `--border-hover`
-- `--color-image` (blue), `--color-dev` (violet), `--color-web` (emerald), `--color-text-tool` (amber)
+- `--color-image` (blue), `--color-dev` (violet), `--color-web` (emerald), `--color-text-tool` (amber), `--color-convertor` (rose)
 - `--color-<category>-dim` variants for icon backgrounds
 
 ### Lucide icon casting
@@ -121,6 +123,8 @@ These values apply to **all tool pages** (dev, text, web, image). Match when add
 | `--border-web` | `oklch(0.6 0.18 160 / 0.35)` | Web tool active/input borders |
 | `--border-text-idle` | `oklch(0.7 0.18 80 / 0.22)` | Text tool idle borders |
 | `--border-text` | `oklch(0.7 0.18 80 / 0.35)` | Text tool active/input borders |
+| `--border-convertor-idle` | `oklch(0.68 0.2 350 / 0.22)` | Convertor tool idle borders |
+| `--border-convertor` | `oklch(0.68 0.2 350 / 0.35)` | Convertor tool active/input borders |
 
 ### Textarea / input borders — per category
 Every tool's borders must use its category brand color, not neutral white. Pattern:
@@ -129,6 +133,7 @@ Every tool's borders must use its category brand color, not neutral white. Patte
 |---|---|---|---|---|
 | dev | `var(--border-dev-idle)` | `var(--border-dev)` | `var(--color-dev)` | `var(--border-dev-idle)` |
 | text | `var(--border-text-idle)` | `var(--border-text)` | `var(--color-text-tool)` | `var(--border-text-idle)` |
+| convertor | `var(--border-convertor-idle)` | `var(--border-convertor)` | `var(--color-convertor)` | `var(--border-convertor-idle)` |
 | web | `var(--border-web-idle)` | `var(--border-web)` | `var(--color-web)` | `var(--border-web-idle)` |
 | image | `var(--border-image-idle)` | `var(--border-image)` | `var(--color-image)` | `var(--border-image-idle)` |
 
