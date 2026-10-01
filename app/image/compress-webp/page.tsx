@@ -150,13 +150,13 @@ export default function CompressWebpPage() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={src} alt="source" className="w-16 h-16 rounded-lg object-cover flex-shrink-0" style={{ border: '2px solid var(--border-image-idle)' }} />
               <div className="min-w-0 flex-1">
-                <p className="text-base font-semibold text-white truncate">{fileName}</p>
-                <p className="text-sm mt-1" style={{ color: 'rgba(255,255,255,0.65)' }}>
+                <p className="text-lg font-semibold text-white truncate">{fileName}</p>
+                <p className="text-base mt-1" style={{ color: 'rgba(255,255,255,0.65)' }}>
                   {dims.w} × {dims.h} px · {formatBytes(origSize)}
                 </p>
               </div>
               <button onClick={() => { setSrc(''); setOutput('') }}
-                className="ml-auto text-sm px-4 py-2 rounded-lg flex-shrink-0 transition-all"
+                className="ml-auto text-base px-4 py-2 rounded-lg flex-shrink-0 transition-all"
                 style={{ background: 'var(--color-image-dim)', border: '1px solid var(--color-image)', color: 'rgba(255,255,255,0.65)' }}>
                 Change image
               </button>
@@ -164,15 +164,15 @@ export default function CompressWebpPage() {
 
             <div>
               <div className="flex items-center justify-between mb-2">
-                <label className="text-sm font-medium" style={{ color: 'rgba(255,255,255,0.7)' }}>Quality</label>
-                <span className="text-base font-mono font-semibold" style={{ color: 'var(--color-image)' }}>{quality}%</span>
+                <label className="text-base font-medium" style={{ color: 'rgba(255,255,255,0.7)' }}>Quality</label>
+                <span className="text-lg font-mono font-semibold" style={{ color: 'var(--color-image)' }}>{quality}%</span>
               </div>
               <input type="range" min={10} max={100} value={quality}
                 onChange={(e) => setQuality(Number(e.target.value))}
                 className="w-full accent-white" />
               <div className="flex justify-between mt-1">
-                <span className="text-sm" style={{ color: 'rgba(255,255,255,0.6)' }}>Smaller file</span>
-                <span className="text-sm" style={{ color: 'rgba(255,255,255,0.6)' }}>Higher quality</span>
+                <span className="text-base" style={{ color: 'rgba(255,255,255,0.6)' }}>Smaller file</span>
+                <span className="text-base" style={{ color: 'rgba(255,255,255,0.6)' }}>Higher quality</span>
               </div>
             </div>
 
@@ -186,14 +186,14 @@ export default function CompressWebpPage() {
                   ].map(({ label, value, color }) => (
                     <div key={label} className="rounded-xl px-4 py-3 text-center" style={{ background: 'var(--surface)', border: '2px solid var(--border-image-idle)' }}>
                       <div className="text-xl font-bold mb-0.5 font-mono" style={{ color }}>{value}</div>
-                      <div className="text-sm" style={{ color: 'rgba(255,255,255,0.6)' }}>{label}</div>
+                      <div className="text-base" style={{ color: 'rgba(255,255,255,0.6)' }}>{label}</div>
                     </div>
                   ))}
                 </div>
 
                 <div className="flex justify-center">
                   <button onClick={downloadOutput}
-                    className="flex items-center gap-2 px-10 py-3 rounded-xl text-base font-semibold"
+                    className="flex items-center gap-2 px-10 py-3 rounded-xl text-lg font-semibold"
                     style={{ background: 'var(--color-image)', color: '#000' }}>
                     <Download size={16} /> Download compressed WebP
                   </button>

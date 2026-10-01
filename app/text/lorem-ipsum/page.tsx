@@ -62,9 +62,9 @@ export default function LoremIpsumPage() {
         <SeoSection
           aboutTitle="About this tool"
           about={<>
-            <p className="text-base leading-relaxed">Lorem Ipsum Generator Online is a free tool that instantly creates Lorem Ipsum placeholder text for design, development, and publishing projects. Generate any amount of dummy text by words, sentences, or paragraphs to quickly fill layouts before your final content is ready. Whether you&apos;re building a website, designing a mobile app, creating a brochure, or testing a content management system, Lorem Ipsum helps you visualize how text will look without being distracted by meaningful content.</p>
-            <p className="text-base leading-relaxed">Lorem Ipsum has been the industry standard placeholder text since the 1500s. It is based on sections of <em>De Finibus Bonorum et Malorum</em>, written by the Roman philosopher Cicero in 45 BC, and is widely used because its natural-looking distribution of letters resembles readable text. Designers, developers, publishers, and content creators rely on Lorem Ipsum to evaluate typography, spacing, alignment, and page layouts during the design process.</p>
-            <p className="text-base leading-relaxed">Everything is generated instantly in your browser with no registration or software installation required. Simply choose the number of words, sentences, or paragraphs, generate your placeholder text, and copy it into your project.</p>
+            <p className="text-lg leading-relaxed">Lorem Ipsum Generator Online is a free tool that instantly creates Lorem Ipsum placeholder text for design, development, and publishing projects. Generate any amount of dummy text by words, sentences, or paragraphs to quickly fill layouts before your final content is ready. Whether you&apos;re building a website, designing a mobile app, creating a brochure, or testing a content management system, Lorem Ipsum helps you visualize how text will look without being distracted by meaningful content.</p>
+            <p className="text-lg leading-relaxed">Lorem Ipsum has been the industry standard placeholder text since the 1500s. It is based on sections of <em>De Finibus Bonorum et Malorum</em>, written by the Roman philosopher Cicero in 45 BC, and is widely used because its natural-looking distribution of letters resembles readable text. Designers, developers, publishers, and content creators rely on Lorem Ipsum to evaluate typography, spacing, alignment, and page layouts during the design process.</p>
+            <p className="text-lg leading-relaxed">Everything is generated instantly in your browser with no registration or software installation required. Simply choose the number of words, sentences, or paragraphs, generate your placeholder text, and copy it into your project.</p>
           </>}
           useCasesTitle="Common use cases"
           useCases={[
@@ -113,7 +113,7 @@ export default function LoremIpsumPage() {
               <button
                 key={t}
                 onClick={() => setType(t)}
-                className="px-3 py-1.5 rounded-md text-sm font-medium transition-all capitalize"
+                className="px-3 py-1.5 rounded-md text-base font-medium transition-all capitalize"
                 style={{
                   background: type === t ? 'rgba(255,255,255,0.09)' : 'transparent',
                   color: type === t ? 'white' : 'rgba(255,255,255,0.6)',
@@ -126,14 +126,14 @@ export default function LoremIpsumPage() {
           </div>
 
           <div className="flex items-center gap-2">
-            <label className="text-sm" style={{ color: 'rgba(255,255,255,0.7)' }}>Amount</label>
+            <label className="text-base" style={{ color: 'rgba(255,255,255,0.7)' }}>Amount</label>
             <input
               type="number"
               min={1}
               max={50}
               value={amount}
               onChange={(e) => setAmount(Math.max(1, Math.min(50, Number(e.target.value))))}
-              className="w-16 px-2 py-1.5 rounded-lg text-sm text-center outline-none"
+              className="w-16 px-2 py-1.5 rounded-lg text-base text-center outline-none"
               style={{
                 background: 'var(--surface)',
                 border: '2px solid var(--border-text-idle)',
@@ -144,7 +144,7 @@ export default function LoremIpsumPage() {
 
           <button
             onClick={handleGenerate}
-            className="px-4 py-2 rounded-lg text-sm font-medium transition-all"
+            className="px-4 py-2 rounded-lg text-base font-medium transition-all"
             style={{
               background: 'var(--color-text-tool-dim)',
               border: '1px solid var(--color-text-tool)',
@@ -158,13 +158,13 @@ export default function LoremIpsumPage() {
         {output && (
           <div>
             <div className="flex items-center justify-between mb-2">
-              <span className="text-sm font-medium" style={{ color: 'rgba(255,255,255,0.7)' }}>
+              <span className="text-base font-medium" style={{ color: 'rgba(255,255,255,0.7)' }}>
                 {amount} {type}
               </span>
               <CopyButton text={output} />
             </div>
             <div
-              className="rounded-xl px-4 py-4 text-sm leading-relaxed whitespace-pre-wrap"
+              className="rounded-xl px-4 py-4 text-base leading-relaxed whitespace-pre-wrap"
               style={{
                 background: 'var(--surface)',
                 border: '2px solid var(--border-text-idle)',

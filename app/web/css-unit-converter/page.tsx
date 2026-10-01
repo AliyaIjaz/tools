@@ -71,9 +71,9 @@ export default function CssUnitConverterPage() {
         <SeoSection
           aboutTitle="CSS Unit Converter Online"
           about={<>
-            <p className="text-base leading-relaxed">Convert CSS units instantly between px, rem, em, vw, vh, pt, and % with this free online CSS Unit Converter. Simply enter a value in any supported unit, customize the root font size, base font size, or viewport dimensions, and all conversions update automatically in real time.</p>
-            <p className="text-base leading-relaxed">Whether you&apos;re building responsive websites, converting design files into CSS, or creating accessible typography, this tool helps you generate accurate CSS measurements without manual calculations.</p>
-            <p className="text-base leading-relaxed">Everything runs entirely in your browser for fast, private, and secure conversions.</p>
+            <p className="text-lg leading-relaxed">Convert CSS units instantly between px, rem, em, vw, vh, pt, and % with this free online CSS Unit Converter. Simply enter a value in any supported unit, customize the root font size, base font size, or viewport dimensions, and all conversions update automatically in real time.</p>
+            <p className="text-lg leading-relaxed">Whether you&apos;re building responsive websites, converting design files into CSS, or creating accessible typography, this tool helps you generate accurate CSS measurements without manual calculations.</p>
+            <p className="text-lg leading-relaxed">Everything runs entirely in your browser for fast, private, and secure conversions.</p>
           </>}
           extraSections={[
             {
@@ -102,53 +102,53 @@ export default function CssUnitConverterPage() {
               title: 'Supported CSS Units',
               items: [
                 <div key="px" className="space-y-1.5">
-                  <p className="text-base font-medium text-white">Pixels (px)</p>
-                  <p className="text-base leading-relaxed">Pixels (px) are fixed units representing individual screen pixels. They provide predictable sizing regardless of parent elements and are commonly used for borders, icons, and precise layouts.</p>
-                  <p className="text-sm" style={{color:'rgba(255,255,255,0.5)'}}>Example:</p>
-                  <pre className="text-sm font-mono px-3 py-2 rounded-lg" style={{background:'rgba(255,255,255,0.05)',color:'rgba(255,255,255,0.8)'}}>{'font-size: 16px;'}</pre>
-                  <p className="text-base leading-relaxed">Best for: borders, icons, small UI elements, pixel-perfect layouts.</p>
+                  <p className="text-lg font-medium text-white">Pixels (px)</p>
+                  <p className="text-lg leading-relaxed">Pixels (px) are fixed units representing individual screen pixels. They provide predictable sizing regardless of parent elements and are commonly used for borders, icons, and precise layouts.</p>
+                  <p className="text-base" style={{color:'rgba(255,255,255,0.5)'}}>Example:</p>
+                  <pre className="text-base font-mono px-3 py-2 rounded-lg" style={{background:'rgba(255,255,255,0.05)',color:'rgba(255,255,255,0.8)'}}>{'font-size: 16px;'}</pre>
+                  <p className="text-lg leading-relaxed">Best for: borders, icons, small UI elements, pixel-perfect layouts.</p>
                 </div>,
                 <div key="rem" className="space-y-1.5">
-                  <p className="text-base font-medium text-white">Root EM (rem)</p>
-                  <p className="text-base leading-relaxed">rem is relative to the root (html) font size. If the root font size is 16px, then 1rem equals 16px. Using rem makes typography and spacing more scalable and improves accessibility because users can adjust browser font settings.</p>
-                  <p className="text-sm" style={{color:'rgba(255,255,255,0.5)'}}>Example:</p>
-                  <pre className="text-sm font-mono px-3 py-2 rounded-lg" style={{background:'rgba(255,255,255,0.05)',color:'rgba(255,255,255,0.8)'}}>{'font-size: 1.5rem;'}</pre>
-                  <p className="text-base leading-relaxed">Best for: typography, margins, padding, responsive layouts, design systems.</p>
+                  <p className="text-lg font-medium text-white">Root EM (rem)</p>
+                  <p className="text-lg leading-relaxed">rem is relative to the root (html) font size. If the root font size is 16px, then 1rem equals 16px. Using rem makes typography and spacing more scalable and improves accessibility because users can adjust browser font settings.</p>
+                  <p className="text-base" style={{color:'rgba(255,255,255,0.5)'}}>Example:</p>
+                  <pre className="text-base font-mono px-3 py-2 rounded-lg" style={{background:'rgba(255,255,255,0.05)',color:'rgba(255,255,255,0.8)'}}>{'font-size: 1.5rem;'}</pre>
+                  <p className="text-lg leading-relaxed">Best for: typography, margins, padding, responsive layouts, design systems.</p>
                 </div>,
                 <div key="em" className="space-y-1.5">
-                  <p className="text-base font-medium text-white">EM (em)</p>
-                  <p className="text-base leading-relaxed">em is relative to the current element&apos;s font size (or its nearest parent). Because em scales with its context, it&apos;s useful for reusable UI components where child elements should scale proportionally.</p>
-                  <p className="text-sm" style={{color:'rgba(255,255,255,0.5)'}}>Example:</p>
-                  <pre className="text-sm font-mono px-3 py-2 rounded-lg" style={{background:'rgba(255,255,255,0.05)',color:'rgba(255,255,255,0.8)'}}>{'padding: 1.25em;'}</pre>
-                  <p className="text-base leading-relaxed">Best for: component sizing, buttons, nested typography, reusable UI components.</p>
+                  <p className="text-lg font-medium text-white">EM (em)</p>
+                  <p className="text-lg leading-relaxed">em is relative to the current element&apos;s font size (or its nearest parent). Because em scales with its context, it&apos;s useful for reusable UI components where child elements should scale proportionally.</p>
+                  <p className="text-base" style={{color:'rgba(255,255,255,0.5)'}}>Example:</p>
+                  <pre className="text-base font-mono px-3 py-2 rounded-lg" style={{background:'rgba(255,255,255,0.05)',color:'rgba(255,255,255,0.8)'}}>{'padding: 1.25em;'}</pre>
+                  <p className="text-lg leading-relaxed">Best for: component sizing, buttons, nested typography, reusable UI components.</p>
                 </div>,
                 <div key="vw" className="space-y-1.5">
-                  <p className="text-base font-medium text-white">Viewport Width (vw)</p>
-                  <p className="text-base leading-relaxed">vw represents a percentage of the browser&apos;s viewport width. 1vw = 1% of viewport width, 50vw = half the viewport width.</p>
-                  <p className="text-sm" style={{color:'rgba(255,255,255,0.5)'}}>Example:</p>
-                  <pre className="text-sm font-mono px-3 py-2 rounded-lg" style={{background:'rgba(255,255,255,0.05)',color:'rgba(255,255,255,0.8)'}}>{'width: 60vw;'}</pre>
-                  <p className="text-base leading-relaxed">Best for: responsive layouts, hero sections, fluid typography, full-width containers.</p>
+                  <p className="text-lg font-medium text-white">Viewport Width (vw)</p>
+                  <p className="text-lg leading-relaxed">vw represents a percentage of the browser&apos;s viewport width. 1vw = 1% of viewport width, 50vw = half the viewport width.</p>
+                  <p className="text-base" style={{color:'rgba(255,255,255,0.5)'}}>Example:</p>
+                  <pre className="text-base font-mono px-3 py-2 rounded-lg" style={{background:'rgba(255,255,255,0.05)',color:'rgba(255,255,255,0.8)'}}>{'width: 60vw;'}</pre>
+                  <p className="text-lg leading-relaxed">Best for: responsive layouts, hero sections, fluid typography, full-width containers.</p>
                 </div>,
                 <div key="vh" className="space-y-1.5">
-                  <p className="text-base font-medium text-white">Viewport Height (vh)</p>
-                  <p className="text-base leading-relaxed">vh represents a percentage of the viewport height.</p>
-                  <p className="text-sm" style={{color:'rgba(255,255,255,0.5)'}}>Example:</p>
-                  <pre className="text-sm font-mono px-3 py-2 rounded-lg" style={{background:'rgba(255,255,255,0.05)',color:'rgba(255,255,255,0.8)'}}>{'height: 100vh;'}</pre>
-                  <p className="text-base leading-relaxed">Best for: full-screen sections, landing pages, hero banners, mobile layouts.</p>
+                  <p className="text-lg font-medium text-white">Viewport Height (vh)</p>
+                  <p className="text-lg leading-relaxed">vh represents a percentage of the viewport height.</p>
+                  <p className="text-base" style={{color:'rgba(255,255,255,0.5)'}}>Example:</p>
+                  <pre className="text-base font-mono px-3 py-2 rounded-lg" style={{background:'rgba(255,255,255,0.05)',color:'rgba(255,255,255,0.8)'}}>{'height: 100vh;'}</pre>
+                  <p className="text-lg leading-relaxed">Best for: full-screen sections, landing pages, hero banners, mobile layouts.</p>
                 </div>,
                 <div key="pt" className="space-y-1.5">
-                  <p className="text-base font-medium text-white">Points (pt)</p>
-                  <p className="text-base leading-relaxed">Points (pt) are primarily used for print stylesheets. 1pt = 1/72 inch. Although pt can be used on screens, px or rem are generally preferred for web interfaces.</p>
-                  <p className="text-sm" style={{color:'rgba(255,255,255,0.5)'}}>Example:</p>
-                  <pre className="text-sm font-mono px-3 py-2 rounded-lg" style={{background:'rgba(255,255,255,0.05)',color:'rgba(255,255,255,0.8)'}}>{'font-size: 12pt;'}</pre>
-                  <p className="text-base leading-relaxed">Best for: print styles, PDF layouts, printable documents.</p>
+                  <p className="text-lg font-medium text-white">Points (pt)</p>
+                  <p className="text-lg leading-relaxed">Points (pt) are primarily used for print stylesheets. 1pt = 1/72 inch. Although pt can be used on screens, px or rem are generally preferred for web interfaces.</p>
+                  <p className="text-base" style={{color:'rgba(255,255,255,0.5)'}}>Example:</p>
+                  <pre className="text-base font-mono px-3 py-2 rounded-lg" style={{background:'rgba(255,255,255,0.05)',color:'rgba(255,255,255,0.8)'}}>{'font-size: 12pt;'}</pre>
+                  <p className="text-lg leading-relaxed">Best for: print styles, PDF layouts, printable documents.</p>
                 </div>,
                 <div key="pct" className="space-y-1.5">
-                  <p className="text-base font-medium text-white">Percentage (%)</p>
-                  <p className="text-base leading-relaxed">Percentage values are relative to another property or parent element, depending on the CSS property being used.</p>
-                  <p className="text-sm" style={{color:'rgba(255,255,255,0.5)'}}>Example:</p>
-                  <pre className="text-sm font-mono px-3 py-2 rounded-lg" style={{background:'rgba(255,255,255,0.05)',color:'rgba(255,255,255,0.8)'}}>{'width: 75%;'}</pre>
-                  <p className="text-base leading-relaxed">Best for: flexible layouts, responsive containers, fluid sizing.</p>
+                  <p className="text-lg font-medium text-white">Percentage (%)</p>
+                  <p className="text-lg leading-relaxed">Percentage values are relative to another property or parent element, depending on the CSS property being used.</p>
+                  <p className="text-base" style={{color:'rgba(255,255,255,0.5)'}}>Example:</p>
+                  <pre className="text-base font-mono px-3 py-2 rounded-lg" style={{background:'rgba(255,255,255,0.05)',color:'rgba(255,255,255,0.8)'}}>{'width: 75%;'}</pre>
+                  <p className="text-lg leading-relaxed">Best for: flexible layouts, responsive containers, fluid sizing.</p>
                 </div>,
               ],
             },
@@ -236,7 +236,7 @@ export default function CssUnitConverterPage() {
         {/* Input */}
         <div className="flex flex-wrap items-end gap-5">
           <div>
-            <label className="text-sm font-semibold mb-2 block" style={{ color: 'rgba(255,255,255,0.85)' }}>Value</label>
+            <label className="text-base font-semibold mb-2 block" style={{ color: 'rgba(255,255,255,0.85)' }}>Value</label>
             <input
               type="number"
               value={value}
@@ -245,13 +245,13 @@ export default function CssUnitConverterPage() {
             />
           </div>
           <div>
-            <label className="text-sm font-semibold mb-2 block" style={{ color: 'rgba(255,255,255,0.85)' }}>From unit</label>
+            <label className="text-base font-semibold mb-2 block" style={{ color: 'rgba(255,255,255,0.85)' }}>From unit</label>
             <div className="flex flex-wrap gap-2">
               {UNITS.map((u) => (
                 <button
                   key={u}
                   onClick={() => setFromUnit(u)}
-                  className="px-4 py-2 rounded-lg text-base font-mono font-semibold transition-all"
+                  className="px-4 py-2 rounded-lg text-lg font-mono font-semibold transition-all"
                   style={{
                     background: fromUnit === u ? 'var(--color-web-dim)' : 'var(--surface)',
                     border: `1.5px solid ${fromUnit === u ? 'var(--color-web)' : 'var(--border)'}`,
@@ -267,7 +267,7 @@ export default function CssUnitConverterPage() {
 
         {/* Baselines */}
         <div className="rounded-xl p-5" style={{ background: 'var(--surface)', border: '2px solid var(--border-web-idle)' }}>
-          <p className="text-sm font-semibold mb-4" style={{ color: 'rgba(255,255,255,0.85)' }}>Baselines</p>
+          <p className="text-base font-semibold mb-4" style={{ color: 'rgba(255,255,255,0.85)' }}>Baselines</p>
           <div className="flex flex-wrap gap-5">
             {[
               { label: 'Root font size', value: rootFontSize, set: setRootFontSize, unit: 'px' },
@@ -276,10 +276,10 @@ export default function CssUnitConverterPage() {
               { label: 'Viewport height', value: viewportH, set: setViewportH, unit: 'px' },
             ].map(({ label, value: v, set, unit }) => (
               <div key={label}>
-                <label className="text-sm font-medium mb-2 block" style={{ color: 'rgba(255,255,255,0.7)' }}>{label}</label>
+                <label className="text-base font-medium mb-2 block" style={{ color: 'rgba(255,255,255,0.7)' }}>{label}</label>
                 <div className="flex items-center gap-2">
                   <input type="number" value={v} onChange={(e) => set(e.target.value)} style={inputStyle} />
-                  <span className="text-sm font-mono font-medium" style={{ color: 'rgba(255,255,255,0.6)' }}>{unit}</span>
+                  <span className="text-base font-mono font-medium" style={{ color: 'rgba(255,255,255,0.6)' }}>{unit}</span>
                 </div>
               </div>
             ))}
@@ -298,7 +298,7 @@ export default function CssUnitConverterPage() {
               }}
             >
               <div className="flex items-center justify-between mb-2">
-                <span className="text-sm font-mono font-semibold" style={{ color: isSelf ? 'var(--color-web)' : 'rgba(255,255,255,0.6)' }}>
+                <span className="text-base font-mono font-semibold" style={{ color: isSelf ? 'var(--color-web)' : 'rgba(255,255,255,0.6)' }}>
                   {unit}
                 </span>
                 <CopyButton text={`${converted}${unit}`} />

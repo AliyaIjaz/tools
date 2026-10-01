@@ -131,9 +131,9 @@ export default function ReadabilityScorerPage() {
       seoContent={
         <SeoSection
           about={<>
-            <p className="text-base leading-relaxed"><strong>Readability Scorer Online</strong> is a free browser-based tool that analyzes your text using three industry-standard readability formulas: <strong>Flesch Reading Ease</strong>, <strong>Flesch-Kincaid Grade Level</strong>, and the <strong>Gunning Fog Index</strong>. It also shows word count, sentence count, average sentence length, syllable count, complex word count, and estimated reading time — all instantly as you type.</p>
-            <p className="text-base leading-relaxed">This tool is especially useful for writers who use AI to generate content and want to verify that the output is readable for their target audience. AI-generated text often scores at a high grade level with long, complex sentences — this tool helps you identify and simplify those areas.</p>
-            <p className="text-base leading-relaxed">All analysis runs entirely in your browser. Your text is never sent to any server.</p>
+            <p className="text-lg leading-relaxed"><strong>Readability Scorer Online</strong> is a free browser-based tool that analyzes your text using three industry-standard readability formulas: <strong>Flesch Reading Ease</strong>, <strong>Flesch-Kincaid Grade Level</strong>, and the <strong>Gunning Fog Index</strong>. It also shows word count, sentence count, average sentence length, syllable count, complex word count, and estimated reading time — all instantly as you type.</p>
+            <p className="text-lg leading-relaxed">This tool is especially useful for writers who use AI to generate content and want to verify that the output is readable for their target audience. AI-generated text often scores at a high grade level with long, complex sentences — this tool helps you identify and simplify those areas.</p>
+            <p className="text-lg leading-relaxed">All analysis runs entirely in your browser. Your text is never sent to any server.</p>
           </>}
           useCases={[
             'Check if AI-generated blog posts are readable for a general audience.',
@@ -167,11 +167,11 @@ export default function ReadabilityScorerPage() {
           style={{ background: 'var(--surface)', border: '2px solid var(--border-text-idle)' }}
         >
           <div className="flex items-center justify-between mb-3">
-            <label className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.9)' }}>Your Text</label>
+            <label className="text-lg font-semibold" style={{ color: 'rgba(255,255,255,0.9)' }}>Your Text</label>
             {text && (
               <button
                 onClick={() => setText('')}
-                className="text-sm px-3 py-1 rounded-lg transition-all"
+                className="text-base px-3 py-1 rounded-lg transition-all"
                 style={{ color: 'rgba(255,255,255,0.65)', background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.15)' }}
                 onMouseEnter={(e) => { e.currentTarget.style.color = 'rgba(255,255,255,0.9)'; e.currentTarget.style.background = 'rgba(255,255,255,0.12)' }}
                 onMouseLeave={(e) => { e.currentTarget.style.color = 'rgba(255,255,255,0.65)'; e.currentTarget.style.background = 'rgba(255,255,255,0.06)' }}
@@ -185,7 +185,7 @@ export default function ReadabilityScorerPage() {
             onChange={(e) => setText(e.target.value)}
             placeholder={PLACEHOLDER}
             rows={10}
-            className="w-full resize-y rounded-lg px-3 py-3 text-base outline-none transition-all duration-150 placeholder:text-white/50"
+            className="w-full resize-y rounded-lg px-3 py-3 text-lg outline-none transition-all duration-150 placeholder:text-white/50"
             style={{
               background: 'rgba(0,0,0,0.35)',
               border: '1px solid rgba(255,255,255,0.15)',
@@ -207,7 +207,7 @@ export default function ReadabilityScorerPage() {
                 className="rounded-xl p-5 flex flex-col items-center gap-2"
                 style={{ background: 'var(--surface)', border: '2px solid var(--border-text-idle)' }}
               >
-                <p className="text-xs font-medium uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.6)' }}>Flesch Reading Ease</p>
+                <p className="text-sm font-medium uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.6)' }}>Flesch Reading Ease</p>
                 <div className="relative w-32 h-32">
                   <svg viewBox="0 0 128 128" className="w-full h-full -rotate-90">
                     <circle cx="64" cy="64" r={radius} fill="none" stroke="rgba(255,255,255,0.07)" strokeWidth="10" />
@@ -223,11 +223,11 @@ export default function ReadabilityScorerPage() {
                   </svg>
                   <div className="absolute inset-0 flex flex-col items-center justify-center">
                     <span className="text-3xl font-bold font-mono" style={{ color: flesch.color }}>{stats.flesch}</span>
-                    <span className="text-sm" style={{ color: 'rgba(255,255,255,0.6)' }}>/100</span>
+                    <span className="text-base" style={{ color: 'rgba(255,255,255,0.6)' }}>/100</span>
                   </div>
                 </div>
-                <span className="text-base font-semibold" style={{ color: flesch.color }}>{flesch.label}</span>
-                <span className="text-sm" style={{ color: 'rgba(255,255,255,0.65)' }}>{flesch.audience}</span>
+                <span className="text-lg font-semibold" style={{ color: flesch.color }}>{flesch.label}</span>
+                <span className="text-base" style={{ color: 'rgba(255,255,255,0.65)' }}>{flesch.audience}</span>
               </div>
 
               {/* Grade Level */}
@@ -235,13 +235,13 @@ export default function ReadabilityScorerPage() {
                 className="rounded-xl p-5 flex flex-col justify-between"
                 style={{ background: 'var(--surface)', border: '2px solid var(--border-text-idle)' }}
               >
-                <p className="text-xs font-medium uppercase tracking-widest mb-3" style={{ color: 'rgba(255,255,255,0.6)' }}>FK Grade Level</p>
+                <p className="text-sm font-medium uppercase tracking-widest mb-3" style={{ color: 'rgba(255,255,255,0.6)' }}>FK Grade Level</p>
                 <div>
                   <span className="text-5xl font-bold font-mono" style={{ color: 'rgba(255,255,255,0.95)' }}>{stats.gradeLevel}</span>
-                  <span className="ml-1 text-base" style={{ color: 'rgba(255,255,255,0.65)' }}>grade</span>
+                  <span className="ml-1 text-lg" style={{ color: 'rgba(255,255,255,0.65)' }}>grade</span>
                 </div>
-                <p className="text-base mt-3" style={{ color: 'rgba(255,255,255,0.75)' }}>{gradeLabel(stats.gradeLevel)}</p>
-                <p className="text-sm mt-1" style={{ color: 'rgba(255,255,255,0.6)' }}>US education level needed to understand the text</p>
+                <p className="text-lg mt-3" style={{ color: 'rgba(255,255,255,0.75)' }}>{gradeLabel(stats.gradeLevel)}</p>
+                <p className="text-base mt-1" style={{ color: 'rgba(255,255,255,0.6)' }}>US education level needed to understand the text</p>
               </div>
 
               {/* Gunning Fog */}
@@ -249,12 +249,12 @@ export default function ReadabilityScorerPage() {
                 className="rounded-xl p-5 flex flex-col justify-between"
                 style={{ background: 'var(--surface)', border: '2px solid var(--border-text-idle)' }}
               >
-                <p className="text-xs font-medium uppercase tracking-widest mb-3" style={{ color: 'rgba(255,255,255,0.6)' }}>Gunning Fog</p>
+                <p className="text-sm font-medium uppercase tracking-widest mb-3" style={{ color: 'rgba(255,255,255,0.6)' }}>Gunning Fog</p>
                 <div>
                   <span className="text-5xl font-bold font-mono" style={{ color: fog.color }}>{stats.fog}</span>
                 </div>
-                <p className="text-base mt-3" style={{ color: fog.color }}>{fog.label}</p>
-                <p className="text-sm mt-1" style={{ color: 'rgba(255,255,255,0.6)' }}>Years of education needed · target &lt;12</p>
+                <p className="text-lg mt-3" style={{ color: fog.color }}>{fog.label}</p>
+                <p className="text-base mt-1" style={{ color: 'rgba(255,255,255,0.6)' }}>Years of education needed · target &lt;12</p>
               </div>
             </div>
 
@@ -275,8 +275,8 @@ export default function ReadabilityScorerPage() {
                   className="rounded-xl px-4 py-3"
                   style={{ background: 'var(--surface)', border: '2px solid var(--border-text-idle)' }}
                 >
-                  <p className="text-xs font-medium uppercase tracking-widest mb-1" style={{ color: 'rgba(255,255,255,0.6)' }}>{label}</p>
-                  <p className="text-base font-semibold font-mono" style={{ color: 'rgba(255,255,255,0.95)' }}>{value}</p>
+                  <p className="text-sm font-medium uppercase tracking-widest mb-1" style={{ color: 'rgba(255,255,255,0.6)' }}>{label}</p>
+                  <p className="text-lg font-semibold font-mono" style={{ color: 'rgba(255,255,255,0.95)' }}>{value}</p>
                 </div>
               ))}
             </div>
@@ -286,7 +286,7 @@ export default function ReadabilityScorerPage() {
               className="rounded-xl p-4 space-y-3"
               style={{ background: 'var(--surface)', border: '2px solid var(--border-text-idle)' }}
             >
-              <p className="text-xs font-medium uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.6)' }}>Flesch Reading Ease Scale</p>
+              <p className="text-sm font-medium uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.6)' }}>Flesch Reading Ease Scale</p>
               <div className="space-y-1.5">
                 {[
                   { range: '90–100', label: 'Very Easy', note: '5th grade · conversational English', color: '#34d399' },
@@ -298,13 +298,13 @@ export default function ReadabilityScorerPage() {
                   { range: '0–30', label: 'Very Confusing', note: 'Professional / academic', color: '#e879f9' },
                 ].map(({ range, label, note, color }) => (
                   <div key={range} className="flex items-center gap-3">
-                    <span className="w-16 text-sm font-mono flex-shrink-0" style={{ color: 'rgba(255,255,255,0.6)' }}>{range}</span>
+                    <span className="w-16 text-base font-mono flex-shrink-0" style={{ color: 'rgba(255,255,255,0.6)' }}>{range}</span>
                     <span
                       className="w-2 h-2 rounded-full flex-shrink-0"
                       style={{ background: color, boxShadow: stats.flesch >= parseInt(range) && stats.flesch < parseInt(range.split('–')[1] ?? '101') ? `0 0 6px ${color}` : 'none' }}
                     />
-                    <span className="text-base font-medium flex-shrink-0" style={{ color }}>{label}</span>
-                    <span className="text-sm" style={{ color: 'rgba(255,255,255,0.6)' }}>{note}</span>
+                    <span className="text-lg font-medium flex-shrink-0" style={{ color }}>{label}</span>
+                    <span className="text-base" style={{ color: 'rgba(255,255,255,0.6)' }}>{note}</span>
                   </div>
                 ))}
               </div>
@@ -317,8 +317,8 @@ export default function ReadabilityScorerPage() {
             className="rounded-xl px-5 py-8 flex flex-col items-center gap-2 text-center"
             style={{ background: 'var(--surface)', border: '1px dashed rgba(255,255,255,0.1)' }}
           >
-            <p className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.65)' }}>Paste any text above to see its readability scores</p>
-            <p className="text-sm" style={{ color: 'rgba(255,255,255,0.5)' }}>Works great for AI-generated content, blog posts, emails, and documentation</p>
+            <p className="text-lg font-semibold" style={{ color: 'rgba(255,255,255,0.65)' }}>Paste any text above to see its readability scores</p>
+            <p className="text-base" style={{ color: 'rgba(255,255,255,0.5)' }}>Works great for AI-generated content, blog posts, emails, and documentation</p>
           </div>
         )}
       </div>

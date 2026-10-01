@@ -50,8 +50,8 @@ export default function FileDropZone({
     >
       <Upload size={28} style={{ color }} />
       <div className="text-center px-6">
-        <p className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.9)' }}>{label}</p>
-        <p className="text-sm mt-1.5" style={{ color }}>{hint}</p>
+        <p className="text-lg font-semibold" style={{ color: 'rgba(255,255,255,0.9)' }}>{label}</p>
+        <p className="text-base mt-1.5" style={{ color }}>{hint}</p>
       </div>
       <input ref={inputRef} type="file" accept={accept} className="hidden"
         onChange={(e) => { if (e.target.files?.[0]) onFile(e.target.files[0]) }} />

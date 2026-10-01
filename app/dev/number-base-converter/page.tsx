@@ -87,9 +87,9 @@ export default function NumberBaseConverterPage() {
       seoContent={
         <SeoSection
           about={<>
-            <p className="text-base leading-relaxed"><strong>Number Base Converter Online</strong> is a free browser-based tool that instantly converts integers between <strong>binary (base 2)</strong>, <strong>octal (base 8)</strong>, <strong>decimal (base 10)</strong>, and <strong>hexadecimal (base 16)</strong>. Type in any field and all other bases update live — no button to press.</p>
-            <p className="text-base leading-relaxed">This tool is essential for developers working with bitfields, memory addresses, color codes, file permissions, network masks, and low-level programming. It also shows binary values grouped in 4-bit nibbles for easy reading.</p>
-            <p className="text-base leading-relaxed">All conversion runs entirely in your browser — nothing is sent to any server.</p>
+            <p className="text-lg leading-relaxed"><strong>Number Base Converter Online</strong> is a free browser-based tool that instantly converts integers between <strong>binary (base 2)</strong>, <strong>octal (base 8)</strong>, <strong>decimal (base 10)</strong>, and <strong>hexadecimal (base 16)</strong>. Type in any field and all other bases update live — no button to press.</p>
+            <p className="text-lg leading-relaxed">This tool is essential for developers working with bitfields, memory addresses, color codes, file permissions, network masks, and low-level programming. It also shows binary values grouped in 4-bit nibbles for easy reading.</p>
+            <p className="text-lg leading-relaxed">All conversion runs entirely in your browser — nothing is sent to any server.</p>
           </>}
           useCases={[
             'Convert hexadecimal color codes to decimal RGB channel values.',
@@ -133,19 +133,19 @@ export default function NumberBaseConverterPage() {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
                     <span
-                      className="text-xs font-bold px-1.5 py-0.5 rounded font-mono"
+                      className="text-sm font-bold px-1.5 py-0.5 rounded font-mono"
                       style={{ background: `${color}20`, color }}
                     >
                       base {base}
                     </span>
-                    <span className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>{label}</span>
+                    <span className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>{label}</span>
                   </div>
-                  <span className="text-xs font-mono" style={{ color: 'rgba(255,255,255,0.4)' }}>{chars}</span>
+                  <span className="text-sm font-mono" style={{ color: 'rgba(255,255,255,0.4)' }}>{chars}</span>
                 </div>
 
                 <div className="flex items-center gap-2">
                   {prefix && (
-                    <span className="text-sm font-mono flex-shrink-0" style={{ color: 'rgba(255,255,255,0.35)' }}>{prefix}</span>
+                    <span className="text-base font-mono flex-shrink-0" style={{ color: 'rgba(255,255,255,0.35)' }}>{prefix}</span>
                   )}
                   <input
                     type="text"
@@ -153,7 +153,7 @@ export default function NumberBaseConverterPage() {
                     onChange={(e) => handleChange(base, e.target.value)}
                     placeholder={`Enter ${label.toLowerCase()}…`}
                     spellCheck={false}
-                    className="flex-1 min-w-0 rounded-lg px-3 py-2.5 text-base font-mono outline-none transition-all placeholder:text-white/50"
+                    className="flex-1 min-w-0 rounded-lg px-3 py-2.5 text-lg font-mono outline-none transition-all placeholder:text-white/50"
                     style={{
                       background: 'rgba(0,0,0,0.35)',
                       border: `1px solid ${isActive ? color : 'rgba(255,255,255,0.12)'}`,
@@ -172,7 +172,7 @@ export default function NumberBaseConverterPage() {
 
                 {/* Binary nibble grouping */}
                 {base === 2 && result && result[2].length > 4 && (
-                  <p className="text-xs font-mono px-1" style={{ color: 'rgba(255,255,255,0.45)' }}>
+                  <p className="text-sm font-mono px-1" style={{ color: 'rgba(255,255,255,0.45)' }}>
                     {groupBinary(result[2])}
                   </p>
                 )}
@@ -183,7 +183,7 @@ export default function NumberBaseConverterPage() {
 
         {/* Error */}
         {error && (
-          <p className="text-sm px-1" style={{ color: '#f87171' }}>{error}</p>
+          <p className="text-base px-1" style={{ color: '#f87171' }}>{error}</p>
         )}
 
         {/* Clear */}
@@ -191,7 +191,7 @@ export default function NumberBaseConverterPage() {
           <div className="flex justify-end">
             <button
               onClick={clearAll}
-              className="text-sm px-3 py-1.5 rounded-lg transition-all"
+              className="text-base px-3 py-1.5 rounded-lg transition-all"
               style={{ color: 'rgba(255,255,255,0.55)', background: 'rgba(255,255,255,0.06)', border: '2px solid var(--border-dev-idle)' }}
               onMouseEnter={(e) => { e.currentTarget.style.color = 'rgba(255,255,255,0.9)'; e.currentTarget.style.background = 'rgba(255,255,255,0.12)' }}
               onMouseLeave={(e) => { e.currentTarget.style.color = 'rgba(255,255,255,0.55)'; e.currentTarget.style.background = 'rgba(255,255,255,0.06)' }}
@@ -206,15 +206,15 @@ export default function NumberBaseConverterPage() {
           className="rounded-xl p-4 space-y-3"
           style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)' }}
         >
-          <p className="text-xs font-medium uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.55)' }}>Quick Reference — 0 to 15</p>
+          <p className="text-sm font-medium uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.55)' }}>Quick Reference — 0 to 15</p>
           <div className="overflow-x-auto">
-            <table className="w-full text-sm font-mono border-collapse">
+            <table className="w-full text-base font-mono border-collapse">
               <thead>
                 <tr>
                   {BASES.map(({ base, label }) => (
                     <th
                       key={base}
-                      className="text-left pb-2 pr-6 text-xs font-semibold uppercase tracking-wider"
+                      className="text-left pb-2 pr-6 text-sm font-semibold uppercase tracking-wider"
                       style={{ color: COLOR[base] }}
                     >
                       {label}
@@ -242,8 +242,8 @@ export default function NumberBaseConverterPage() {
             className="rounded-xl px-5 py-8 flex flex-col items-center gap-2 text-center"
             style={{ background: 'var(--surface)', border: '1px dashed rgba(255,255,255,0.1)' }}
           >
-            <p className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.6)' }}>Type a number in any field to convert</p>
-            <p className="text-sm" style={{ color: 'rgba(255,255,255,0.45)' }}>Binary, octal, decimal, and hex update simultaneously</p>
+            <p className="text-lg font-semibold" style={{ color: 'rgba(255,255,255,0.6)' }}>Type a number in any field to convert</p>
+            <p className="text-base" style={{ color: 'rgba(255,255,255,0.45)' }}>Binary, octal, decimal, and hex update simultaneously</p>
           </div>
         )}
 

@@ -32,10 +32,10 @@ export default function UuidGeneratorPage() {
       seoContent={
         <SeoSection
           about={<>
-            <p className="text-base leading-relaxed"><strong>UUID Generator Online</strong> is a free browser-based tool that lets you generate <strong>cryptographically secure UUID v4 (Version 4) identifiers</strong> instantly. Whether you need a single UUID or multiple unique identifiers for databases, APIs, cloud applications, or software testing, this tool creates standards-compliant UUIDs with a single click.</p>
-            <p className="text-base leading-relaxed">A <strong>UUID (Universally Unique Identifier)</strong>, also known as a <strong>GUID (Globally Unique Identifier)</strong>, is a 128-bit value designed to uniquely identify objects, records, sessions, transactions, and resources across distributed systems. UUID v4 generates identifiers using high-quality random numbers, making collisions extraordinarily unlikely and suitable for virtually all practical applications.</p>
-            <p className="text-base leading-relaxed">This generator uses your browser&apos;s built-in <strong><code>crypto.randomUUID()</code></strong> API, which relies on a <strong>cryptographically secure random number generator (CSPRNG)</strong> to produce RFC-compliant Version 4 UUIDs. Because generation happens entirely inside your browser, no UUIDs are transmitted, stored, or processed on a remote server. Your generated identifiers remain completely private.</p>
-            <p className="text-base leading-relaxed">Whether you&apos;re a developer, DevOps engineer, database administrator, tester, or student, this UUID Generator helps you quickly create unique IDs for primary keys, REST APIs, distributed systems, cloud infrastructure, microservices, event tracking, request tracing, temporary objects, and automated testing. Generate one or many UUIDs instantly without installing software or writing code.</p>
+            <p className="text-lg leading-relaxed"><strong>UUID Generator Online</strong> is a free browser-based tool that lets you generate <strong>cryptographically secure UUID v4 (Version 4) identifiers</strong> instantly. Whether you need a single UUID or multiple unique identifiers for databases, APIs, cloud applications, or software testing, this tool creates standards-compliant UUIDs with a single click.</p>
+            <p className="text-lg leading-relaxed">A <strong>UUID (Universally Unique Identifier)</strong>, also known as a <strong>GUID (Globally Unique Identifier)</strong>, is a 128-bit value designed to uniquely identify objects, records, sessions, transactions, and resources across distributed systems. UUID v4 generates identifiers using high-quality random numbers, making collisions extraordinarily unlikely and suitable for virtually all practical applications.</p>
+            <p className="text-lg leading-relaxed">This generator uses your browser&apos;s built-in <strong><code>crypto.randomUUID()</code></strong> API, which relies on a <strong>cryptographically secure random number generator (CSPRNG)</strong> to produce RFC-compliant Version 4 UUIDs. Because generation happens entirely inside your browser, no UUIDs are transmitted, stored, or processed on a remote server. Your generated identifiers remain completely private.</p>
+            <p className="text-lg leading-relaxed">Whether you&apos;re a developer, DevOps engineer, database administrator, tester, or student, this UUID Generator helps you quickly create unique IDs for primary keys, REST APIs, distributed systems, cloud infrastructure, microservices, event tracking, request tracing, temporary objects, and automated testing. Generate one or many UUIDs instantly without installing software or writing code.</p>
           </>}
           useCases={[
             'Generate unique primary keys for database records.',
@@ -88,7 +88,7 @@ export default function UuidGeneratorPage() {
           className="rounded-xl p-4"
           style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)' }}
         >
-          <label className="block text-sm font-semibold mb-3" style={{ color: 'rgba(255,255,255,0.75)' }}>
+          <label className="block text-base font-semibold mb-3" style={{ color: 'rgba(255,255,255,0.75)' }}>
             How many UUIDs?
           </label>
           <div className="flex flex-wrap items-center gap-3">
@@ -97,7 +97,7 @@ export default function UuidGeneratorPage() {
                 <button
                   key={n}
                   onClick={() => setAmount(n)}
-                  className="px-4 py-1.5 rounded-md text-sm font-semibold transition-all"
+                  className="px-4 py-1.5 rounded-md text-base font-semibold transition-all"
                   style={{
                     background: amount === n ? 'var(--color-dev)' : 'transparent',
                     color: amount === n ? '#fff' : 'rgba(255,255,255,0.5)',
@@ -110,7 +110,7 @@ export default function UuidGeneratorPage() {
 
             <button
               onClick={generate}
-              className="flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold transition-all active:scale-95 active:brightness-90"
+              className="flex items-center gap-2 px-5 py-2.5 rounded-lg text-base font-semibold transition-all active:scale-95 active:brightness-90"
               style={{ background: 'var(--color-dev)', color: '#fff' }}
             >
               <RefreshCw size={14} />
@@ -120,7 +120,7 @@ export default function UuidGeneratorPage() {
             {uuids.length > 1 && (
               <button
                 onClick={copyAll}
-                className="px-5 py-2.5 rounded-lg text-sm font-semibold transition-all active:scale-95 active:brightness-75"
+                className="px-5 py-2.5 rounded-lg text-base font-semibold transition-all active:scale-95 active:brightness-75"
                 style={{
                   background: justCopiedAll ? 'rgba(52,211,153,0.15)' : 'rgba(255,255,255,0.08)',
                   border: `1px solid ${justCopiedAll ? 'rgba(52,211,153,0.4)' : 'rgba(255,255,255,0.15)'}`,
@@ -142,7 +142,7 @@ export default function UuidGeneratorPage() {
               style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)' }}
             >
               <code
-                className="text-sm flex-1 tracking-wide"
+                className="text-base flex-1 tracking-wide"
                 style={{ color: 'rgba(255,255,255,0.92)', fontFamily: 'var(--font-geist-mono), monospace' }}
               >
                 {uuid}

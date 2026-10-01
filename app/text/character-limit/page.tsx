@@ -104,9 +104,9 @@ export default function CharacterLimitPage() {
       seoContent={
         <SeoSection
           about={<>
-            <p className="text-base leading-relaxed"><strong>Character Limit Checker Online</strong> is a free browser-based tool that checks your text against the character limits of 28 platforms — including X (Twitter), LinkedIn, Instagram, TikTok, YouTube, Google Ads, Meta Ads, email subject lines, SMS, push notifications, and SEO meta tags. As you type, every platform shows your remaining characters, a color-coded status bar, and a clear over/under indicator.</p>
-            <p className="text-base leading-relaxed">Writers using AI to generate social posts, ad copy, or meta descriptions frequently overshoot platform limits. This tool makes it instant to check all limits at once, so you can trim and publish with confidence. You can also set a custom character limit for any specific use case.</p>
-            <p className="text-base leading-relaxed">All processing runs in your browser — your text is never sent to any server.</p>
+            <p className="text-lg leading-relaxed"><strong>Character Limit Checker Online</strong> is a free browser-based tool that checks your text against the character limits of 28 platforms — including X (Twitter), LinkedIn, Instagram, TikTok, YouTube, Google Ads, Meta Ads, email subject lines, SMS, push notifications, and SEO meta tags. As you type, every platform shows your remaining characters, a color-coded status bar, and a clear over/under indicator.</p>
+            <p className="text-lg leading-relaxed">Writers using AI to generate social posts, ad copy, or meta descriptions frequently overshoot platform limits. This tool makes it instant to check all limits at once, so you can trim and publish with confidence. You can also set a custom character limit for any specific use case.</p>
+            <p className="text-lg leading-relaxed">All processing runs in your browser — your text is never sent to any server.</p>
           </>}
           useCases={[
             'Check that AI-generated tweets and LinkedIn posts fit within platform limits.',
@@ -137,15 +137,15 @@ export default function CharacterLimitPage() {
           style={{ background: 'var(--surface)', border: '2px solid var(--border-text-idle)' }}
         >
           <div className="flex items-center justify-between mb-3">
-            <label className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>Your Text</label>
+            <label className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>Your Text</label>
             <div className="flex items-center gap-3">
-              <span className="text-xs font-mono" style={{ color: 'rgba(255,255,255,0.4)' }}>
+              <span className="text-sm font-mono" style={{ color: 'rgba(255,255,255,0.4)' }}>
                 {chars.toLocaleString()} chars · {words.toLocaleString()} words
               </span>
               {text && (
                 <button
                   onClick={() => setText('')}
-                  className="text-sm px-3 py-1 rounded-lg transition-all"
+                  className="text-base px-3 py-1 rounded-lg transition-all"
                   style={{ color: 'rgba(255,255,255,0.5)', background: 'rgba(255,255,255,0.06)', border: '2px solid var(--border-text-idle)' }}
                   onMouseEnter={(e) => { e.currentTarget.style.color = 'rgba(255,255,255,0.85)'; e.currentTarget.style.background = 'rgba(255,255,255,0.12)' }}
                   onMouseLeave={(e) => { e.currentTarget.style.color = 'rgba(255,255,255,0.5)'; e.currentTarget.style.background = 'rgba(255,255,255,0.06)' }}
@@ -160,7 +160,7 @@ export default function CharacterLimitPage() {
             onChange={(e) => setText(e.target.value)}
             placeholder="Paste or type your text here to check it against all platform limits…"
             rows={6}
-            className="w-full resize-y rounded-lg px-3 py-3 text-sm outline-none transition-all duration-150 placeholder:text-white/50"
+            className="w-full resize-y rounded-lg px-3 py-3 text-base outline-none transition-all duration-150 placeholder:text-white/50"
             style={{
               background: 'rgba(0,0,0,0.35)',
               border: '2px solid var(--border-text)',
@@ -180,7 +180,7 @@ export default function CharacterLimitPage() {
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className="px-3 py-2 text-sm font-medium transition-all"
+                className="px-3 py-2 text-base font-medium transition-all"
                 style={activeCategory === cat
                   ? { background: 'var(--color-text-tool)', color: '#000' }
                   : { background: 'transparent', color: 'rgba(255,255,255,0.5)' }}
@@ -194,14 +194,14 @@ export default function CharacterLimitPage() {
 
           {/* Custom limit */}
           <div className="flex items-center gap-2 ml-auto">
-            <label className="text-sm" style={{ color: 'rgba(255,255,255,0.5)' }}>Custom limit</label>
+            <label className="text-base" style={{ color: 'rgba(255,255,255,0.5)' }}>Custom limit</label>
             <input
               type="number"
               min={1}
               value={customLimit}
               onChange={(e) => setCustomLimit(e.target.value)}
               placeholder="e.g. 500"
-              className="w-28 rounded-lg px-3 py-2 text-sm outline-none transition-all font-mono placeholder:text-white/50"
+              className="w-28 rounded-lg px-3 py-2 text-base outline-none transition-all font-mono placeholder:text-white/50"
               style={{
                 background: 'rgba(0,0,0,0.3)',
                 border: '2px solid var(--border-text-idle)',
@@ -227,10 +227,10 @@ export default function CharacterLimitPage() {
               >
                 <div className="flex items-center justify-between mb-2">
                   <div>
-                    <span className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.9)' }}>Custom Limit</span>
-                    <span className="ml-2 text-xs font-mono" style={{ color: 'rgba(255,255,255,0.4)' }}>{customLimitNum} chars</span>
+                    <span className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.9)' }}>Custom Limit</span>
+                    <span className="ml-2 text-sm font-mono" style={{ color: 'rgba(255,255,255,0.4)' }}>{customLimitNum} chars</span>
                   </div>
-                  <span className="text-sm font-semibold font-mono" style={{ color: statusColor(status) }}>
+                  <span className="text-base font-semibold font-mono" style={{ color: statusColor(status) }}>
                     {status === 'over' ? `${Math.abs(remaining)} over` : `${remaining} left`}
                   </span>
                 </div>
@@ -250,7 +250,7 @@ export default function CharacterLimitPage() {
             if (platforms.length === 0) return null
             return (
               <div key={cat}>
-                <p className="text-xs font-medium uppercase tracking-widest mb-2" style={{ color: 'rgba(255,255,255,0.3)' }}>{cat}</p>
+                <p className="text-sm font-medium uppercase tracking-widest mb-2" style={{ color: 'rgba(255,255,255,0.3)' }}>{cat}</p>
                 <div className="space-y-2">
                   {platforms.map((platform) => {
                     const status = getStatus(chars, platform.limit)
@@ -267,18 +267,18 @@ export default function CharacterLimitPage() {
                       >
                         <div className="flex items-center justify-between gap-3 mb-2">
                           <div className="min-w-0">
-                            <span className="text-sm font-medium" style={{ color: 'rgba(255,255,255,0.88)' }}>{platform.name}</span>
+                            <span className="text-base font-medium" style={{ color: 'rgba(255,255,255,0.88)' }}>{platform.name}</span>
                             {platform.note && (
-                              <span className="ml-2 text-xs" style={{ color: 'rgba(255,255,255,0.35)' }}>{platform.note}</span>
+                              <span className="ml-2 text-sm" style={{ color: 'rgba(255,255,255,0.35)' }}>{platform.note}</span>
                             )}
                           </div>
                           <div className="flex items-center gap-3 flex-shrink-0">
-                            <span className="text-xs font-mono" style={{ color: 'rgba(255,255,255,0.35)' }}>
+                            <span className="text-sm font-mono" style={{ color: 'rgba(255,255,255,0.35)' }}>
                               {chars.toLocaleString()} / {platform.limit.toLocaleString()}
                             </span>
                             {chars > 0 && (
                               <span
-                                className="text-sm font-semibold font-mono w-20 text-right"
+                                className="text-base font-semibold font-mono w-20 text-right"
                                 style={{ color: statusColor(status) }}
                               >
                                 {status === 'over'
@@ -316,7 +316,7 @@ export default function CharacterLimitPage() {
           ].map(({ color, label }) => (
             <div key={label} className="flex items-center gap-2">
               <span className="w-2.5 h-2.5 rounded-full flex-shrink-0" style={{ background: color }} />
-              <span className="text-xs" style={{ color: 'rgba(255,255,255,0.4)' }}>{label}</span>
+              <span className="text-sm" style={{ color: 'rgba(255,255,255,0.4)' }}>{label}</span>
             </div>
           ))}
         </div>

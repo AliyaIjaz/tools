@@ -13,7 +13,7 @@ import { pdfToEpub, PdfToEpubMode, PdfToEpubResult } from '@/lib/convertors/pdfT
 const MODE_LABELS: Record<PdfToEpubMode, string> = { text: 'Reflowable text', images: 'Page images' }
 const LABEL_TO_MODE: Record<string, PdfToEpubMode> = { 'Reflowable text': 'text', 'Page images': 'images' }
 
-const inputClass = 'w-full rounded-lg px-3 py-2 text-base text-white bg-transparent outline-none placeholder:text-white/50'
+const inputClass = 'w-full rounded-lg px-3 py-2 text-lg text-white bg-transparent outline-none placeholder:text-white/50'
 
 export default function PdfToEpubPage() {
   const [file, setFile] = useState<File | null>(null)
@@ -82,10 +82,10 @@ export default function PdfToEpubPage() {
           aboutTitle="About This Free Online PDF to EPUB Converter"
           about={
             <>
-              <p className="text-base leading-relaxed"><strong className="text-white">PDF to EPUB Converter</strong> turns a PDF into an EPUB eBook that opens in Apple Books, Kobo, Calibre, and most other eBook readers. Choose <strong className="text-white">Reflowable text</strong> to get an eBook whose text resizes to fit your screen, or <strong className="text-white">Page images</strong> to keep every page looking exactly like the original.</p>
-              <p className="text-base leading-relaxed">Reflowable mode extracts the text, detects headings and paragraphs, joins hyphenated line breaks, and splits the book into chapters with a table of contents. Page-image mode renders each page as a picture, which preserves layout, figures, and scanned documents but is not reflowable.</p>
-              <p className="text-base leading-relaxed">Want a PDF from an eBook instead? Use the <Link href="/convertor/epub-to-pdf" className="underline" style={{ color: 'var(--color-convertor)' }}>EPUB to PDF converter</Link>.</p>
-              <p className="text-base leading-relaxed">Everything runs <strong className="text-white">locally in your browser</strong>. Your PDF is <strong className="text-white">never uploaded</strong>, and there is no registration or watermark.</p>
+              <p className="text-lg leading-relaxed"><strong className="text-white">PDF to EPUB Converter</strong> turns a PDF into an EPUB eBook that opens in Apple Books, Kobo, Calibre, and most other eBook readers. Choose <strong className="text-white">Reflowable text</strong> to get an eBook whose text resizes to fit your screen, or <strong className="text-white">Page images</strong> to keep every page looking exactly like the original.</p>
+              <p className="text-lg leading-relaxed">Reflowable mode extracts the text, detects headings and paragraphs, joins hyphenated line breaks, and splits the book into chapters with a table of contents. Page-image mode renders each page as a picture, which preserves layout, figures, and scanned documents but is not reflowable.</p>
+              <p className="text-lg leading-relaxed">Want a PDF from an eBook instead? Use the <Link href="/convertor/epub-to-pdf" className="underline" style={{ color: 'var(--color-convertor)' }}>EPUB to PDF converter</Link>.</p>
+              <p className="text-lg leading-relaxed">Everything runs <strong className="text-white">locally in your browser</strong>. Your PDF is <strong className="text-white">never uploaded</strong>, and there is no registration or watermark.</p>
             </>
           }
           useCases={[
@@ -129,13 +129,13 @@ export default function PdfToEpubPage() {
             style={{ background: 'var(--surface)', border: '2px solid var(--border-convertor-idle)' }}
           >
             <div className="min-w-0">
-              <p className="text-base font-semibold text-white truncate">{file.name}</p>
-              <p className="text-sm mt-1" style={{ color: 'rgba(255,255,255,0.65)' }}>{formatBytes(file.size)}</p>
+              <p className="text-lg font-semibold text-white truncate">{file.name}</p>
+              <p className="text-base mt-1" style={{ color: 'rgba(255,255,255,0.65)' }}>{formatBytes(file.size)}</p>
             </div>
             <button
               onClick={reset}
               disabled={busy}
-              className="inline-flex items-center gap-1.5 text-sm disabled:opacity-50"
+              className="inline-flex items-center gap-1.5 text-base disabled:opacity-50"
               style={{ color: 'rgba(255,255,255,0.65)' }}
             >
               <RotateCcw size={14} /> Change file
@@ -145,13 +145,13 @@ export default function PdfToEpubPage() {
           {!result && (
             <>
               <div className="space-y-2">
-                <p className="text-sm font-medium" style={{ color: 'rgba(255,255,255,0.7)' }}>Conversion mode</p>
+                <p className="text-base font-medium" style={{ color: 'rgba(255,255,255,0.7)' }}>Conversion mode</p>
                 <Tabs
                   tabs={Object.values(MODE_LABELS)}
                   value={MODE_LABELS[mode]}
                   onChange={(label) => setMode(LABEL_TO_MODE[label])}
                 />
-                <p className="text-sm" style={{ color: 'rgba(255,255,255,0.6)' }}>
+                <p className="text-base" style={{ color: 'rgba(255,255,255,0.6)' }}>
                   {mode === 'text'
                     ? 'Extracts text into chapters. Best for novels and articles; scanned PDFs have no text to extract.'
                     : 'Embeds each page as an image. Keeps the exact layout, but text is not reflowable and files are larger.'}
@@ -160,7 +160,7 @@ export default function PdfToEpubPage() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <label className="block space-y-2">
-                  <span className="text-sm font-medium" style={{ color: 'rgba(255,255,255,0.7)' }}>Title</span>
+                  <span className="text-base font-medium" style={{ color: 'rgba(255,255,255,0.7)' }}>Title</span>
                   <input
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
@@ -172,7 +172,7 @@ export default function PdfToEpubPage() {
                   />
                 </label>
                 <label className="block space-y-2">
-                  <span className="text-sm font-medium" style={{ color: 'rgba(255,255,255,0.7)' }}>Author (optional)</span>
+                  <span className="text-base font-medium" style={{ color: 'rgba(255,255,255,0.7)' }}>Author (optional)</span>
                   <input
                     value={author}
                     onChange={(e) => setAuthor(e.target.value)}
@@ -188,7 +188,7 @@ export default function PdfToEpubPage() {
               <button
                 onClick={convert}
                 disabled={busy}
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-base font-semibold text-white disabled:opacity-60 transition-opacity"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-lg font-semibold text-white disabled:opacity-60 transition-opacity"
                 style={{ background: 'var(--color-convertor)' }}
               >
                 {busy ? <Loader2 size={18} className="animate-spin" /> : null}
@@ -202,7 +202,7 @@ export default function PdfToEpubPage() {
               <div className="h-2 rounded-full overflow-hidden" style={{ background: 'var(--color-convertor-dim)' }}>
                 <div className="h-full transition-all" style={{ width: `${Math.round(progress * 100)}%`, background: 'var(--color-convertor)' }} />
               </div>
-              <p className="text-sm" style={{ color: 'rgba(255,255,255,0.65)' }}>{status}</p>
+              <p className="text-base" style={{ color: 'rgba(255,255,255,0.65)' }}>{status}</p>
             </div>
           )}
 
@@ -211,11 +211,11 @@ export default function PdfToEpubPage() {
               className="rounded-xl p-5 space-y-4"
               style={{ background: 'var(--surface)', border: '2px solid var(--border-convertor)' }}
             >
-              <p className="text-sm" style={{ color: 'rgba(255,255,255,0.65)' }}>
+              <p className="text-base" style={{ color: 'rgba(255,255,255,0.65)' }}>
                 {result.pages} PDF pages → {result.chapters} {result.chapters === 1 ? 'chapter' : 'chapters'} · {formatBytes(result.blob.size)} · {MODE_LABELS[result.mode]}
               </p>
               {result.mode === 'text' && result.emptyTextPages > 0 && (
-                <p className="text-sm flex items-start gap-2" style={{ color: 'rgba(255,255,255,0.75)' }}>
+                <p className="text-base flex items-start gap-2" style={{ color: 'rgba(255,255,255,0.75)' }}>
                   <AlertTriangle size={16} className="shrink-0 mt-0.5" style={{ color: 'var(--color-text-tool)' }} />
                   {result.emptyTextPages} {result.emptyTextPages === 1 ? 'page has' : 'pages have'} no selectable text (images or scans) and will be blank. Use Page images mode to keep them.
                 </p>
@@ -223,14 +223,14 @@ export default function PdfToEpubPage() {
               <div className="flex flex-wrap gap-3">
                 <button
                   onClick={() => downloadBlob(result.blob, outName)}
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-base font-semibold text-white"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-lg font-semibold text-white"
                   style={{ background: 'var(--color-convertor)' }}
                 >
                   <Download size={18} /> Download EPUB
                 </button>
                 <button
                   onClick={() => setResult(null)}
-                  className="text-sm"
+                  className="text-base"
                   style={{ color: 'rgba(255,255,255,0.65)' }}
                 >
                   Convert again with different settings
@@ -242,7 +242,7 @@ export default function PdfToEpubPage() {
       )}
 
       {error && (
-        <p className="text-sm mt-4" style={{ color: '#f87171' }}>{error}</p>
+        <p className="text-base mt-4" style={{ color: '#f87171' }}>{error}</p>
       )}
     </ToolLayout>
   )

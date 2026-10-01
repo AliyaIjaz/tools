@@ -41,10 +41,10 @@ export default function HashGeneratorPage() {
       seoContent={
         <SeoSection
           about={<>
-            <p className="text-base leading-relaxed"><strong>Hash Generator Online</strong> is a free browser-based tool that lets you generate <strong>SHA-1, SHA-256, and SHA-512 hashes</strong> instantly from any text string. Whether you&apos;re verifying data integrity, comparing text values, testing applications, or learning about cryptographic hash functions, this tool produces secure hash values in real time as you type.</p>
-            <p className="text-base leading-relaxed">A cryptographic hash function converts text or binary data into a fixed-length string known as a <strong>hash</strong>, <strong>message digest</strong>, or <strong>checksum</strong>. The same input always produces the same output, while even a tiny change to the original text results in a completely different hash. Because hashing is a <strong>one-way operation</strong>, the original input cannot be reconstructed from the generated hash, making hash functions useful for integrity verification, digital signatures, content identification, and many security-related applications.</p>
-            <p className="text-base leading-relaxed">This Hash Generator uses your browser&apos;s built-in <strong>Web Crypto API</strong> to compute SHA hashes securely and efficiently. It supports <strong>SHA-1</strong>, <strong>SHA-256</strong>, and <strong>SHA-512</strong>, allowing you to compare different algorithms and generate hexadecimal hash values instantly. While SHA-1 remains available for compatibility with older systems, modern applications should use <strong>SHA-256</strong> or <strong>SHA-512</strong> because SHA-1 is no longer considered secure against collision attacks.</p>
-            <p className="text-base leading-relaxed">All hashing happens entirely <strong>inside your browser</strong>, meaning your text is never uploaded, stored, or transmitted to any server. Whether you&apos;re a developer, security professional, system administrator, student, or IT enthusiast, this online hash generator provides a fast, private, and reliable way to generate cryptographic hashes.</p>
+            <p className="text-lg leading-relaxed"><strong>Hash Generator Online</strong> is a free browser-based tool that lets you generate <strong>SHA-1, SHA-256, and SHA-512 hashes</strong> instantly from any text string. Whether you&apos;re verifying data integrity, comparing text values, testing applications, or learning about cryptographic hash functions, this tool produces secure hash values in real time as you type.</p>
+            <p className="text-lg leading-relaxed">A cryptographic hash function converts text or binary data into a fixed-length string known as a <strong>hash</strong>, <strong>message digest</strong>, or <strong>checksum</strong>. The same input always produces the same output, while even a tiny change to the original text results in a completely different hash. Because hashing is a <strong>one-way operation</strong>, the original input cannot be reconstructed from the generated hash, making hash functions useful for integrity verification, digital signatures, content identification, and many security-related applications.</p>
+            <p className="text-lg leading-relaxed">This Hash Generator uses your browser&apos;s built-in <strong>Web Crypto API</strong> to compute SHA hashes securely and efficiently. It supports <strong>SHA-1</strong>, <strong>SHA-256</strong>, and <strong>SHA-512</strong>, allowing you to compare different algorithms and generate hexadecimal hash values instantly. While SHA-1 remains available for compatibility with older systems, modern applications should use <strong>SHA-256</strong> or <strong>SHA-512</strong> because SHA-1 is no longer considered secure against collision attacks.</p>
+            <p className="text-lg leading-relaxed">All hashing happens entirely <strong>inside your browser</strong>, meaning your text is never uploaded, stored, or transmitted to any server. Whether you&apos;re a developer, security professional, system administrator, student, or IT enthusiast, this online hash generator provides a fast, private, and reliable way to generate cryptographic hashes.</p>
           </>}
           useCases={[
             'Generate SHA-256 hashes for application testing.',
@@ -97,15 +97,15 @@ export default function HashGeneratorPage() {
           style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)' }}
         >
           <div className="flex items-center justify-between mb-3">
-            <label className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>Input text</label>
-            <span className="text-sm" style={{ color: 'rgba(255,255,255,0.4)' }}>{input.length} chars</span>
+            <label className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>Input text</label>
+            <span className="text-base" style={{ color: 'rgba(255,255,255,0.4)' }}>{input.length} chars</span>
           </div>
           <textarea
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder="Enter text to hash…"
             rows={4}
-            className="w-full resize-y rounded-lg px-3 py-3 text-sm outline-none transition-all duration-150 placeholder:text-white/45"
+            className="w-full resize-y rounded-lg px-3 py-3 text-base outline-none transition-all duration-150 placeholder:text-white/45"
             style={{
               background: 'rgba(0,0,0,0.35)',
               border: '2px solid var(--border-dev)',
@@ -126,11 +126,11 @@ export default function HashGeneratorPage() {
               style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)' }}
             >
               <div className="flex items-center justify-between mb-3">
-                <label className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>{label}</label>
+                <label className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>{label}</label>
                 {hashes[algo] && <CopyButton text={hashes[algo]} />}
               </div>
               <div
-                className="px-3 py-3 rounded-lg text-sm leading-relaxed break-all"
+                className="px-3 py-3 rounded-lg text-base leading-relaxed break-all"
                 style={{
                   background: 'rgba(0,0,0,0.35)',
                   border: '2px solid var(--border-dev-idle)',

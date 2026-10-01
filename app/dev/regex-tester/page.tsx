@@ -116,7 +116,7 @@ export default function RegexTesterPage() {
       <div className="space-y-5">
         {/* Pattern input */}
         <div>
-          <label className="text-sm font-semibold mb-2 block" style={{ color: 'rgba(255,255,255,0.75)' }}>
+          <label className="text-base font-semibold mb-2 block" style={{ color: 'rgba(255,255,255,0.75)' }}>
             Pattern
           </label>
           <div
@@ -129,7 +129,7 @@ export default function RegexTesterPage() {
               value={pattern}
               onChange={(e) => setPattern(e.target.value)}
               placeholder="[a-z]+"
-              className="flex-1 bg-transparent outline-none text-base"
+              className="flex-1 bg-transparent outline-none text-lg"
               style={{ color: 'rgba(255,255,255,0.95)', fontFamily: 'var(--font-geist-mono), monospace' }}
             />
             <span className="text-lg font-mono" style={{ color: 'rgba(255,255,255,0.45)' }}>/</span>
@@ -139,7 +139,7 @@ export default function RegexTesterPage() {
                 <button
                   key={f}
                   onClick={() => toggleFlag(f)}
-                  className="w-8 h-8 rounded-lg text-sm font-mono font-bold transition-all"
+                  className="w-8 h-8 rounded-lg text-base font-mono font-bold transition-all"
                   style={{
                     background: flags.has(f) ? 'oklch(0.6 0.2 290 / 0.25)' : 'rgba(255,255,255,0.06)',
                     color: flags.has(f) ? 'var(--color-dev)' : 'rgba(255,255,255,0.5)',
@@ -151,12 +151,12 @@ export default function RegexTesterPage() {
               ))}
             </div>
           </div>
-          {error && <p className="text-sm mt-1.5 font-medium" style={{ color: '#f87171' }}>{error}</p>}
+          {error && <p className="text-base mt-1.5 font-medium" style={{ color: '#f87171' }}>{error}</p>}
         </div>
 
         {/* Test string */}
         <div>
-          <label className="text-sm font-semibold mb-2 block" style={{ color: 'rgba(255,255,255,0.75)' }}>
+          <label className="text-base font-semibold mb-2 block" style={{ color: 'rgba(255,255,255,0.75)' }}>
             Test string
           </label>
           <textarea
@@ -164,7 +164,7 @@ export default function RegexTesterPage() {
             onChange={(e) => setTestStr(e.target.value)}
             rows={7}
             placeholder="Enter text to test against…"
-            className="w-full resize-y rounded-xl px-4 py-3 text-base outline-none"
+            className="w-full resize-y rounded-xl px-4 py-3 text-lg outline-none"
             style={{
               background: 'var(--surface)',
               border: '2px solid var(--border-dev)',
@@ -179,9 +179,9 @@ export default function RegexTesterPage() {
         {testStr && (
           <div>
             <div className="flex items-center justify-between mb-2">
-              <label className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>Matches</label>
+              <label className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>Matches</label>
               <span
-                className="text-sm font-semibold px-3 py-1 rounded-full"
+                className="text-base font-semibold px-3 py-1 rounded-full"
                 style={{
                   background: matchCount > 0 ? 'oklch(0.6 0.2 290 / 0.2)' : 'var(--surface)',
                   color: matchCount > 0 ? 'var(--color-dev)' : 'rgba(255,255,255,0.4)',
@@ -192,7 +192,7 @@ export default function RegexTesterPage() {
               </span>
             </div>
             <pre
-              className="rounded-xl px-4 py-3 text-base overflow-auto whitespace-pre-wrap break-words"
+              className="rounded-xl px-4 py-3 text-lg overflow-auto whitespace-pre-wrap break-words"
               style={{
                 background: 'var(--surface)',
                 border: '2px solid var(--border-dev)',
@@ -209,14 +209,14 @@ export default function RegexTesterPage() {
         {/* Groups */}
         {groups.length > 0 && (
           <div>
-            <label className="text-sm font-semibold mb-2 block" style={{ color: 'rgba(255,255,255,0.75)' }}>
+            <label className="text-base font-semibold mb-2 block" style={{ color: 'rgba(255,255,255,0.75)' }}>
               Capture groups
             </label>
             <div className="space-y-1.5">
               {groups.map((g, i) => (
                 <div
                   key={i}
-                  className="flex items-center gap-3 px-4 py-2.5 rounded-lg text-sm"
+                  className="flex items-center gap-3 px-4 py-2.5 rounded-lg text-base"
                   style={{ background: 'var(--surface)', border: '2px solid var(--border-dev)' }}
                 >
                   <span style={{ color: 'rgba(255,255,255,0.5)' }}>Match {g.match} · Group {g.group}</span>

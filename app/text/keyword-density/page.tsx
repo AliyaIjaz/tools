@@ -111,9 +111,9 @@ export default function KeywordDensityPage() {
       seoContent={
         <SeoSection
           about={<>
-            <p className="text-base leading-relaxed"><strong>Keyword Density Checker Online</strong> is a free browser-based tool that analyzes your text and shows the frequency and density percentage of every word, phrase (bigram), and three-word phrase (trigram). It is designed for <strong>SEO content audits</strong>, checking AI-generated articles for keyword stuffing, and ensuring your content focuses on the right topics.</p>
-            <p className="text-base leading-relaxed">Paste any text and instantly see a ranked list of your most-used keywords with their count and density percentage. Toggle between single keywords, two-word phrases, and three-word phrases. Filter out common stop words like &ldquo;the&rdquo;, &ldquo;and&rdquo;, &ldquo;is&rdquo; to focus on meaningful content words. Color-coded density bars make it easy to spot over-optimized keywords (above 3–5%) at a glance.</p>
-            <p className="text-base leading-relaxed">All analysis runs locally in your browser — your text is never uploaded to any server.</p>
+            <p className="text-lg leading-relaxed"><strong>Keyword Density Checker Online</strong> is a free browser-based tool that analyzes your text and shows the frequency and density percentage of every word, phrase (bigram), and three-word phrase (trigram). It is designed for <strong>SEO content audits</strong>, checking AI-generated articles for keyword stuffing, and ensuring your content focuses on the right topics.</p>
+            <p className="text-lg leading-relaxed">Paste any text and instantly see a ranked list of your most-used keywords with their count and density percentage. Toggle between single keywords, two-word phrases, and three-word phrases. Filter out common stop words like &ldquo;the&rdquo;, &ldquo;and&rdquo;, &ldquo;is&rdquo; to focus on meaningful content words. Color-coded density bars make it easy to spot over-optimized keywords (above 3–5%) at a glance.</p>
+            <p className="text-lg leading-relaxed">All analysis runs locally in your browser — your text is never uploaded to any server.</p>
           </>}
           useCases={[
             'Audit blog posts and articles for keyword stuffing before publishing.',
@@ -145,17 +145,17 @@ export default function KeywordDensityPage() {
           style={{ background: 'var(--surface)', border: '2px solid var(--border-text-idle)' }}
         >
           <div className="flex items-center justify-between mb-3">
-            <label className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>Your Text</label>
+            <label className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>Your Text</label>
             <div className="flex items-center gap-3">
               {totalWords > 0 && (
-                <span className="text-xs font-mono" style={{ color: 'rgba(255,255,255,0.4)' }}>
+                <span className="text-sm font-mono" style={{ color: 'rgba(255,255,255,0.4)' }}>
                   {totalWords.toLocaleString()} words
                 </span>
               )}
               {text && (
                 <button
                   onClick={() => { setText(''); setSearch('') }}
-                  className="text-sm px-3 py-1 rounded-lg transition-all"
+                  className="text-base px-3 py-1 rounded-lg transition-all"
                   style={{ color: 'rgba(255,255,255,0.5)', background: 'rgba(255,255,255,0.06)', border: '2px solid var(--border-text-idle)' }}
                   onMouseEnter={(e) => { e.currentTarget.style.color = 'rgba(255,255,255,0.85)'; e.currentTarget.style.background = 'rgba(255,255,255,0.12)' }}
                   onMouseLeave={(e) => { e.currentTarget.style.color = 'rgba(255,255,255,0.5)'; e.currentTarget.style.background = 'rgba(255,255,255,0.06)' }}
@@ -170,7 +170,7 @@ export default function KeywordDensityPage() {
             onChange={(e) => { setText(e.target.value); setLimit(30) }}
             placeholder={PLACEHOLDER}
             rows={9}
-            className="w-full resize-y rounded-lg px-3 py-3 text-sm outline-none transition-all duration-150 placeholder:text-white/50"
+            className="w-full resize-y rounded-lg px-3 py-3 text-base outline-none transition-all duration-150 placeholder:text-white/50"
             style={{
               background: 'rgba(0,0,0,0.35)',
               border: '2px solid var(--border-text)',
@@ -191,7 +191,7 @@ export default function KeywordDensityPage() {
                 <button
                   key={n}
                   onClick={() => { setNgramMode(n); setLimit(30) }}
-                  className="px-4 py-2 text-sm font-medium transition-all"
+                  className="px-4 py-2 text-base font-medium transition-all"
                   style={ngramMode === n
                     ? { background: 'var(--color-text-tool)', color: '#000' }
                     : { background: 'transparent', color: 'rgba(255,255,255,0.5)' }}
@@ -215,7 +215,7 @@ export default function KeywordDensityPage() {
                   style={{ left: stopFilter ? '18px' : '2px' }}
                 />
               </div>
-              <span className="text-sm" style={{ color: 'rgba(255,255,255,0.65)' }}>Filter stop words</span>
+              <span className="text-base" style={{ color: 'rgba(255,255,255,0.65)' }}>Filter stop words</span>
             </label>
 
             {/* Search */}
@@ -225,7 +225,7 @@ export default function KeywordDensityPage() {
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 placeholder="Search keywords…"
-                className="w-full rounded-lg px-3 py-2 text-sm outline-none transition-all placeholder:text-white/50"
+                className="w-full rounded-lg px-3 py-2 text-base outline-none transition-all placeholder:text-white/50"
                 style={{
                   background: 'rgba(0,0,0,0.3)',
                   border: '2px solid var(--border-text-idle)',
@@ -249,7 +249,7 @@ export default function KeywordDensityPage() {
           >
             {/* Table header */}
             <div
-              className="grid gap-3 px-4 py-2.5 text-xs font-medium uppercase tracking-widest"
+              className="grid gap-3 px-4 py-2.5 text-sm font-medium uppercase tracking-widest"
               style={{
                 gridTemplateColumns: '1fr 3fr 72px 80px',
                 borderBottom: '1px solid rgba(255,255,255,0.07)',
@@ -264,7 +264,7 @@ export default function KeywordDensityPage() {
 
             {/* Rows */}
             {displayed.length === 0 ? (
-              <div className="px-4 py-8 text-center text-sm" style={{ color: 'rgba(255,255,255,0.3)' }}>
+              <div className="px-4 py-8 text-center text-base" style={{ color: 'rgba(255,255,255,0.3)' }}>
                 No results found
               </div>
             ) : (
@@ -279,9 +279,9 @@ export default function KeywordDensityPage() {
                   onMouseEnter={(e) => { e.currentTarget.style.background = 'rgba(255,255,255,0.03)' }}
                   onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent' }}
                 >
-                  <span className="text-xs font-mono" style={{ color: 'rgba(255,255,255,0.25)' }}>{i + 1}</span>
+                  <span className="text-sm font-mono" style={{ color: 'rgba(255,255,255,0.25)' }}>{i + 1}</span>
                   <div className="space-y-1 min-w-0">
-                    <span className="text-sm font-medium block truncate" style={{ color: 'rgba(255,255,255,0.88)' }}>{entry.phrase}</span>
+                    <span className="text-base font-medium block truncate" style={{ color: 'rgba(255,255,255,0.88)' }}>{entry.phrase}</span>
                     {/* Bar */}
                     <div className="w-full rounded-full overflow-hidden" style={{ height: '3px', background: 'rgba(255,255,255,0.07)' }}>
                       <div
@@ -293,9 +293,9 @@ export default function KeywordDensityPage() {
                       />
                     </div>
                   </div>
-                  <span className="text-sm font-mono text-right" style={{ color: 'rgba(255,255,255,0.65)' }}>{entry.count}</span>
+                  <span className="text-base font-mono text-right" style={{ color: 'rgba(255,255,255,0.65)' }}>{entry.count}</span>
                   <span
-                    className="text-sm font-mono font-semibold text-right"
+                    className="text-base font-mono font-semibold text-right"
                     style={{ color: barColor(entry.density) }}
                   >
                     {entry.density.toFixed(2)}%
@@ -309,7 +309,7 @@ export default function KeywordDensityPage() {
               <div className="px-4 py-3" style={{ borderTop: '1px solid rgba(255,255,255,0.07)' }}>
                 <button
                   onClick={() => setLimit((l) => l + 30)}
-                  className="w-full py-2 rounded-lg text-sm font-medium transition-all"
+                  className="w-full py-2 rounded-lg text-base font-medium transition-all"
                   style={{ color: 'rgba(255,255,255,0.5)', background: 'rgba(255,255,255,0.04)' }}
                   onMouseEnter={(e) => { e.currentTarget.style.background = 'rgba(255,255,255,0.08)'; e.currentTarget.style.color = 'rgba(255,255,255,0.85)' }}
                   onMouseLeave={(e) => { e.currentTarget.style.background = 'rgba(255,255,255,0.04)'; e.currentTarget.style.color = 'rgba(255,255,255,0.5)' }}
@@ -321,7 +321,7 @@ export default function KeywordDensityPage() {
 
             {/* Summary footer */}
             <div
-              className="px-4 py-2.5 flex items-center justify-between text-xs"
+              className="px-4 py-2.5 flex items-center justify-between text-sm"
               style={{ borderTop: '1px solid rgba(255,255,255,0.07)', color: 'rgba(255,255,255,0.3)' }}
             >
               <span>Showing {displayed.length} of {filtered.length} {ngramMode === 1 ? 'keywords' : ngramMode === 2 ? 'phrases' : 'trigrams'}</span>
@@ -339,10 +339,10 @@ export default function KeywordDensityPage() {
             className="rounded-xl px-5 py-8 flex flex-col items-center gap-2 text-center"
             style={{ background: 'var(--surface)', border: '1px dashed rgba(255,255,255,0.1)' }}
           >
-            <p className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.35)' }}>
+            <p className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.35)' }}>
               Paste any text above to analyze keyword frequency and density
             </p>
-            <p className="text-xs" style={{ color: 'rgba(255,255,255,0.25)' }}>
+            <p className="text-sm" style={{ color: 'rgba(255,255,255,0.25)' }}>
               Works for blog posts, articles, AI-generated content, landing pages, and more
             </p>
           </div>

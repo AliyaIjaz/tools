@@ -50,39 +50,39 @@ export default function BorderRadiusPage() {
         <SeoSection
           aboutTitle="Border Radius Generator Online"
           about={<>
-            <p className="text-base leading-relaxed">Create custom rounded corners for your website with this free Border Radius Generator. Adjust the top-left, top-right, bottom-right, and bottom-left corner radius independently, preview the result instantly, and copy production-ready CSS with one click.</p>
-            <p className="text-base leading-relaxed">Whether you&apos;re designing buttons, cards, badges, forms, avatars, or modern user interfaces, this tool makes it easy to generate accurate CSS border-radius values without writing code manually.</p>
-            <p className="text-base leading-relaxed">Everything runs entirely in your browser. No data is uploaded or stored.</p>
-            <h3 className="text-base font-semibold text-white mt-4 mb-1">What Is CSS border-radius?</h3>
-            <p className="text-base leading-relaxed">The CSS <code className="text-sm font-mono px-1 rounded" style={{ background: 'rgba(255,255,255,0.1)' }}>border-radius</code> property rounds the corners of HTML elements. It is one of the most widely used CSS properties for creating modern user interfaces, allowing developers to soften sharp corners or create circles, pills, and custom organic shapes.</p>
-            <p className="text-base leading-relaxed">Instead of manually experimenting with different values, this online Border Radius Generator provides a live preview so you can visually adjust each corner and instantly generate the corresponding CSS.</p>
-            <p className="text-base leading-relaxed">Rounded corners are commonly used in buttons, cards, navigation menus, input fields, profile images, badges, dialog boxes, product cards, mobile interfaces, and dashboard components.</p>
-            <h3 className="text-base font-semibold text-white mt-4 mb-2">Border Radius Properties Explained</h3>
-            <p className="text-base leading-relaxed"><strong className="text-white">Top-Left Radius</strong> — Controls how rounded the upper-left corner of the element appears.</p>
-            <p className="text-base leading-relaxed"><strong className="text-white">Top-Right Radius</strong> — Adjusts the curvature of the upper-right corner.</p>
-            <p className="text-base leading-relaxed"><strong className="text-white">Bottom-Right Radius</strong> — Changes the roundness of the lower-right corner.</p>
-            <p className="text-base leading-relaxed"><strong className="text-white">Bottom-Left Radius</strong> — Controls the curvature of the lower-left corner.</p>
-            <p className="text-base leading-relaxed">By setting different values for each corner, you can create unique shapes ranging from subtle rounded rectangles to modern asymmetric designs.</p>
-            <h3 className="text-base font-semibold text-white mt-4 mb-2">CSS Shorthand Explained</h3>
-            <p className="text-base leading-relaxed">The <code className="text-sm font-mono px-1 rounded" style={{ background: 'rgba(255,255,255,0.1)' }}>border-radius</code> property supports one to four values.</p>
-            <p className="text-base font-medium text-white mt-3 mb-1">One Value — All four corners use the same radius.</p>
-            <pre className="text-sm rounded-lg p-3 overflow-x-auto" style={{ background: 'rgba(255,255,255,0.05)', color: 'rgba(255,255,255,0.8)', border: '2px solid var(--border-web-idle)' }}>{`border-radius: 12px;`}</pre>
-            <p className="text-base font-medium text-white mt-3 mb-1">Two Values — First applies to top-left & bottom-right; second to top-right & bottom-left.</p>
-            <pre className="text-sm rounded-lg p-3 overflow-x-auto" style={{ background: 'rgba(255,255,255,0.05)', color: 'rgba(255,255,255,0.8)', border: '2px solid var(--border-web-idle)' }}>{`border-radius: 12px 24px;`}</pre>
-            <p className="text-base font-medium text-white mt-3 mb-1">Three Values — Top-left, then top-right & bottom-left, then bottom-right.</p>
-            <pre className="text-sm rounded-lg p-3 overflow-x-auto" style={{ background: 'rgba(255,255,255,0.05)', color: 'rgba(255,255,255,0.8)', border: '2px solid var(--border-web-idle)' }}>{`border-radius: 12px 24px 8px;`}</pre>
-            <p className="text-base font-medium text-white mt-3 mb-1">Four Values — Each corner receives its own value (top-left, top-right, bottom-right, bottom-left).</p>
-            <pre className="text-sm rounded-lg p-3 overflow-x-auto" style={{ background: 'rgba(255,255,255,0.05)', color: 'rgba(255,255,255,0.8)', border: '2px solid var(--border-web-idle)' }}>{`border-radius: 12px 24px 8px 16px;`}</pre>
-            <h3 className="text-base font-semibold text-white mt-4 mb-2">Example CSS</h3>
-            <p className="text-base font-medium text-white mb-1">Rounded Button</p>
-            <pre className="text-sm rounded-lg p-3 overflow-x-auto" style={{ background: 'rgba(255,255,255,0.05)', color: 'rgba(255,255,255,0.8)', border: '2px solid var(--border-web-idle)' }}>{`button {\n  border-radius: 8px;\n}`}</pre>
-            <p className="text-base font-medium text-white mt-3 mb-1">Pill Button</p>
-            <pre className="text-sm rounded-lg p-3 overflow-x-auto" style={{ background: 'rgba(255,255,255,0.05)', color: 'rgba(255,255,255,0.8)', border: '2px solid var(--border-web-idle)' }}>{`button {\n  border-radius: 9999px;\n}`}</pre>
-            <p className="text-base font-medium text-white mt-3 mb-1">Card Component</p>
-            <pre className="text-sm rounded-lg p-3 overflow-x-auto" style={{ background: 'rgba(255,255,255,0.05)', color: 'rgba(255,255,255,0.8)', border: '2px solid var(--border-web-idle)' }}>{`.card {\n  border-radius: 16px;\n}`}</pre>
-            <p className="text-base font-medium text-white mt-3 mb-1">Asymmetrical Shape</p>
-            <pre className="text-sm rounded-lg p-3 overflow-x-auto" style={{ background: 'rgba(255,255,255,0.05)', color: 'rgba(255,255,255,0.8)', border: '2px solid var(--border-web-idle)' }}>{`.box {\n  border-radius: 40px 8px 32px 12px;\n}`}</pre>
-            <h3 className="text-base font-semibold text-white mt-4 mb-2">Design Tips</h3>
+            <p className="text-lg leading-relaxed">Create custom rounded corners for your website with this free Border Radius Generator. Adjust the top-left, top-right, bottom-right, and bottom-left corner radius independently, preview the result instantly, and copy production-ready CSS with one click.</p>
+            <p className="text-lg leading-relaxed">Whether you&apos;re designing buttons, cards, badges, forms, avatars, or modern user interfaces, this tool makes it easy to generate accurate CSS border-radius values without writing code manually.</p>
+            <p className="text-lg leading-relaxed">Everything runs entirely in your browser. No data is uploaded or stored.</p>
+            <h3 className="text-lg font-semibold text-white mt-4 mb-1">What Is CSS border-radius?</h3>
+            <p className="text-lg leading-relaxed">The CSS <code className="text-base font-mono px-1 rounded" style={{ background: 'rgba(255,255,255,0.1)' }}>border-radius</code> property rounds the corners of HTML elements. It is one of the most widely used CSS properties for creating modern user interfaces, allowing developers to soften sharp corners or create circles, pills, and custom organic shapes.</p>
+            <p className="text-lg leading-relaxed">Instead of manually experimenting with different values, this online Border Radius Generator provides a live preview so you can visually adjust each corner and instantly generate the corresponding CSS.</p>
+            <p className="text-lg leading-relaxed">Rounded corners are commonly used in buttons, cards, navigation menus, input fields, profile images, badges, dialog boxes, product cards, mobile interfaces, and dashboard components.</p>
+            <h3 className="text-lg font-semibold text-white mt-4 mb-2">Border Radius Properties Explained</h3>
+            <p className="text-lg leading-relaxed"><strong className="text-white">Top-Left Radius</strong> — Controls how rounded the upper-left corner of the element appears.</p>
+            <p className="text-lg leading-relaxed"><strong className="text-white">Top-Right Radius</strong> — Adjusts the curvature of the upper-right corner.</p>
+            <p className="text-lg leading-relaxed"><strong className="text-white">Bottom-Right Radius</strong> — Changes the roundness of the lower-right corner.</p>
+            <p className="text-lg leading-relaxed"><strong className="text-white">Bottom-Left Radius</strong> — Controls the curvature of the lower-left corner.</p>
+            <p className="text-lg leading-relaxed">By setting different values for each corner, you can create unique shapes ranging from subtle rounded rectangles to modern asymmetric designs.</p>
+            <h3 className="text-lg font-semibold text-white mt-4 mb-2">CSS Shorthand Explained</h3>
+            <p className="text-lg leading-relaxed">The <code className="text-base font-mono px-1 rounded" style={{ background: 'rgba(255,255,255,0.1)' }}>border-radius</code> property supports one to four values.</p>
+            <p className="text-lg font-medium text-white mt-3 mb-1">One Value — All four corners use the same radius.</p>
+            <pre className="text-base rounded-lg p-3 overflow-x-auto" style={{ background: 'rgba(255,255,255,0.05)', color: 'rgba(255,255,255,0.8)', border: '2px solid var(--border-web-idle)' }}>{`border-radius: 12px;`}</pre>
+            <p className="text-lg font-medium text-white mt-3 mb-1">Two Values — First applies to top-left & bottom-right; second to top-right & bottom-left.</p>
+            <pre className="text-base rounded-lg p-3 overflow-x-auto" style={{ background: 'rgba(255,255,255,0.05)', color: 'rgba(255,255,255,0.8)', border: '2px solid var(--border-web-idle)' }}>{`border-radius: 12px 24px;`}</pre>
+            <p className="text-lg font-medium text-white mt-3 mb-1">Three Values — Top-left, then top-right & bottom-left, then bottom-right.</p>
+            <pre className="text-base rounded-lg p-3 overflow-x-auto" style={{ background: 'rgba(255,255,255,0.05)', color: 'rgba(255,255,255,0.8)', border: '2px solid var(--border-web-idle)' }}>{`border-radius: 12px 24px 8px;`}</pre>
+            <p className="text-lg font-medium text-white mt-3 mb-1">Four Values — Each corner receives its own value (top-left, top-right, bottom-right, bottom-left).</p>
+            <pre className="text-base rounded-lg p-3 overflow-x-auto" style={{ background: 'rgba(255,255,255,0.05)', color: 'rgba(255,255,255,0.8)', border: '2px solid var(--border-web-idle)' }}>{`border-radius: 12px 24px 8px 16px;`}</pre>
+            <h3 className="text-lg font-semibold text-white mt-4 mb-2">Example CSS</h3>
+            <p className="text-lg font-medium text-white mb-1">Rounded Button</p>
+            <pre className="text-base rounded-lg p-3 overflow-x-auto" style={{ background: 'rgba(255,255,255,0.05)', color: 'rgba(255,255,255,0.8)', border: '2px solid var(--border-web-idle)' }}>{`button {\n  border-radius: 8px;\n}`}</pre>
+            <p className="text-lg font-medium text-white mt-3 mb-1">Pill Button</p>
+            <pre className="text-base rounded-lg p-3 overflow-x-auto" style={{ background: 'rgba(255,255,255,0.05)', color: 'rgba(255,255,255,0.8)', border: '2px solid var(--border-web-idle)' }}>{`button {\n  border-radius: 9999px;\n}`}</pre>
+            <p className="text-lg font-medium text-white mt-3 mb-1">Card Component</p>
+            <pre className="text-base rounded-lg p-3 overflow-x-auto" style={{ background: 'rgba(255,255,255,0.05)', color: 'rgba(255,255,255,0.8)', border: '2px solid var(--border-web-idle)' }}>{`.card {\n  border-radius: 16px;\n}`}</pre>
+            <p className="text-lg font-medium text-white mt-3 mb-1">Asymmetrical Shape</p>
+            <pre className="text-base rounded-lg p-3 overflow-x-auto" style={{ background: 'rgba(255,255,255,0.05)', color: 'rgba(255,255,255,0.8)', border: '2px solid var(--border-web-idle)' }}>{`.box {\n  border-radius: 40px 8px 32px 12px;\n}`}</pre>
+            <h3 className="text-lg font-semibold text-white mt-4 mb-2">Design Tips</h3>
           </>}
           useCasesTitle="Features"
           useCases={[
@@ -192,7 +192,7 @@ export default function BorderRadiusPage() {
               <button
                 key={u}
                 onClick={() => { setUnit(u); setRadii({ tl: 16, tr: 16, br: 16, bl: 16 }) }}
-                className="px-4 py-1.5 rounded-md text-sm font-mono font-semibold transition-all"
+                className="px-4 py-1.5 rounded-md text-base font-mono font-semibold transition-all"
                 style={{
                   background: unit === u ? 'var(--color-web-dim)' : 'transparent',
                   color: unit === u ? 'var(--color-web)' : 'rgba(255,255,255,0.5)',
@@ -207,7 +207,7 @@ export default function BorderRadiusPage() {
           {/* Linked toggle */}
           <button
             onClick={() => setLinked((v) => !v)}
-            className="flex items-center gap-2 text-sm font-medium transition-colors"
+            className="flex items-center gap-2 text-base font-medium transition-colors"
             style={{ color: linked ? 'var(--color-web)' : 'rgba(255,255,255,0.55)' }}
           >
             <span
@@ -232,8 +232,8 @@ export default function BorderRadiusPage() {
               style={{ background: 'var(--surface)', border: '2px solid var(--border-web)' }}
             >
               <div className="flex items-center justify-between mb-3">
-                <label className="text-sm font-semibold text-white">{label}</label>
-                <span className="text-base font-mono font-semibold" style={{ color: 'var(--color-web)' }}>
+                <label className="text-base font-semibold text-white">{label}</label>
+                <span className="text-lg font-mono font-semibold" style={{ color: 'var(--color-web)' }}>
                   {radii[key]}{unit}
                 </span>
               </div>
@@ -251,11 +251,11 @@ export default function BorderRadiusPage() {
         {/* Output */}
         <div>
           <div className="flex items-center justify-between mb-2">
-            <label className="text-sm font-semibold text-white">CSS output</label>
+            <label className="text-base font-semibold text-white">CSS output</label>
             <CopyButton text={css} label="Copy CSS" />
           </div>
           <pre
-            className="rounded-xl px-4 py-4 text-base"
+            className="rounded-xl px-4 py-4 text-lg"
             style={{ background: 'var(--surface)', border: '2px solid var(--border-web)', color: 'rgba(255,255,255,0.9)', fontFamily: 'var(--font-geist-mono), monospace' }}
           >
             {css}

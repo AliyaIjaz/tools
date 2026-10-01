@@ -44,10 +44,10 @@ export default function UrlEncoderPage() {
       seoContent={
         <SeoSection
           about={<>
-            <p className="text-base leading-relaxed"><strong>URL Encoder Online</strong> is a free browser-based tool that lets you <strong>encode and decode URLs</strong> instantly using standard URL encoding (also known as <strong>percent encoding</strong>). Whether you&apos;re working with query parameters, API requests, redirect URLs, form submissions, or encoded links, this tool helps you safely convert text into a URL-friendly format and decode encoded URLs back into readable text.</p>
-            <p className="text-base leading-relaxed">URL encoding replaces characters that are not safe for URLs with their percent-encoded equivalents. For example, a space becomes <code>%20</code>, allowing browsers, servers, and APIs to correctly interpret special characters. This is essential when transmitting data through URLs, especially when query strings contain spaces, symbols, Unicode characters, or reserved URL characters.</p>
-            <p className="text-base leading-relaxed">The tool supports both JavaScript&apos;s <strong><code>encodeURIComponent()</code></strong> and <strong><code>encodeURI()</code></strong> functions, allowing you to choose the appropriate encoding method for your use case. Use <code>encodeURIComponent()</code> when encoding individual query parameter values, and <code>encodeURI()</code> when encoding an entire URL while preserving its structure. You can also decode previously encoded URLs using the corresponding decoding functions.</p>
-            <p className="text-base leading-relaxed">Designed for developers, testers, system administrators, and students, this URL Encoder and Decoder correctly handles <strong>UTF-8 text</strong>, including emoji, accented characters, and multilingual content. All processing happens entirely <strong>inside your browser</strong>, so your data is never uploaded to a server, ensuring complete privacy and security.</p>
+            <p className="text-lg leading-relaxed"><strong>URL Encoder Online</strong> is a free browser-based tool that lets you <strong>encode and decode URLs</strong> instantly using standard URL encoding (also known as <strong>percent encoding</strong>). Whether you&apos;re working with query parameters, API requests, redirect URLs, form submissions, or encoded links, this tool helps you safely convert text into a URL-friendly format and decode encoded URLs back into readable text.</p>
+            <p className="text-lg leading-relaxed">URL encoding replaces characters that are not safe for URLs with their percent-encoded equivalents. For example, a space becomes <code>%20</code>, allowing browsers, servers, and APIs to correctly interpret special characters. This is essential when transmitting data through URLs, especially when query strings contain spaces, symbols, Unicode characters, or reserved URL characters.</p>
+            <p className="text-lg leading-relaxed">The tool supports both JavaScript&apos;s <strong><code>encodeURIComponent()</code></strong> and <strong><code>encodeURI()</code></strong> functions, allowing you to choose the appropriate encoding method for your use case. Use <code>encodeURIComponent()</code> when encoding individual query parameter values, and <code>encodeURI()</code> when encoding an entire URL while preserving its structure. You can also decode previously encoded URLs using the corresponding decoding functions.</p>
+            <p className="text-lg leading-relaxed">Designed for developers, testers, system administrators, and students, this URL Encoder and Decoder correctly handles <strong>UTF-8 text</strong>, including emoji, accented characters, and multilingual content. All processing happens entirely <strong>inside your browser</strong>, so your data is never uploaded to a server, ensuring complete privacy and security.</p>
           </>}
           useCases={[
             'Encode query parameter values containing spaces or special characters.',
@@ -101,7 +101,7 @@ export default function UrlEncoderPage() {
           className="rounded-xl p-4"
           style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)' }}
         >
-          <label className="block text-sm font-semibold mb-3" style={{ color: 'rgba(255,255,255,0.75)' }}>
+          <label className="block text-base font-semibold mb-3" style={{ color: 'rgba(255,255,255,0.75)' }}>
             Input
           </label>
           <textarea
@@ -109,7 +109,7 @@ export default function UrlEncoderPage() {
             onChange={(e) => { setInput(e.target.value); setComponent(''); setFull(''); setDecoded(''); setError(''); setMode(null) }}
             placeholder="Enter a URL to encode or a percent-encoded string to decode…"
             rows={4}
-            className="w-full resize-y rounded-lg px-3 py-3 text-sm outline-none transition-all duration-150 placeholder:text-white/45"
+            className="w-full resize-y rounded-lg px-3 py-3 text-base outline-none transition-all duration-150 placeholder:text-white/45"
             style={{
               background: 'rgba(0,0,0,0.35)',
               border: '2px solid var(--border-dev)',
@@ -126,14 +126,14 @@ export default function UrlEncoderPage() {
         <div className="flex flex-wrap gap-2">
           <button
             onClick={encode}
-            className="px-5 py-2.5 rounded-lg text-sm font-semibold transition-all active:scale-95 active:brightness-90"
+            className="px-5 py-2.5 rounded-lg text-base font-semibold transition-all active:scale-95 active:brightness-90"
             style={{ background: 'var(--color-dev)', color: '#fff' }}
           >
             Encode
           </button>
           <button
             onClick={decode}
-            className="px-5 py-2.5 rounded-lg text-sm font-semibold transition-all active:scale-95 active:brightness-75"
+            className="px-5 py-2.5 rounded-lg text-base font-semibold transition-all active:scale-95 active:brightness-75"
             style={{ background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.15)', color: 'rgba(255,255,255,0.85)' }}
           >
             Decode
@@ -142,7 +142,7 @@ export default function UrlEncoderPage() {
 
         {error && (
           <div
-            className="rounded-lg px-4 py-3 text-sm font-mono leading-relaxed"
+            className="rounded-lg px-4 py-3 text-base font-mono leading-relaxed"
             style={{ background: 'rgba(239,68,68,0.12)', border: '1px solid rgba(239,68,68,0.35)', color: '#fca5a5' }}
           >
             {error}
@@ -157,8 +157,8 @@ export default function UrlEncoderPage() {
             >
               <div className="flex items-center justify-between mb-3">
                 <div>
-                  <span className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>encodeURIComponent</span>
-                  <span className="text-sm ml-2" style={{ color: 'rgba(255,255,255,0.4)' }}>encodes everything incl. / ? &</span>
+                  <span className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>encodeURIComponent</span>
+                  <span className="text-base ml-2" style={{ color: 'rgba(255,255,255,0.4)' }}>encodes everything incl. / ? &</span>
                 </div>
                 <CopyButton text={component} />
               </div>
@@ -166,7 +166,7 @@ export default function UrlEncoderPage() {
                 value={component}
                 readOnly
                 rows={3}
-                className="w-full resize-y rounded-lg px-3 py-3 text-sm outline-none"
+                className="w-full resize-y rounded-lg px-3 py-3 text-base outline-none"
                 style={{
                   background: 'rgba(0,0,0,0.35)',
                   border: '2px solid var(--border-dev-idle)',
@@ -182,8 +182,8 @@ export default function UrlEncoderPage() {
             >
               <div className="flex items-center justify-between mb-3">
                 <div>
-                  <span className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>encodeURI</span>
-                  <span className="text-sm ml-2" style={{ color: 'rgba(255,255,255,0.4)' }}>preserves / ? # & = etc.</span>
+                  <span className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>encodeURI</span>
+                  <span className="text-base ml-2" style={{ color: 'rgba(255,255,255,0.4)' }}>preserves / ? # & = etc.</span>
                 </div>
                 <CopyButton text={full} />
               </div>
@@ -191,7 +191,7 @@ export default function UrlEncoderPage() {
                 value={full}
                 readOnly
                 rows={3}
-                className="w-full resize-y rounded-lg px-3 py-3 text-sm outline-none"
+                className="w-full resize-y rounded-lg px-3 py-3 text-base outline-none"
                 style={{
                   background: 'rgba(0,0,0,0.35)',
                   border: '2px solid var(--border-dev-idle)',
@@ -210,14 +210,14 @@ export default function UrlEncoderPage() {
             style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)' }}
           >
             <div className="flex items-center justify-between mb-3">
-              <label className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>Decoded</label>
+              <label className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>Decoded</label>
               <CopyButton text={decoded} />
             </div>
             <textarea
               value={decoded}
               readOnly
               rows={4}
-              className="w-full resize-y rounded-lg px-3 py-3 text-sm outline-none"
+              className="w-full resize-y rounded-lg px-3 py-3 text-base outline-none"
               style={{
                 background: 'rgba(0,0,0,0.35)',
                 border: '2px solid var(--border-dev-idle)',

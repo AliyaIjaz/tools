@@ -74,7 +74,7 @@ export default function ToolLayout({ toolId, title, description, category, iconN
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
         {/* Breadcrumb */}
-        <nav className="flex items-center gap-2 text-sm mb-8">
+        <nav className="flex items-center gap-2 text-base mb-8">
           <Link
             href="/"
             className="flex items-center gap-1.5 font-medium transition-colors"
@@ -109,7 +109,7 @@ export default function ToolLayout({ toolId, title, description, category, iconN
           </div>
           <div>
             <h1 className="text-3xl font-semibold text-white mb-1">{title} Online</h1>
-            <p className="text-base" style={{ color: 'rgba(255,255,255,0.65)' }}>{description}</p>
+            <p className="text-lg" style={{ color: 'rgba(255,255,255,0.65)' }}>{description}</p>
           </div>
         </div>
 
@@ -131,7 +131,7 @@ export default function ToolLayout({ toolId, title, description, category, iconN
                 height={40}
                 className="w-10 h-10 rounded-lg object-cover flex-shrink-0"
               />
-              <span className="text-sm font-medium" style={{ color: 'rgba(255,255,255,0.7)' }}>
+              <span className="text-base font-medium" style={{ color: 'rgba(255,255,255,0.7)' }}>
                 {label}
               </span>
             </div>
@@ -143,7 +143,7 @@ export default function ToolLayout({ toolId, title, description, category, iconN
           className="mt-16 flex flex-col items-center justify-center gap-4 pt-8"
           style={{ borderTop: '1px solid rgba(255,255,255,0.1)' }}
         >
-          <span className="text-base font-semibold text-white">
+          <span className="text-lg font-semibold text-white">
             Share this tool
           </span>
           <div className="flex flex-wrap items-center justify-center gap-4">
@@ -182,7 +182,7 @@ export default function ToolLayout({ toolId, title, description, category, iconN
         {/* Related tools */}
         {related.length > 0 && (
           <div className="mt-16">
-            <h2 className="text-sm font-medium uppercase tracking-widest mb-4" style={{ color: 'rgba(255,255,255,0.3)' }}>
+            <h2 className="text-base font-medium uppercase tracking-widest mb-4" style={{ color: 'rgba(255,255,255,0.3)' }}>
               Related Tools
             </h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">

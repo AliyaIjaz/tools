@@ -30,12 +30,12 @@ export default function Textarea({
       {(label || showCount) && (
         <div className="flex items-center justify-between">
           {label && (
-            <label className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>
+            <label className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>
               {label}
             </label>
           )}
           {showCount && (
-            <span className="text-xs" style={{ color: 'rgba(255,255,255,0.5)' }}>
+            <span className="text-sm" style={{ color: 'rgba(255,255,255,0.5)' }}>
               {value.length} chars
             </span>
           )}
@@ -47,7 +47,7 @@ export default function Textarea({
         readOnly={readOnly}
         rows={rows}
         placeholder={placeholder}
-        className="w-full resize-y rounded-xl px-4 py-3 text-base outline-none transition-all duration-150 placeholder:text-white/55"
+        className="w-full resize-y rounded-xl px-4 py-3 text-lg outline-none transition-all duration-150 placeholder:text-white/55"
         style={{
           background: 'var(--surface)',
           border: '2px solid var(--border-hover)',

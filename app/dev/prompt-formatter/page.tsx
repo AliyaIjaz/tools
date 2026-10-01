@@ -167,9 +167,9 @@ export default function PromptFormatterPage() {
       seoContent={
         <SeoSection
           about={<>
-            <p className="text-base leading-relaxed"><strong>Prompt Formatter Online</strong> is a free browser-based tool for structuring AI prompts into the correct message format for <strong>OpenAI (GPT-4o)</strong>, <strong>Anthropic (Claude)</strong>, and <strong>Google Gemini</strong> APIs. Build a conversation with system, user, and assistant turns, then export the exact JSON payload ready to paste into your API call or codebase.</p>
-            <p className="text-base leading-relaxed">Each provider uses a slightly different message structure. OpenAI uses a flat <code>messages</code> array with a <code>role</code> field. Anthropic separates the system prompt from the conversation turns and uses a top-level <code>system</code> field. Gemini uses <code>contents</code> with <code>parts</code> arrays and renames the assistant role to <code>model</code>. This tool handles all those differences automatically — just write your prompt and switch providers.</p>
-            <p className="text-base leading-relaxed">All formatting runs locally in your browser. Nothing is sent to any server.</p>
+            <p className="text-lg leading-relaxed"><strong>Prompt Formatter Online</strong> is a free browser-based tool for structuring AI prompts into the correct message format for <strong>OpenAI (GPT-4o)</strong>, <strong>Anthropic (Claude)</strong>, and <strong>Google Gemini</strong> APIs. Build a conversation with system, user, and assistant turns, then export the exact JSON payload ready to paste into your API call or codebase.</p>
+            <p className="text-lg leading-relaxed">Each provider uses a slightly different message structure. OpenAI uses a flat <code>messages</code> array with a <code>role</code> field. Anthropic separates the system prompt from the conversation turns and uses a top-level <code>system</code> field. Gemini uses <code>contents</code> with <code>parts</code> arrays and renames the assistant role to <code>model</code>. This tool handles all those differences automatically — just write your prompt and switch providers.</p>
+            <p className="text-lg leading-relaxed">All formatting runs locally in your browser. Nothing is sent to any server.</p>
           </>}
           useCases={[
             'Build a multi-turn prompt and export it for OpenAI, Claude, or Gemini with one click.',
@@ -200,7 +200,7 @@ export default function PromptFormatterPage() {
           <div className="relative">
             <button
               onClick={() => setShowProviderMenu((v) => !v)}
-              className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold transition-all"
+              className="flex items-center gap-2 px-4 py-2 rounded-lg text-base font-semibold transition-all"
               style={{ background: 'var(--color-dev)', color: '#fff' }}
             >
               {currentProvider.label}
@@ -220,18 +220,18 @@ export default function PromptFormatterPage() {
                     onMouseEnter={(e) => { e.currentTarget.style.background = 'rgba(255,255,255,0.06)' }}
                     onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent' }}
                   >
-                    <p className="text-sm font-semibold" style={{ color: provider === p.id ? 'var(--color-dev)' : 'rgba(255,255,255,0.85)' }}>{p.label}</p>
-                    <p className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.4)' }}>{p.note}</p>
+                    <p className="text-base font-semibold" style={{ color: provider === p.id ? 'var(--color-dev)' : 'rgba(255,255,255,0.85)' }}>{p.label}</p>
+                    <p className="text-sm mt-0.5" style={{ color: 'rgba(255,255,255,0.4)' }}>{p.note}</p>
                   </button>
                 ))}
               </div>
             )}
           </div>
 
-          <button onClick={loadExample} className="px-3 py-2 rounded-lg text-sm font-medium transition-all" style={btnGhost} onMouseEnter={(e) => onHover(e, true)} onMouseLeave={(e) => onHover(e, false)}>
+          <button onClick={loadExample} className="px-3 py-2 rounded-lg text-base font-medium transition-all" style={btnGhost} onMouseEnter={(e) => onHover(e, true)} onMouseLeave={(e) => onHover(e, false)}>
             Load example
           </button>
-          <button onClick={clear} className="px-3 py-2 rounded-lg text-sm font-medium transition-all" style={btnGhost} onMouseEnter={(e) => onHover(e, true)} onMouseLeave={(e) => onHover(e, false)}>
+          <button onClick={clear} className="px-3 py-2 rounded-lg text-base font-medium transition-all" style={btnGhost} onMouseEnter={(e) => onHover(e, true)} onMouseLeave={(e) => onHover(e, false)}>
             Reset
           </button>
         </div>
@@ -256,7 +256,7 @@ export default function PromptFormatterPage() {
                       <button
                         key={r}
                         onClick={() => updateMessage(msg.id, 'role', r)}
-                        className="px-2.5 py-1 text-xs font-semibold capitalize transition-all"
+                        className="px-2.5 py-1 text-sm font-semibold capitalize transition-all"
                         style={msg.role === r
                           ? { background: ROLE_COLORS[r], color: '#000' }
                           : { background: 'transparent', color: 'rgba(255,255,255,0.4)' }}
@@ -267,7 +267,7 @@ export default function PromptFormatterPage() {
                       </button>
                     ))}
                   </div>
-                  <span className="text-xs font-mono ml-auto" style={{ color: 'rgba(255,255,255,0.25)' }}>#{idx + 1}</span>
+                  <span className="text-sm font-mono ml-auto" style={{ color: 'rgba(255,255,255,0.25)' }}>#{idx + 1}</span>
                   <button
                     onClick={() => removeMessage(msg.id)}
                     className="p-1 rounded transition-all flex-shrink-0"
@@ -289,7 +289,7 @@ export default function PromptFormatterPage() {
                     'Assistant response…'
                   }
                   rows={4}
-                  className="w-full resize-y px-3 py-2.5 text-sm outline-none transition-all placeholder:text-white/50"
+                  className="w-full resize-y px-3 py-2.5 text-base outline-none transition-all placeholder:text-white/50"
                   style={{
                     background: 'transparent',
                     color: 'rgba(255,255,255,0.88)',
@@ -306,7 +306,7 @@ export default function PromptFormatterPage() {
                 <button
                   key={r}
                   onClick={() => addMessage(r)}
-                  className="flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium transition-all capitalize"
+                  className="flex items-center gap-1.5 px-3 py-2 rounded-lg text-base font-medium transition-all capitalize"
                   style={{ background: ROLE_BG[r], border: `1px solid ${ROLE_BORDER[r]}`, color: ROLE_COLORS[r] }}
                   onMouseEnter={(e) => { e.currentTarget.style.opacity = '0.75' }}
                   onMouseLeave={(e) => { e.currentTarget.style.opacity = '1' }}
@@ -324,17 +324,17 @@ export default function PromptFormatterPage() {
           >
             <div className="flex items-center justify-between mb-3">
               <div>
-                <span className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>
+                <span className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>
                   {currentProvider.label} Format
                 </span>
-                <span className="ml-2 text-xs" style={{ color: 'rgba(255,255,255,0.35)' }}>{currentProvider.note}</span>
+                <span className="ml-2 text-sm" style={{ color: 'rgba(255,255,255,0.35)' }}>{currentProvider.note}</span>
               </div>
               {output && <CopyButton text={output} />}
             </div>
 
             {output ? (
               <pre
-                className="flex-1 rounded-lg px-3 py-3 text-xs overflow-auto leading-relaxed"
+                className="flex-1 rounded-lg px-3 py-3 text-sm overflow-auto leading-relaxed"
                 style={{
                   background: 'rgba(0,0,0,0.4)',
                   border: '1px solid rgba(255,255,255,0.07)',
@@ -352,13 +352,13 @@ export default function PromptFormatterPage() {
                 className="flex-1 rounded-lg flex items-center justify-center"
                 style={{ background: 'rgba(0,0,0,0.2)', border: '1px dashed rgba(255,255,255,0.07)', minHeight: '300px' }}
               >
-                <p className="text-sm" style={{ color: 'rgba(255,255,255,0.2)' }}>Add message content to see output</p>
+                <p className="text-base" style={{ color: 'rgba(255,255,255,0.2)' }}>Add message content to see output</p>
               </div>
             )}
 
             {/* Token hint */}
             {output && (
-              <p className="mt-3 text-xs" style={{ color: 'rgba(255,255,255,0.3)' }}>
+              <p className="mt-3 text-sm" style={{ color: 'rgba(255,255,255,0.3)' }}>
                 ~{Math.ceil(output.length / 4).toLocaleString()} estimated tokens · use the{' '}
                 <a href="/dev/token-counter" className="underline underline-offset-2" style={{ color: 'var(--color-dev)' }}>
                   Token Counter
@@ -374,7 +374,7 @@ export default function PromptFormatterPage() {
           className="rounded-xl p-4 space-y-3"
           style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)' }}
         >
-          <p className="text-xs font-medium uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.35)' }}>Format differences</p>
+          <p className="text-sm font-medium uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.35)' }}>Format differences</p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
             {[
               { provider: 'OpenAI', detail: 'system / user / assistant all in messages[]', color: '#34d399' },
@@ -382,8 +382,8 @@ export default function PromptFormatterPage() {
               { provider: 'Gemini', detail: 'system_instruction at root; assistant renamed to model; content in parts[]', color: '#93c5fd' },
             ].map(({ provider: p, detail, color }) => (
               <div key={p} className="rounded-lg px-3 py-3 space-y-1" style={{ background: 'rgba(0,0,0,0.2)', border: '1px solid rgba(255,255,255,0.06)' }}>
-                <p className="text-sm font-semibold" style={{ color }}>{p}</p>
-                <p className="text-xs leading-relaxed" style={{ color: 'rgba(255,255,255,0.45)' }}>{detail}</p>
+                <p className="text-base font-semibold" style={{ color }}>{p}</p>
+                <p className="text-sm leading-relaxed" style={{ color: 'rgba(255,255,255,0.45)' }}>{detail}</p>
               </div>
             ))}
           </div>

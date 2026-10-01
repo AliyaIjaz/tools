@@ -202,8 +202,8 @@ export default function ImageMetadataPage() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={preview} alt="preview" className="w-20 h-20 rounded-lg object-cover flex-shrink-0" style={{ border: '2px solid var(--border-image-idle)' }} />
               <div className="min-w-0 flex-1">
-                <p className="text-base font-semibold text-white truncate">{fileName}</p>
-                <p className="text-sm mt-1" style={{ color: 'rgba(255,255,255,0.65)' }}>
+                <p className="text-lg font-semibold text-white truncate">{fileName}</p>
+                <p className="text-base mt-1" style={{ color: 'rgba(255,255,255,0.65)' }}>
                   {groups[0]?.entries.find(e => e.label === 'File size')?.value}
                   {' · '}
                   {groups[0]?.entries.find(e => e.label === 'MIME type')?.value}
@@ -211,7 +211,7 @@ export default function ImageMetadataPage() {
               </div>
               <button
                 onClick={() => { setPreview(''); setGroups([]); setFileName(''); setGpsCoords(null) }}
-                className="ml-auto text-sm font-medium px-4 py-2 rounded-lg flex-shrink-0 transition-all"
+                className="ml-auto text-base font-medium px-4 py-2 rounded-lg flex-shrink-0 transition-all"
                 style={{ background: 'var(--color-image-dim)', border: '1px solid var(--color-image)', color: 'var(--color-image)' }}
               >
                 Change image
@@ -219,7 +219,7 @@ export default function ImageMetadataPage() {
             </div>
 
             <div className="flex items-center justify-between">
-              <span className="text-sm font-medium" style={{ color: 'rgba(255,255,255,0.7)' }}>
+              <span className="text-base font-medium" style={{ color: 'rgba(255,255,255,0.7)' }}>
                 {groups.length} section{groups.length !== 1 ? 's' : ''} · {groups.reduce((n, g) => n + g.entries.length, 0)} fields
               </span>
               <CopyButton text={allText} label="Copy all" />
@@ -229,7 +229,7 @@ export default function ImageMetadataPage() {
               {groups.map((group) => (
                 <div key={group.title} className="rounded-xl overflow-hidden" style={{ border: '2px solid var(--border-image-idle)' }}>
                   <div className="px-4 py-2.5" style={{ background: 'var(--surface-hover)', borderBottom: '1px solid var(--border)' }}>
-                    <p className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>{group.title}</p>
+                    <p className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>{group.title}</p>
                   </div>
                   {group.entries.map(({ label, value }, i) => (
                     <div
@@ -240,20 +240,20 @@ export default function ImageMetadataPage() {
                         borderBottom: i < group.entries.length - 1 ? '1px solid var(--border)' : 'none',
                       }}
                     >
-                      <span className="text-sm flex-shrink-0" style={{ color: 'rgba(255,255,255,0.65)', minWidth: '150px' }}>{label}</span>
+                      <span className="text-base flex-shrink-0" style={{ color: 'rgba(255,255,255,0.65)', minWidth: '150px' }}>{label}</span>
                       <div className="flex items-center gap-2 ml-auto min-w-0">
                         {label === 'Coordinates' && gpsCoords ? (
                           <a
                             href={`https://www.google.com/maps?q=${gpsCoords.lat},${gpsCoords.lon}`}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-sm font-mono text-right underline underline-offset-2"
+                            className="text-base font-mono text-right underline underline-offset-2"
                             style={{ color: 'var(--color-image)' }}
                           >
                             {value}
                           </a>
                         ) : (
-                          <span className="text-sm font-mono text-white text-right truncate">{value}</span>
+                          <span className="text-base font-mono text-white text-right truncate">{value}</span>
                         )}
                         <CopyButton text={value} />
                       </div>

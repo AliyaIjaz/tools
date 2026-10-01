@@ -111,9 +111,9 @@ export default function TimestampConverterPage() {
       seoContent={
         <SeoSection
           about={<>
-            <p className="text-base leading-relaxed"><strong>Timestamp Converter Online</strong> is a free browser-based tool for converting Unix timestamps to human-readable dates and times, and vice versa. It supports both <strong>seconds</strong> and <strong>milliseconds</strong> epoch formats and displays results across 14 major timezones simultaneously — making it ideal for developers debugging API responses, logs, database records, or AI-generated data.</p>
-            <p className="text-base leading-relaxed">Paste any Unix timestamp and instantly see the equivalent UTC date, ISO 8601 string, relative time (e.g. &ldquo;3 days ago&rdquo;), and local times across multiple timezones. You can also go the other direction — pick a date and time to get the corresponding Unix timestamp in seconds and milliseconds.</p>
-            <p className="text-base leading-relaxed">Everything runs in your browser with no server requests and no data sent anywhere.</p>
+            <p className="text-lg leading-relaxed"><strong>Timestamp Converter Online</strong> is a free browser-based tool for converting Unix timestamps to human-readable dates and times, and vice versa. It supports both <strong>seconds</strong> and <strong>milliseconds</strong> epoch formats and displays results across 14 major timezones simultaneously — making it ideal for developers debugging API responses, logs, database records, or AI-generated data.</p>
+            <p className="text-lg leading-relaxed">Paste any Unix timestamp and instantly see the equivalent UTC date, ISO 8601 string, relative time (e.g. &ldquo;3 days ago&rdquo;), and local times across multiple timezones. You can also go the other direction — pick a date and time to get the corresponding Unix timestamp in seconds and milliseconds.</p>
+            <p className="text-lg leading-relaxed">Everything runs in your browser with no server requests and no data sent anywhere.</p>
           </>}
           useCases={[
             'Convert API response timestamps to a readable date for debugging.',
@@ -144,17 +144,17 @@ export default function TimestampConverterPage() {
           style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)' }}
         >
           <div>
-            <p className="text-xs font-medium uppercase tracking-widest mb-1" style={{ color: 'rgba(255,255,255,0.35)' }}>Current Unix Time</p>
+            <p className="text-sm font-medium uppercase tracking-widest mb-1" style={{ color: 'rgba(255,255,255,0.35)' }}>Current Unix Time</p>
             <div className="flex items-baseline gap-3 flex-wrap">
               <span className="text-2xl font-bold font-mono" style={{ color: 'var(--color-dev)' }}>{nowSecs}</span>
-              <span className="text-sm font-mono" style={{ color: 'rgba(255,255,255,0.4)' }}>{nowMs} ms</span>
+              <span className="text-base font-mono" style={{ color: 'rgba(255,255,255,0.4)' }}>{nowMs} ms</span>
             </div>
           </div>
           <div className="flex gap-2">
             <CopyButton text={String(nowSecs)} />
             <button
               onClick={useNow}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-all"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-base font-medium transition-all"
               style={btnGhost}
               onMouseEnter={(e) => onHover(e, true)}
               onMouseLeave={(e) => onHover(e, false)}
@@ -171,7 +171,7 @@ export default function TimestampConverterPage() {
         >
           <div className="flex items-center gap-2">
             <ArrowDown size={14} style={{ color: 'var(--color-dev)' }} />
-            <span className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>Timestamp → Date</span>
+            <span className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>Timestamp → Date</span>
           </div>
 
           {/* Input row */}
@@ -181,7 +181,7 @@ export default function TimestampConverterPage() {
               value={tsInput}
               onChange={(e) => setTsInput(e.target.value)}
               placeholder="e.g. 1700000000"
-              className="flex-1 min-w-0 rounded-lg px-3 py-2.5 text-sm outline-none transition-all font-mono placeholder:text-white/50"
+              className="flex-1 min-w-0 rounded-lg px-3 py-2.5 text-base outline-none transition-all font-mono placeholder:text-white/50"
               style={{
                 background: 'rgba(0,0,0,0.35)',
                 border: '2px solid var(--border-dev)',
@@ -196,7 +196,7 @@ export default function TimestampConverterPage() {
                 <button
                   key={u}
                   onClick={() => setUnitAndConvert(u)}
-                  className="px-3 py-2 text-sm font-medium transition-all"
+                  className="px-3 py-2 text-base font-medium transition-all"
                   style={unit === u
                     ? { background: 'var(--color-dev)', color: '#fff' }
                     : { background: 'transparent', color: 'rgba(255,255,255,0.45)' }}
@@ -224,8 +224,8 @@ export default function TimestampConverterPage() {
                   className="flex items-center justify-between gap-3 rounded-lg px-3 py-2.5"
                   style={{ background: 'rgba(0,0,0,0.25)', border: '1px solid rgba(255,255,255,0.07)' }}
                 >
-                  <span className="text-xs font-medium w-28 flex-shrink-0" style={{ color: 'rgba(255,255,255,0.4)' }}>{label}</span>
-                  <span className="flex-1 text-sm font-mono truncate" style={{ color: 'rgba(255,255,255,0.88)' }}>{value}</span>
+                  <span className="text-sm font-medium w-28 flex-shrink-0" style={{ color: 'rgba(255,255,255,0.4)' }}>{label}</span>
+                  <span className="flex-1 text-base font-mono truncate" style={{ color: 'rgba(255,255,255,0.88)' }}>{value}</span>
                   <CopyButton text={value} />
                 </div>
               ))}
@@ -233,7 +233,7 @@ export default function TimestampConverterPage() {
           )}
 
           {tsInput && !isValidTs && (
-            <p className="text-sm" style={{ color: '#f87171' }}>Invalid timestamp — enter a numeric Unix timestamp</p>
+            <p className="text-base" style={{ color: '#f87171' }}>Invalid timestamp — enter a numeric Unix timestamp</p>
           )}
         </div>
 
@@ -243,7 +243,7 @@ export default function TimestampConverterPage() {
             className="rounded-xl p-4 space-y-3"
             style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)' }}
           >
-            <p className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>Timezone Breakdown</p>
+            <p className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>Timezone Breakdown</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
               {TIMEZONES.map(({ label, tz }) => (
                 <div
@@ -256,8 +256,8 @@ export default function TimestampConverterPage() {
                   }}
                   onClick={() => setSelectedTz(tz)}
                 >
-                  <span className="text-xs font-medium w-28 flex-shrink-0" style={{ color: selectedTz === tz ? 'var(--color-dev)' : 'rgba(255,255,255,0.4)' }}>{label}</span>
-                  <span className="flex-1 text-sm font-mono" style={{ color: 'rgba(255,255,255,0.82)' }}>{formatInTz(parsedDate, tz)}</span>
+                  <span className="text-sm font-medium w-28 flex-shrink-0" style={{ color: selectedTz === tz ? 'var(--color-dev)' : 'rgba(255,255,255,0.4)' }}>{label}</span>
+                  <span className="flex-1 text-base font-mono" style={{ color: 'rgba(255,255,255,0.82)' }}>{formatInTz(parsedDate, tz)}</span>
                 </div>
               ))}
             </div>
@@ -271,14 +271,14 @@ export default function TimestampConverterPage() {
         >
           <div className="flex items-center gap-2">
             <ArrowUp size={14} style={{ color: 'var(--color-dev)' }} />
-            <span className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>Date → Timestamp</span>
+            <span className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>Date → Timestamp</span>
           </div>
 
           <input
             type="datetime-local"
             value={dateInput}
             onChange={(e) => setDateInput(e.target.value)}
-            className="w-full rounded-lg px-3 py-2.5 text-sm outline-none transition-all font-mono"
+            className="w-full rounded-lg px-3 py-2.5 text-base outline-none transition-all font-mono"
             style={{
               background: 'rgba(0,0,0,0.35)',
               border: '2px solid var(--border-dev)',
@@ -301,8 +301,8 @@ export default function TimestampConverterPage() {
                   className="flex items-center justify-between gap-3 rounded-lg px-3 py-2.5"
                   style={{ background: 'rgba(0,0,0,0.25)', border: '1px solid rgba(255,255,255,0.07)' }}
                 >
-                  <span className="text-xs font-medium w-28 flex-shrink-0" style={{ color: 'rgba(255,255,255,0.4)' }}>{label}</span>
-                  <span className="flex-1 text-sm font-mono truncate" style={{ color: 'rgba(255,255,255,0.88)' }}>{value}</span>
+                  <span className="text-sm font-medium w-28 flex-shrink-0" style={{ color: 'rgba(255,255,255,0.4)' }}>{label}</span>
+                  <span className="flex-1 text-base font-mono truncate" style={{ color: 'rgba(255,255,255,0.88)' }}>{value}</span>
                   <CopyButton text={value} />
                 </div>
               ))}
@@ -310,7 +310,7 @@ export default function TimestampConverterPage() {
           )}
 
           {!dateInput && (
-            <p className="text-sm" style={{ color: 'rgba(255,255,255,0.3)' }}>
+            <p className="text-base" style={{ color: 'rgba(255,255,255,0.3)' }}>
               Pick a date and time to get the Unix timestamp
             </p>
           )}

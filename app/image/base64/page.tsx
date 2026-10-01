@@ -199,12 +199,12 @@ Modern web browsers can display this string directly without requiring a separat
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src={imgSrc} alt="preview" className="w-16 h-16 rounded-lg object-cover flex-shrink-0" style={{ border: '2px solid var(--border-image-idle)' }} />
                   <div className="min-w-0">
-                    <p className="text-sm font-medium text-white truncate">{fileName}</p>
-                    <p className="text-sm mt-0.5" style={{ color: 'rgba(255,255,255,0.65)' }}>{formatBytes(fileSize)}</p>
+                    <p className="text-base font-medium text-white truncate">{fileName}</p>
+                    <p className="text-base mt-0.5" style={{ color: 'rgba(255,255,255,0.65)' }}>{formatBytes(fileSize)}</p>
                   </div>
                   <button
                     onClick={() => { setDataUrl(''); setImgSrc(''); setFileName('') }}
-                    className="ml-auto text-sm font-medium px-4 py-2 rounded-lg transition-all"
+                    className="ml-auto text-base font-medium px-4 py-2 rounded-lg transition-all"
                     style={{ background: 'var(--color-image-dim)', border: '1px solid var(--color-image)', color: 'var(--color-image)' }}
                   >
                     Change image
@@ -213,13 +213,13 @@ Modern web browsers can display this string directly without requiring a separat
 
                 <div>
                   <div className="flex items-center justify-between mb-2">
-                    <label className="text-sm font-medium" style={{ color: 'rgba(255,255,255,0.7)' }}>
+                    <label className="text-base font-medium" style={{ color: 'rgba(255,255,255,0.7)' }}>
                       Data URL <span style={{ color: 'rgba(255,255,255,0.6)' }}>({formatBytes(dataUrl.length)} string)</span>
                     </label>
                     <div className="flex items-center gap-2">
                       <button
                         onClick={() => downloadBlob(new Blob([dataUrl], { type: 'text/plain' }), `${fileName}.txt`)}
-                        className="text-sm font-medium px-3 py-1.5 rounded-md transition-all"
+                        className="text-base font-medium px-3 py-1.5 rounded-md transition-all"
                         style={{ background: 'var(--surface-hover)', border: '2px solid var(--border-image)', color: 'rgba(255,255,255,0.75)' }}
                       >
                         Download .txt
@@ -231,7 +231,7 @@ Modern web browsers can display this string directly without requiring a separat
                     readOnly
                     value={dataUrl}
                     rows={5}
-                    className="w-full rounded-xl px-4 py-3 text-sm resize-y outline-none"
+                    className="w-full rounded-xl px-4 py-3 text-base resize-y outline-none"
                     style={{
                       background: 'var(--surface)',
                       border: '2px solid var(--border-image-idle)',
@@ -244,7 +244,7 @@ Modern web browsers can display this string directly without requiring a separat
 
                 <div>
                   <div className="flex items-center justify-between mb-2">
-                    <label className="text-sm font-medium" style={{ color: 'rgba(255,255,255,0.7)' }}>
+                    <label className="text-base font-medium" style={{ color: 'rgba(255,255,255,0.7)' }}>
                       Raw Base64 only
                     </label>
                     <CopyButton text={dataUrl.split(',')[1] ?? ''} />
@@ -253,7 +253,7 @@ Modern web browsers can display this string directly without requiring a separat
                     readOnly
                     value={dataUrl.split(',')[1] ?? ''}
                     rows={3}
-                    className="w-full rounded-xl px-4 py-3 text-sm resize-y outline-none"
+                    className="w-full rounded-xl px-4 py-3 text-base resize-y outline-none"
                     style={{
                       background: 'var(--surface)',
                       border: '2px solid var(--border-image-idle)',
@@ -271,7 +271,7 @@ Modern web browsers can display this string directly without requiring a separat
         {tab === 'Decode' && (
           <>
             <div>
-              <label className="text-sm font-medium mb-1.5 block" style={{ color: 'rgba(255,255,255,0.7)' }}>
+              <label className="text-base font-medium mb-1.5 block" style={{ color: 'rgba(255,255,255,0.7)' }}>
                 Paste Base64 or data URL
               </label>
               <textarea
@@ -279,7 +279,7 @@ Modern web browsers can display this string directly without requiring a separat
                 onChange={(e) => { setDecodeInput(e.target.value); setDecodeError(''); setDecodedSrc('') }}
                 rows={5}
                 placeholder="data:image/png;base64,iVBORw0KGgo… or raw base64"
-                className="w-full rounded-xl px-4 py-3 text-sm resize-y outline-none placeholder:text-white/50"
+                className="w-full rounded-xl px-4 py-3 text-base resize-y outline-none placeholder:text-white/50"
                 style={{
                   background: 'var(--surface)',
                   border: '2px solid var(--border-image-idle)',
@@ -293,14 +293,14 @@ Modern web browsers can display this string directly without requiring a separat
             <button
               onClick={handleDecode}
               disabled={!decodeInput.trim()}
-              className="px-4 py-2 rounded-lg text-sm font-medium transition-all disabled:opacity-40"
+              className="px-4 py-2 rounded-lg text-base font-medium transition-all disabled:opacity-40"
               style={{ background: 'var(--color-image-dim)', border: '1px solid var(--color-image)', color: 'var(--color-image)' }}
             >
               Decode
             </button>
 
             {decodeError && (
-              <p className="text-sm" style={{ color: '#f87171' }}>{decodeError}</p>
+              <p className="text-base" style={{ color: '#f87171' }}>{decodeError}</p>
             )}
 
             {decodedSrc && (
@@ -309,7 +309,7 @@ Modern web browsers can display this string directly without requiring a separat
                 <img src={decodedSrc} alt="decoded" className="max-w-full rounded-xl" style={{ border: '2px solid var(--border-image-idle)', maxHeight: '320px', objectFit: 'contain' }} />
                 <button
                   onClick={downloadDecoded}
-                  className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all"
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg text-base font-medium transition-all"
                   style={{ background: 'var(--color-image-dim)', border: '1px solid var(--color-image)', color: 'var(--color-image)' }}
                 >
                   <Download size={13} /> Download image

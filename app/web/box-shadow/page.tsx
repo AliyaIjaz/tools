@@ -84,8 +84,8 @@ export default function BoxShadowPage() {
         <SeoSection
           aboutTitle="Box Shadow Generator Online"
           about={<>
-            <p className="text-base leading-relaxed">Create custom CSS box shadows visually with a live preview and generate production-ready CSS in seconds. This free Box Shadow Generator lets you adjust horizontal and vertical offsets, blur radius, spread radius, color, opacity, and inset effects. Stack multiple shadow layers to build realistic depth, soft glows, or modern Material Design-inspired interfaces, then copy the generated CSS with a single click.</p>
-            <p className="text-base leading-relaxed">Everything runs directly in your browser, so your work stays private and updates instantly.</p>
+            <p className="text-lg leading-relaxed">Create custom CSS box shadows visually with a live preview and generate production-ready CSS in seconds. This free Box Shadow Generator lets you adjust horizontal and vertical offsets, blur radius, spread radius, color, opacity, and inset effects. Stack multiple shadow layers to build realistic depth, soft glows, or modern Material Design-inspired interfaces, then copy the generated CSS with a single click.</p>
+            <p className="text-lg leading-relaxed">Everything runs directly in your browser, so your work stays private and updates instantly.</p>
           </>}
           extraSections={[
             {
@@ -115,13 +115,13 @@ export default function BoxShadowPage() {
             {
               title: 'Shadow Properties Explained',
               items: [
-                <div key="x" className="space-y-1"><p className="text-base font-medium text-white">Horizontal Offset</p><p className="text-base leading-relaxed">Moves the shadow left or right. Positive values move it to the right, while negative values move it to the left.</p></div>,
-                <div key="y" className="space-y-1"><p className="text-base font-medium text-white">Vertical Offset</p><p className="text-base leading-relaxed">Moves the shadow up or down. Positive values move it downward, while negative values move it upward.</p></div>,
-                <div key="blur" className="space-y-1"><p className="text-base font-medium text-white">Blur Radius</p><p className="text-base leading-relaxed">Controls how soft the shadow appears. Smaller values create sharp shadows, while larger values produce smooth, diffused shadows.</p></div>,
-                <div key="spread" className="space-y-1"><p className="text-base font-medium text-white">Spread Radius</p><p className="text-base leading-relaxed">Expands or shrinks the size of the shadow before blur is applied. Positive values increase the shadow size, while negative values reduce it.</p></div>,
-                <div key="color" className="space-y-1"><p className="text-base font-medium text-white">Shadow Color</p><p className="text-base leading-relaxed">Choose any HEX, RGB, HSL, or RGBA color to match your design. Transparent colors are commonly used to create natural-looking shadows.</p></div>,
-                <div key="opacity" className="space-y-1"><p className="text-base font-medium text-white">Opacity</p><p className="text-base leading-relaxed">Adjust the transparency of the shadow to make it subtle or more prominent without changing its color.</p></div>,
-                <div key="inset" className="space-y-1"><p className="text-base font-medium text-white">Inset Shadow</p><p className="text-base leading-relaxed">An inset shadow is drawn inside the element instead of outside it. Commonly used for pressed buttons, input fields, recessed panels, and neumorphic interfaces.</p></div>,
+                <div key="x" className="space-y-1"><p className="text-lg font-medium text-white">Horizontal Offset</p><p className="text-lg leading-relaxed">Moves the shadow left or right. Positive values move it to the right, while negative values move it to the left.</p></div>,
+                <div key="y" className="space-y-1"><p className="text-lg font-medium text-white">Vertical Offset</p><p className="text-lg leading-relaxed">Moves the shadow up or down. Positive values move it downward, while negative values move it upward.</p></div>,
+                <div key="blur" className="space-y-1"><p className="text-lg font-medium text-white">Blur Radius</p><p className="text-lg leading-relaxed">Controls how soft the shadow appears. Smaller values create sharp shadows, while larger values produce smooth, diffused shadows.</p></div>,
+                <div key="spread" className="space-y-1"><p className="text-lg font-medium text-white">Spread Radius</p><p className="text-lg leading-relaxed">Expands or shrinks the size of the shadow before blur is applied. Positive values increase the shadow size, while negative values reduce it.</p></div>,
+                <div key="color" className="space-y-1"><p className="text-lg font-medium text-white">Shadow Color</p><p className="text-lg leading-relaxed">Choose any HEX, RGB, HSL, or RGBA color to match your design. Transparent colors are commonly used to create natural-looking shadows.</p></div>,
+                <div key="opacity" className="space-y-1"><p className="text-lg font-medium text-white">Opacity</p><p className="text-lg leading-relaxed">Adjust the transparency of the shadow to make it subtle or more prominent without changing its color.</p></div>,
+                <div key="inset" className="space-y-1"><p className="text-lg font-medium text-white">Inset Shadow</p><p className="text-lg leading-relaxed">An inset shadow is drawn inside the element instead of outside it. Commonly used for pressed buttons, input fields, recessed panels, and neumorphic interfaces.</p></div>,
               ],
             },
             {
@@ -141,9 +141,9 @@ export default function BoxShadowPage() {
             {
               title: 'Example CSS',
               items: [
-                <div key="simple" className="space-y-1.5"><p className="text-base font-medium text-white">Simple Shadow</p><pre className="text-sm font-mono px-3 py-2 rounded-lg" style={{background:'rgba(255,255,255,0.05)',color:'rgba(255,255,255,0.8)'}}>{'box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);'}</pre></div>,
-                <div key="layered" className="space-y-1.5"><p className="text-base font-medium text-white">Layered Shadow</p><pre className="text-sm font-mono px-3 py-2 rounded-lg" style={{background:'rgba(255,255,255,0.05)',color:'rgba(255,255,255,0.8)'}}>{'box-shadow:\n  0 2px 4px rgba(0,0,0,.08),\n  0 8px 24px rgba(0,0,0,.12);'}</pre></div>,
-                <div key="inset" className="space-y-1.5"><p className="text-base font-medium text-white">Inset Shadow</p><pre className="text-sm font-mono px-3 py-2 rounded-lg" style={{background:'rgba(255,255,255,0.05)',color:'rgba(255,255,255,0.8)'}}>{'box-shadow: inset 0 2px 6px rgba(0,0,0,.2);'}</pre></div>,
+                <div key="simple" className="space-y-1.5"><p className="text-lg font-medium text-white">Simple Shadow</p><pre className="text-base font-mono px-3 py-2 rounded-lg" style={{background:'rgba(255,255,255,0.05)',color:'rgba(255,255,255,0.8)'}}>{'box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);'}</pre></div>,
+                <div key="layered" className="space-y-1.5"><p className="text-lg font-medium text-white">Layered Shadow</p><pre className="text-base font-mono px-3 py-2 rounded-lg" style={{background:'rgba(255,255,255,0.05)',color:'rgba(255,255,255,0.8)'}}>{'box-shadow:\n  0 2px 4px rgba(0,0,0,.08),\n  0 8px 24px rgba(0,0,0,.12);'}</pre></div>,
+                <div key="inset" className="space-y-1.5"><p className="text-lg font-medium text-white">Inset Shadow</p><pre className="text-base font-mono px-3 py-2 rounded-lg" style={{background:'rgba(255,255,255,0.05)',color:'rgba(255,255,255,0.8)'}}>{'box-shadow: inset 0 2px 6px rgba(0,0,0,.2);'}</pre></div>,
               ],
             },
             {
@@ -227,12 +227,12 @@ export default function BoxShadowPage() {
         {/* Preview bg / box color */}
         <div className="flex gap-5">
           <div className="flex items-center gap-2.5">
-            <label className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>Background</label>
+            <label className="text-lg font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>Background</label>
             <input type="color" value={bg} onChange={(e) => setBg(e.target.value)}
               className="w-9 h-9 rounded-lg cursor-pointer" style={{ padding: '2px', border: '2px solid var(--border-web-idle)', background: 'transparent' }} />
           </div>
           <div className="flex items-center gap-2.5">
-            <label className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>Box color</label>
+            <label className="text-lg font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>Box color</label>
             <input type="color" value={boxColor} onChange={(e) => setBoxColor(e.target.value)}
               className="w-9 h-9 rounded-lg cursor-pointer" style={{ padding: '2px', border: '2px solid var(--border-web-idle)', background: 'transparent' }} />
           </div>
@@ -257,11 +257,11 @@ export default function BoxShadowPage() {
                     className="w-5 h-5 rounded flex-shrink-0"
                     style={{ background: shadow.color, border: '1px solid rgba(255,255,255,0.15)' }}
                   />
-                  <span className="text-base font-semibold flex-shrink-0" style={{ color: 'rgba(255,255,255,0.85)' }}>
+                  <span className="text-lg font-semibold flex-shrink-0" style={{ color: 'rgba(255,255,255,0.85)' }}>
                     Layer {idx + 1}
                   </span>
                   {isCollapsed && (
-                    <span className="text-sm flex-1 truncate font-mono" style={{ color: 'rgba(255,255,255,0.4)' }}>
+                    <span className="text-base flex-1 truncate font-mono" style={{ color: 'rgba(255,255,255,0.4)' }}>
                       {shadowSummary(shadow)}
                     </span>
                   )}
@@ -302,10 +302,10 @@ export default function BoxShadowPage() {
                           onChange={(e) => update(shadow.id, 'inset', e.target.checked)}
                           className="w-4 h-4 accent-white"
                         />
-                        <span className="text-base font-medium">Inset</span>
+                        <span className="text-lg font-medium">Inset</span>
                       </label>
                       <div className="flex items-center gap-2.5" onClick={(e) => e.stopPropagation()}>
-                        <label className="text-base font-medium" style={{ color: 'rgba(255,255,255,0.65)' }}>Color</label>
+                        <label className="text-lg font-medium" style={{ color: 'rgba(255,255,255,0.65)' }}>Color</label>
                         <input
                           type="color"
                           value={shadow.color}
@@ -313,7 +313,7 @@ export default function BoxShadowPage() {
                           className="w-9 h-9 rounded-lg cursor-pointer"
                           style={{ padding: '2px', border: '2px solid var(--border-web-idle)', background: 'transparent' }}
                         />
-                        <code className="text-sm font-mono" style={{ color: 'rgba(255,255,255,0.6)' }}>
+                        <code className="text-base font-mono" style={{ color: 'rgba(255,255,255,0.6)' }}>
                           {shadow.color}
                         </code>
                       </div>
@@ -321,14 +321,14 @@ export default function BoxShadowPage() {
 
                     {sliders.map(({ key, label, min, max, unit }) => (
                       <div key={key} className="flex items-center gap-3">
-                        <span className="text-sm font-medium w-20 flex-shrink-0" style={{ color: 'rgba(255,255,255,0.65)' }}>{label}</span>
+                        <span className="text-base font-medium w-20 flex-shrink-0" style={{ color: 'rgba(255,255,255,0.65)' }}>{label}</span>
                         <input
                           type="range" min={min} max={max}
                           value={shadow[key] as number}
                           onChange={(e) => update(shadow.id, key, Number(e.target.value))}
                           className="flex-1 accent-white"
                         />
-                        <span className="text-sm font-mono w-14 text-right" style={{ color: 'rgba(255,255,255,0.8)' }}>
+                        <span className="text-base font-mono w-14 text-right" style={{ color: 'rgba(255,255,255,0.8)' }}>
                           {shadow[key] as number}{unit}
                         </span>
                       </div>
@@ -341,7 +341,7 @@ export default function BoxShadowPage() {
 
           <button
             onClick={addShadow}
-            className="w-full py-3 rounded-xl text-base font-medium flex items-center justify-center gap-2 transition-all"
+            className="w-full py-3 rounded-xl text-lg font-medium flex items-center justify-center gap-2 transition-all"
             style={{ background: 'var(--surface)', border: '1px dashed var(--border)', color: 'rgba(255,255,255,0.55)' }}
           >
             <Plus size={15} /> Add layer
@@ -351,7 +351,7 @@ export default function BoxShadowPage() {
         {/* Output */}
         <div className="flex flex-col gap-2">
           <div className="flex items-center justify-between">
-            <label className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>CSS output</label>
+            <label className="text-lg font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>CSS output</label>
             <CopyButton text={fullCss} label="Copy CSS" />
           </div>
           <pre

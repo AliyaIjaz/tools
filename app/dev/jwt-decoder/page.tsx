@@ -121,7 +121,7 @@ export default function JwtDecoderPage() {
 
         {result?.error && (
           <div
-            className="rounded-lg px-4 py-3 text-base font-medium"
+            className="rounded-lg px-4 py-3 text-lg font-medium"
             style={{ background: 'rgba(239,68,68,0.12)', border: '1.5px solid rgba(239,68,68,0.4)', color: '#f87171' }}
           >
             {result.error}
@@ -133,7 +133,7 @@ export default function JwtDecoderPage() {
             {/* Expiry status */}
             {result.expiry && (
               <div
-                className="flex items-center gap-3 px-4 py-3 rounded-xl text-base font-medium"
+                className="flex items-center gap-3 px-4 py-3 rounded-xl text-lg font-medium"
                 style={{
                   background: result.expiry.status === 'valid' ? 'rgba(52,211,153,0.1)' : 'rgba(239,68,68,0.1)',
                   border: `1.5px solid ${result.expiry.status === 'valid' ? 'rgba(52,211,153,0.35)' : 'rgba(239,68,68,0.35)'}`,
@@ -153,11 +153,11 @@ export default function JwtDecoderPage() {
               {/* Header */}
               <div>
                 <div className="flex items-center justify-between mb-2">
-                  <label className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>Header</label>
+                  <label className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>Header</label>
                   <CopyButton text={result.headerStr!} />
                 </div>
                 <pre
-                  className="rounded-xl px-4 py-3 text-sm overflow-auto"
+                  className="rounded-xl px-4 py-3 text-base overflow-auto"
                   style={{
                     background: 'var(--surface)',
                     border: '2px solid var(--border-dev)',
@@ -172,11 +172,11 @@ export default function JwtDecoderPage() {
               {/* Payload */}
               <div>
                 <div className="flex items-center justify-between mb-2">
-                  <label className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>Payload</label>
+                  <label className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>Payload</label>
                   <CopyButton text={result.payloadStr!} />
                 </div>
                 <pre
-                  className="rounded-xl px-4 py-3 text-sm overflow-auto"
+                  className="rounded-xl px-4 py-3 text-base overflow-auto"
                   style={{
                     background: 'var(--surface)',
                     border: '2px solid var(--border-dev)',
@@ -191,11 +191,11 @@ export default function JwtDecoderPage() {
 
             {/* Signature */}
             <div>
-              <label className="text-sm font-semibold mb-2 block" style={{ color: 'rgba(255,255,255,0.75)' }}>
+              <label className="text-base font-semibold mb-2 block" style={{ color: 'rgba(255,255,255,0.75)' }}>
                 Signature <span className="font-normal" style={{ color: 'rgba(255,255,255,0.35)' }}>(not verified)</span>
               </label>
               <div
-                className="px-4 py-3 rounded-xl text-sm break-all"
+                className="px-4 py-3 rounded-xl text-base break-all"
                 style={{
                   background: 'var(--surface)',
                   border: '2px solid var(--border-dev)',

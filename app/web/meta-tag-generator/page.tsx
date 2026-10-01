@@ -72,9 +72,9 @@ export default function MetaTagGeneratorPage() {
         <SeoSection
           aboutTitle="HTML Meta Tag Generator Online"
           about={<>
-            <p className="text-base leading-relaxed">Create complete HTML meta tags for your website in seconds with this free HTML Meta Tag Generator. Generate SEO meta tags, Open Graph (Facebook, LinkedIn, Slack, Discord), Twitter/X Card tags, canonical URLs, robots meta tags, and other essential metadata with a live preview and ready-to-copy HTML.</p>
-            <p className="text-base leading-relaxed">Whether you&apos;re building a blog, landing page, ecommerce store, or business website, this tool helps you create search engine and social media metadata that follows modern best practices.</p>
-            <p className="text-base leading-relaxed">Everything runs entirely in your browser. No data is uploaded or stored.</p>
+            <p className="text-lg leading-relaxed">Create complete HTML meta tags for your website in seconds with this free HTML Meta Tag Generator. Generate SEO meta tags, Open Graph (Facebook, LinkedIn, Slack, Discord), Twitter/X Card tags, canonical URLs, robots meta tags, and other essential metadata with a live preview and ready-to-copy HTML.</p>
+            <p className="text-lg leading-relaxed">Whether you&apos;re building a blog, landing page, ecommerce store, or business website, this tool helps you create search engine and social media metadata that follows modern best practices.</p>
+            <p className="text-lg leading-relaxed">Everything runs entirely in your browser. No data is uploaded or stored.</p>
           </>}
           extraSections={[
             {
@@ -114,55 +114,55 @@ export default function MetaTagGeneratorPage() {
               title: 'Supported Meta Tags',
               items: [
                 <div key="title" className="space-y-1.5">
-                  <p className="text-base font-medium text-white">{'Page Title (<title>)'}</p>
-                  <p className="text-base leading-relaxed">The page title appears in browser tabs and is often used as the clickable headline in search engine results.</p>
-                  <p className="text-sm" style={{color:'rgba(255,255,255,0.5)'}}>Example:</p>
-                  <pre className="text-sm font-mono px-3 py-2 rounded-lg" style={{background:'rgba(255,255,255,0.05)',color:'rgba(255,255,255,0.8)'}}>{`<title>Free HTML Meta Tag Generator</title>`}</pre>
-                  <p className="text-base leading-relaxed font-medium" style={{color:'rgba(255,255,255,0.75)'}}>Best practice:</p>
-                  <ul className="space-y-0.5 pl-4 text-base leading-relaxed" style={{listStyleType:'disc'}}>
+                  <p className="text-lg font-medium text-white">{'Page Title (<title>)'}</p>
+                  <p className="text-lg leading-relaxed">The page title appears in browser tabs and is often used as the clickable headline in search engine results.</p>
+                  <p className="text-base" style={{color:'rgba(255,255,255,0.5)'}}>Example:</p>
+                  <pre className="text-base font-mono px-3 py-2 rounded-lg" style={{background:'rgba(255,255,255,0.05)',color:'rgba(255,255,255,0.8)'}}>{`<title>Free HTML Meta Tag Generator</title>`}</pre>
+                  <p className="text-lg leading-relaxed font-medium" style={{color:'rgba(255,255,255,0.75)'}}>Best practice:</p>
+                  <ul className="space-y-0.5 pl-4 text-lg leading-relaxed" style={{listStyleType:'disc'}}>
                     <li>Keep between 50–60 characters.</li>
                     <li>Make each page title unique.</li>
                     <li>Include your primary keyword naturally.</li>
                   </ul>
                 </div>,
                 <div key="desc" className="space-y-1.5">
-                  <p className="text-base font-medium text-white">Meta Description</p>
-                  <p className="text-base leading-relaxed">The meta description summarizes your page and is commonly displayed beneath the title in search engine results.</p>
-                  <p className="text-sm" style={{color:'rgba(255,255,255,0.5)'}}>Example:</p>
-                  <pre className="text-sm font-mono px-3 py-2 rounded-lg" style={{background:'rgba(255,255,255,0.05)',color:'rgba(255,255,255,0.8)'}}>{`<meta\n  name="description"\n  content="Generate SEO, Open Graph, and Twitter meta tags instantly.">`}</pre>
-                  <p className="text-base leading-relaxed font-medium" style={{color:'rgba(255,255,255,0.75)'}}>Best practice:</p>
-                  <ul className="space-y-0.5 pl-4 text-base leading-relaxed" style={{listStyleType:'disc'}}>
+                  <p className="text-lg font-medium text-white">Meta Description</p>
+                  <p className="text-lg leading-relaxed">The meta description summarizes your page and is commonly displayed beneath the title in search engine results.</p>
+                  <p className="text-base" style={{color:'rgba(255,255,255,0.5)'}}>Example:</p>
+                  <pre className="text-base font-mono px-3 py-2 rounded-lg" style={{background:'rgba(255,255,255,0.05)',color:'rgba(255,255,255,0.8)'}}>{`<meta\n  name="description"\n  content="Generate SEO, Open Graph, and Twitter meta tags instantly.">`}</pre>
+                  <p className="text-lg leading-relaxed font-medium" style={{color:'rgba(255,255,255,0.75)'}}>Best practice:</p>
+                  <ul className="space-y-0.5 pl-4 text-lg leading-relaxed" style={{listStyleType:'disc'}}>
                     <li>Keep between 150–160 characters.</li>
                     <li>Write clear, compelling descriptions.</li>
                     <li>Include relevant keywords naturally.</li>
                   </ul>
                 </div>,
                 <div key="canonical" className="space-y-1.5">
-                  <p className="text-base font-medium text-white">Canonical URL</p>
-                  <p className="text-base leading-relaxed">A canonical tag tells search engines which version of a page should be treated as the primary version, helping prevent duplicate content issues.</p>
-                  <p className="text-sm" style={{color:'rgba(255,255,255,0.5)'}}>Example:</p>
-                  <pre className="text-sm font-mono px-3 py-2 rounded-lg" style={{background:'rgba(255,255,255,0.05)',color:'rgba(255,255,255,0.8)'}}>{`<link\n  rel="canonical"\n  href="https://example.com/page">`}</pre>
+                  <p className="text-lg font-medium text-white">Canonical URL</p>
+                  <p className="text-lg leading-relaxed">A canonical tag tells search engines which version of a page should be treated as the primary version, helping prevent duplicate content issues.</p>
+                  <p className="text-base" style={{color:'rgba(255,255,255,0.5)'}}>Example:</p>
+                  <pre className="text-base font-mono px-3 py-2 rounded-lg" style={{background:'rgba(255,255,255,0.05)',color:'rgba(255,255,255,0.8)'}}>{`<link\n  rel="canonical"\n  href="https://example.com/page">`}</pre>
                 </div>,
                 <div key="robots" className="space-y-1.5">
-                  <p className="text-base font-medium text-white">Robots Meta Tag</p>
-                  <p className="text-base leading-relaxed">Robots tags tell search engines whether a page should be indexed or whether links should be followed.</p>
-                  <p className="text-sm" style={{color:'rgba(255,255,255,0.5)'}}>Example:</p>
-                  <pre className="text-sm font-mono px-3 py-2 rounded-lg" style={{background:'rgba(255,255,255,0.05)',color:'rgba(255,255,255,0.8)'}}>{`<meta\n  name="robots"\n  content="index,follow">`}</pre>
-                  <p className="text-base leading-relaxed">Common values include: <code className="text-sm px-1.5 py-0.5 rounded" style={{background:'rgba(255,255,255,0.08)',color:'rgba(255,255,255,0.85)'}}>index</code>, <code className="text-sm px-1.5 py-0.5 rounded" style={{background:'rgba(255,255,255,0.08)',color:'rgba(255,255,255,0.85)'}}>noindex</code>, <code className="text-sm px-1.5 py-0.5 rounded" style={{background:'rgba(255,255,255,0.08)',color:'rgba(255,255,255,0.85)'}}>follow</code>, <code className="text-sm px-1.5 py-0.5 rounded" style={{background:'rgba(255,255,255,0.08)',color:'rgba(255,255,255,0.85)'}}>nofollow</code>.</p>
+                  <p className="text-lg font-medium text-white">Robots Meta Tag</p>
+                  <p className="text-lg leading-relaxed">Robots tags tell search engines whether a page should be indexed or whether links should be followed.</p>
+                  <p className="text-base" style={{color:'rgba(255,255,255,0.5)'}}>Example:</p>
+                  <pre className="text-base font-mono px-3 py-2 rounded-lg" style={{background:'rgba(255,255,255,0.05)',color:'rgba(255,255,255,0.8)'}}>{`<meta\n  name="robots"\n  content="index,follow">`}</pre>
+                  <p className="text-lg leading-relaxed">Common values include: <code className="text-base px-1.5 py-0.5 rounded" style={{background:'rgba(255,255,255,0.08)',color:'rgba(255,255,255,0.85)'}}>index</code>, <code className="text-base px-1.5 py-0.5 rounded" style={{background:'rgba(255,255,255,0.08)',color:'rgba(255,255,255,0.85)'}}>noindex</code>, <code className="text-base px-1.5 py-0.5 rounded" style={{background:'rgba(255,255,255,0.08)',color:'rgba(255,255,255,0.85)'}}>follow</code>, <code className="text-base px-1.5 py-0.5 rounded" style={{background:'rgba(255,255,255,0.08)',color:'rgba(255,255,255,0.85)'}}>nofollow</code>.</p>
                 </div>,
                 <div key="og" className="space-y-1.5">
-                  <p className="text-base font-medium text-white">Open Graph Tags</p>
-                  <p className="text-base leading-relaxed">Open Graph metadata controls how your website appears when shared on platforms that support the Open Graph protocol.</p>
-                  <p className="text-base leading-relaxed">Supported platforms include: Facebook, LinkedIn, Slack, Discord, WhatsApp, Telegram, Microsoft Teams.</p>
-                  <p className="text-sm" style={{color:'rgba(255,255,255,0.5)'}}>Example:</p>
-                  <pre className="text-sm font-mono px-3 py-2 rounded-lg" style={{background:'rgba(255,255,255,0.05)',color:'rgba(255,255,255,0.8)'}}>{`<meta property="og:title" content="My Website">\n<meta property="og:description" content="Example description">\n<meta property="og:image" content="https://example.com/image.jpg">\n<meta property="og:url" content="https://example.com">`}</pre>
+                  <p className="text-lg font-medium text-white">Open Graph Tags</p>
+                  <p className="text-lg leading-relaxed">Open Graph metadata controls how your website appears when shared on platforms that support the Open Graph protocol.</p>
+                  <p className="text-lg leading-relaxed">Supported platforms include: Facebook, LinkedIn, Slack, Discord, WhatsApp, Telegram, Microsoft Teams.</p>
+                  <p className="text-base" style={{color:'rgba(255,255,255,0.5)'}}>Example:</p>
+                  <pre className="text-base font-mono px-3 py-2 rounded-lg" style={{background:'rgba(255,255,255,0.05)',color:'rgba(255,255,255,0.8)'}}>{`<meta property="og:title" content="My Website">\n<meta property="og:description" content="Example description">\n<meta property="og:image" content="https://example.com/image.jpg">\n<meta property="og:url" content="https://example.com">`}</pre>
                 </div>,
                 <div key="twitter" className="space-y-1.5">
-                  <p className="text-base font-medium text-white">Twitter/X Card Tags</p>
-                  <p className="text-base leading-relaxed">Twitter Card tags provide additional control over how your content appears when shared on X (formerly Twitter).</p>
-                  <p className="text-sm" style={{color:'rgba(255,255,255,0.5)'}}>Example:</p>
-                  <pre className="text-sm font-mono px-3 py-2 rounded-lg" style={{background:'rgba(255,255,255,0.05)',color:'rgba(255,255,255,0.8)'}}>{`<meta\n  name="twitter:card"\n  content="summary_large_image">`}</pre>
-                  <p className="text-base leading-relaxed">Common card types include: <code className="text-sm px-1.5 py-0.5 rounded" style={{background:'rgba(255,255,255,0.08)',color:'rgba(255,255,255,0.85)'}}>summary</code>, <code className="text-sm px-1.5 py-0.5 rounded" style={{background:'rgba(255,255,255,0.08)',color:'rgba(255,255,255,0.85)'}}>summary_large_image</code>.</p>
+                  <p className="text-lg font-medium text-white">Twitter/X Card Tags</p>
+                  <p className="text-lg leading-relaxed">Twitter Card tags provide additional control over how your content appears when shared on X (formerly Twitter).</p>
+                  <p className="text-base" style={{color:'rgba(255,255,255,0.5)'}}>Example:</p>
+                  <pre className="text-base font-mono px-3 py-2 rounded-lg" style={{background:'rgba(255,255,255,0.05)',color:'rgba(255,255,255,0.8)'}}>{`<meta\n  name="twitter:card"\n  content="summary_large_image">`}</pre>
+                  <p className="text-lg leading-relaxed">Common card types include: <code className="text-base px-1.5 py-0.5 rounded" style={{background:'rgba(255,255,255,0.08)',color:'rgba(255,255,255,0.85)'}}>summary</code>, <code className="text-base px-1.5 py-0.5 rounded" style={{background:'rgba(255,255,255,0.08)',color:'rgba(255,255,255,0.85)'}}>summary_large_image</code>.</p>
                 </div>,
               ],
             },
@@ -186,7 +186,7 @@ export default function MetaTagGeneratorPage() {
               title: 'Example Generated HTML',
               intro: '',
               items: [
-                <pre key="example" className="text-sm font-mono px-4 py-3 rounded-xl overflow-auto" style={{background:'rgba(255,255,255,0.04)',color:'rgba(255,255,255,0.8)',lineHeight:'1.7'}}>{`<title>My Website</title>\n\n<meta\n  name="description"\n  content="Example website description">\n\n<link\n  rel="canonical"\n  href="https://example.com">\n\n<meta\n  name="robots"\n  content="index,follow">\n\n<meta\n  property="og:title"\n  content="My Website">\n\n<meta\n  property="og:description"\n  content="Example website description">\n\n<meta\n  property="og:image"\n  content="https://example.com/image.jpg">\n\n<meta\n  property="og:url"\n  content="https://example.com">\n\n<meta\n  name="twitter:card"\n  content="summary_large_image">\n\n<meta\n  name="twitter:title"\n  content="My Website">\n\n<meta\n  name="twitter:description"\n  content="Example website description">\n\n<meta\n  name="twitter:image"\n  content="https://example.com/image.jpg">`}</pre>,
+                <pre key="example" className="text-base font-mono px-4 py-3 rounded-xl overflow-auto" style={{background:'rgba(255,255,255,0.04)',color:'rgba(255,255,255,0.8)',lineHeight:'1.7'}}>{`<title>My Website</title>\n\n<meta\n  name="description"\n  content="Example website description">\n\n<link\n  rel="canonical"\n  href="https://example.com">\n\n<meta\n  name="robots"\n  content="index,follow">\n\n<meta\n  property="og:title"\n  content="My Website">\n\n<meta\n  property="og:description"\n  content="Example website description">\n\n<meta\n  property="og:image"\n  content="https://example.com/image.jpg">\n\n<meta\n  property="og:url"\n  content="https://example.com">\n\n<meta\n  name="twitter:card"\n  content="summary_large_image">\n\n<meta\n  name="twitter:title"\n  content="My Website">\n\n<meta\n  name="twitter:description"\n  content="Example website description">\n\n<meta\n  name="twitter:image"\n  content="https://example.com/image.jpg">`}</pre>,
               ],
             },
             {
@@ -278,17 +278,17 @@ export default function MetaTagGeneratorPage() {
           {fields.map(({ label, value, set, placeholder, hint }) => (
             <div key={label}>
               <div className="flex items-center justify-between mb-2">
-                <label className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>{label}</label>
-                {hint && <span className="text-sm" style={{ color: 'rgba(255,255,255,0.5)' }}>{hint}</span>}
+                <label className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>{label}</label>
+                {hint && <span className="text-base" style={{ color: 'rgba(255,255,255,0.5)' }}>{hint}</span>}
               </div>
               <input type="text" value={value} onChange={(e) => set(e.target.value)} placeholder={placeholder} style={inputStyle} />
               {label === 'Title' && value && (
-                <p className="text-sm mt-1.5" style={{ color: value.length > 60 ? '#f87171' : 'rgba(255,255,255,0.5)' }}>
+                <p className="text-base mt-1.5" style={{ color: value.length > 60 ? '#f87171' : 'rgba(255,255,255,0.5)' }}>
                   {value.length}/60 chars
                 </p>
               )}
               {label === 'Description' && value && (
-                <p className="text-sm mt-1.5" style={{ color: value.length > 160 ? '#f87171' : 'rgba(255,255,255,0.5)' }}>
+                <p className="text-base mt-1.5" style={{ color: value.length > 160 ? '#f87171' : 'rgba(255,255,255,0.5)' }}>
                   {value.length}/160 chars
                 </p>
               )}
@@ -298,13 +298,13 @@ export default function MetaTagGeneratorPage() {
 
         {/* Page type */}
         <div>
-          <label className="text-sm font-semibold mb-2.5 block" style={{ color: 'rgba(255,255,255,0.85)' }}>Page type</label>
+          <label className="text-base font-semibold mb-2.5 block" style={{ color: 'rgba(255,255,255,0.85)' }}>Page type</label>
           <div className="flex gap-2">
             {(['website', 'article'] as const).map((t) => (
               <button
                 key={t}
                 onClick={() => setType(t)}
-                className="px-4 py-2 rounded-lg text-base font-semibold capitalize transition-all"
+                className="px-4 py-2 rounded-lg text-lg font-semibold capitalize transition-all"
                 style={{
                   background: type === t ? 'var(--color-web-dim)' : 'var(--surface)',
                   border: `1.5px solid ${type === t ? 'var(--color-web)' : 'var(--border)'}`,
@@ -320,15 +320,15 @@ export default function MetaTagGeneratorPage() {
         {/* OG Preview card */}
         {(title || description || image) && (
           <div>
-            <p className="text-sm font-semibold mb-2.5" style={{ color: 'rgba(255,255,255,0.85)' }}>Social preview</p>
+            <p className="text-base font-semibold mb-2.5" style={{ color: 'rgba(255,255,255,0.85)' }}>Social preview</p>
             <div className="rounded-xl overflow-hidden" style={{ border: '2px solid var(--border-web-idle)', maxWidth: '480px' }}>
               {image && (
                 <div className="h-44 bg-cover bg-center" style={{ backgroundImage: `url(${image})` }} />
               )}
               <div className="px-4 py-4" style={{ background: '#1a1a1a' }}>
-                {url && <p className="text-sm mb-1 uppercase tracking-wide" style={{ color: 'rgba(255,255,255,0.45)' }}>{url.replace(/^https?:\/\//, '').split('/')[0]}</p>}
-                {title && <p className="text-base font-semibold text-white leading-snug">{title}</p>}
-                {description && <p className="text-sm mt-1.5 line-clamp-2" style={{ color: 'rgba(255,255,255,0.65)' }}>{description}</p>}
+                {url && <p className="text-base mb-1 uppercase tracking-wide" style={{ color: 'rgba(255,255,255,0.45)' }}>{url.replace(/^https?:\/\//, '').split('/')[0]}</p>}
+                {title && <p className="text-lg font-semibold text-white leading-snug">{title}</p>}
+                {description && <p className="text-base mt-1.5 line-clamp-2" style={{ color: 'rgba(255,255,255,0.65)' }}>{description}</p>}
               </div>
             </div>
           </div>
@@ -338,11 +338,11 @@ export default function MetaTagGeneratorPage() {
         {tags && (
           <div>
             <div className="flex items-center justify-between mb-2.5">
-              <label className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>Generated tags</label>
+              <label className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>Generated tags</label>
               <CopyButton text={tags} label="Copy all" />
             </div>
             <pre
-              className="rounded-xl px-5 py-4 text-sm overflow-auto whitespace-pre-wrap"
+              className="rounded-xl px-5 py-4 text-base overflow-auto whitespace-pre-wrap"
               style={{
                 background: 'var(--surface)',
                 border: '2px solid var(--border-web-idle)',

@@ -52,7 +52,7 @@ export default function CssGradientPage() {
         <SeoSection
           aboutTitle="CSS Gradient Generator Online"
           about={<>
-            <p className="text-base leading-relaxed">Create beautiful CSS gradients visually with a live preview and copy production-ready CSS instantly. This free CSS Gradient Generator lets you build linear, radial, and conic gradients, customize unlimited color stops, adjust angles and positions, and generate clean CSS that works in all modern browsers. Everything runs entirely in your browser, so your work stays private and updates instantly.</p>
+            <p className="text-lg leading-relaxed">Create beautiful CSS gradients visually with a live preview and copy production-ready CSS instantly. This free CSS Gradient Generator lets you build linear, radial, and conic gradients, customize unlimited color stops, adjust angles and positions, and generate clean CSS that works in all modern browsers. Everything runs entirely in your browser, so your work stays private and updates instantly.</p>
           </>}
           extraSections={[
             {
@@ -81,22 +81,22 @@ export default function CssGradientPage() {
               title: 'Supported Gradient Types',
               items: [
                 <div key="linear" className="space-y-1.5">
-                  <p className="text-base font-medium text-white">Linear Gradient</p>
-                  <p className="text-base leading-relaxed">Linear gradients transition colors in a straight line. Commonly used for website backgrounds, buttons, hero banners, navigation bars, and call-to-action sections.</p>
-                  <p className="text-sm" style={{ color: 'rgba(255,255,255,0.5)' }}>Example:</p>
-                  <pre className="text-sm font-mono px-3 py-2 rounded-lg" style={{ background: 'rgba(255,255,255,0.05)', color: 'rgba(255,255,255,0.8)' }}>{`background: linear-gradient(90deg, #3b82f6 0%, #8b5cf6 100%);`}</pre>
+                  <p className="text-lg font-medium text-white">Linear Gradient</p>
+                  <p className="text-lg leading-relaxed">Linear gradients transition colors in a straight line. Commonly used for website backgrounds, buttons, hero banners, navigation bars, and call-to-action sections.</p>
+                  <p className="text-base" style={{ color: 'rgba(255,255,255,0.5)' }}>Example:</p>
+                  <pre className="text-base font-mono px-3 py-2 rounded-lg" style={{ background: 'rgba(255,255,255,0.05)', color: 'rgba(255,255,255,0.8)' }}>{`background: linear-gradient(90deg, #3b82f6 0%, #8b5cf6 100%);`}</pre>
                 </div>,
                 <div key="radial" className="space-y-1.5">
-                  <p className="text-base font-medium text-white">Radial Gradient</p>
-                  <p className="text-base leading-relaxed">Radial gradients spread outward from a central point. Perfect for spotlight effects, circular backgrounds, glowing elements, badges, and decorative UI components.</p>
-                  <p className="text-sm" style={{ color: 'rgba(255,255,255,0.5)' }}>Example:</p>
-                  <pre className="text-sm font-mono px-3 py-2 rounded-lg" style={{ background: 'rgba(255,255,255,0.05)', color: 'rgba(255,255,255,0.8)' }}>{`background: radial-gradient(circle, #ffffff 0%, #3b82f6 100%);`}</pre>
+                  <p className="text-lg font-medium text-white">Radial Gradient</p>
+                  <p className="text-lg leading-relaxed">Radial gradients spread outward from a central point. Perfect for spotlight effects, circular backgrounds, glowing elements, badges, and decorative UI components.</p>
+                  <p className="text-base" style={{ color: 'rgba(255,255,255,0.5)' }}>Example:</p>
+                  <pre className="text-base font-mono px-3 py-2 rounded-lg" style={{ background: 'rgba(255,255,255,0.05)', color: 'rgba(255,255,255,0.8)' }}>{`background: radial-gradient(circle, #ffffff 0%, #3b82f6 100%);`}</pre>
                 </div>,
                 <div key="conic" className="space-y-1.5">
-                  <p className="text-base font-medium text-white">Conic Gradient</p>
-                  <p className="text-base leading-relaxed">Conic gradients rotate colors around a center point. Useful for pie charts, progress indicators, loading animations, color wheels, and creative visual effects.</p>
-                  <p className="text-sm" style={{ color: 'rgba(255,255,255,0.5)' }}>Example:</p>
-                  <pre className="text-sm font-mono px-3 py-2 rounded-lg" style={{ background: 'rgba(255,255,255,0.05)', color: 'rgba(255,255,255,0.8)' }}>{`background: conic-gradient(#3b82f6, #8b5cf6, #ec4899, #3b82f6);`}</pre>
+                  <p className="text-lg font-medium text-white">Conic Gradient</p>
+                  <p className="text-lg leading-relaxed">Conic gradients rotate colors around a center point. Useful for pie charts, progress indicators, loading animations, color wheels, and creative visual effects.</p>
+                  <p className="text-base" style={{ color: 'rgba(255,255,255,0.5)' }}>Example:</p>
+                  <pre className="text-base font-mono px-3 py-2 rounded-lg" style={{ background: 'rgba(255,255,255,0.05)', color: 'rgba(255,255,255,0.8)' }}>{`background: conic-gradient(#3b82f6, #8b5cf6, #ec4899, #3b82f6);`}</pre>
                 </div>,
               ],
             },
@@ -190,13 +190,13 @@ export default function CssGradientPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
           {/* Type */}
           <div className="flex flex-col gap-2">
-            <label className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>Type</label>
+            <label className="text-lg font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>Type</label>
             <div className="flex gap-2">
               {TYPES.map((t) => (
                 <button
                   key={t}
                   onClick={() => setType(t)}
-                  className="flex-1 py-2.5 rounded-lg text-base font-semibold capitalize transition-all"
+                  className="flex-1 py-2.5 rounded-lg text-lg font-semibold capitalize transition-all"
                   style={{
                     background: type === t ? 'var(--color-web-dim)' : 'var(--surface)',
                     border: `1.5px solid ${type === t ? 'var(--color-web)' : 'var(--border)'}`,
@@ -212,9 +212,9 @@ export default function CssGradientPage() {
           {/* Angle */}
           {type !== 'radial' && (
             <div className="flex flex-col gap-2">
-              <label className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>
+              <label className="text-lg font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>
                 Angle
-                <span className="ml-2 font-mono text-sm" style={{ color: 'rgba(255,255,255,0.5)' }}>{angle}°</span>
+                <span className="ml-2 font-mono text-base" style={{ color: 'rgba(255,255,255,0.5)' }}>{angle}°</span>
               </label>
               <div className="flex items-center gap-3">
                 <input
@@ -227,7 +227,7 @@ export default function CssGradientPage() {
                   type="number" min={0} max={360}
                   value={angle}
                   onChange={(e) => setAngle(Number(e.target.value))}
-                  className="w-18 px-3 py-2 rounded-lg text-base text-center outline-none"
+                  className="w-18 px-3 py-2 rounded-lg text-lg text-center outline-none"
                   style={{ background: 'var(--surface)', border: '2px solid var(--border-web-idle)', color: 'rgba(255,255,255,0.9)', fontFamily: 'var(--font-geist-mono)' }}
                 />
               </div>
@@ -238,10 +238,10 @@ export default function CssGradientPage() {
         {/* Color stops */}
         <div className="flex flex-col gap-2">
           <div className="flex items-center justify-between">
-            <label className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>Color stops</label>
+            <label className="text-lg font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>Color stops</label>
             <button
               onClick={addStop}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-all"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-base font-medium transition-all"
               style={{ background: 'var(--surface)', border: '2px solid var(--border-web-idle)', color: 'rgba(255,255,255,0.65)' }}
             >
               <Plus size={13} /> Add stop
@@ -262,7 +262,7 @@ export default function CssGradientPage() {
                   className="w-10 h-10 rounded-lg cursor-pointer flex-shrink-0"
                   style={{ padding: '2px', background: 'transparent', border: '2px solid var(--border-web-idle)' }}
                 />
-                <code className="text-sm flex-shrink-0 w-18" style={{ color: 'rgba(255,255,255,0.75)', fontFamily: 'var(--font-geist-mono)' }}>
+                <code className="text-base flex-shrink-0 w-18" style={{ color: 'rgba(255,255,255,0.75)', fontFamily: 'var(--font-geist-mono)' }}>
                   {stop.color}
                 </code>
                 <input
@@ -271,7 +271,7 @@ export default function CssGradientPage() {
                   onChange={(e) => updateStop(stop.id, 'position', Number(e.target.value))}
                   className="flex-1 accent-white"
                 />
-                <span className="text-sm w-10 text-right font-mono" style={{ color: 'rgba(255,255,255,0.6)' }}>
+                <span className="text-base w-10 text-right font-mono" style={{ color: 'rgba(255,255,255,0.6)' }}>
                   {stop.position}%
                 </span>
                 <button
@@ -290,14 +290,14 @@ export default function CssGradientPage() {
         {/* Output */}
         <div className="flex flex-col gap-2">
           <div className="flex items-center justify-between">
-            <label className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>CSS output</label>
+            <label className="text-lg font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>CSS output</label>
             <div className="flex gap-2">
               <CopyButton text={`background: ${css};`} label="Copy CSS" />
               <CopyButton text={css} label="Copy value" />
             </div>
           </div>
           <pre
-            className="rounded-xl px-5 py-4 text-sm break-all whitespace-pre-wrap"
+            className="rounded-xl px-5 py-4 text-base break-all whitespace-pre-wrap"
             style={{
               background: 'var(--surface)',
               border: '2px solid var(--border-web-idle)',

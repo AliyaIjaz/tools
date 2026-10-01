@@ -206,8 +206,8 @@ export default function EnvParserPage() {
       seoContent={
         <SeoSection
           about={<>
-            <p className="text-base leading-relaxed"><strong>ENV File Parser Online</strong> is a free browser-based tool that parses <code>.env</code> files into a clean, readable table and lets you export the variables as JSON, shell export statements, or Docker <code>--env</code> flags. It handles quoted values, inline comments, multiline values, empty variables, and automatically detects secrets by key name — masking them by default so they are safe to share on screen.</p>
-            <p className="text-base leading-relaxed">Paste your <code>.env</code> content directly or drag-and-drop a file. All parsing happens in your browser — your environment variables are never sent to any server. This is especially important for <code>.env</code> files that contain API keys, database credentials, and JWT secrets.</p>
+            <p className="text-lg leading-relaxed"><strong>ENV File Parser Online</strong> is a free browser-based tool that parses <code>.env</code> files into a clean, readable table and lets you export the variables as JSON, shell export statements, or Docker <code>--env</code> flags. It handles quoted values, inline comments, multiline values, empty variables, and automatically detects secrets by key name — masking them by default so they are safe to share on screen.</p>
+            <p className="text-lg leading-relaxed">Paste your <code>.env</code> content directly or drag-and-drop a file. All parsing happens in your browser — your environment variables are never sent to any server. This is especially important for <code>.env</code> files that contain API keys, database credentials, and JWT secrets.</p>
           </>}
           useCases={[
             'Quickly inspect all variables in a .env file as a clean table.',
@@ -240,7 +240,7 @@ export default function EnvParserPage() {
           onDrop={handleDrop}
         >
           <div className="flex items-center justify-between mb-3 flex-wrap gap-2">
-            <label className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>.env Content</label>
+            <label className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>.env Content</label>
             <div className="flex items-center gap-2">
               <input
                 ref={fileRef} type="file" accept=".env,.txt" className="hidden"
@@ -248,7 +248,7 @@ export default function EnvParserPage() {
               />
               <button
                 onClick={() => fileRef.current?.click()}
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-all"
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-base font-medium transition-all"
                 style={btnGhost}
                 onMouseEnter={(e) => onHover(e, true)}
                 onMouseLeave={(e) => onHover(e, false)}
@@ -257,7 +257,7 @@ export default function EnvParserPage() {
               </button>
               <button
                 onClick={() => setInput(EXAMPLE_ENV)}
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-all"
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-base font-medium transition-all"
                 style={btnGhost}
                 onMouseEnter={(e) => onHover(e, true)}
                 onMouseLeave={(e) => onHover(e, false)}
@@ -267,7 +267,7 @@ export default function EnvParserPage() {
               {input && (
                 <button
                   onClick={() => { setInput(''); setSearch('') }}
-                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-all"
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-base font-medium transition-all"
                   style={btnGhost}
                   onMouseEnter={(e) => onHover(e, true)}
                   onMouseLeave={(e) => onHover(e, false)}
@@ -282,7 +282,7 @@ export default function EnvParserPage() {
             onChange={(e) => setInput(e.target.value)}
             placeholder={'# Paste your .env file here or drag-and-drop a file\nAPP_NAME=MyApp\nDATABASE_URL=postgres://...\nAPI_KEY=sk-...'}
             rows={9}
-            className="w-full resize-y rounded-lg px-3 py-3 text-sm outline-none transition-all placeholder:text-white/50"
+            className="w-full resize-y rounded-lg px-3 py-3 text-base outline-none transition-all placeholder:text-white/50"
             style={{
               background: 'rgba(0,0,0,0.35)',
               border: '2px solid var(--border-dev)',
@@ -308,7 +308,7 @@ export default function EnvParserPage() {
                 ].map(({ label, color }) => (
                   <span
                     key={label}
-                    className="px-2.5 py-1 rounded-lg text-xs font-medium"
+                    className="px-2.5 py-1 rounded-lg text-sm font-medium"
                     style={{
                       background: 'rgba(255,255,255,0.07)',
                       border: '2px solid var(--border-dev-idle)',
@@ -332,7 +332,7 @@ export default function EnvParserPage() {
                 {maskSecrets
                   ? <EyeOff size={14} style={{ color: 'rgba(255,255,255,0.5)' }} />
                   : <Eye size={14} style={{ color: 'rgba(255,255,255,0.5)' }} />}
-                <span className="text-sm" style={{ color: 'rgba(255,255,255,0.55)' }}>Mask secrets</span>
+                <span className="text-base" style={{ color: 'rgba(255,255,255,0.55)' }}>Mask secrets</span>
               </label>
             </div>
 
@@ -343,7 +343,7 @@ export default function EnvParserPage() {
                   <button
                     key={f}
                     onClick={() => setFormat(f)}
-                    className="px-3 py-2 text-sm font-medium transition-all capitalize"
+                    className="px-3 py-2 text-base font-medium transition-all capitalize"
                     style={format === f
                       ? { background: 'var(--color-dev)', color: '#fff' }
                       : { background: 'transparent', color: 'rgba(255,255,255,0.5)' }}
@@ -361,7 +361,7 @@ export default function EnvParserPage() {
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
                   placeholder="Search keys or values…"
-                  className="flex-1 min-w-36 rounded-lg px-3 py-2 text-sm outline-none transition-all placeholder:text-white/50"
+                  className="flex-1 min-w-36 rounded-lg px-3 py-2 text-base outline-none transition-all placeholder:text-white/50"
                   style={{
                     background: 'rgba(0,0,0,0.3)',
                     border: '2px solid var(--border-dev-idle)',
@@ -383,7 +383,7 @@ export default function EnvParserPage() {
               >
                 {/* Header */}
                 <div
-                  className="grid px-4 py-2.5 text-xs font-medium uppercase tracking-widest"
+                  className="grid px-4 py-2.5 text-sm font-medium uppercase tracking-widest"
                   style={{
                     gridTemplateColumns: '40px 1fr 1fr 80px',
                     borderBottom: '1px solid rgba(255,255,255,0.07)',
@@ -411,26 +411,26 @@ export default function EnvParserPage() {
                       onMouseEnter={(e) => { e.currentTarget.style.background = 'rgba(255,255,255,0.025)' }}
                       onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent' }}
                     >
-                      <span className="text-xs font-mono" style={{ color: 'rgba(255,255,255,0.2)' }}>{entry.lineNumber}</span>
+                      <span className="text-sm font-mono" style={{ color: 'rgba(255,255,255,0.2)' }}>{entry.lineNumber}</span>
                       <div className="flex items-center gap-2 min-w-0 pr-3">
-                        <span className="text-sm font-mono font-medium truncate" style={{ color: secret ? '#fdba74' : 'var(--color-dev)' }}>
+                        <span className="text-base font-mono font-medium truncate" style={{ color: secret ? '#fdba74' : 'var(--color-dev)' }}>
                           {entry.key}
                         </span>
                         {secret && (
-                          <span className="text-xs px-1.5 py-0.5 rounded flex-shrink-0" style={{ background: 'rgba(251,186,74,0.1)', color: '#fdba74', border: '1px solid rgba(251,186,74,0.2)' }}>
+                          <span className="text-sm px-1.5 py-0.5 rounded flex-shrink-0" style={{ background: 'rgba(251,186,74,0.1)', color: '#fdba74', border: '1px solid rgba(251,186,74,0.2)' }}>
                             secret
                           </span>
                         )}
                       </div>
                       <div className="min-w-0 pr-3">
                         {entry.isEmpty
-                          ? <span className="text-xs italic" style={{ color: 'rgba(255,255,255,0.25)' }}>empty</span>
-                          : <span className="text-sm font-mono truncate block" style={{ color: secret && maskSecrets ? 'rgba(255,255,255,0.3)' : 'rgba(255,255,255,0.75)' }}>
+                          ? <span className="text-sm italic" style={{ color: 'rgba(255,255,255,0.25)' }}>empty</span>
+                          : <span className="text-base font-mono truncate block" style={{ color: secret && maskSecrets ? 'rgba(255,255,255,0.3)' : 'rgba(255,255,255,0.75)' }}>
                               {displayVal}
                             </span>
                         }
                         {entry.comment && (
-                          <span className="text-xs italic block" style={{ color: 'rgba(255,255,255,0.3)' }}>
+                          <span className="text-sm italic block" style={{ color: 'rgba(255,255,255,0.3)' }}>
                             # {entry.comment}
                           </span>
                         )}
@@ -443,7 +443,7 @@ export default function EnvParserPage() {
                 })}
 
                 {filtered.length === 0 && (
-                  <div className="px-4 py-8 text-center text-sm" style={{ color: 'rgba(255,255,255,0.3)' }}>No results</div>
+                  <div className="px-4 py-8 text-center text-base" style={{ color: 'rgba(255,255,255,0.3)' }}>No results</div>
                 )}
               </div>
             )}
@@ -455,7 +455,7 @@ export default function EnvParserPage() {
                 style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)' }}
               >
                 <pre
-                  className="text-sm overflow-auto leading-relaxed rounded-lg px-3 py-3"
+                  className="text-base overflow-auto leading-relaxed rounded-lg px-3 py-3"
                   style={{
                     background: 'rgba(0,0,0,0.35)',
                     border: '2px solid var(--border-dev-idle)',
@@ -478,10 +478,10 @@ export default function EnvParserPage() {
             className="rounded-xl px-5 py-8 flex flex-col items-center gap-2 text-center"
             style={{ background: 'var(--surface)', border: '1px dashed rgba(255,255,255,0.1)' }}
           >
-            <p className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.35)' }}>
+            <p className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.35)' }}>
               Paste your .env content above or drag-and-drop a file
             </p>
-            <p className="text-xs" style={{ color: 'rgba(255,255,255,0.25)' }}>
+            <p className="text-sm" style={{ color: 'rgba(255,255,255,0.25)' }}>
               Secrets are detected and masked automatically — your data never leaves your browser
             </p>
           </div>

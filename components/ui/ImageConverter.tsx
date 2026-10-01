@@ -80,13 +80,13 @@ export default function ImageConverter({ defaultTarget, accept, hint }: { defaul
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={src} alt="source" className="w-16 h-16 rounded-lg object-cover flex-shrink-0" style={{ border: '1px solid var(--border)' }} />
               <div className="min-w-0 flex-1">
-                <p className="text-sm font-medium text-white truncate">{fileName}</p>
-                <p className="text-sm mt-1" style={{ color: 'rgba(255,255,255,0.65)' }}>
+                <p className="text-base font-medium text-white truncate">{fileName}</p>
+                <p className="text-base mt-1" style={{ color: 'rgba(255,255,255,0.65)' }}>
                   {formatBytes(origSize)} · {currentFmt?.label ?? origMime}
                 </p>
               </div>
               <button onClick={() => { setSrc(''); setOutput('') }}
-                className="ml-auto text-xs px-3 py-1.5 rounded-lg flex-shrink-0 transition-all hover:text-white"
+                className="ml-auto text-sm px-3 py-1.5 rounded-lg flex-shrink-0 transition-all hover:text-white"
                 style={{ background: 'var(--surface)', border: '1px solid var(--border)', color: 'rgba(255,255,255,0.65)' }}
                 onMouseEnter={e => { (e.currentTarget as HTMLButtonElement).style.background = 'var(--surface-hover)'; (e.currentTarget as HTMLButtonElement).style.borderColor = 'var(--border-hover)' }}
                 onMouseLeave={e => { (e.currentTarget as HTMLButtonElement).style.background = 'var(--surface)'; (e.currentTarget as HTMLButtonElement).style.borderColor = 'var(--border)' }}>
@@ -95,11 +95,11 @@ export default function ImageConverter({ defaultTarget, accept, hint }: { defaul
             </div>
 
             <div>
-              <label className="text-sm font-medium mb-2 block" style={{ color: 'rgba(255,255,255,0.7)' }}>Convert to</label>
+              <label className="text-base font-medium mb-2 block" style={{ color: 'rgba(255,255,255,0.7)' }}>Convert to</label>
               <div className="flex gap-2">
                 {FORMATS.map(({ label, mime }) => (
                   <button key={mime} onClick={() => { setTargetFormat(mime); setOutput('') }}
-                    className="flex-1 py-2 rounded-lg text-sm font-medium transition-all"
+                    className="flex-1 py-2 rounded-lg text-base font-medium transition-all"
                     style={{
                       background: targetFormat === mime ? 'var(--color-image-dim)' : 'var(--surface)',
                       border: `1px solid ${targetFormat === mime ? 'var(--color-image)' : 'var(--border)'}`,
@@ -113,16 +113,16 @@ export default function ImageConverter({ defaultTarget, accept, hint }: { defaul
 
             {targetFormat !== 'image/png' && (
               <div className="flex items-center gap-3">
-                <label className="text-sm flex-shrink-0" style={{ color: 'rgba(255,255,255,0.7)' }}>Quality</label>
+                <label className="text-base flex-shrink-0" style={{ color: 'rgba(255,255,255,0.7)' }}>Quality</label>
                 <input type="range" min={10} max={100} value={quality}
                   onChange={(e) => { setQuality(Number(e.target.value)); setOutput('') }}
                   className="flex-1 accent-white" />
-                <span className="text-sm w-8 text-right" style={{ color: 'rgba(255,255,255,0.85)', fontFamily: 'var(--font-geist-mono)' }}>{quality}%</span>
+                <span className="text-base w-8 text-right" style={{ color: 'rgba(255,255,255,0.85)', fontFamily: 'var(--font-geist-mono)' }}>{quality}%</span>
               </div>
             )}
 
             <button onClick={convert}
-              className="px-10 py-3 rounded-lg text-base font-semibold transition-all"
+              className="px-10 py-3 rounded-lg text-lg font-semibold transition-all"
               style={{ background: 'var(--color-image-dim)', border: '1px solid var(--color-image)', color: 'var(--color-image)' }}
               onMouseEnter={e => { (e.currentTarget as HTMLButtonElement).style.background = 'var(--color-image)'; (e.currentTarget as HTMLButtonElement).style.color = '#000' }}
               onMouseLeave={e => { (e.currentTarget as HTMLButtonElement).style.background = 'var(--color-image-dim)'; (e.currentTarget as HTMLButtonElement).style.color = 'var(--color-image)' }}>
@@ -132,7 +132,7 @@ export default function ImageConverter({ defaultTarget, accept, hint }: { defaul
             {output && (
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
-                  <div className="text-sm" style={{ color: 'rgba(255,255,255,0.65)' }}>
+                  <div className="text-base" style={{ color: 'rgba(255,255,255,0.65)' }}>
                     <span className="text-white">{formatBytes(outputSize)}</span>
                     {origSize > 0 && (
                       <span className="ml-2" style={{ color: outputSize < origSize ? '#34d399' : '#f87171' }}>
@@ -141,7 +141,7 @@ export default function ImageConverter({ defaultTarget, accept, hint }: { defaul
                     )}
                   </div>
                   <button onClick={downloadOutput}
-                    className="flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-medium transition-all"
+                    className="flex items-center gap-2 px-3 py-1.5 rounded-lg text-base font-medium transition-all"
                     style={{ background: 'var(--color-image-dim)', border: '1px solid var(--color-image)', color: 'var(--color-image)' }}
                     onMouseEnter={e => { (e.currentTarget as HTMLButtonElement).style.background = 'var(--color-image)'; (e.currentTarget as HTMLButtonElement).style.color = '#000' }}
                     onMouseLeave={e => { (e.currentTarget as HTMLButtonElement).style.background = 'var(--color-image-dim)'; (e.currentTarget as HTMLButtonElement).style.color = 'var(--color-image)' }}>

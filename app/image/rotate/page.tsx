@@ -119,10 +119,10 @@ export default function ImageRotatePage() {
           aboutTitle="About This Free Online Image Rotator"
           about={
             <>
-              <p className="text-base leading-relaxed"><strong className="text-white">Image Rotator Online</strong> is a free, browser-based tool that lets you <strong className="text-white">rotate, flip, and mirror images</strong> in seconds without installing any software. Whether you need to rotate a photo by <strong className="text-white">90°, 180°, or 270°</strong>, flip an image horizontally or vertically, or fix the orientation of a picture taken on your phone, this tool provides a fast and secure solution.</p>
-              <p className="text-base leading-relaxed">Many photos captured on smartphones and digital cameras rely on <strong className="text-white">EXIF orientation metadata</strong> to display correctly. However, some websites, applications, or devices ignore this metadata, causing images to appear sideways or upside down. This Image Rotator permanently rotates the image pixels so your photos display correctly everywhere.</p>
-              <p className="text-base leading-relaxed">Our online image rotator supports popular image formats including <strong className="text-white">PNG, JPG (JPEG), and WebP</strong>, making it ideal for photographers, designers, students, businesses, and everyday users. Whether you&apos;re preparing images for social media, e-commerce, websites, presentations, or printed documents, you can quickly rotate or flip your images while maintaining excellent visual quality.</p>
-              <p className="text-base leading-relaxed">Unlike many online image editing tools, <strong className="text-white">all image processing happens locally inside your browser</strong> using the HTML5 Canvas API. Your images are <strong className="text-white">never uploaded to a server</strong>, ensuring complete privacy and security. No registration, software installation, or watermark is required—simply upload your image, rotate or flip it, and download the result instantly.</p>
+              <p className="text-lg leading-relaxed"><strong className="text-white">Image Rotator Online</strong> is a free, browser-based tool that lets you <strong className="text-white">rotate, flip, and mirror images</strong> in seconds without installing any software. Whether you need to rotate a photo by <strong className="text-white">90°, 180°, or 270°</strong>, flip an image horizontally or vertically, or fix the orientation of a picture taken on your phone, this tool provides a fast and secure solution.</p>
+              <p className="text-lg leading-relaxed">Many photos captured on smartphones and digital cameras rely on <strong className="text-white">EXIF orientation metadata</strong> to display correctly. However, some websites, applications, or devices ignore this metadata, causing images to appear sideways or upside down. This Image Rotator permanently rotates the image pixels so your photos display correctly everywhere.</p>
+              <p className="text-lg leading-relaxed">Our online image rotator supports popular image formats including <strong className="text-white">PNG, JPG (JPEG), and WebP</strong>, making it ideal for photographers, designers, students, businesses, and everyday users. Whether you&apos;re preparing images for social media, e-commerce, websites, presentations, or printed documents, you can quickly rotate or flip your images while maintaining excellent visual quality.</p>
+              <p className="text-lg leading-relaxed">Unlike many online image editing tools, <strong className="text-white">all image processing happens locally inside your browser</strong> using the HTML5 Canvas API. Your images are <strong className="text-white">never uploaded to a server</strong>, ensuring complete privacy and security. No registration, software installation, or watermark is required—simply upload your image, rotate or flip it, and download the result instantly.</p>
             </>
           }
           useCasesTitle="Common Use Cases"
@@ -253,7 +253,7 @@ export default function ImageRotatePage() {
           <>
             {/* Top bar */}
             <div className="flex items-center justify-between">
-              <span className="text-sm" style={{ color: 'rgba(255,255,255,0.65)' }}>
+              <span className="text-base" style={{ color: 'rgba(255,255,255,0.65)' }}>
                 Output:{' '}
                 <span className="text-white font-mono">
                   {outW} × {outH} px
@@ -265,7 +265,7 @@ export default function ImageRotatePage() {
                   onClick={() => { setRotation(0); setFlipH(false); setFlipV(false); setOutput('') }}
                   onMouseEnter={() => setHoveredBtn('reset')}
                   onMouseLeave={() => setHoveredBtn('')}
-                  className="flex items-center gap-1.5 text-sm font-medium px-4 py-2 rounded-lg transition-all active:scale-95"
+                  className="flex items-center gap-1.5 text-base font-medium px-4 py-2 rounded-lg transition-all active:scale-95"
                   style={{
                     background: hoveredBtn === 'reset' ? 'rgba(255,255,255,0.15)' : 'var(--surface-hover)',
                     border: '2px solid var(--border-image)',
@@ -279,7 +279,7 @@ export default function ImageRotatePage() {
                   onClick={() => { setSrc(''); setOutput('') }}
                   onMouseEnter={() => setHoveredBtn('change')}
                   onMouseLeave={() => setHoveredBtn('')}
-                  className="text-sm font-medium px-4 py-2 rounded-lg transition-all active:scale-95"
+                  className="text-base font-medium px-4 py-2 rounded-lg transition-all active:scale-95"
                   style={{
                     background: hoveredBtn === 'change' ? 'var(--color-image)' : 'var(--color-image-dim)',
                     border: '1px solid var(--color-image)',
@@ -316,7 +316,7 @@ export default function ImageRotatePage() {
                 onClick={() => rotate(-90)}
                 onMouseEnter={() => setHoveredBtn('rotL')}
                 onMouseLeave={() => setHoveredBtn('')}
-                className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold transition-all active:scale-95"
+                className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-base font-semibold transition-all active:scale-95"
                 style={{
                   background: hoveredBtn === 'rotL' ? 'var(--surface-hover)' : 'var(--surface)',
                   border: `1px solid ${hoveredBtn === 'rotL' ? 'var(--color-image)' : 'var(--border-hover)'}`,
@@ -329,7 +329,7 @@ export default function ImageRotatePage() {
                 onClick={() => rotate(90)}
                 onMouseEnter={() => setHoveredBtn('rotR')}
                 onMouseLeave={() => setHoveredBtn('')}
-                className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold transition-all active:scale-95"
+                className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-base font-semibold transition-all active:scale-95"
                 style={{
                   background: hoveredBtn === 'rotR' ? 'var(--surface-hover)' : 'var(--surface)',
                   border: `1px solid ${hoveredBtn === 'rotR' ? 'var(--color-image)' : 'var(--border-hover)'}`,
@@ -342,7 +342,7 @@ export default function ImageRotatePage() {
                 onClick={() => rotate(180)}
                 onMouseEnter={() => setHoveredBtn('rot180')}
                 onMouseLeave={() => setHoveredBtn('')}
-                className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold transition-all active:scale-95"
+                className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-base font-semibold transition-all active:scale-95"
                 style={{
                   background: hoveredBtn === 'rot180' ? 'var(--surface-hover)' : 'var(--surface)',
                   border: `1px solid ${hoveredBtn === 'rot180' ? 'var(--color-image)' : 'var(--border-hover)'}`,
@@ -355,7 +355,7 @@ export default function ImageRotatePage() {
                 onClick={toggleFlipH}
                 onMouseEnter={() => setHoveredBtn('flipH')}
                 onMouseLeave={() => setHoveredBtn('')}
-                className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold transition-all active:scale-95"
+                className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-base font-semibold transition-all active:scale-95"
                 style={{
                   background: flipH ? 'var(--color-image-dim)' : hoveredBtn === 'flipH' ? 'var(--surface-hover)' : 'var(--surface)',
                   border: `1px solid ${flipH || hoveredBtn === 'flipH' ? 'var(--color-image)' : 'var(--border-hover)'}`,
@@ -368,7 +368,7 @@ export default function ImageRotatePage() {
                 onClick={toggleFlipV}
                 onMouseEnter={() => setHoveredBtn('flipV')}
                 onMouseLeave={() => setHoveredBtn('')}
-                className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold transition-all active:scale-95"
+                className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-base font-semibold transition-all active:scale-95"
                 style={{
                   background: flipV ? 'var(--color-image-dim)' : hoveredBtn === 'flipV' ? 'var(--surface-hover)' : 'var(--surface)',
                   border: `1px solid ${flipV || hoveredBtn === 'flipV' ? 'var(--color-image)' : 'var(--border-hover)'}`,
@@ -386,7 +386,7 @@ export default function ImageRotatePage() {
                 disabled={!hasChanges}
                 onMouseEnter={() => hasChanges && setHoveredBtn('apply')}
                 onMouseLeave={() => setHoveredBtn('')}
-                className="px-10 py-3 rounded-xl text-base font-semibold transition-all active:scale-95"
+                className="px-10 py-3 rounded-xl text-lg font-semibold transition-all active:scale-95"
                 style={{
                   background: hasChanges
                     ? hoveredBtn === 'apply' ? 'color-mix(in srgb, var(--color-image) 85%, #fff)' : 'var(--color-image)'
@@ -404,7 +404,7 @@ export default function ImageRotatePage() {
             {output && (
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
-                  <span className="text-sm" style={{ color: 'rgba(255,255,255,0.65)' }}>
+                  <span className="text-base" style={{ color: 'rgba(255,255,255,0.65)' }}>
                     {outW} × {outH} px ·{' '}
                     <span className="text-white">{formatBytes(outputSize)}</span>
                     <span className="ml-2" style={{ color: 'rgba(255,255,255,0.5)' }}>
@@ -415,7 +415,7 @@ export default function ImageRotatePage() {
                     onClick={downloadOutput}
                     onMouseEnter={() => setHoveredBtn('dl')}
                     onMouseLeave={() => setHoveredBtn('')}
-                    className="flex items-center gap-2 px-6 py-2.5 rounded-xl text-base font-semibold transition-all active:scale-95"
+                    className="flex items-center gap-2 px-6 py-2.5 rounded-xl text-lg font-semibold transition-all active:scale-95"
                     style={{
                       background: hoveredBtn === 'dl' ? 'color-mix(in srgb, var(--color-image) 85%, #fff)' : 'var(--color-image)',
                       color: '#000',

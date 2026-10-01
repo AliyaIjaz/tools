@@ -95,13 +95,13 @@ function CaseGrid({ cases, input }: { cases: typeof GENERAL_CASES; input: string
             style={{ background: 'var(--surface)', border: '2px solid var(--border-text-idle)' }}
           >
             <div className="flex items-center justify-between mb-2">
-              <span className="text-sm font-medium" style={{ color: 'rgba(255,255,255,0.7)' }}>
+              <span className="text-base font-medium" style={{ color: 'rgba(255,255,255,0.7)' }}>
                 {label}
               </span>
               <CopyButton text={result} />
             </div>
             <p
-              className="text-sm leading-relaxed break-all min-h-[1.5rem]"
+              className="text-base leading-relaxed break-all min-h-[1.5rem]"
               style={{ color: result ? 'rgba(255,255,255,0.8)' : 'rgba(255,255,255,0.2)' }}
             >
               {result || 'Output will appear here'}
@@ -125,9 +125,9 @@ export default function CaseConverterPage() {
         <SeoSection
           aboutTitle="About This Free Online Case Converter"
           about={<>
-            <p className="text-base leading-relaxed">Convert text instantly with our free online Case Converter. Change text to UPPERCASE, lowercase, Title Case, Sentence case, camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE, dot.case, or path/case in a single click.</p>
-            <p className="text-base leading-relaxed">Whether you&apos;re formatting documents, editing blog posts, renaming programming variables, or preparing text for databases and APIs, this tool makes text conversion fast and effortless. Everything runs locally in your browser, so your text is never uploaded to a server, ensuring complete privacy.</p>
-            <p className="text-base leading-relaxed">Designed for both everyday users and developers, this case converter helps standardize text formatting, improve consistency, and eliminate manual editing.</p>
+            <p className="text-lg leading-relaxed">Convert text instantly with our free online Case Converter. Change text to UPPERCASE, lowercase, Title Case, Sentence case, camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE, dot.case, or path/case in a single click.</p>
+            <p className="text-lg leading-relaxed">Whether you&apos;re formatting documents, editing blog posts, renaming programming variables, or preparing text for databases and APIs, this tool makes text conversion fast and effortless. Everything runs locally in your browser, so your text is never uploaded to a server, ensuring complete privacy.</p>
+            <p className="text-lg leading-relaxed">Designed for both everyday users and developers, this case converter helps standardize text formatting, improve consistency, and eliminate manual editing.</p>
           </>}
           benefits={{
             title: 'Why Use This Case Converter?',
@@ -148,77 +148,77 @@ export default function CaseConverterPage() {
               intro: 'This tool supports the most commonly used text and programming naming conventions.',
               items: [
                 <div key="upper" className="space-y-1">
-                  <p className="text-base font-medium text-white">UPPERCASE</p>
-                  <p className="text-base leading-relaxed">Converts every letter to uppercase.</p>
-                  <p className="text-sm" style={{ color: 'rgba(255,255,255,0.5)' }}>Example:</p>
-                  <code className="text-sm font-mono" style={{ color: 'rgba(255,255,255,0.85)' }}>HELLO WORLD</code>
+                  <p className="text-lg font-medium text-white">UPPERCASE</p>
+                  <p className="text-lg leading-relaxed">Converts every letter to uppercase.</p>
+                  <p className="text-base" style={{ color: 'rgba(255,255,255,0.5)' }}>Example:</p>
+                  <code className="text-base font-mono" style={{ color: 'rgba(255,255,255,0.85)' }}>HELLO WORLD</code>
                 </div>,
                 <div key="lower" className="space-y-1">
-                  <p className="text-base font-medium text-white">lowercase</p>
-                  <p className="text-base leading-relaxed">Converts every letter to lowercase.</p>
-                  <p className="text-sm" style={{ color: 'rgba(255,255,255,0.5)' }}>Example:</p>
-                  <code className="text-sm font-mono" style={{ color: 'rgba(255,255,255,0.85)' }}>hello world</code>
+                  <p className="text-lg font-medium text-white">lowercase</p>
+                  <p className="text-lg leading-relaxed">Converts every letter to lowercase.</p>
+                  <p className="text-base" style={{ color: 'rgba(255,255,255,0.5)' }}>Example:</p>
+                  <code className="text-base font-mono" style={{ color: 'rgba(255,255,255,0.85)' }}>hello world</code>
                 </div>,
                 <div key="title" className="space-y-1">
-                  <p className="text-base font-medium text-white">Title Case</p>
-                  <p className="text-base leading-relaxed">Capitalizes the first letter of every word.</p>
-                  <p className="text-sm" style={{ color: 'rgba(255,255,255,0.5)' }}>Example:</p>
-                  <code className="text-sm font-mono" style={{ color: 'rgba(255,255,255,0.85)' }}>Hello World</code>
+                  <p className="text-lg font-medium text-white">Title Case</p>
+                  <p className="text-lg leading-relaxed">Capitalizes the first letter of every word.</p>
+                  <p className="text-base" style={{ color: 'rgba(255,255,255,0.5)' }}>Example:</p>
+                  <code className="text-base font-mono" style={{ color: 'rgba(255,255,255,0.85)' }}>Hello World</code>
                 </div>,
                 <div key="sentence" className="space-y-1">
-                  <p className="text-base font-medium text-white">Sentence case</p>
-                  <p className="text-base leading-relaxed">Capitalizes only the first letter of each sentence.</p>
-                  <p className="text-sm" style={{ color: 'rgba(255,255,255,0.5)' }}>Example:</p>
-                  <code className="text-sm font-mono" style={{ color: 'rgba(255,255,255,0.85)' }}>Hello world. This is an example.</code>
+                  <p className="text-lg font-medium text-white">Sentence case</p>
+                  <p className="text-lg leading-relaxed">Capitalizes only the first letter of each sentence.</p>
+                  <p className="text-base" style={{ color: 'rgba(255,255,255,0.5)' }}>Example:</p>
+                  <code className="text-base font-mono" style={{ color: 'rgba(255,255,255,0.85)' }}>Hello world. This is an example.</code>
                 </div>,
                 <div key="camel" className="space-y-1">
-                  <p className="text-base font-medium text-white">camelCase</p>
-                  <p className="text-base leading-relaxed">The first word begins with a lowercase letter, and each following word begins with an uppercase letter.</p>
-                  <p className="text-sm" style={{ color: 'rgba(255,255,255,0.5)' }}>Example:</p>
-                  <code className="text-sm font-mono" style={{ color: 'rgba(255,255,255,0.85)' }}>myVariableName</code>
-                  <p className="text-base leading-relaxed">Commonly used in JavaScript, Java, and many programming languages.</p>
+                  <p className="text-lg font-medium text-white">camelCase</p>
+                  <p className="text-lg leading-relaxed">The first word begins with a lowercase letter, and each following word begins with an uppercase letter.</p>
+                  <p className="text-base" style={{ color: 'rgba(255,255,255,0.5)' }}>Example:</p>
+                  <code className="text-base font-mono" style={{ color: 'rgba(255,255,255,0.85)' }}>myVariableName</code>
+                  <p className="text-lg leading-relaxed">Commonly used in JavaScript, Java, and many programming languages.</p>
                 </div>,
                 <div key="pascal" className="space-y-1">
-                  <p className="text-base font-medium text-white">PascalCase</p>
-                  <p className="text-base leading-relaxed">Every word begins with an uppercase letter.</p>
-                  <p className="text-sm" style={{ color: 'rgba(255,255,255,0.5)' }}>Example:</p>
-                  <code className="text-sm font-mono" style={{ color: 'rgba(255,255,255,0.85)' }}>MyComponentName</code>
-                  <p className="text-base leading-relaxed">Frequently used for class names, components, and constructors.</p>
+                  <p className="text-lg font-medium text-white">PascalCase</p>
+                  <p className="text-lg leading-relaxed">Every word begins with an uppercase letter.</p>
+                  <p className="text-base" style={{ color: 'rgba(255,255,255,0.5)' }}>Example:</p>
+                  <code className="text-base font-mono" style={{ color: 'rgba(255,255,255,0.85)' }}>MyComponentName</code>
+                  <p className="text-lg leading-relaxed">Frequently used for class names, components, and constructors.</p>
                 </div>,
                 <div key="snake" className="space-y-1">
-                  <p className="text-base font-medium text-white">snake_case</p>
-                  <p className="text-base leading-relaxed">Words are separated using underscores.</p>
-                  <p className="text-sm" style={{ color: 'rgba(255,255,255,0.5)' }}>Example:</p>
-                  <code className="text-sm font-mono" style={{ color: 'rgba(255,255,255,0.85)' }}>my_variable_name</code>
-                  <p className="text-base leading-relaxed">Commonly used in Python, databases, and configuration files.</p>
+                  <p className="text-lg font-medium text-white">snake_case</p>
+                  <p className="text-lg leading-relaxed">Words are separated using underscores.</p>
+                  <p className="text-base" style={{ color: 'rgba(255,255,255,0.5)' }}>Example:</p>
+                  <code className="text-base font-mono" style={{ color: 'rgba(255,255,255,0.85)' }}>my_variable_name</code>
+                  <p className="text-lg leading-relaxed">Commonly used in Python, databases, and configuration files.</p>
                 </div>,
                 <div key="kebab" className="space-y-1">
-                  <p className="text-base font-medium text-white">kebab-case</p>
-                  <p className="text-base leading-relaxed">Words are separated using hyphens.</p>
-                  <p className="text-sm" style={{ color: 'rgba(255,255,255,0.5)' }}>Example:</p>
-                  <code className="text-sm font-mono" style={{ color: 'rgba(255,255,255,0.85)' }}>my-variable-name</code>
-                  <p className="text-base leading-relaxed">Widely used in URLs, CSS classes, and file names.</p>
+                  <p className="text-lg font-medium text-white">kebab-case</p>
+                  <p className="text-lg leading-relaxed">Words are separated using hyphens.</p>
+                  <p className="text-base" style={{ color: 'rgba(255,255,255,0.5)' }}>Example:</p>
+                  <code className="text-base font-mono" style={{ color: 'rgba(255,255,255,0.85)' }}>my-variable-name</code>
+                  <p className="text-lg leading-relaxed">Widely used in URLs, CSS classes, and file names.</p>
                 </div>,
                 <div key="constant" className="space-y-1">
-                  <p className="text-base font-medium text-white">CONSTANT_CASE</p>
-                  <p className="text-base leading-relaxed">Words are uppercase and separated with underscores.</p>
-                  <p className="text-sm" style={{ color: 'rgba(255,255,255,0.5)' }}>Example:</p>
-                  <code className="text-sm font-mono" style={{ color: 'rgba(255,255,255,0.85)' }}>MAX_FILE_SIZE</code>
-                  <p className="text-base leading-relaxed">Often used for constants, environment variables, and configuration keys.</p>
+                  <p className="text-lg font-medium text-white">CONSTANT_CASE</p>
+                  <p className="text-lg leading-relaxed">Words are uppercase and separated with underscores.</p>
+                  <p className="text-base" style={{ color: 'rgba(255,255,255,0.5)' }}>Example:</p>
+                  <code className="text-base font-mono" style={{ color: 'rgba(255,255,255,0.85)' }}>MAX_FILE_SIZE</code>
+                  <p className="text-lg leading-relaxed">Often used for constants, environment variables, and configuration keys.</p>
                 </div>,
                 <div key="dot" className="space-y-1">
-                  <p className="text-base font-medium text-white">dot.case</p>
-                  <p className="text-base leading-relaxed">Words are separated using periods.</p>
-                  <p className="text-sm" style={{ color: 'rgba(255,255,255,0.5)' }}>Example:</p>
-                  <code className="text-sm font-mono" style={{ color: 'rgba(255,255,255,0.85)' }}>my.variable.name</code>
-                  <p className="text-base leading-relaxed">Commonly found in configuration files, localization keys, logging systems, and object paths.</p>
+                  <p className="text-lg font-medium text-white">dot.case</p>
+                  <p className="text-lg leading-relaxed">Words are separated using periods.</p>
+                  <p className="text-base" style={{ color: 'rgba(255,255,255,0.5)' }}>Example:</p>
+                  <code className="text-base font-mono" style={{ color: 'rgba(255,255,255,0.85)' }}>my.variable.name</code>
+                  <p className="text-lg leading-relaxed">Commonly found in configuration files, localization keys, logging systems, and object paths.</p>
                 </div>,
                 <div key="path" className="space-y-1">
-                  <p className="text-base font-medium text-white">path/case</p>
-                  <p className="text-base leading-relaxed">Words are separated using forward slashes.</p>
-                  <p className="text-sm" style={{ color: 'rgba(255,255,255,0.5)' }}>Example:</p>
-                  <code className="text-sm font-mono" style={{ color: 'rgba(255,255,255,0.85)' }}>my/path/name</code>
-                  <p className="text-base leading-relaxed">Useful for file paths, URL paths, routing systems, and hierarchical identifiers.</p>
+                  <p className="text-lg font-medium text-white">path/case</p>
+                  <p className="text-lg leading-relaxed">Words are separated using forward slashes.</p>
+                  <p className="text-base" style={{ color: 'rgba(255,255,255,0.5)' }}>Example:</p>
+                  <code className="text-base font-mono" style={{ color: 'rgba(255,255,255,0.85)' }}>my/path/name</code>
+                  <p className="text-lg leading-relaxed">Useful for file paths, URL paths, routing systems, and hierarchical identifiers.</p>
                 </div>,
               ],
             },
@@ -265,7 +265,7 @@ export default function CaseConverterPage() {
           faqs={[
             {
               q: 'What is the difference between camelCase and PascalCase?',
-              a: <><p className="text-base leading-relaxed mb-1">camelCase starts with a lowercase letter, while PascalCase starts with an uppercase letter.</p><p className="text-base leading-relaxed mb-1">Examples:</p><p className="text-base leading-relaxed">camelCase: <code className="font-mono">myVariableName</code> — PascalCase: <code className="font-mono">MyVariableName</code></p><p className="text-base leading-relaxed">Both capitalize the first letter of each subsequent word.</p></>,
+              a: <><p className="text-lg leading-relaxed mb-1">camelCase starts with a lowercase letter, while PascalCase starts with an uppercase letter.</p><p className="text-lg leading-relaxed mb-1">Examples:</p><p className="text-lg leading-relaxed">camelCase: <code className="font-mono">myVariableName</code> — PascalCase: <code className="font-mono">MyVariableName</code></p><p className="text-lg leading-relaxed">Both capitalize the first letter of each subsequent word.</p></>,
             },
             {
               q: 'What is snake_case?',
@@ -326,14 +326,14 @@ export default function CaseConverterPage() {
         />
 
         <div className="space-y-3">
-          <h2 className="text-sm font-semibold uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.45)' }}>
+          <h2 className="text-base font-semibold uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.45)' }}>
             General
           </h2>
           <CaseGrid cases={GENERAL_CASES} input={input} />
         </div>
 
         <div className="space-y-3">
-          <h2 className="text-sm font-semibold uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.45)' }}>
+          <h2 className="text-base font-semibold uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.45)' }}>
             Developer
           </h2>
           <CaseGrid cases={DEV_CASES} input={input} />

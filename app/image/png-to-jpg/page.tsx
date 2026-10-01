@@ -18,10 +18,10 @@ export default function PngToJpgPage() {
         <SeoSection
           aboutTitle="PNG to JPG Converter Online"
           about={<>
-            <p className="text-base leading-relaxed">Convert PNG images to JPG (JPEG) online for free in just a few clicks. This browser-based PNG to JPG converter quickly changes your image format while reducing file size, making images easier to upload, share, and use on websites.</p>
-            <p className="text-base leading-relaxed">Unlike many online converters, all processing happens locally in your browser using the HTML5 Canvas API. Your images are never uploaded to a server, ensuring complete privacy and fast conversion.</p>
-            <p className="text-base leading-relaxed">PNG files are ideal for graphics and transparent images, while JPG is better suited for photographs and situations where smaller file sizes are important. If your PNG contains transparency, transparent areas are automatically replaced with a white background because JPG does not support transparency.</p>
-            <p className="text-base leading-relaxed">Need to convert between other formats? Try the <Link href="/image/convert" className="underline" style={{ color: 'var(--color-image)' }}>Image Converter</Link> for more options.</p>
+            <p className="text-lg leading-relaxed">Convert PNG images to JPG (JPEG) online for free in just a few clicks. This browser-based PNG to JPG converter quickly changes your image format while reducing file size, making images easier to upload, share, and use on websites.</p>
+            <p className="text-lg leading-relaxed">Unlike many online converters, all processing happens locally in your browser using the HTML5 Canvas API. Your images are never uploaded to a server, ensuring complete privacy and fast conversion.</p>
+            <p className="text-lg leading-relaxed">PNG files are ideal for graphics and transparent images, while JPG is better suited for photographs and situations where smaller file sizes are important. If your PNG contains transparency, transparent areas are automatically replaced with a white background because JPG does not support transparency.</p>
+            <p className="text-lg leading-relaxed">Need to convert between other formats? Try the <Link href="/image/convert" className="underline" style={{ color: 'var(--color-image)' }}>Image Converter</Link> for more options.</p>
           </>}
           useCasesTitle="Common Use Cases"
           useCases={[

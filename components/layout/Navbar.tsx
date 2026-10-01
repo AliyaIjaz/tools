@@ -17,11 +17,12 @@ const NAV_LINKS: { category: Category; label: string; href: string }[] = [
   { category: 'web', label: 'Web Dev', href: '/web' },
   { category: 'dev', label: 'Developer', href: '/dev' },
   { category: 'convertor', label: 'Convertor', href: '/convertor' },
+  { category: 'typing', label: 'Typing', href: '/typing' },
 ]
 
-const TYPING_HREF = '/typing/typing-practice'
-const TYPING_COLOR = '#ef4444'
-const TYPING_BG = 'rgba(239, 68, 68, 0.15)'
+const NAV_COLOR_OVERRIDES: Partial<Record<Category, { color: string; dimColor: string }>> = {
+  typing: { color: '#ef4444', dimColor: 'rgba(239, 68, 68, 0.15)' },
+}
 
 const LucideIconMap = LucideIcons as unknown as Record<
   string,
@@ -36,8 +37,6 @@ export default function Navbar() {
   function isActive(href: string) {
     return pathname === href || pathname.startsWith(href + '/')
   }
-
-  const typingActive = pathname === TYPING_HREF
 
   return (
     <nav
@@ -80,9 +79,9 @@ export default function Navbar() {
           {/* Desktop nav */}
           <div className="hidden md:flex items-center gap-1">
             {NAV_LINKS.map(({ category, label, href }) => {
-              const active = isActive(href) && pathname !== TYPING_HREF
-              const color = CATEGORIES[category].color
-              const dimColor = CATEGORIES[category].dimColor
+              const active = isActive(href)
+              const color = NAV_COLOR_OVERRIDES[category]?.color ?? CATEGORIES[category].color
+              const dimColor = NAV_COLOR_OVERRIDES[category]?.dimColor ?? CATEGORIES[category].dimColor
               const tools = getToolsByCategory(category).filter((t) => AVAILABLE_HREFS.has(t.href))
               const showMenu = hoveredCategory === category
 
@@ -126,7 +125,7 @@ export default function Navbar() {
                             <Link
                               key={tool.href}
                               href={tool.href}
-                              className="flex items-center gap-2 px-2.5 py-2 rounded-lg text-sm transition-colors"
+                              className="flex items-center gap-2 px-2.5 py-2 rounded-lg text-base transition-colors"
                               style={{ color: 'rgba(255,255,255,0.85)' }}
                               onMouseEnter={(e) => {
                                 (e.currentTarget as HTMLElement).style.background = dimColor
@@ -149,23 +148,6 @@ export default function Navbar() {
               )
             })}
 
-            {/* Typing Practice direct link */}
-            <Link
-              href={TYPING_HREF}
-              className={cn(
-                'px-4 py-2 rounded-md text-lg font-medium transition-all duration-150',
-                typingActive ? 'text-white' : 'text-white/70 hover:text-white/95'
-              )}
-              style={typingActive ? { color: TYPING_COLOR, background: TYPING_BG } : {}}
-              onMouseEnter={(e) => {
-                if (!typingActive) (e.currentTarget as HTMLElement).style.color = TYPING_COLOR
-              }}
-              onMouseLeave={(e) => {
-                if (!typingActive) (e.currentTarget as HTMLElement).style.color = ''
-              }}
-            >
-              Typing
-            </Link>
           </div>
 
           {/* Mobile hamburger */}
@@ -186,14 +168,14 @@ export default function Navbar() {
           style={{ borderTop: '1px solid var(--border)' }}
         >
           {NAV_LINKS.map(({ category, label, href }) => {
-            const active = isActive(href) && pathname !== TYPING_HREF
-            const color = CATEGORIES[category].color
+            const active = isActive(href)
+            const color = NAV_COLOR_OVERRIDES[category]?.color ?? CATEGORIES[category].color
             return (
               <Link
                 key={href}
                 href={href}
                 onClick={() => setOpen(false)}
-                className="flex items-center gap-2 px-3 py-2 rounded-md text-base font-medium transition-all"
+                className="flex items-center gap-2 px-3 py-2 rounded-md text-lg font-medium transition-all"
                 style={{
                   color: active ? color : 'rgba(255,255,255,0.75)',
                   background: active ? `${color}18` : 'transparent',
@@ -203,17 +185,6 @@ export default function Navbar() {
               </Link>
             )
           })}
-          <Link
-            href={TYPING_HREF}
-            onClick={() => setOpen(false)}
-            className="flex items-center gap-2 px-3 py-2 rounded-md text-base font-medium transition-all"
-            style={{
-              color: typingActive ? TYPING_COLOR : 'rgba(255,255,255,0.75)',
-              background: typingActive ? TYPING_BG : 'transparent',
-            }}
-          >
-            Typing
-          </Link>
         </div>
       )}
     </nav>

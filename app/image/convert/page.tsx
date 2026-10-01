@@ -64,18 +64,18 @@ export default function ImageConvertPage() {
               title: 'Understanding Image Formats',
               intro: (
                 <div className="space-y-3">
-                  <p className="text-base leading-relaxed">Each image format has its own strengths.</p>
+                  <p className="text-lg leading-relaxed">Each image format has its own strengths.</p>
                   <div>
-                    <p className="text-base font-semibold text-white">PNG</p>
-                    <p className="text-base leading-relaxed">Best for graphics, logos, icons, screenshots, and images with transparent backgrounds.</p>
+                    <p className="text-lg font-semibold text-white">PNG</p>
+                    <p className="text-lg leading-relaxed">Best for graphics, logos, icons, screenshots, and images with transparent backgrounds.</p>
                   </div>
                   <div>
-                    <p className="text-base font-semibold text-white">JPEG (JPG)</p>
-                    <p className="text-base leading-relaxed">Ideal for photographs and large images where smaller file size is important.</p>
+                    <p className="text-lg font-semibold text-white">JPEG (JPG)</p>
+                    <p className="text-lg leading-relaxed">Ideal for photographs and large images where smaller file size is important.</p>
                   </div>
                   <div>
-                    <p className="text-base font-semibold text-white">WebP</p>
-                    <p className="text-base leading-relaxed">Designed for the modern web, WebP offers excellent image quality with significantly smaller file sizes than JPEG or PNG in many situations, making pages load faster.</p>
+                    <p className="text-lg font-semibold text-white">WebP</p>
+                    <p className="text-lg leading-relaxed">Designed for the modern web, WebP offers excellent image quality with significantly smaller file sizes than JPEG or PNG in many situations, making pages load faster.</p>
                   </div>
                 </div>
               ),

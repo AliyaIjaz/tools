@@ -237,17 +237,17 @@ export default function ImageCropPage() {
           <>
             <div className="flex items-center justify-between">
               <div className="w-28" />
-              <span className="text-sm" style={{ color: 'rgba(255,255,255,0.65)' }}>
+              <span className="text-base" style={{ color: 'rgba(255,255,255,0.65)' }}>
                 Selection: <span className="text-white">{selPxW} × {selPxH} px</span>
               </span>
               <div className="flex gap-2">
                 <button onClick={() => { setRect({ x: 0.1, y: 0.1, w: 0.8, h: 0.8 }); setActiveRatio(null) }}
-                  className="flex items-center gap-1.5 text-sm font-medium px-4 py-2 rounded-lg transition-all"
+                  className="flex items-center gap-1.5 text-base font-medium px-4 py-2 rounded-lg transition-all"
                   style={{ background: 'var(--surface-hover)', border: '2px solid var(--border-image)', color: 'rgba(255,255,255,0.9)' }}>
                   <RotateCcw size={13} /> Reset
                 </button>
                 <button onClick={() => { setSrc(''); setOutput('') }}
-                  className="text-sm font-medium px-4 py-2 rounded-lg transition-all"
+                  className="text-base font-medium px-4 py-2 rounded-lg transition-all"
                   style={{ background: 'var(--color-image-dim)', border: '1px solid var(--color-image)', color: 'var(--color-image)' }}>
                   Change image
                 </button>
@@ -262,7 +262,7 @@ export default function ImageCropPage() {
                   <button
                     key={label}
                     onClick={() => applyRatio(w, h, label)}
-                    className="flex flex-col items-center px-3 py-1.5 rounded-lg text-sm font-medium transition-all"
+                    className="flex flex-col items-center px-3 py-1.5 rounded-lg text-base font-medium transition-all"
                     style={{
                       background: active ? 'var(--color-image-dim)' : 'var(--surface-hover)',
                       border: `1px solid ${active ? 'var(--color-image)' : 'var(--border-hover)'}`,
@@ -270,7 +270,7 @@ export default function ImageCropPage() {
                     }}
                   >
                     <span className="font-semibold leading-tight">{label}</span>
-                    <span className="text-xs leading-tight" style={{ opacity: 0.7 }}>{desc}</span>
+                    <span className="text-sm leading-tight" style={{ opacity: 0.7 }}>{desc}</span>
                   </button>
                 )
               })}
@@ -332,7 +332,7 @@ export default function ImageCropPage() {
 
             <div className="flex justify-center">
               <button onClick={crop}
-                className="px-10 py-3 rounded-xl text-base font-semibold transition-all"
+                className="px-10 py-3 rounded-xl text-lg font-semibold transition-all"
                 style={{ background: 'var(--color-image)', color: '#000' }}>
                 Crop image
               </button>
@@ -341,11 +341,11 @@ export default function ImageCropPage() {
             {output && (
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
-                  <span className="text-sm" style={{ color: 'rgba(255,255,255,0.65)' }}>
+                  <span className="text-base" style={{ color: 'rgba(255,255,255,0.65)' }}>
                     {selPxW} × {selPxH} px · <span className="text-white">{formatBytes(outputSize)}</span>
                   </span>
                   <button onClick={downloadOutput}
-                    className="flex items-center gap-2 px-6 py-2.5 rounded-xl text-base font-semibold"
+                    className="flex items-center gap-2 px-6 py-2.5 rounded-xl text-lg font-semibold"
                     style={{ background: 'var(--color-image)', color: '#000' }}>
                     <Download size={16} /> Download
                   </button>

@@ -184,9 +184,9 @@ export default function CsvToJsonPage() {
       seoContent={
         <SeoSection
           about={<>
-            <p className="text-base leading-relaxed"><strong>CSV to JSON Converter Online</strong> is a free, browser-based tool that converts CSV (Comma-Separated Values) data to JSON, and JSON back to CSV, entirely in your browser. Whether you are working with data exports from spreadsheets, databases, or APIs, this tool gives you clean, well-formatted output in seconds.</p>
-            <p className="text-base leading-relaxed">Paste your CSV directly, drag and drop a file, or upload a <code>.csv</code> or <code>.json</code> file. The converter automatically detects numbers, booleans, and null values so your JSON output is typed correctly — not just strings. You can choose between <strong>array of objects</strong> (one object per row) or <strong>array of arrays</strong> (matrix-style) output format.</p>
-            <p className="text-base leading-relaxed">All processing happens locally in your browser using JavaScript. Your data is never sent to any server, making this tool safe for sensitive or proprietary datasets.</p>
+            <p className="text-lg leading-relaxed"><strong>CSV to JSON Converter Online</strong> is a free, browser-based tool that converts CSV (Comma-Separated Values) data to JSON, and JSON back to CSV, entirely in your browser. Whether you are working with data exports from spreadsheets, databases, or APIs, this tool gives you clean, well-formatted output in seconds.</p>
+            <p className="text-lg leading-relaxed">Paste your CSV directly, drag and drop a file, or upload a <code>.csv</code> or <code>.json</code> file. The converter automatically detects numbers, booleans, and null values so your JSON output is typed correctly — not just strings. You can choose between <strong>array of objects</strong> (one object per row) or <strong>array of arrays</strong> (matrix-style) output format.</p>
+            <p className="text-lg leading-relaxed">All processing happens locally in your browser using JavaScript. Your data is never sent to any server, making this tool safe for sensitive or proprietary datasets.</p>
           </>}
           useCases={[
             'Convert a CSV export from Excel, Google Sheets, or Numbers to JSON for use in a web app.',
@@ -218,7 +218,7 @@ export default function CsvToJsonPage() {
         <div className="flex items-center gap-2">
           <button
             onClick={() => handleMode('csv-to-json')}
-            className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold transition-all"
+            className="flex items-center gap-2 px-4 py-2 rounded-lg text-base font-semibold transition-all"
             style={mode === 'csv-to-json'
               ? { background: 'var(--color-dev)', color: '#fff' }
               : { background: 'rgba(255,255,255,0.07)', border: '2px solid var(--border-dev)', color: 'rgba(255,255,255,0.65)' }}
@@ -229,7 +229,7 @@ export default function CsvToJsonPage() {
           </button>
           <button
             onClick={() => handleMode('json-to-csv')}
-            className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold transition-all"
+            className="flex items-center gap-2 px-4 py-2 rounded-lg text-base font-semibold transition-all"
             style={mode === 'json-to-csv'
               ? { background: 'var(--color-dev)', color: '#fff' }
               : { background: 'rgba(255,255,255,0.07)', border: '2px solid var(--border-dev)', color: 'rgba(255,255,255,0.65)' }}
@@ -243,7 +243,7 @@ export default function CsvToJsonPage() {
             <div className="ml-auto flex items-center gap-1 rounded-lg overflow-hidden" style={{ border: '2px solid var(--border-dev)' }}>
               <button
                 onClick={() => handleStyleChange('array-of-objects')}
-                className="px-3 py-1.5 text-sm font-medium transition-all"
+                className="px-3 py-1.5 text-base font-medium transition-all"
                 style={arrayStyle === 'array-of-objects'
                   ? { background: 'rgba(255,255,255,0.12)', color: 'rgba(255,255,255,0.95)' }
                   : { background: 'transparent', color: 'rgba(255,255,255,0.45)' }}
@@ -254,7 +254,7 @@ export default function CsvToJsonPage() {
               </button>
               <button
                 onClick={() => handleStyleChange('array-of-arrays')}
-                className="px-3 py-1.5 text-sm font-medium transition-all"
+                className="px-3 py-1.5 text-base font-medium transition-all"
                 style={arrayStyle === 'array-of-arrays'
                   ? { background: 'rgba(255,255,255,0.12)', color: 'rgba(255,255,255,0.95)' }
                   : { background: 'transparent', color: 'rgba(255,255,255,0.45)' }}
@@ -279,7 +279,7 @@ export default function CsvToJsonPage() {
           onDrop={handleDrop}
         >
           <div className="flex items-center justify-between mb-3">
-            <label className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>
+            <label className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>
               {inputLabel}
             </label>
             <div className="flex items-center gap-2">
@@ -292,7 +292,7 @@ export default function CsvToJsonPage() {
               />
               <button
                 onClick={() => fileRef.current?.click()}
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-all"
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-base font-medium transition-all"
                 style={{ background: 'rgba(255,255,255,0.07)', border: '2px solid var(--border-dev)', color: 'rgba(255,255,255,0.65)' }}
                 onMouseEnter={(e) => { e.currentTarget.style.background = 'rgba(255,255,255,0.13)'; e.currentTarget.style.color = 'rgba(255,255,255,0.9)' }}
                 onMouseLeave={(e) => { e.currentTarget.style.background = 'rgba(255,255,255,0.07)'; e.currentTarget.style.color = 'rgba(255,255,255,0.65)' }}
@@ -302,7 +302,7 @@ export default function CsvToJsonPage() {
               {input && (
                 <button
                   onClick={clear}
-                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-all"
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-base font-medium transition-all"
                   style={{ background: 'rgba(255,255,255,0.07)', border: '2px solid var(--border-dev)', color: 'rgba(255,255,255,0.65)' }}
                   onMouseEnter={(e) => { e.currentTarget.style.background = 'rgba(255,255,255,0.13)'; e.currentTarget.style.color = 'rgba(255,255,255,0.9)' }}
                   onMouseLeave={(e) => { e.currentTarget.style.background = 'rgba(255,255,255,0.07)'; e.currentTarget.style.color = 'rgba(255,255,255,0.65)' }}
@@ -317,7 +317,7 @@ export default function CsvToJsonPage() {
             onChange={(e) => handleInput(e.target.value)}
             placeholder={placeholder}
             rows={10}
-            className="w-full resize-y rounded-lg px-3 py-3 text-sm outline-none transition-all duration-150 placeholder:text-white/50"
+            className="w-full resize-y rounded-lg px-3 py-3 text-base outline-none transition-all duration-150 placeholder:text-white/50"
             style={{
               background: 'rgba(0,0,0,0.35)',
               border: '2px solid var(--border-dev)',
@@ -329,7 +329,7 @@ export default function CsvToJsonPage() {
             onBlur={(e) => { e.currentTarget.style.borderColor = 'var(--border-dev-idle)' }}
           />
           {isDragging && (
-            <div className="mt-2 text-sm text-center" style={{ color: 'var(--color-dev)' }}>
+            <div className="mt-2 text-base text-center" style={{ color: 'var(--color-dev)' }}>
               Drop file to load
             </div>
           )}
@@ -339,13 +339,13 @@ export default function CsvToJsonPage() {
         {status !== 'idle' && (
           <div className="flex items-center gap-2">
             {status === 'success' && (
-              <div className="flex items-center gap-1.5 text-sm font-medium text-emerald-400">
+              <div className="flex items-center gap-1.5 text-base font-medium text-emerald-400">
                 <CheckCircle size={15} />
                 Converted successfully
               </div>
             )}
             {status === 'error' && (
-              <div className="flex items-center gap-1.5 text-sm font-medium text-red-400">
+              <div className="flex items-center gap-1.5 text-base font-medium text-red-400">
                 <XCircle size={15} />
                 {error}
               </div>
@@ -360,13 +360,13 @@ export default function CsvToJsonPage() {
             style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)' }}
           >
             <div className="flex items-center justify-between mb-3">
-              <label className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>
+              <label className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>
                 {outputLabel}
               </label>
               <div className="flex items-center gap-2">
                 <button
                   onClick={downloadOutput}
-                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-all"
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-base font-medium transition-all"
                   style={{ background: 'rgba(255,255,255,0.07)', border: '2px solid var(--border-dev)', color: 'rgba(255,255,255,0.65)' }}
                   onMouseEnter={(e) => { e.currentTarget.style.background = 'rgba(255,255,255,0.13)'; e.currentTarget.style.color = 'rgba(255,255,255,0.9)' }}
                   onMouseLeave={(e) => { e.currentTarget.style.background = 'rgba(255,255,255,0.07)'; e.currentTarget.style.color = 'rgba(255,255,255,0.65)' }}
@@ -378,7 +378,7 @@ export default function CsvToJsonPage() {
               </div>
             </div>
             <pre
-              className="rounded-lg px-3 py-3 text-sm overflow-auto leading-relaxed"
+              className="rounded-lg px-3 py-3 text-base overflow-auto leading-relaxed"
               style={{
                 background: 'rgba(0,0,0,0.35)',
                 border: '2px solid var(--border-dev-idle)',
@@ -399,7 +399,7 @@ export default function CsvToJsonPage() {
             style={{ background: 'var(--surface)', border: '1px dashed rgba(255,255,255,0.1)' }}
           >
             <ArrowRightLeft size={28} style={{ color: 'var(--color-dev)', opacity: 0.5 }} />
-            <p className="text-sm" style={{ color: 'rgba(255,255,255,0.4)' }}>
+            <p className="text-base" style={{ color: 'rgba(255,255,255,0.4)' }}>
               Paste {mode === 'csv-to-json' ? 'CSV' : 'JSON'} above or drag and drop a file to convert
             </p>
           </div>

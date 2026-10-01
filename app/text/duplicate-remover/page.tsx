@@ -43,9 +43,9 @@ export default function DuplicateRemoverPage() {
         <SeoSection
           aboutTitle="About this tool"
           about={<>
-            <p className="text-base leading-relaxed">Remove Duplicate Lines Online is a free text-cleaning tool that instantly removes repeated lines from your text while preserving the original order of the remaining entries. Simply paste your list, click the button, and the tool keeps only the first occurrence of each unique line, making it easy to clean large datasets, keyword lists, logs, and copied text. Whether you&apos;re working with plain text, CSV columns, email lists, URLs, file names, or programming output, this tool helps eliminate duplicate entries in seconds.</p>
-            <p className="text-base leading-relaxed">For more control over the results, you can enable <strong>case-insensitive matching</strong> to treat values such as <code className="text-sm font-mono px-1 py-0.5 rounded" style={{background:'rgba(255,255,255,0.08)'}}>Apple</code> and <code className="text-sm font-mono px-1 py-0.5 rounded" style={{background:'rgba(255,255,255,0.08)'}}>apple</code> as duplicates, or use the <strong>trim whitespace</strong> option to ignore leading and trailing spaces when comparing lines. These options make the tool especially useful when cleaning data from spreadsheets, databases, content management systems, or exported reports.</p>
-            <p className="text-base leading-relaxed">Everything is processed locally in your browser, so your text is never uploaded or stored. There are no registrations, downloads, or usage limits. Whether you&apos;re a developer, SEO professional, marketer, student, researcher, or data analyst, this online duplicate line remover provides a fast, secure, and reliable way to create clean, unique lists.</p>
+            <p className="text-lg leading-relaxed">Remove Duplicate Lines Online is a free text-cleaning tool that instantly removes repeated lines from your text while preserving the original order of the remaining entries. Simply paste your list, click the button, and the tool keeps only the first occurrence of each unique line, making it easy to clean large datasets, keyword lists, logs, and copied text. Whether you&apos;re working with plain text, CSV columns, email lists, URLs, file names, or programming output, this tool helps eliminate duplicate entries in seconds.</p>
+            <p className="text-lg leading-relaxed">For more control over the results, you can enable <strong>case-insensitive matching</strong> to treat values such as <code className="text-base font-mono px-1 py-0.5 rounded" style={{background:'rgba(255,255,255,0.08)'}}>Apple</code> and <code className="text-base font-mono px-1 py-0.5 rounded" style={{background:'rgba(255,255,255,0.08)'}}>apple</code> as duplicates, or use the <strong>trim whitespace</strong> option to ignore leading and trailing spaces when comparing lines. These options make the tool especially useful when cleaning data from spreadsheets, databases, content management systems, or exported reports.</p>
+            <p className="text-lg leading-relaxed">Everything is processed locally in your browser, so your text is never uploaded or stored. There are no registrations, downloads, or usage limits. Whether you&apos;re a developer, SEO professional, marketer, student, researcher, or data analyst, this online duplicate line remover provides a fast, secure, and reliable way to create clean, unique lists.</p>
           </>}
           useCasesTitle="Common use cases"
           useCases={[
@@ -87,8 +87,8 @@ export default function DuplicateRemoverPage() {
       <div className="space-y-6">
         {/* Input */}
         <div className="flex flex-col gap-2">
-          <label className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>
-            Input <span className="text-sm font-normal" style={{ color: 'rgba(255,255,255,0.45)' }}>— one item per line</span>
+          <label className="text-lg font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>
+            Input <span className="text-base font-normal" style={{ color: 'rgba(255,255,255,0.45)' }}>— one item per line</span>
           </label>
           <textarea
             value={input}
@@ -137,7 +137,7 @@ export default function DuplicateRemoverPage() {
               >
                 {state && <span style={{ color: 'var(--color-text-tool)', fontSize: '11px', lineHeight: 1 }}>✓</span>}
               </span>
-              <span className="text-base font-medium">{label}</span>
+              <span className="text-lg font-medium">{label}</span>
             </button>
           ))}
         </div>
@@ -164,7 +164,7 @@ export default function DuplicateRemoverPage() {
                 >
                   {value}
                 </span>
-                <span className="text-sm ml-2" style={{ color: 'rgba(255,255,255,0.55)' }}>{label}</span>
+                <span className="text-base ml-2" style={{ color: 'rgba(255,255,255,0.55)' }}>{label}</span>
               </div>
             ))}
           </div>
@@ -174,7 +174,7 @@ export default function DuplicateRemoverPage() {
         {input && (
           <div className="flex flex-col gap-2">
             <div className="flex items-center justify-between">
-              <label className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>Result</label>
+              <label className="text-lg font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>Result</label>
               <CopyButton text={result} />
             </div>
             <Textarea value={result} readOnly rows={8} />

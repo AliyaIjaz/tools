@@ -77,10 +77,10 @@ export default function JsonFormatterPage() {
       seoContent={
         <SeoSection
           about={<>
-            <p className="text-base leading-relaxed"><strong>JSON Formatter Online</strong> is a free browser-based tool that helps you <strong>format, beautify, validate, view, and minify JSON</strong> instantly. Whether you&apos;re working with API responses, configuration files, exported data, or application logs, this tool converts unreadable JSON into a clean, well-indented structure that&apos;s easier to read, edit, and debug.</p>
-            <p className="text-base leading-relaxed">Simply paste your JSON into the editor to <strong>pretty print JSON</strong>, check for syntax errors, or compress it into a compact minified version for production use. The formatter uses standard <strong>2-space indentation</strong> to produce consistent and readable output while preserving the original data structure.</p>
-            <p className="text-base leading-relaxed">This tool is designed for developers, testers, DevOps engineers, students, and anyone working with JSON data. It supports nested objects, arrays, and complex JSON documents, making it useful for everything from debugging REST API responses to reviewing configuration files.</p>
-            <p className="text-base leading-relaxed">Because all formatting, validation, and minification happen entirely <strong>inside your browser</strong>, your JSON is never uploaded to a server. Your data remains private and secure throughout the entire process.</p>
+            <p className="text-lg leading-relaxed"><strong>JSON Formatter Online</strong> is a free browser-based tool that helps you <strong>format, beautify, validate, view, and minify JSON</strong> instantly. Whether you&apos;re working with API responses, configuration files, exported data, or application logs, this tool converts unreadable JSON into a clean, well-indented structure that&apos;s easier to read, edit, and debug.</p>
+            <p className="text-lg leading-relaxed">Simply paste your JSON into the editor to <strong>pretty print JSON</strong>, check for syntax errors, or compress it into a compact minified version for production use. The formatter uses standard <strong>2-space indentation</strong> to produce consistent and readable output while preserving the original data structure.</p>
+            <p className="text-lg leading-relaxed">This tool is designed for developers, testers, DevOps engineers, students, and anyone working with JSON data. It supports nested objects, arrays, and complex JSON documents, making it useful for everything from debugging REST API responses to reviewing configuration files.</p>
+            <p className="text-lg leading-relaxed">Because all formatting, validation, and minification happen entirely <strong>inside your browser</strong>, your JSON is never uploaded to a server. Your data remains private and secure throughout the entire process.</p>
           </>}
           useCases={[
             'Format minified API responses into a readable, properly indented structure.',
@@ -125,7 +125,7 @@ export default function JsonFormatterPage() {
           className="rounded-xl p-4"
           style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)' }}
         >
-          <label className="block text-sm font-semibold mb-3" style={{ color: 'rgba(255,255,255,0.75)' }}>
+          <label className="block text-base font-semibold mb-3" style={{ color: 'rgba(255,255,255,0.75)' }}>
             Input JSON
           </label>
           <textarea
@@ -133,7 +133,7 @@ export default function JsonFormatterPage() {
             onChange={(e) => setInput(e.target.value)}
             placeholder='{"hello": "world"}'
             rows={12}
-            className="w-full resize-y rounded-lg px-3 py-3 text-sm outline-none transition-all duration-150 placeholder:text-white/50"
+            className="w-full resize-y rounded-lg px-3 py-3 text-base outline-none transition-all duration-150 placeholder:text-white/50"
             style={{
               background: 'rgba(0,0,0,0.35)',
               border: '2px solid var(--border-dev)',
@@ -150,7 +150,7 @@ export default function JsonFormatterPage() {
         <div className="flex flex-wrap items-center gap-2">
           <button
             onClick={format}
-            className="flex items-center gap-1.5 px-5 py-2.5 rounded-lg text-sm font-semibold transition-all"
+            className="flex items-center gap-1.5 px-5 py-2.5 rounded-lg text-base font-semibold transition-all"
             style={{ background: 'var(--color-dev)', color: '#fff' }}
           >
             <Maximize2 size={14} />
@@ -158,7 +158,7 @@ export default function JsonFormatterPage() {
           </button>
           <button
             onClick={minify}
-            className="flex items-center gap-1.5 px-5 py-2.5 rounded-lg text-sm font-semibold transition-all"
+            className="flex items-center gap-1.5 px-5 py-2.5 rounded-lg text-base font-semibold transition-all"
             style={{ background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.15)', color: 'rgba(255,255,255,0.85)' }}
           >
             <Minimize2 size={14} />
@@ -166,19 +166,19 @@ export default function JsonFormatterPage() {
           </button>
           <button
             onClick={validate}
-            className="flex items-center gap-1.5 px-5 py-2.5 rounded-lg text-sm font-semibold transition-all"
+            className="flex items-center gap-1.5 px-5 py-2.5 rounded-lg text-base font-semibold transition-all"
             style={{ background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.15)', color: 'rgba(255,255,255,0.85)' }}
           >
             Validate
           </button>
 
           {status === 'valid' && (
-            <div className="flex items-center gap-1.5 text-sm font-medium text-emerald-400">
+            <div className="flex items-center gap-1.5 text-base font-medium text-emerald-400">
               <CheckCircle size={15} /> Valid JSON
             </div>
           )}
           {status === 'invalid' && (
-            <div className="flex items-center gap-1.5 text-sm font-medium text-red-400">
+            <div className="flex items-center gap-1.5 text-base font-medium text-red-400">
               <XCircle size={15} /> Invalid JSON
             </div>
           )}
@@ -187,7 +187,7 @@ export default function JsonFormatterPage() {
         {/* Error */}
         {error && (
           <div
-            className="rounded-lg px-4 py-3 text-sm font-mono leading-relaxed"
+            className="rounded-lg px-4 py-3 text-base font-mono leading-relaxed"
             style={{ background: 'rgba(239,68,68,0.12)', border: '1px solid rgba(239,68,68,0.35)', color: '#fca5a5' }}
           >
             {error}
@@ -201,11 +201,11 @@ export default function JsonFormatterPage() {
             style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)' }}
           >
             <div className="flex items-center justify-between mb-3">
-              <label className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>Output</label>
+              <label className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>Output</label>
               <CopyButton text={output} />
             </div>
             <pre
-              className="rounded-lg px-3 py-3 text-sm overflow-auto leading-relaxed"
+              className="rounded-lg px-3 py-3 text-base overflow-auto leading-relaxed"
               style={{
                 background: 'rgba(0,0,0,0.35)',
                 border: '2px solid var(--border-dev-idle)',

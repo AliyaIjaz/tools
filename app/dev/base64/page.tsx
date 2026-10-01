@@ -47,10 +47,10 @@ export default function Base64Page() {
       seoContent={
         <SeoSection
           about={<>
-            <p className="text-base leading-relaxed"><strong>Base64 Encoder Online</strong> is a free browser-based tool that lets you <strong>encode text to Base64</strong> and <strong>decode Base64 back to plain text</strong> instantly. Whether you&apos;re working with API credentials, configuration files, JSON payloads, email content, or application data, this tool provides a fast and reliable way to convert between plain text and Base64 encoding.</p>
-            <p className="text-base leading-relaxed">Base64 is a widely used encoding scheme that converts binary or text data into printable ASCII characters. It is commonly used when transmitting data through systems that only support text, embedding binary data inside JSON or XML, creating Data URIs, sending email attachments, handling HTTP Basic Authentication credentials, and exchanging data between web services.</p>
-            <p className="text-base leading-relaxed">This tool correctly handles <strong>UTF-8 encoded text</strong>, including Unicode characters, emoji, accented letters, and non-English languages. Simply paste your text to generate a Base64 string, or paste a Base64 string to decode it back into readable text. The original data remains unchanged—Base64 is an encoding method, not encryption.</p>
-            <p className="text-base leading-relaxed">All encoding and decoding are performed entirely <strong>inside your browser</strong> using modern JavaScript APIs. Your text is never uploaded to a server, ensuring your sensitive information remains private. Whether you&apos;re a developer, student, system administrator, or security researcher, this Base64 Encoder and Decoder helps simplify everyday development and debugging tasks.</p>
+            <p className="text-lg leading-relaxed"><strong>Base64 Encoder Online</strong> is a free browser-based tool that lets you <strong>encode text to Base64</strong> and <strong>decode Base64 back to plain text</strong> instantly. Whether you&apos;re working with API credentials, configuration files, JSON payloads, email content, or application data, this tool provides a fast and reliable way to convert between plain text and Base64 encoding.</p>
+            <p className="text-lg leading-relaxed">Base64 is a widely used encoding scheme that converts binary or text data into printable ASCII characters. It is commonly used when transmitting data through systems that only support text, embedding binary data inside JSON or XML, creating Data URIs, sending email attachments, handling HTTP Basic Authentication credentials, and exchanging data between web services.</p>
+            <p className="text-lg leading-relaxed">This tool correctly handles <strong>UTF-8 encoded text</strong>, including Unicode characters, emoji, accented letters, and non-English languages. Simply paste your text to generate a Base64 string, or paste a Base64 string to decode it back into readable text. The original data remains unchanged—Base64 is an encoding method, not encryption.</p>
+            <p className="text-lg leading-relaxed">All encoding and decoding are performed entirely <strong>inside your browser</strong> using modern JavaScript APIs. Your text is never uploaded to a server, ensuring your sensitive information remains private. Whether you&apos;re a developer, student, system administrator, or security researcher, this Base64 Encoder and Decoder helps simplify everyday development and debugging tasks.</p>
           </>}
           useCases={[
             'Encode plain text into Base64 for APIs and web services.',
@@ -103,17 +103,17 @@ export default function Base64Page() {
           style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)' }}
         >
           <div className="flex items-center justify-between mb-3">
-            <label className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>
+            <label className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>
               Input
             </label>
-            <span className="text-sm" style={{ color: 'rgba(255,255,255,0.4)' }}>{input.length} chars</span>
+            <span className="text-base" style={{ color: 'rgba(255,255,255,0.4)' }}>{input.length} chars</span>
           </div>
           <textarea
             value={input}
             onChange={(e) => { setInput(e.target.value); setOutput(''); setError(''); setMode(null) }}
             placeholder="Enter text to encode or a Base64 string to decode…"
             rows={7}
-            className="w-full resize-y rounded-lg px-3 py-3 text-sm outline-none transition-all duration-150 placeholder:text-white/45"
+            className="w-full resize-y rounded-lg px-3 py-3 text-base outline-none transition-all duration-150 placeholder:text-white/45"
             style={{
               background: 'rgba(0,0,0,0.35)',
               border: '2px solid var(--border-dev)',
@@ -130,14 +130,14 @@ export default function Base64Page() {
         <div className="flex flex-wrap gap-2">
           <button
             onClick={encode}
-            className="px-5 py-2.5 rounded-lg text-sm font-semibold transition-all active:scale-95 active:brightness-90"
+            className="px-5 py-2.5 rounded-lg text-base font-semibold transition-all active:scale-95 active:brightness-90"
             style={{ background: 'var(--color-dev)', color: '#fff' }}
           >
             Encode
           </button>
           <button
             onClick={decode}
-            className="px-5 py-2.5 rounded-lg text-sm font-semibold transition-all active:scale-95 active:brightness-75"
+            className="px-5 py-2.5 rounded-lg text-base font-semibold transition-all active:scale-95 active:brightness-75"
             style={{ background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.15)', color: 'rgba(255,255,255,0.85)' }}
           >
             Decode
@@ -146,7 +146,7 @@ export default function Base64Page() {
 
         {error && (
           <div
-            className="rounded-lg px-4 py-3 text-sm font-mono leading-relaxed"
+            className="rounded-lg px-4 py-3 text-base font-mono leading-relaxed"
             style={{ background: 'rgba(239,68,68,0.12)', border: '1px solid rgba(239,68,68,0.35)', color: '#fca5a5' }}
           >
             {error}
@@ -160,7 +160,7 @@ export default function Base64Page() {
             style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)' }}
           >
             <div className="flex items-center justify-between mb-3">
-              <label className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>
+              <label className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>
                 {mode === 'encode' ? 'Base64 output' : 'Decoded text'}
               </label>
               <CopyButton text={output} />
@@ -169,7 +169,7 @@ export default function Base64Page() {
               value={output}
               readOnly
               rows={7}
-              className="w-full resize-y rounded-lg px-3 py-3 text-sm outline-none"
+              className="w-full resize-y rounded-lg px-3 py-3 text-base outline-none"
               style={{
                 background: 'rgba(0,0,0,0.35)',
                 border: '2px solid var(--border-dev-idle)',

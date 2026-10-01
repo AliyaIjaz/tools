@@ -71,7 +71,7 @@ export default function ToolCard({ tool, showCategory = false, compact = false }
         </div>
 
         <div className="flex items-center gap-2 mb-1">
-          <h3 className={`font-medium text-white/90 leading-tight ${compact ? 'text-xs' : 'text-sm'}`}>{tool.name}</h3>
+          <h3 className={`font-medium text-white/90 leading-tight ${compact ? 'text-sm' : 'text-base'}`}>{tool.name}</h3>
           {tool.new && (
             <span
               className="text-[10px] font-semibold px-1.5 py-0.5 rounded-full"
@@ -82,7 +82,7 @@ export default function ToolCard({ tool, showCategory = false, compact = false }
           )}
         </div>
 
-        <p className={`leading-relaxed ${compact ? 'text-[11px]' : 'text-xs'}`} style={{ color: 'rgba(255,255,255,0.65)' }}>
+        <p className={`leading-relaxed ${compact ? 'text-[11px]' : 'text-sm'}`} style={{ color: 'rgba(255,255,255,0.65)' }}>
           {tool.description}
         </p>
 

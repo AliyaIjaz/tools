@@ -25,13 +25,13 @@ export default function AllToolsPage() {
     <div className="max-w-5xl mx-auto px-4 sm:px-6 py-12">
       <div className="mb-10">
         <div
-          className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium mb-4"
+          className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm font-medium mb-4"
           style={{ background: 'var(--color-dev-dim)', border: '1px solid oklch(0.6 0.2 290 / 0.3)', color: 'var(--color-dev)' }}
         >
           {TOOLS.length} tools
         </div>
         <h1 className="text-3xl font-bold text-white mb-2">All Tools</h1>
-        <p className="text-sm" style={{ color: 'rgba(255,255,255,0.45)' }}>
+        <p className="text-base" style={{ color: 'rgba(255,255,255,0.45)' }}>
           A complete index of every tool on Zenveel, grouped by category.
         </p>
       </div>
@@ -54,7 +54,7 @@ export default function AllToolsPage() {
                     {meta.label}
                   </Link>
                 </h2>
-                <span className="text-sm" style={{ color: 'rgba(255,255,255,0.45)' }}>
+                <span className="text-base" style={{ color: 'rgba(255,255,255,0.45)' }}>
                   {tools.length} {tools.length === 1 ? 'tool' : 'tools'}
                 </span>
               </div>
@@ -66,7 +66,7 @@ export default function AllToolsPage() {
                   <li key={tool.id}>
                     <Link
                       href={tool.href}
-                      className="text-sm underline underline-offset-4 decoration-white/20 hover:decoration-white/60 transition-colors"
+                      className="text-base underline underline-offset-4 decoration-white/20 hover:decoration-white/60 transition-colors"
                       style={{ color: 'rgba(255,255,255,0.75)' }}
                     >
                       {tool.name}

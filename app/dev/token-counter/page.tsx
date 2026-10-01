@@ -123,9 +123,9 @@ export default function TokenCounterPage() {
       seoContent={
         <SeoSection
           about={<>
-            <p className="text-base leading-relaxed"><strong>Token Counter Online</strong> is a free, browser-based tool that counts tokens in your text for major AI language models including <strong>GPT-4o, GPT-4 Turbo, Claude 3.5, Claude 4, and Gemini</strong>. Tokens are the units AI models use to process text — understanding token counts helps you manage API costs, stay within context limits, and optimize your prompts.</p>
-            <p className="text-base leading-relaxed">Select a model, paste your prompt or text, and instantly see the token count, estimated API input cost, and how much of the model&apos;s context window your text occupies. All tokenization runs entirely in your browser — your text is never sent to any server.</p>
-            <p className="text-base leading-relaxed">Different models use different tokenizers. GPT-4o uses the <strong>o200k</strong> tokenizer while GPT-4, GPT-3.5, and Claude models use the <strong>cl100k</strong> tokenizer. This tool automatically applies the correct tokenizer for the model you select.</p>
+            <p className="text-lg leading-relaxed"><strong>Token Counter Online</strong> is a free, browser-based tool that counts tokens in your text for major AI language models including <strong>GPT-4o, GPT-4 Turbo, Claude 3.5, Claude 4, and Gemini</strong>. Tokens are the units AI models use to process text — understanding token counts helps you manage API costs, stay within context limits, and optimize your prompts.</p>
+            <p className="text-lg leading-relaxed">Select a model, paste your prompt or text, and instantly see the token count, estimated API input cost, and how much of the model&apos;s context window your text occupies. All tokenization runs entirely in your browser — your text is never sent to any server.</p>
+            <p className="text-lg leading-relaxed">Different models use different tokenizers. GPT-4o uses the <strong>o200k</strong> tokenizer while GPT-4, GPT-3.5, and Claude models use the <strong>cl100k</strong> tokenizer. This tool automatically applies the correct tokenizer for the model you select.</p>
           </>}
           useCases={[
             'Check if your prompt fits within the context window before making an API call.',
@@ -156,7 +156,7 @@ export default function TokenCounterPage() {
           className="rounded-xl p-4"
           style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)' }}
         >
-          <label className="block text-sm font-semibold mb-3" style={{ color: 'rgba(255,255,255,0.75)' }}>
+          <label className="block text-base font-semibold mb-3" style={{ color: 'rgba(255,255,255,0.75)' }}>
             Model
           </label>
           <div className="flex flex-wrap gap-2">
@@ -165,7 +165,7 @@ export default function TokenCounterPage() {
                 <button
                   key={m.name}
                   onClick={() => setSelectedModel(m.name)}
-                  className="px-3 py-1.5 rounded-lg text-sm font-medium transition-all"
+                  className="px-3 py-1.5 rounded-lg text-base font-medium transition-all"
                   style={selectedModel === m.name
                     ? { background: 'var(--color-dev)', color: '#fff' }
                     : { background: 'rgba(255,255,255,0.07)', border: '2px solid var(--border-dev)', color: 'rgba(255,255,255,0.6)' }}
@@ -185,13 +185,13 @@ export default function TokenCounterPage() {
           style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)' }}
         >
           <div className="flex items-center justify-between mb-3">
-            <label className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>
+            <label className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>
               Your Text / Prompt
             </label>
             {text && (
               <button
                 onClick={() => setText('')}
-                className="text-sm px-3 py-1 rounded-lg transition-all"
+                className="text-base px-3 py-1 rounded-lg transition-all"
                 style={{ color: 'rgba(255,255,255,0.5)', background: 'rgba(255,255,255,0.06)', border: '2px solid var(--border-dev-idle)' }}
                 onMouseEnter={(e) => { e.currentTarget.style.color = 'rgba(255,255,255,0.85)'; e.currentTarget.style.background = 'rgba(255,255,255,0.12)' }}
                 onMouseLeave={(e) => { e.currentTarget.style.color = 'rgba(255,255,255,0.5)'; e.currentTarget.style.background = 'rgba(255,255,255,0.06)' }}
@@ -205,7 +205,7 @@ export default function TokenCounterPage() {
             onChange={(e) => setText(e.target.value)}
             placeholder="Paste your prompt or text here…"
             rows={12}
-            className="w-full resize-y rounded-lg px-3 py-3 text-sm outline-none transition-all duration-150 placeholder:text-white/50"
+            className="w-full resize-y rounded-lg px-3 py-3 text-base outline-none transition-all duration-150 placeholder:text-white/50"
             style={{
               background: 'rgba(0,0,0,0.35)',
               border: '2px solid var(--border-dev)',
@@ -225,7 +225,7 @@ export default function TokenCounterPage() {
               className="rounded-xl px-4 py-4 flex flex-col gap-1"
               style={{ background: 'var(--surface)', border: `1px solid ${accent ? 'rgba(139,92,246,0.35)' : 'rgba(255,255,255,0.08)'}` }}
             >
-              <span className="text-xs font-medium uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.4)' }}>{label}</span>
+              <span className="text-sm font-medium uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.4)' }}>{label}</span>
               <span
                 className="text-2xl font-bold font-mono"
                 style={{ color: accent ? 'var(--color-dev)' : 'rgba(255,255,255,0.92)' }}
@@ -244,10 +244,10 @@ export default function TokenCounterPage() {
             style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)' }}
           >
             <div className="flex items-center justify-between">
-              <span className="text-xs font-medium uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.4)' }}>
+              <span className="text-sm font-medium uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.4)' }}>
                 Context Window
               </span>
-              <span className="text-sm font-mono font-semibold" style={{ color: contextUsageColor(contextPct) }}>
+              <span className="text-base font-mono font-semibold" style={{ color: contextUsageColor(contextPct) }}>
                 {contextPct.toFixed(1)}%
               </span>
             </div>
@@ -257,7 +257,7 @@ export default function TokenCounterPage() {
                 style={{ width: `${contextPct}%`, background: contextUsageColor(contextPct) }}
               />
             </div>
-            <div className="flex justify-between text-xs font-mono" style={{ color: 'rgba(255,255,255,0.45)' }}>
+            <div className="flex justify-between text-sm font-mono" style={{ color: 'rgba(255,255,255,0.45)' }}>
               <span>{formatNumber(tokenCount)} used</span>
               <span>{formatNumber(model.contextWindow)} max</span>
             </div>
@@ -268,13 +268,13 @@ export default function TokenCounterPage() {
             className="rounded-xl px-4 py-4 space-y-2"
             style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)' }}
           >
-            <span className="text-xs font-medium uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.4)' }}>
+            <span className="text-sm font-medium uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.4)' }}>
               Estimated Input Cost
             </span>
             <div className="text-2xl font-bold font-mono" style={{ color: 'rgba(255,255,255,0.92)' }}>
               {tokenCount === 0 ? '—' : formatCost(inputCost)}
             </div>
-            <div className="text-xs" style={{ color: 'rgba(255,255,255,0.4)' }}>
+            <div className="text-sm" style={{ color: 'rgba(255,255,255,0.4)' }}>
               ${model.inputCostPer1M}/M input · ${model.outputCostPer1M}/M output · <span className="font-mono">{selectedModel}</span>
             </div>
           </div>
@@ -287,16 +287,16 @@ export default function TokenCounterPage() {
             style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)' }}
           >
             <div className="flex items-center justify-between mb-3">
-              <span className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>
+              <span className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>
                 Token IDs
-                <span className="ml-2 text-xs font-normal" style={{ color: 'rgba(255,255,255,0.35)' }}>
+                <span className="ml-2 text-sm font-normal" style={{ color: 'rgba(255,255,255,0.35)' }}>
                   ({tokens.length} tokens)
                 </span>
               </span>
               <CopyButton text={`[${tokens.join(', ')}]`} />
             </div>
             <div
-              className="rounded-lg px-3 py-3 text-xs font-mono overflow-auto leading-relaxed"
+              className="rounded-lg px-3 py-3 text-sm font-mono overflow-auto leading-relaxed"
               style={{
                 background: 'rgba(0,0,0,0.35)',
                 border: '2px solid var(--border-dev-idle)',

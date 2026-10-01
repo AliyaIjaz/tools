@@ -38,9 +38,9 @@ export default function TextSorterPage() {
         <SeoSection
           aboutTitle="About this tool"
           about={<>
-            <p className="text-base leading-relaxed">Text Sorter Online is a free tool that helps you quickly organize and reorder lists of text with just a few clicks. Paste your text into the editor and sort individual lines alphabetically (A–Z), reverse alphabetically (Z–A), by line length, or in a random order. Whether you&apos;re organizing names, keywords, URLs, programming code, or spreadsheet data, this tool makes sorting fast, accurate, and effortless.</p>
-            <p className="text-base leading-relaxed">The tool treats each line as a separate item, making it ideal for sorting lists copied from text files, CSV columns, Markdown documents, configuration files, or code editors. Alphabetical sorting is case-insensitive by default, ensuring that values such as <code className="text-sm font-mono px-1 py-0.5 rounded" style={{background:'rgba(255,255,255,0.08)'}}>Apple</code> and <code className="text-sm font-mono px-1 py-0.5 rounded" style={{background:'rgba(255,255,255,0.08)'}}>apple</code> are grouped naturally. You can also sort by line length to identify unusually short or long entries or use random sorting to shuffle items for giveaways, quizzes, testing, or sampling.</p>
-            <p className="text-base leading-relaxed">Everything is processed locally in your browser, so your text is never uploaded or stored. There are no registrations, downloads, or usage limits. Whether you&apos;re a developer, student, SEO professional, marketer, researcher, or content editor, this online Text Sorter provides a quick and secure way to organize text without writing scripts or using spreadsheet software.</p>
+            <p className="text-lg leading-relaxed">Text Sorter Online is a free tool that helps you quickly organize and reorder lists of text with just a few clicks. Paste your text into the editor and sort individual lines alphabetically (A–Z), reverse alphabetically (Z–A), by line length, or in a random order. Whether you&apos;re organizing names, keywords, URLs, programming code, or spreadsheet data, this tool makes sorting fast, accurate, and effortless.</p>
+            <p className="text-lg leading-relaxed">The tool treats each line as a separate item, making it ideal for sorting lists copied from text files, CSV columns, Markdown documents, configuration files, or code editors. Alphabetical sorting is case-insensitive by default, ensuring that values such as <code className="text-base font-mono px-1 py-0.5 rounded" style={{background:'rgba(255,255,255,0.08)'}}>Apple</code> and <code className="text-base font-mono px-1 py-0.5 rounded" style={{background:'rgba(255,255,255,0.08)'}}>apple</code> are grouped naturally. You can also sort by line length to identify unusually short or long entries or use random sorting to shuffle items for giveaways, quizzes, testing, or sampling.</p>
+            <p className="text-lg leading-relaxed">Everything is processed locally in your browser, so your text is never uploaded or stored. There are no registrations, downloads, or usage limits. Whether you&apos;re a developer, student, SEO professional, marketer, researcher, or content editor, this online Text Sorter provides a quick and secure way to organize text without writing scripts or using spreadsheet software.</p>
           </>}
           useCasesTitle="Common use cases"
           useCases={[
@@ -82,8 +82,8 @@ export default function TextSorterPage() {
       <div className="space-y-6">
         {/* Input */}
         <div className="flex flex-col gap-2">
-          <label className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>
-            Input <span className="text-sm font-normal" style={{ color: 'rgba(255,255,255,0.45)' }}>— one item per line</span>
+          <label className="text-lg font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>
+            Input <span className="text-base font-normal" style={{ color: 'rgba(255,255,255,0.45)' }}>— one item per line</span>
           </label>
           <textarea
             value={input}
@@ -112,7 +112,7 @@ export default function TextSorterPage() {
 
         {/* Sort mode */}
         <div className="flex flex-col gap-2">
-          <label className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>
+          <label className="text-lg font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>
             Sort by
           </label>
           <div className="flex flex-wrap gap-2">
@@ -120,7 +120,7 @@ export default function TextSorterPage() {
               <button
                 key={label}
                 onClick={() => setMode(label)}
-                className="px-4 py-2 rounded-lg text-base font-semibold transition-all"
+                className="px-4 py-2 rounded-lg text-lg font-semibold transition-all"
                 style={{
                   background: mode === label ? 'var(--color-text-tool-dim)' : 'var(--surface)',
                   border: `1.5px solid ${mode === label ? 'var(--color-text-tool)' : 'var(--border)'}`,
@@ -154,7 +154,7 @@ export default function TextSorterPage() {
               >
                 {state && <span style={{ color: 'var(--color-text-tool)', fontSize: '11px', lineHeight: 1 }}>✓</span>}
               </span>
-              <span className="text-base font-medium">{label}</span>
+              <span className="text-lg font-medium">{label}</span>
             </button>
           ))}
         </div>
@@ -163,9 +163,9 @@ export default function TextSorterPage() {
         {input && (
           <div className="flex flex-col gap-2">
             <div className="flex items-center justify-between">
-              <label className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>
+              <label className="text-lg font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>
                 Sorted
-                <span className="text-sm font-normal ml-2" style={{ color: 'rgba(255,255,255,0.45)' }}>
+                <span className="text-base font-normal ml-2" style={{ color: 'rgba(255,255,255,0.45)' }}>
                   — {result.split('\n').length} lines
                 </span>
               </label>

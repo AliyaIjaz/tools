@@ -18,9 +18,9 @@ export default function JpgToWebpPage() {
         <SeoSection
           aboutTitle="About This JPG to WebP Converter"
           about={<>
-            <p className="text-base leading-relaxed">Convert JPG (JPEG) images to WebP online to reduce file size while maintaining excellent image quality. WebP is designed for modern websites and can help improve page loading speed without noticeably affecting image appearance.</p>
-            <p className="text-base leading-relaxed">This converter processes every image locally in your browser, keeping your files private and eliminating upload delays.</p>
-            <p className="text-base leading-relaxed">Need to convert between other formats? Try the <Link href="/image/convert" className="underline" style={{ color: 'var(--color-image)' }}>Image Converter</Link> for more options.</p>
+            <p className="text-lg leading-relaxed">Convert JPG (JPEG) images to WebP online to reduce file size while maintaining excellent image quality. WebP is designed for modern websites and can help improve page loading speed without noticeably affecting image appearance.</p>
+            <p className="text-lg leading-relaxed">This converter processes every image locally in your browser, keeping your files private and eliminating upload delays.</p>
+            <p className="text-lg leading-relaxed">Need to convert between other formats? Try the <Link href="/image/convert" className="underline" style={{ color: 'var(--color-image)' }}>Image Converter</Link> for more options.</p>
           </>}
           useCasesTitle="Common Use Cases"
           useCases={[

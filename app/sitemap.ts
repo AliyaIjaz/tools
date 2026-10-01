@@ -14,7 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/terms`, changeFrequency: 'yearly', priority: 0.3 },
   ]
 
-  const categoryRoutes: MetadataRoute.Sitemap = CATEGORY_ORDER.filter((category) => category !== 'typing').map((category) => ({
+  const categoryRoutes: MetadataRoute.Sitemap = CATEGORY_ORDER.map((category) => ({
     url: `${BASE_URL}${CATEGORIES[category].href}`,
     changeFrequency: 'weekly',
     priority: 0.7,

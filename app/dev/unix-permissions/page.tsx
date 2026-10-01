@@ -175,9 +175,9 @@ export default function UnixPermissionsPage() {
           <SeoSection
             aboutTitle="Unix & Linux File Permissions & chmod Explained"
             about={<>
-              <p className="text-base leading-relaxed"><strong>Unix File Permissions & chmod Calculator</strong> is a free browser-based tool that converts between numeric (octal) and symbolic Unix/Linux file permissions. Toggle the read/write/execute bits for owner, group, and other — and see the <code>chmod</code> value update instantly. Or type a value like <code>755</code> or <code>rwxr-xr-x</code> and the checkboxes update to match.</p>
-              <p className="text-base leading-relaxed">Linux/Unix permissions control access at the file system level. Every file and directory has three groups — owner, group, and other — each with independent read (4), write (2), and execute (1) bits. The sum of those bits gives one octal digit per group: <code>chmod 755</code> = owner full access (7), group and other read+execute (5). This calculator makes that arithmetic instant and visual.</p>
-              <p className="text-base leading-relaxed">All conversion runs entirely in your browser — nothing is sent to any server.</p>
+              <p className="text-lg leading-relaxed"><strong>Unix File Permissions & chmod Calculator</strong> is a free browser-based tool that converts between numeric (octal) and symbolic Unix/Linux file permissions. Toggle the read/write/execute bits for owner, group, and other — and see the <code>chmod</code> value update instantly. Or type a value like <code>755</code> or <code>rwxr-xr-x</code> and the checkboxes update to match.</p>
+              <p className="text-lg leading-relaxed">Linux/Unix permissions control access at the file system level. Every file and directory has three groups — owner, group, and other — each with independent read (4), write (2), and execute (1) bits. The sum of those bits gives one octal digit per group: <code>chmod 755</code> = owner full access (7), group and other read+execute (5). This calculator makes that arithmetic instant and visual.</p>
+              <p className="text-lg leading-relaxed">All conversion runs entirely in your browser — nothing is sent to any server.</p>
             </>}
             useCasesTitle="Common chmod Use Cases"
             useCases={[
@@ -205,11 +205,11 @@ export default function UnixPermissionsPage() {
             className="rounded-xl p-4 space-y-2"
             style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)' }}
           >
-            <p className="text-xs font-medium uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.5)' }}>
+            <p className="text-sm font-medium uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.5)' }}>
               Numeric (Octal)
             </p>
             <div className="flex items-center gap-2">
-              <span className="text-sm font-mono flex-shrink-0" style={{ color: 'rgba(255,255,255,0.35)' }}>chmod</span>
+              <span className="text-base font-mono flex-shrink-0" style={{ color: 'rgba(255,255,255,0.35)' }}>chmod</span>
               <input
                 type="text"
                 value={numericInput}
@@ -229,7 +229,7 @@ export default function UnixPermissionsPage() {
               />
               <CopyButton text={numeric} />
             </div>
-            {numericError && <p className="text-sm" style={{ color: '#f87171' }}>{numericError}</p>}
+            {numericError && <p className="text-base" style={{ color: '#f87171' }}>{numericError}</p>}
           </div>
 
           {/* Symbolic */}
@@ -237,11 +237,11 @@ export default function UnixPermissionsPage() {
             className="rounded-xl p-4 space-y-2"
             style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)' }}
           >
-            <p className="text-xs font-medium uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.5)' }}>
+            <p className="text-sm font-medium uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.5)' }}>
               Symbolic
             </p>
             <div className="flex items-center gap-2">
-              <span className="text-sm font-mono flex-shrink-0" style={{ color: 'rgba(255,255,255,0.35)' }}>-</span>
+              <span className="text-base font-mono flex-shrink-0" style={{ color: 'rgba(255,255,255,0.35)' }}>-</span>
               <input
                 type="text"
                 value={symbolicInput}
@@ -261,7 +261,7 @@ export default function UnixPermissionsPage() {
               />
               <CopyButton text={fullSymbolic} />
             </div>
-            {symbolicError && <p className="text-sm" style={{ color: '#f87171' }}>{symbolicError}</p>}
+            {symbolicError && <p className="text-base" style={{ color: '#f87171' }}>{symbolicError}</p>}
           </div>
         </div>
 
@@ -281,16 +281,16 @@ export default function UnixPermissionsPage() {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
                     <span
-                      className="text-xs font-bold px-1.5 py-0.5 rounded font-mono"
+                      className="text-sm font-bold px-1.5 py-0.5 rounded font-mono"
                       style={{ background: `${color}20`, color }}
                     >
                       {short}
                     </span>
-                    <span className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>{label}</span>
+                    <span className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>{label}</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <span className="text-lg font-mono font-bold" style={{ color }}>{octalVal}</span>
-                    <span className="text-sm font-mono" style={{ color: 'rgba(255,255,255,0.5)' }}>{sym}</span>
+                    <span className="text-base font-mono" style={{ color: 'rgba(255,255,255,0.5)' }}>{sym}</span>
                   </div>
                 </div>
 
@@ -323,7 +323,7 @@ export default function UnixPermissionsPage() {
                         <div className="flex items-center gap-2">
                           {/* Checkbox indicator */}
                           <span
-                            className="w-4 h-4 rounded flex items-center justify-center flex-shrink-0 text-xs font-bold"
+                            className="w-4 h-4 rounded flex items-center justify-center flex-shrink-0 text-sm font-bold"
                             style={{
                               background: active ? color : 'rgba(255,255,255,0.08)',
                               border: `2px solid ${active ? color : 'rgba(255,255,255,0.2)'}`,
@@ -332,15 +332,15 @@ export default function UnixPermissionsPage() {
                           >
                             {active && '✓'}
                           </span>
-                          <span className="font-mono text-sm font-semibold" style={{ color: active ? color : 'rgba(255,255,255,0.55)' }}>
+                          <span className="font-mono text-base font-semibold" style={{ color: active ? color : 'rgba(255,255,255,0.55)' }}>
                             {bit}
                           </span>
-                          <span className="text-sm" style={{ color: active ? 'rgba(255,255,255,0.8)' : 'rgba(255,255,255,0.4)' }}>
+                          <span className="text-base" style={{ color: active ? 'rgba(255,255,255,0.8)' : 'rgba(255,255,255,0.4)' }}>
                             {bitLabel}
                           </span>
                         </div>
                         <span
-                          className="text-xs font-mono font-semibold"
+                          className="text-sm font-mono font-semibold"
                           style={{ color: active ? color : 'rgba(255,255,255,0.25)' }}
                         >
                           +{octal}
@@ -360,13 +360,13 @@ export default function UnixPermissionsPage() {
           style={{ background: 'rgba(139,92,246,0.08)', border: '2px solid var(--border-dev-idle)' }}
         >
           <div className="space-y-1">
-            <p className="text-xs font-medium uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.5)' }}>chmod command</p>
+            <p className="text-sm font-medium uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.5)' }}>chmod command</p>
             <p className="text-lg font-mono font-semibold" style={{ color: 'var(--color-dev)' }}>
-              chmod {numeric} <span className="text-sm font-normal" style={{ color: 'rgba(255,255,255,0.5)' }}>filename</span>
+              chmod {numeric} <span className="text-base font-normal" style={{ color: 'rgba(255,255,255,0.5)' }}>filename</span>
             </p>
           </div>
           <div className="flex items-center gap-3">
-            <span className="text-base font-mono" style={{ color: 'rgba(255,255,255,0.75)' }}>{fullSymbolic}</span>
+            <span className="text-lg font-mono" style={{ color: 'rgba(255,255,255,0.75)' }}>{fullSymbolic}</span>
             <CopyButton text={`chmod ${numeric}`} />
           </div>
         </div>
@@ -376,7 +376,7 @@ export default function UnixPermissionsPage() {
           className="rounded-xl p-4 space-y-3"
           style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)' }}
         >
-          <p className="text-xs font-medium uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.55)' }}>Common Presets</p>
+          <p className="text-sm font-medium uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.55)' }}>Common Presets</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
             {PRESET_EXAMPLES.map(({ label, desc, note }) => (
               <button
@@ -395,10 +395,10 @@ export default function UnixPermissionsPage() {
                 }}
               >
                 <div className="flex items-center gap-2 mb-0.5">
-                  <span className="font-mono font-bold text-base" style={{ color: 'var(--color-dev)' }}>{label}</span>
-                  <span className="font-mono text-sm" style={{ color: 'rgba(255,255,255,0.55)' }}>{desc}</span>
+                  <span className="font-mono font-bold text-lg" style={{ color: 'var(--color-dev)' }}>{label}</span>
+                  <span className="font-mono text-base" style={{ color: 'rgba(255,255,255,0.55)' }}>{desc}</span>
                 </div>
-                <p className="text-sm" style={{ color: 'rgba(255,255,255,0.45)' }}>{note}</p>
+                <p className="text-base" style={{ color: 'rgba(255,255,255,0.45)' }}>{note}</p>
               </button>
             ))}
           </div>
@@ -409,15 +409,15 @@ export default function UnixPermissionsPage() {
           className="rounded-xl p-4 space-y-3"
           style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)' }}
         >
-          <p className="text-xs font-medium uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.55)' }}>Bit Reference — Octal Values</p>
+          <p className="text-sm font-medium uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.55)' }}>Bit Reference — Octal Values</p>
           <div className="overflow-x-auto">
-            <table className="w-full text-sm font-mono border-collapse">
+            <table className="w-full text-base font-mono border-collapse">
               <thead>
                 <tr>
-                  <th className="text-left pb-2 pr-6 text-xs font-semibold uppercase tracking-wider" style={{ color: 'rgba(255,255,255,0.55)' }}>Bit</th>
-                  <th className="text-left pb-2 pr-6 text-xs font-semibold uppercase tracking-wider" style={{ color: ENTITY_COLOR.owner }}>Owner</th>
-                  <th className="text-left pb-2 pr-6 text-xs font-semibold uppercase tracking-wider" style={{ color: ENTITY_COLOR.group }}>Group</th>
-                  <th className="text-left pb-2 text-xs font-semibold uppercase tracking-wider" style={{ color: ENTITY_COLOR.other }}>Other</th>
+                  <th className="text-left pb-2 pr-6 text-sm font-semibold uppercase tracking-wider" style={{ color: 'rgba(255,255,255,0.55)' }}>Bit</th>
+                  <th className="text-left pb-2 pr-6 text-sm font-semibold uppercase tracking-wider" style={{ color: ENTITY_COLOR.owner }}>Owner</th>
+                  <th className="text-left pb-2 pr-6 text-sm font-semibold uppercase tracking-wider" style={{ color: ENTITY_COLOR.group }}>Group</th>
+                  <th className="text-left pb-2 text-sm font-semibold uppercase tracking-wider" style={{ color: ENTITY_COLOR.other }}>Other</th>
                 </tr>
               </thead>
               <tbody>

@@ -22,7 +22,7 @@ export default function Tabs({ tabs, value, onChange, className }: Props) {
             key={tab}
             onClick={() => onChange(tab)}
             className={cn(
-              'px-3 py-1.5 rounded-md text-sm font-medium transition-all duration-150',
+              'px-3 py-1.5 rounded-md text-base font-medium transition-all duration-150',
               active ? 'text-white' : 'text-white/40 hover:text-white/70'
             )}
             style={

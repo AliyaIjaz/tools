@@ -154,7 +154,7 @@ export default function JsonSchemaGeneratorPage() {
     )
   }
 
-  const btnBase = 'px-3 py-1.5 rounded-lg text-sm font-medium transition-all'
+  const btnBase = 'px-3 py-1.5 rounded-lg text-base font-medium transition-all'
   const btnGhost = { background: 'rgba(255,255,255,0.07)', border: '2px solid var(--border-dev)', color: 'rgba(255,255,255,0.65)' }
   const btnHover = (e: React.MouseEvent<HTMLButtonElement>, enter: boolean) => {
     e.currentTarget.style.background = enter ? 'rgba(255,255,255,0.13)' : 'rgba(255,255,255,0.07)'
@@ -172,9 +172,9 @@ export default function JsonSchemaGeneratorPage() {
       seoContent={
         <SeoSection
           about={<>
-            <p className="text-base leading-relaxed"><strong>JSON Schema Generator Online</strong> is a free browser-based tool that automatically generates a <strong>JSON Schema (Draft-07 or 2020-12)</strong> from any example JSON you provide. Simply paste a sample JSON object and get a complete, valid schema — including property types, required fields, nested objects, arrays, and common string formats like email, UUID, date, and URI.</p>
-            <p className="text-base leading-relaxed">This tool is especially useful for developers working with <strong>OpenAI function calling</strong>, <strong>structured outputs</strong>, API validation, form generation, or any workflow that requires a formal schema definition. Instead of writing schemas by hand, paste an example and let the generator do the work.</p>
-            <p className="text-base leading-relaxed">All processing runs entirely in your browser — your JSON is never uploaded to any server.</p>
+            <p className="text-lg leading-relaxed"><strong>JSON Schema Generator Online</strong> is a free browser-based tool that automatically generates a <strong>JSON Schema (Draft-07 or 2020-12)</strong> from any example JSON you provide. Simply paste a sample JSON object and get a complete, valid schema — including property types, required fields, nested objects, arrays, and common string formats like email, UUID, date, and URI.</p>
+            <p className="text-lg leading-relaxed">This tool is especially useful for developers working with <strong>OpenAI function calling</strong>, <strong>structured outputs</strong>, API validation, form generation, or any workflow that requires a formal schema definition. Instead of writing schemas by hand, paste an example and let the generator do the work.</p>
+            <p className="text-lg leading-relaxed">All processing runs entirely in your browser — your JSON is never uploaded to any server.</p>
           </>}
           useCases={[
             'Generate schemas for OpenAI function calling and structured output definitions.',
@@ -208,7 +208,7 @@ export default function JsonSchemaGeneratorPage() {
         >
           <button
             onClick={() => setShowOptions((v) => !v)}
-            className="w-full flex items-center justify-between px-4 py-3 text-sm font-semibold transition-all"
+            className="w-full flex items-center justify-between px-4 py-3 text-base font-semibold transition-all"
             style={{ color: 'rgba(255,255,255,0.75)' }}
             onMouseEnter={(e) => { e.currentTarget.style.background = 'rgba(255,255,255,0.04)' }}
             onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent' }}
@@ -231,7 +231,7 @@ export default function JsonSchemaGeneratorPage() {
             >
               {/* Draft */}
               <div className="space-y-2">
-                <span className="text-xs font-medium uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.4)' }}>Schema Draft</span>
+                <span className="text-sm font-medium uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.4)' }}>Schema Draft</span>
                 <div className="flex gap-2">
                   {(['draft-07', '2020-12'] as const).map((d) => (
                     <button
@@ -268,7 +268,7 @@ export default function JsonSchemaGeneratorPage() {
                         style={{ left: options[key] ? '18px' : '2px' }}
                       />
                     </div>
-                    <span className="text-sm" style={{ color: 'rgba(255,255,255,0.7)' }}>{label}</span>
+                    <span className="text-base" style={{ color: 'rgba(255,255,255,0.7)' }}>{label}</span>
                   </label>
                 ))}
               </div>
@@ -282,7 +282,7 @@ export default function JsonSchemaGeneratorPage() {
           style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)' }}
         >
           <div className="flex items-center justify-between mb-3">
-            <label className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>
+            <label className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>
               Example JSON
             </label>
             <div className="flex items-center gap-2">
@@ -313,7 +313,7 @@ export default function JsonSchemaGeneratorPage() {
             onChange={(e) => handleInput(e.target.value)}
             placeholder={'{\n  "name": "Alice",\n  "age": 30,\n  "email": "alice@example.com"\n}'}
             rows={12}
-            className="w-full resize-y rounded-lg px-3 py-3 text-sm outline-none transition-all duration-150 placeholder:text-white/50"
+            className="w-full resize-y rounded-lg px-3 py-3 text-base outline-none transition-all duration-150 placeholder:text-white/50"
             style={{
               background: 'rgba(0,0,0,0.35)',
               border: '2px solid var(--border-dev)',
@@ -330,12 +330,12 @@ export default function JsonSchemaGeneratorPage() {
         {status !== 'idle' && (
           <div className="flex items-center gap-2">
             {status === 'success' && (
-              <div className="flex items-center gap-1.5 text-sm font-medium text-emerald-400">
+              <div className="flex items-center gap-1.5 text-base font-medium text-emerald-400">
                 <CheckCircle size={15} /> Schema generated
               </div>
             )}
             {status === 'error' && (
-              <div className="flex items-center gap-1.5 text-sm font-medium text-red-400">
+              <div className="flex items-center gap-1.5 text-base font-medium text-red-400">
                 <XCircle size={15} /> {error}
               </div>
             )}
@@ -349,16 +349,16 @@ export default function JsonSchemaGeneratorPage() {
             style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)' }}
           >
             <div className="flex items-center justify-between mb-3">
-              <label className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>
+              <label className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>
                 JSON Schema
-                <span className="ml-2 text-xs font-normal" style={{ color: 'rgba(255,255,255,0.35)' }}>
+                <span className="ml-2 text-sm font-normal" style={{ color: 'rgba(255,255,255,0.35)' }}>
                   {options.draft}
                 </span>
               </label>
               <CopyButton text={output} />
             </div>
             <pre
-              className="rounded-lg px-3 py-3 text-sm overflow-auto leading-relaxed"
+              className="rounded-lg px-3 py-3 text-base overflow-auto leading-relaxed"
               style={{
                 background: 'rgba(0,0,0,0.35)',
                 border: '2px solid var(--border-dev-idle)',
@@ -377,7 +377,7 @@ export default function JsonSchemaGeneratorPage() {
             className="rounded-xl px-5 py-5 space-y-3"
             style={{ background: 'var(--surface)', border: '1px dashed rgba(255,255,255,0.1)' }}
           >
-            <p className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.5)' }}>Tips</p>
+            <p className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.5)' }}>Tips</p>
             <ul className="space-y-1.5">
               {[
                 'For OpenAI function calling: use Draft-07, required: on, additional properties: off',
@@ -385,7 +385,7 @@ export default function JsonSchemaGeneratorPage() {
                 'Arrays are typed from their first element',
                 'null values produce { "type": "null" }',
               ].map((tip) => (
-                <li key={tip} className="flex items-start gap-2 text-sm" style={{ color: 'rgba(255,255,255,0.4)' }}>
+                <li key={tip} className="flex items-start gap-2 text-base" style={{ color: 'rgba(255,255,255,0.4)' }}>
                   <span className="mt-1.5 w-1 h-1 rounded-full flex-shrink-0" style={{ background: 'rgba(255,255,255,0.3)' }} />
                   {tip}
                 </li>

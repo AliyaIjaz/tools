@@ -189,9 +189,9 @@ export default function JsonSchemaValidatorPage() {
       seoContent={
         <SeoSection
           about={<>
-            <p className="text-base leading-relaxed"><strong>JSON Schema Validator Online</strong> is a free browser-based tool that validates any JSON document against a JSON Schema and shows detailed, human-readable error messages. It uses <strong>AJV (Another JSON Validator)</strong> — the fastest and most widely used JSON Schema validator — with full support for Draft-07 and common string formats like email, uuid, date-time, and uri.</p>
-            <p className="text-base leading-relaxed">Paste your JSON Schema on the left and your JSON data on the right. Results update automatically. Each validation error shows the exact path in your JSON that failed, the validation keyword that triggered the error, and a clear explanation of what went wrong — making it easy to debug schema issues in API payloads, AI structured outputs, configuration files, and form data.</p>
-            <p className="text-base leading-relaxed">All validation runs locally in your browser using AJV compiled to WebAssembly-friendly JavaScript. Your data is never sent to any server.</p>
+            <p className="text-lg leading-relaxed"><strong>JSON Schema Validator Online</strong> is a free browser-based tool that validates any JSON document against a JSON Schema and shows detailed, human-readable error messages. It uses <strong>AJV (Another JSON Validator)</strong> — the fastest and most widely used JSON Schema validator — with full support for Draft-07 and common string formats like email, uuid, date-time, and uri.</p>
+            <p className="text-lg leading-relaxed">Paste your JSON Schema on the left and your JSON data on the right. Results update automatically. Each validation error shows the exact path in your JSON that failed, the validation keyword that triggered the error, and a clear explanation of what went wrong — making it easy to debug schema issues in API payloads, AI structured outputs, configuration files, and form data.</p>
+            <p className="text-lg leading-relaxed">All validation runs locally in your browser using AJV compiled to WebAssembly-friendly JavaScript. Your data is never sent to any server.</p>
           </>}
           useCases={[
             'Validate OpenAI structured output responses against your function calling schema.',
@@ -222,7 +222,7 @@ export default function JsonSchemaValidatorPage() {
         <div className="flex flex-wrap items-center gap-2">
           <button
             onClick={() => loadExample(true)}
-            className="flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium transition-all"
+            className="flex items-center gap-1.5 px-3 py-2 rounded-lg text-base font-medium transition-all"
             style={btnGhost}
             onMouseEnter={(e) => onHover(e, true)}
             onMouseLeave={(e) => onHover(e, false)}
@@ -231,7 +231,7 @@ export default function JsonSchemaValidatorPage() {
           </button>
           <button
             onClick={() => loadExample(false)}
-            className="flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium transition-all"
+            className="flex items-center gap-1.5 px-3 py-2 rounded-lg text-base font-medium transition-all"
             style={btnGhost}
             onMouseEnter={(e) => onHover(e, true)}
             onMouseLeave={(e) => onHover(e, false)}
@@ -241,7 +241,7 @@ export default function JsonSchemaValidatorPage() {
           {(schema || data) && (
             <button
               onClick={clear}
-              className="flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium transition-all"
+              className="flex items-center gap-1.5 px-3 py-2 rounded-lg text-base font-medium transition-all"
               style={btnGhost}
               onMouseEnter={(e) => onHover(e, true)}
               onMouseLeave={(e) => onHover(e, false)}
@@ -260,7 +260,7 @@ export default function JsonSchemaValidatorPage() {
             style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)' }}
           >
             <div className="flex items-center justify-between">
-              <label className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>JSON Schema</label>
+              <label className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>JSON Schema</label>
               {schema && <CopyButton text={schema} />}
             </div>
             <textarea
@@ -274,7 +274,7 @@ export default function JsonSchemaValidatorPage() {
             />
             {result?.status === 'json-error' && result.target === 'schema' && (
               <div
-                className="rounded-lg px-3 py-2.5 text-xs font-mono"
+                className="rounded-lg px-3 py-2.5 text-sm font-mono"
                 style={{ background: 'rgba(248,113,113,0.1)', border: '1px solid rgba(248,113,113,0.25)', color: '#fca5a5' }}
               >
                 Schema JSON error: {result.message}
@@ -282,7 +282,7 @@ export default function JsonSchemaValidatorPage() {
             )}
             {result?.status === 'schema-error' && (
               <div
-                className="rounded-lg px-3 py-2.5 text-xs font-mono"
+                className="rounded-lg px-3 py-2.5 text-sm font-mono"
                 style={{ background: 'rgba(248,113,113,0.1)', border: '1px solid rgba(248,113,113,0.25)', color: '#fca5a5' }}
               >
                 Invalid schema: {result.message}
@@ -296,7 +296,7 @@ export default function JsonSchemaValidatorPage() {
             style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)' }}
           >
             <div className="flex items-center justify-between">
-              <label className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>JSON Data</label>
+              <label className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>JSON Data</label>
               {data && <CopyButton text={data} />}
             </div>
             <textarea
@@ -310,7 +310,7 @@ export default function JsonSchemaValidatorPage() {
             />
             {result?.status === 'json-error' && result.target === 'data' && (
               <div
-                className="rounded-lg px-3 py-2.5 text-xs font-mono"
+                className="rounded-lg px-3 py-2.5 text-sm font-mono"
                 style={{ background: 'rgba(248,113,113,0.1)', border: '1px solid rgba(248,113,113,0.25)', color: '#fca5a5' }}
               >
                 Data JSON error: {result.message}
@@ -322,7 +322,7 @@ export default function JsonSchemaValidatorPage() {
         {/* Result banner */}
         {loading && (
           <div
-            className="rounded-xl px-5 py-4 text-sm"
+            className="rounded-xl px-5 py-4 text-base"
             style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)', color: 'rgba(255,255,255,0.5)' }}
           >
             Validating…
@@ -336,8 +336,8 @@ export default function JsonSchemaValidatorPage() {
           >
             <CheckCircle size={20} style={{ color: '#34d399', flexShrink: 0 }} />
             <div>
-              <p className="text-sm font-semibold text-emerald-400">Valid</p>
-              <p className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.5)' }}>
+              <p className="text-base font-semibold text-emerald-400">Valid</p>
+              <p className="text-sm mt-0.5" style={{ color: 'rgba(255,255,255,0.5)' }}>
                 The JSON data is valid against the provided schema.
               </p>
             </div>
@@ -353,10 +353,10 @@ export default function JsonSchemaValidatorPage() {
             >
               <XCircle size={20} style={{ color: '#f87171', flexShrink: 0 }} />
               <div>
-                <p className="text-sm font-semibold text-red-400">
+                <p className="text-base font-semibold text-red-400">
                   Invalid — {result.errors.length} error{result.errors.length !== 1 ? 's' : ''} found
                 </p>
-                <p className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.5)' }}>
+                <p className="text-sm mt-0.5" style={{ color: 'rgba(255,255,255,0.5)' }}>
                   Fix the issues below and re-validate.
                 </p>
               </div>
@@ -369,7 +369,7 @@ export default function JsonSchemaValidatorPage() {
             >
               {/* Header */}
               <div
-                className="grid gap-3 px-4 py-2.5 text-xs font-medium uppercase tracking-widest"
+                className="grid gap-3 px-4 py-2.5 text-sm font-medium uppercase tracking-widest"
                 style={{
                   gridTemplateColumns: '200px 1fr 100px',
                   borderBottom: '1px solid rgba(255,255,255,0.07)',
@@ -393,16 +393,16 @@ export default function JsonSchemaValidatorPage() {
                   onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent' }}
                 >
                   <code
-                    className="text-xs font-mono break-all"
+                    className="text-sm font-mono break-all"
                     style={{ color: '#f87171' }}
                   >
                     {err.path}
                   </code>
-                  <span className="text-sm" style={{ color: 'rgba(255,255,255,0.8)' }}>
+                  <span className="text-base" style={{ color: 'rgba(255,255,255,0.8)' }}>
                     {err.message}
                   </span>
                   <span
-                    className="text-xs font-mono px-2 py-0.5 rounded w-fit"
+                    className="text-sm font-mono px-2 py-0.5 rounded w-fit"
                     style={{ background: 'rgba(255,255,255,0.07)', color: 'rgba(255,255,255,0.5)' }}
                   >
                     {err.keyword}
@@ -420,10 +420,10 @@ export default function JsonSchemaValidatorPage() {
             style={{ background: 'var(--surface)', border: '1px dashed rgba(255,255,255,0.1)' }}
           >
             <AlertCircle size={24} style={{ color: 'var(--color-dev)', opacity: 0.4 }} />
-            <p className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.35)' }}>
+            <p className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.35)' }}>
               Paste a JSON Schema and JSON data to validate
             </p>
-            <p className="text-xs" style={{ color: 'rgba(255,255,255,0.25)' }}>
+            <p className="text-sm" style={{ color: 'rgba(255,255,255,0.25)' }}>
               Or load one of the examples above to see it in action
             </p>
           </div>
@@ -436,11 +436,11 @@ export default function JsonSchemaValidatorPage() {
             style={{ background: 'var(--surface)', border: '1px solid rgba(52,211,153,0.2)' }}
           >
             <div className="flex items-center justify-between mb-3">
-              <label className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.6)' }}>Validated Data</label>
+              <label className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.6)' }}>Validated Data</label>
               <CopyButton text={data} />
             </div>
             <pre
-              className="rounded-lg px-3 py-3 text-xs overflow-auto leading-relaxed"
+              className="rounded-lg px-3 py-3 text-sm overflow-auto leading-relaxed"
               style={{
                 background: 'rgba(0,0,0,0.35)',
                 border: '1px solid rgba(255,255,255,0.07)',

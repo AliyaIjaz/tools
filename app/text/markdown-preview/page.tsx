@@ -108,9 +108,9 @@ export default function MarkdownPreviewPage() {
         <SeoSection
           aboutTitle="About this tool"
           about={<>
-            <p className="text-base leading-relaxed"><strong>Markdown Preview Online</strong> is a free browser-based tool that lets you write or paste Markdown and instantly see the rendered HTML output in a live side-by-side preview. It also includes a <strong>Plain Text</strong> mode that strips all Markdown formatting — headings, bold, italic, links, code blocks — down to clean readable text. This is especially useful for removing AI-generated Markdown before pasting into emails, Word documents, or CMS platforms that don&apos;t support Markdown.</p>
-            <p className="text-base leading-relaxed">Rendering is powered by the <strong>Marked</strong> library, while the generated HTML is sanitized with <strong>DOMPurify</strong> to help prevent XSS attacks. Everything runs locally in your browser — your Markdown content is never uploaded to a server.</p>
-            <p className="text-base leading-relaxed">Whether you&apos;re writing GitHub README files, technical documentation, blog posts, or stripping Markdown from AI-generated output, this tool handles it all in one place with no registration required.</p>
+            <p className="text-lg leading-relaxed"><strong>Markdown Preview Online</strong> is a free browser-based tool that lets you write or paste Markdown and instantly see the rendered HTML output in a live side-by-side preview. It also includes a <strong>Plain Text</strong> mode that strips all Markdown formatting — headings, bold, italic, links, code blocks — down to clean readable text. This is especially useful for removing AI-generated Markdown before pasting into emails, Word documents, or CMS platforms that don&apos;t support Markdown.</p>
+            <p className="text-lg leading-relaxed">Rendering is powered by the <strong>Marked</strong> library, while the generated HTML is sanitized with <strong>DOMPurify</strong> to help prevent XSS attacks. Everything runs locally in your browser — your Markdown content is never uploaded to a server.</p>
+            <p className="text-lg leading-relaxed">Whether you&apos;re writing GitHub README files, technical documentation, blog posts, or stripping Markdown from AI-generated output, this tool handles it all in one place with no registration required.</p>
           </>}
           useCasesTitle="Common use cases"
           useCases={[

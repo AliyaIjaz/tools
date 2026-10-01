@@ -16,7 +16,7 @@ export default function Footer() {
         {/* Row 1: logo + links + copyright */}
         <div className="w-full flex flex-col sm:flex-row items-center justify-between gap-4">
           <span
-            className="text-base"
+            className="text-lg"
             style={{
               fontFamily: 'var(--font-orbitron)',
               fontWeight: 700,
@@ -40,7 +40,7 @@ export default function Footer() {
               <span key={href} className="flex items-center gap-4">
                 <Link
                   href={href}
-                  className="text-sm font-medium transition-colors"
+                  className="text-base font-medium transition-colors"
                   style={{ color: 'rgba(255,255,255,0.4)' }}
                   onMouseEnter={e => ((e.target as HTMLElement).style.color = 'rgba(255,255,255,0.75)')}
                   onMouseLeave={e => ((e.target as HTMLElement).style.color = 'rgba(255,255,255,0.4)')}
@@ -54,14 +54,14 @@ export default function Footer() {
             ))}
           </div>
 
-          <span className="text-sm font-medium" style={{ color: 'rgba(255,255,255,0.4)' }}>
+          <span className="text-base font-medium" style={{ color: 'rgba(255,255,255,0.4)' }}>
             © {new Date().getFullYear()} Zenveel
           </span>
         </div>
 
         {/* Row 2: privacy badge */}
         <div
-          className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium"
+          className="flex items-center gap-2 px-4 py-2 rounded-full text-base font-medium"
           style={{
             background: 'rgba(255,255,255,0.05)',
             border: '1px solid rgba(255,255,255,0.1)',

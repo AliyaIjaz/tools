@@ -200,10 +200,10 @@ export default function ColorPickerPage() {
         {imageSrc && (
           <>
             <div className="flex items-center justify-between">
-              <p className="text-sm" style={{ color: 'rgba(255,255,255,0.65)' }}>{fileName} · click any pixel</p>
+              <p className="text-base" style={{ color: 'rgba(255,255,255,0.65)' }}>{fileName} · click any pixel</p>
               <button
                 onClick={() => { setImageSrc(''); setPicked(null); setHistory([]) }}
-                className="text-sm font-medium px-4 py-2 rounded-lg transition-all"
+                className="text-base font-medium px-4 py-2 rounded-lg transition-all"
                 style={{ background: 'var(--color-image-dim)', border: '1px solid var(--color-image)', color: 'var(--color-image)' }}
               >
                 Change image
@@ -239,7 +239,7 @@ export default function ColorPickerPage() {
               <div className="rounded-xl overflow-hidden" style={{ border: '2px solid var(--border-image-idle)' }}>
                 <div className="h-16" style={{ background: picked.hex }} />
                 <div className="p-4 space-y-2" style={{ background: 'var(--surface)' }}>
-                  <p className="text-sm mb-3" style={{ color: 'rgba(255,255,255,0.6)' }}>
+                  <p className="text-base mb-3" style={{ color: 'rgba(255,255,255,0.6)' }}>
                     Pixel at ({picked.x}, {picked.y})
                   </p>
                   {[
@@ -248,8 +248,8 @@ export default function ColorPickerPage() {
                     { label: 'HSL', value: picked.hsl },
                   ].map(({ label, value }) => (
                     <div key={label} className="flex items-center justify-between">
-                      <span className="text-sm w-10 flex-shrink-0" style={{ color: 'rgba(255,255,255,0.65)' }}>{label}</span>
-                      <code className="text-base flex-1 mx-3" style={{ color: 'rgba(255,255,255,0.85)', fontFamily: 'var(--font-geist-mono), monospace' }}>{value}</code>
+                      <span className="text-base w-10 flex-shrink-0" style={{ color: 'rgba(255,255,255,0.65)' }}>{label}</span>
+                      <code className="text-lg flex-1 mx-3" style={{ color: 'rgba(255,255,255,0.85)', fontFamily: 'var(--font-geist-mono), monospace' }}>{value}</code>
                       <CopyButton text={value} />
                     </div>
                   ))}
@@ -260,7 +260,7 @@ export default function ColorPickerPage() {
             {/* History */}
             {history.length > 1 && (
               <div>
-                <p className="text-sm font-medium mb-2" style={{ color: 'rgba(255,255,255,0.6)' }}>Recent picks</p>
+                <p className="text-base font-medium mb-2" style={{ color: 'rgba(255,255,255,0.6)' }}>Recent picks</p>
                 <div className="flex flex-wrap gap-2">
                   {history.map((c, i) => (
                     <button

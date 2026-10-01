@@ -19,7 +19,7 @@ export default function AdSlot({ side }: Props) {
         }}
       >
         <span
-          className="text-xs font-medium uppercase tracking-widest rotate-0 select-none"
+          className="text-sm font-medium uppercase tracking-widest rotate-0 select-none"
           style={{ color: 'rgba(255,255,255,0.18)' }}
         >
           Ad

@@ -75,15 +75,15 @@ export default function FaviconGeneratorPage() {
         <SeoSection
           aboutTitle="Favicon Generator Online"
           about={<>
-            <p className="text-base leading-relaxed">Create high-quality website favicons from any image with this free Favicon Generator. Upload a PNG, JPEG, or WebP image and instantly generate favicon PNG files in all standard sizes, including 16×16, 32×32, 48×48, 64×64, 128×128, and 256×256 pixels. Download each favicon individually or save the complete favicon set in one click.</p>
-            <p className="text-base leading-relaxed">Everything is processed locally in your browser. Your images are never uploaded, making the tool fast, private, and secure.</p>
-            <h3 className="text-base font-semibold text-white mt-4 mb-1">What Is a Favicon?</h3>
-            <p className="text-base leading-relaxed">A favicon (short for favorite icon) is the small icon that represents a website in browser tabs, bookmarks, browser history, address bars, and shortcuts. It helps users quickly recognize your website and strengthens your brand identity.</p>
-            <p className="text-base leading-relaxed">Favicons are an essential part of every modern website. They improve the user experience by making your site easier to identify when multiple browser tabs are open and provide icons for mobile devices, Progressive Web Apps (PWAs), and pinned shortcuts.</p>
-            <p className="text-base leading-relaxed">Instead of creating multiple favicon sizes manually in image editing software, this online Favicon Generator automatically creates all commonly used PNG favicon sizes from a single source image.</p>
-            <h3 className="text-base font-semibold text-white mt-4 mb-2">Generated Favicon Sizes</h3>
-            <p className="text-base leading-relaxed mb-2">The tool creates favicon PNG files in the following standard sizes:</p>
-            <table className="w-full text-sm border-collapse" style={{ borderColor: 'var(--border)' }}>
+            <p className="text-lg leading-relaxed">Create high-quality website favicons from any image with this free Favicon Generator. Upload a PNG, JPEG, or WebP image and instantly generate favicon PNG files in all standard sizes, including 16×16, 32×32, 48×48, 64×64, 128×128, and 256×256 pixels. Download each favicon individually or save the complete favicon set in one click.</p>
+            <p className="text-lg leading-relaxed">Everything is processed locally in your browser. Your images are never uploaded, making the tool fast, private, and secure.</p>
+            <h3 className="text-lg font-semibold text-white mt-4 mb-1">What Is a Favicon?</h3>
+            <p className="text-lg leading-relaxed">A favicon (short for favorite icon) is the small icon that represents a website in browser tabs, bookmarks, browser history, address bars, and shortcuts. It helps users quickly recognize your website and strengthens your brand identity.</p>
+            <p className="text-lg leading-relaxed">Favicons are an essential part of every modern website. They improve the user experience by making your site easier to identify when multiple browser tabs are open and provide icons for mobile devices, Progressive Web Apps (PWAs), and pinned shortcuts.</p>
+            <p className="text-lg leading-relaxed">Instead of creating multiple favicon sizes manually in image editing software, this online Favicon Generator automatically creates all commonly used PNG favicon sizes from a single source image.</p>
+            <h3 className="text-lg font-semibold text-white mt-4 mb-2">Generated Favicon Sizes</h3>
+            <p className="text-lg leading-relaxed mb-2">The tool creates favicon PNG files in the following standard sizes:</p>
+            <table className="w-full text-base border-collapse" style={{ borderColor: 'var(--border)' }}>
               <thead>
                 <tr style={{ borderBottom: '1px solid var(--border)' }}>
                   <th className="text-left py-1.5 pr-4 font-medium text-white">Size</th>
@@ -106,27 +106,27 @@ export default function FaviconGeneratorPage() {
                 ))}
               </tbody>
             </table>
-            <h3 className="text-base font-semibold text-white mt-4 mb-2">Supported Image Formats</h3>
-            <p className="text-base leading-relaxed"><strong className="text-white">PNG</strong> — Recommended because it supports transparent backgrounds and produces the highest-quality favicon images.</p>
-            <p className="text-base leading-relaxed"><strong className="text-white">JPEG</strong> — Fully supported, making it easy to convert existing logos or photographs into favicon PNG files.</p>
-            <p className="text-base leading-relaxed"><strong className="text-white">WebP</strong> — Modern WebP images can also be uploaded and are automatically converted into PNG favicon files.</p>
-            <h3 className="text-base font-semibold text-white mt-4 mb-2">How to Use</h3>
+            <h3 className="text-lg font-semibold text-white mt-4 mb-2">Supported Image Formats</h3>
+            <p className="text-lg leading-relaxed"><strong className="text-white">PNG</strong> — Recommended because it supports transparent backgrounds and produces the highest-quality favicon images.</p>
+            <p className="text-lg leading-relaxed"><strong className="text-white">JPEG</strong> — Fully supported, making it easy to convert existing logos or photographs into favicon PNG files.</p>
+            <p className="text-lg leading-relaxed"><strong className="text-white">WebP</strong> — Modern WebP images can also be uploaded and are automatically converted into PNG favicon files.</p>
+            <h3 className="text-lg font-semibold text-white mt-4 mb-2">How to Use</h3>
             <ol className="space-y-1.5 list-decimal list-inside" style={{ color: 'rgba(255,255,255,0.75)' }}>
-              <li className="text-base">Upload a PNG, JPEG, or WebP image.</li>
-              <li className="text-base">Preview the source image.</li>
-              <li className="text-base">The tool automatically generates all standard favicon sizes.</li>
-              <li className="text-base">Download individual PNG files or the complete favicon set.</li>
-              <li className="text-base">Add the generated files to your website.</li>
+              <li className="text-lg">Upload a PNG, JPEG, or WebP image.</li>
+              <li className="text-lg">Preview the source image.</li>
+              <li className="text-lg">The tool automatically generates all standard favicon sizes.</li>
+              <li className="text-lg">Download individual PNG files or the complete favicon set.</li>
+              <li className="text-lg">Add the generated files to your website.</li>
             </ol>
-            <p className="text-base leading-relaxed mt-2">No installation or registration is required.</p>
-            <h3 className="text-base font-semibold text-white mt-4 mb-2">How to Add a Favicon to Your Website</h3>
-            <p className="text-base leading-relaxed">After generating your favicon, upload it to your website and reference it in the <code className="text-sm font-mono px-1 rounded" style={{ background: 'rgba(255,255,255,0.1)' }}>&lt;head&gt;</code> section of your HTML document.</p>
-            <pre className="text-sm rounded-lg p-3 mt-2 overflow-x-auto" style={{ background: 'rgba(255,255,255,0.05)', color: 'rgba(255,255,255,0.8)', border: '2px solid var(--border-web-idle)' }}>{`<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+            <p className="text-lg leading-relaxed mt-2">No installation or registration is required.</p>
+            <h3 className="text-lg font-semibold text-white mt-4 mb-2">How to Add a Favicon to Your Website</h3>
+            <p className="text-lg leading-relaxed">After generating your favicon, upload it to your website and reference it in the <code className="text-base font-mono px-1 rounded" style={{ background: 'rgba(255,255,255,0.1)' }}>&lt;head&gt;</code> section of your HTML document.</p>
+            <pre className="text-base rounded-lg p-3 mt-2 overflow-x-auto" style={{ background: 'rgba(255,255,255,0.05)', color: 'rgba(255,255,255,0.8)', border: '2px solid var(--border-web-idle)' }}>{`<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">`}</pre>
-            <p className="text-base leading-relaxed mt-2">For Apple devices:</p>
-            <pre className="text-sm rounded-lg p-3 mt-2 overflow-x-auto" style={{ background: 'rgba(255,255,255,0.05)', color: 'rgba(255,255,255,0.8)', border: '2px solid var(--border-web-idle)' }}>{`<link rel="apple-touch-icon" href="/apple-touch-icon.png">`}</pre>
-            <p className="text-base leading-relaxed mt-2">If your site uses a Web App Manifest:</p>
-            <pre className="text-sm rounded-lg p-3 mt-2 overflow-x-auto" style={{ background: 'rgba(255,255,255,0.05)', color: 'rgba(255,255,255,0.8)', border: '2px solid var(--border-web-idle)' }}>{`{
+            <p className="text-lg leading-relaxed mt-2">For Apple devices:</p>
+            <pre className="text-base rounded-lg p-3 mt-2 overflow-x-auto" style={{ background: 'rgba(255,255,255,0.05)', color: 'rgba(255,255,255,0.8)', border: '2px solid var(--border-web-idle)' }}>{`<link rel="apple-touch-icon" href="/apple-touch-icon.png">`}</pre>
+            <p className="text-lg leading-relaxed mt-2">If your site uses a Web App Manifest:</p>
+            <pre className="text-base rounded-lg p-3 mt-2 overflow-x-auto" style={{ background: 'rgba(255,255,255,0.05)', color: 'rgba(255,255,255,0.8)', border: '2px solid var(--border-web-idle)' }}>{`{
   "icons": [
     {
       "src": "/favicon-192.png",
@@ -135,13 +135,13 @@ export default function FaviconGeneratorPage() {
     }
   ]
 }`}</pre>
-            <h3 className="text-base font-semibold text-white mt-4 mb-2">Why Use a Favicon Generator?</h3>
-            <p className="text-base leading-relaxed">Creating favicon images manually often requires multiple exports and image editing software. This tool automatically generates all commonly used favicon sizes from one source image, saving time while ensuring consistent quality.</p>
-            <h3 className="text-base font-semibold text-white mt-4 mb-2">Browser Compatibility</h3>
-            <p className="text-base leading-relaxed">PNG favicons are supported by all modern browsers, including Google Chrome, Mozilla Firefox, Microsoft Edge, Safari, and Opera. Modern browsers no longer require .ico files for favicon support. PNG favicons are sufficient for nearly all current websites. Only very old versions of Internet Explorer rely on the .ico format.</p>
-            <h3 className="text-base font-semibold text-white mt-4 mb-2">Apple Touch Icons &amp; Progressive Web Apps</h3>
-            <p className="text-base leading-relaxed">In addition to browser favicons, websites often use larger icons for mobile devices and installed web apps. Apple Touch Icons are displayed when users add a website to the iPhone or iPad home screen. Progressive Web Apps (PWAs) use application icons in their web app manifest to provide a native app-like experience. Generating multiple favicon sizes helps prepare assets for these modern web platforms.</p>
-            <h3 className="text-base font-semibold text-white mt-4 mb-2">Tips for Better Favicons</h3>
+            <h3 className="text-lg font-semibold text-white mt-4 mb-2">Why Use a Favicon Generator?</h3>
+            <p className="text-lg leading-relaxed">Creating favicon images manually often requires multiple exports and image editing software. This tool automatically generates all commonly used favicon sizes from one source image, saving time while ensuring consistent quality.</p>
+            <h3 className="text-lg font-semibold text-white mt-4 mb-2">Browser Compatibility</h3>
+            <p className="text-lg leading-relaxed">PNG favicons are supported by all modern browsers, including Google Chrome, Mozilla Firefox, Microsoft Edge, Safari, and Opera. Modern browsers no longer require .ico files for favicon support. PNG favicons are sufficient for nearly all current websites. Only very old versions of Internet Explorer rely on the .ico format.</p>
+            <h3 className="text-lg font-semibold text-white mt-4 mb-2">Apple Touch Icons &amp; Progressive Web Apps</h3>
+            <p className="text-lg leading-relaxed">In addition to browser favicons, websites often use larger icons for mobile devices and installed web apps. Apple Touch Icons are displayed when users add a website to the iPhone or iPad home screen. Progressive Web Apps (PWAs) use application icons in their web app manifest to provide a native app-like experience. Generating multiple favicon sizes helps prepare assets for these modern web platforms.</p>
+            <h3 className="text-lg font-semibold text-white mt-4 mb-2">Tips for Better Favicons</h3>
           </>}
           useCasesTitle="Features"
           useCases={[
@@ -239,10 +239,10 @@ export default function FaviconGeneratorPage() {
             <Upload size={22} style={{ color: 'var(--color-web)' }} />
           </div>
           <div className="text-center">
-            <p className="text-base font-semibold text-white">
+            <p className="text-lg font-semibold text-white">
               {fileName || 'Drop an image or click to upload'}
             </p>
-            <p className="text-sm mt-1" style={{ color: 'rgba(255,255,255,0.55)' }}>
+            <p className="text-base mt-1" style={{ color: 'rgba(255,255,255,0.55)' }}>
               PNG, JPEG, WebP — square images work best
             </p>
           </div>
@@ -259,10 +259,10 @@ export default function FaviconGeneratorPage() {
         {previews.length > 0 && (
           <>
             <div className="flex items-center justify-between">
-              <p className="text-sm font-semibold text-white">Generated favicons</p>
+              <p className="text-base font-semibold text-white">Generated favicons</p>
               <button
                 onClick={downloadAll}
-                className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold transition-all"
+                className="flex items-center gap-2 px-4 py-2 rounded-lg text-base font-semibold transition-all"
                 style={{ background: 'var(--color-web)', color: '#000' }}
               >
                 <Download size={14} /> Download all (.zip)
@@ -293,12 +293,12 @@ export default function FaviconGeneratorPage() {
                     />
                   </div>
                   <div className="text-center">
-                    <p className="text-sm font-semibold text-white">{p.size}×{p.size}</p>
-                    <p className="text-sm" style={{ color: 'rgba(255,255,255,0.5)' }}>PNG</p>
+                    <p className="text-base font-semibold text-white">{p.size}×{p.size}</p>
+                    <p className="text-base" style={{ color: 'rgba(255,255,255,0.5)' }}>PNG</p>
                   </div>
                   <button
                     onClick={() => downloadSize(p)}
-                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium w-full justify-center transition-all"
+                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-base font-medium w-full justify-center transition-all"
                     style={{ background: 'var(--color-web-dim)', border: '1px solid var(--color-web)', color: 'var(--color-web)' }}
                   >
                     <Download size={13} /> Download

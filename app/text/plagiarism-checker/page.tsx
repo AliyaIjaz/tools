@@ -49,7 +49,7 @@ function ScoreMeter({ score }: { score: number }) {
   return (
     <div className="rounded-xl p-6 text-center" style={{ background: 'var(--surface)', border: '2px solid var(--border-text-idle)' }}>
       <div className="text-6xl font-bold mb-2 tabular-nums" style={{ color }}>{score}%</div>
-      <div className="text-sm font-medium mb-4" style={{ color }}>{label}</div>
+      <div className="text-base font-medium mb-4" style={{ color }}>{label}</div>
       <div className="h-2 rounded-full overflow-hidden" style={{ background: 'var(--border)' }}>
         <div className="h-full rounded-full transition-all duration-700" style={{ width: `${score}%`, background: color }} />
       </div>
@@ -92,9 +92,9 @@ export default function PlagiarismCheckerPage() {
         <SeoSection
           aboutTitle="About this tool"
           about={<>
-            <p className="text-base leading-relaxed">Text Similarity Checker Online is a free tool that compares two pieces of text and measures how similar they are using <strong>Jaccard similarity on word n-grams</strong>. Simply paste the original text and the comparison text, and the tool calculates a similarity score while highlighting matching words and phrases so you can quickly identify overlapping content. Whether you&apos;re reviewing articles, essays, reports, documentation, or product descriptions, this tool provides a fast and easy way to compare text without uploading your data.</p>
-            <p className="text-base leading-relaxed">Unlike traditional plagiarism checkers, this tool compares <strong>only the two texts you provide</strong>. It does not search the internet, academic databases, or external repositories. Instead, it analyzes the shared word sequences (n-grams) between both texts to estimate content similarity, making it ideal for comparing revisions, checking rewritten content, evaluating AI-generated text, and identifying duplicate passages.</p>
-            <p className="text-base leading-relaxed">Everything runs locally in your browser using JavaScript, so your content remains private and never leaves your device. There are no registrations, downloads, or usage limits. Whether you&apos;re a student, teacher, writer, editor, researcher, developer, SEO professional, or content marketer, this online Text Similarity Checker offers a secure and efficient way to compare documents and measure content overlap.</p>
+            <p className="text-lg leading-relaxed">Text Similarity Checker Online is a free tool that compares two pieces of text and measures how similar they are using <strong>Jaccard similarity on word n-grams</strong>. Simply paste the original text and the comparison text, and the tool calculates a similarity score while highlighting matching words and phrases so you can quickly identify overlapping content. Whether you&apos;re reviewing articles, essays, reports, documentation, or product descriptions, this tool provides a fast and easy way to compare text without uploading your data.</p>
+            <p className="text-lg leading-relaxed">Unlike traditional plagiarism checkers, this tool compares <strong>only the two texts you provide</strong>. It does not search the internet, academic databases, or external repositories. Instead, it analyzes the shared word sequences (n-grams) between both texts to estimate content similarity, making it ideal for comparing revisions, checking rewritten content, evaluating AI-generated text, and identifying duplicate passages.</p>
+            <p className="text-lg leading-relaxed">Everything runs locally in your browser using JavaScript, so your content remains private and never leaves your device. There are no registrations, downloads, or usage limits. Whether you&apos;re a student, teacher, writer, editor, researcher, developer, SEO professional, or content marketer, this online Text Similarity Checker offers a secure and efficient way to compare documents and measure content overlap.</p>
           </>}
           useCasesTitle="Common use cases"
           useCases={[
@@ -168,14 +168,14 @@ export default function PlagiarismCheckerPage() {
           <button
             onClick={handleCheck}
             disabled={!original.trim() || !suspect.trim()}
-            className="px-6 py-3 rounded-xl text-base font-semibold transition-all disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
+            className="px-6 py-3 rounded-xl text-lg font-semibold transition-all disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
             style={{ background: 'var(--color-text-tool)', color: '#000' }}
           >
             Check Similarity
           </button>
           <button
             onClick={handleClear}
-            className="px-6 py-3 rounded-xl text-base font-medium transition-all"
+            className="px-6 py-3 rounded-xl text-lg font-medium transition-all"
             style={{ background: 'var(--surface)', border: '2px solid var(--border-text-idle)', color: 'rgba(255,255,255,0.65)' }}
             onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'var(--border-text-idle)' }}
             onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'var(--border-text-idle)' }}
@@ -197,19 +197,19 @@ export default function PlagiarismCheckerPage() {
                 <div key={label} className="rounded-xl px-4 py-4 text-center"
                   style={{ background: 'var(--surface)', border: '2px solid var(--border-text-idle)' }}>
                   <div className="text-2xl font-bold mb-1" style={{ color: 'var(--color-text-tool)' }}>{value}</div>
-                  <div className="text-sm" style={{ color: 'rgba(255,255,255,0.5)' }}>{label}</div>
+                  <div className="text-base" style={{ color: 'rgba(255,255,255,0.5)' }}>{label}</div>
                 </div>
               ))}
             </div>
 
             {result.matchingPhrases.length > 0 ? (
               <div className="rounded-xl p-5" style={{ background: 'var(--surface)', border: '2px solid var(--border-text-idle)' }}>
-                <div className="text-sm font-semibold mb-3" style={{ color: 'rgba(255,255,255,0.55)' }}>
+                <div className="text-base font-semibold mb-3" style={{ color: 'rgba(255,255,255,0.55)' }}>
                   Matching phrases detected
                 </div>
                 <div className="flex flex-wrap gap-2 max-h-48 overflow-y-auto">
                   {result.matchingPhrases.map((phrase, i) => (
-                    <span key={i} className="px-3 py-1.5 rounded-lg text-sm font-mono"
+                    <span key={i} className="px-3 py-1.5 rounded-lg text-base font-mono"
                       style={{ background: 'rgba(251,191,36,0.12)', border: '1px solid rgba(251,191,36,0.25)', color: 'var(--color-text-tool)' }}>
                       {phrase}
                     </span>
@@ -217,7 +217,7 @@ export default function PlagiarismCheckerPage() {
                 </div>
               </div>
             ) : (
-              <div className="rounded-xl p-5 text-base text-center"
+              <div className="rounded-xl p-5 text-lg text-center"
                 style={{ color: 'rgba(255,255,255,0.45)', background: 'var(--surface)', border: '2px solid var(--border-text-idle)' }}>
                 No matching phrases found.
               </div>

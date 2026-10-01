@@ -67,9 +67,9 @@ export default function StringEscapePage() {
         <SeoSection
           aboutTitle="About this tool"
           about={<>
-            <p className="text-base leading-relaxed">String Escaper Online is a free developer tool that lets you quickly escape or unescape text for <strong>HTML</strong>, <strong>JSON</strong>, and <strong>regular expressions (regex)</strong>. Whether you&apos;re preparing user input for HTML, embedding strings inside JSON payloads, creating literal regex patterns, or decoding escaped text, this tool performs the conversion instantly with just one click.</p>
-            <p className="text-base leading-relaxed">The tool supports multiple escaping modes to suit different development tasks. <strong>HTML escaping</strong> converts reserved characters such as <code className="text-sm font-mono px-1 py-0.5 rounded" style={{background:'rgba(255,255,255,0.08)'}}>&lt;</code>, <code className="text-sm font-mono px-1 py-0.5 rounded" style={{background:'rgba(255,255,255,0.08)'}}>&gt;</code>, <code className="text-sm font-mono px-1 py-0.5 rounded" style={{background:'rgba(255,255,255,0.08)'}}>&amp;</code>, <code className="text-sm font-mono px-1 py-0.5 rounded" style={{background:'rgba(255,255,255,0.08)'}}>&#34;</code>, and <code className="text-sm font-mono px-1 py-0.5 rounded" style={{background:'rgba(255,255,255,0.08)'}}>&#39;</code> into their corresponding HTML entities, making text safe for display in HTML documents. <strong>JSON escaping</strong> converts text into a valid JSON string by escaping quotation marks, backslashes, newlines, tabs, and other special characters. <strong>Regex escaping</strong> automatically escapes characters with special meaning in regular expressions so they are treated as literal text rather than regex operators.</p>
-            <p className="text-base leading-relaxed">All processing happens locally in your browser, so your text is never uploaded or stored. There are no registrations, downloads, or usage limits. Whether you&apos;re a frontend developer, backend engineer, API developer, technical writer, QA tester, or student, this online String Escaper helps you safely prepare and transform text for web applications, APIs, configuration files, documentation, and programming projects.</p>
+            <p className="text-lg leading-relaxed">String Escaper Online is a free developer tool that lets you quickly escape or unescape text for <strong>HTML</strong>, <strong>JSON</strong>, and <strong>regular expressions (regex)</strong>. Whether you&apos;re preparing user input for HTML, embedding strings inside JSON payloads, creating literal regex patterns, or decoding escaped text, this tool performs the conversion instantly with just one click.</p>
+            <p className="text-lg leading-relaxed">The tool supports multiple escaping modes to suit different development tasks. <strong>HTML escaping</strong> converts reserved characters such as <code className="text-base font-mono px-1 py-0.5 rounded" style={{background:'rgba(255,255,255,0.08)'}}>&lt;</code>, <code className="text-base font-mono px-1 py-0.5 rounded" style={{background:'rgba(255,255,255,0.08)'}}>&gt;</code>, <code className="text-base font-mono px-1 py-0.5 rounded" style={{background:'rgba(255,255,255,0.08)'}}>&amp;</code>, <code className="text-base font-mono px-1 py-0.5 rounded" style={{background:'rgba(255,255,255,0.08)'}}>&#34;</code>, and <code className="text-base font-mono px-1 py-0.5 rounded" style={{background:'rgba(255,255,255,0.08)'}}>&#39;</code> into their corresponding HTML entities, making text safe for display in HTML documents. <strong>JSON escaping</strong> converts text into a valid JSON string by escaping quotation marks, backslashes, newlines, tabs, and other special characters. <strong>Regex escaping</strong> automatically escapes characters with special meaning in regular expressions so they are treated as literal text rather than regex operators.</p>
+            <p className="text-lg leading-relaxed">All processing happens locally in your browser, so your text is never uploaded or stored. There are no registrations, downloads, or usage limits. Whether you&apos;re a frontend developer, backend engineer, API developer, technical writer, QA tester, or student, this online String Escaper helps you safely prepare and transform text for web applications, APIs, configuration files, documentation, and programming projects.</p>
           </>}
           useCasesTitle="Common use cases"
           useCases={[
@@ -92,7 +92,7 @@ export default function StringEscapePage() {
             { q: 'Which escaping modes are supported?', a: 'The tool supports HTML Escape, HTML Unescape, JSON Escape, JSON Unescape, and Regex Escape. Each mode is designed for a specific use case and produces output suitable for that format.' },
             {
               q: 'What is HTML escaping?',
-              a: <><p className="text-base leading-relaxed mb-2">HTML escaping converts reserved HTML characters into entity references so they are displayed as text instead of being interpreted as HTML:</p><ul className="space-y-1 text-base"><li><code className="font-mono text-sm">&lt;</code> → <code className="font-mono text-sm">&amp;lt;</code></li><li><code className="font-mono text-sm">&gt;</code> → <code className="font-mono text-sm">&amp;gt;</code></li><li><code className="font-mono text-sm">&amp;</code> → <code className="font-mono text-sm">&amp;amp;</code></li><li><code className="font-mono text-sm">&#34;</code> → <code className="font-mono text-sm">&amp;quot;</code></li><li><code className="font-mono text-sm">&#39;</code> → <code className="font-mono text-sm">&amp;#039;</code></li></ul></>,
+              a: <><p className="text-lg leading-relaxed mb-2">HTML escaping converts reserved HTML characters into entity references so they are displayed as text instead of being interpreted as HTML:</p><ul className="space-y-1 text-lg"><li><code className="font-mono text-base">&lt;</code> → <code className="font-mono text-base">&amp;lt;</code></li><li><code className="font-mono text-base">&gt;</code> → <code className="font-mono text-base">&amp;gt;</code></li><li><code className="font-mono text-base">&amp;</code> → <code className="font-mono text-base">&amp;amp;</code></li><li><code className="font-mono text-base">&#34;</code> → <code className="font-mono text-base">&amp;quot;</code></li><li><code className="font-mono text-base">&#39;</code> → <code className="font-mono text-base">&amp;#039;</code></li></ul></>,
             },
             { q: 'What is HTML unescaping?', a: 'HTML unescaping converts HTML entities back into their original characters. For example, &amp;lt;div&amp;gt; becomes <div>.' },
             { q: 'How does JSON escaping work?', a: "JSON escaping converts a string into valid JSON format by escaping quotation marks, backslashes, newline characters, tabs, carriage returns, and other control characters. The tool uses JavaScript's JSON.stringify() behavior to produce properly escaped JSON strings." },
@@ -120,7 +120,7 @@ export default function StringEscapePage() {
               <button
                 key={m}
                 onClick={() => { setMode(m); setInput(''); setOutput('') }}
-                className="px-4 py-2 rounded-lg text-base font-semibold transition-all"
+                className="px-4 py-2 rounded-lg text-lg font-semibold transition-all"
                 style={{
                   background: mode === m ? 'var(--color-text-tool-dim)' : 'var(--surface)',
                   border: `1.5px solid ${mode === m ? 'var(--color-text-tool)' : 'var(--border)'}`,
@@ -144,10 +144,10 @@ export default function StringEscapePage() {
         {/* Input */}
         <div className="flex flex-col gap-2">
           <div className="flex items-center justify-between">
-            <label className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>
+            <label className="text-lg font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>
               {tab === 'Escape' ? 'Input' : 'Escaped input'}
             </label>
-            <span className="text-sm" style={{ color: 'rgba(255,255,255,0.4)' }}>
+            <span className="text-base" style={{ color: 'rgba(255,255,255,0.4)' }}>
               {input.length} chars
             </span>
           </div>
@@ -181,7 +181,7 @@ export default function StringEscapePage() {
         {output && (
           <div className="flex flex-col gap-2">
             <div className="flex items-center justify-between">
-              <label className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>
+              <label className="text-lg font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>
                 {mode === 'Regex' ? 'Escaped pattern' : tab === 'Escape' ? 'Escaped output' : 'Unescaped output'}
               </label>
               <CopyButton text={output} />

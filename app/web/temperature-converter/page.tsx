@@ -147,9 +147,9 @@ export default function TemperatureConverterPage() {
           <SeoSection
             aboutTitle="Celsius to Fahrenheit Converter — °C, °F, Kelvin & Rankine Explained"
             about={<>
-              <p className="text-base leading-relaxed"><strong>Celsius to Fahrenheit Converter Online</strong> is a free browser-based tool for instant temperature conversion between <strong>Celsius (°C)</strong>, <strong>Fahrenheit (°F)</strong>, <strong>Kelvin (K)</strong>, and <strong>Rankine (°R)</strong>. Type a value in any field and all three other scales update simultaneously — no button to press. The Celsius to Fahrenheit conversion formula is °F = (°C × 9/5) + 32; the reverse is °C = (°F − 32) × 5/9.</p>
-              <p className="text-base leading-relaxed">All four temperature scales are supported: Celsius and Fahrenheit for everyday weather and cooking use, Kelvin for science and physics, and Rankine for US engineering thermodynamics. Common reference points — freezing point, boiling point, body temperature, absolute zero — are available as one-click presets.</p>
-              <p className="text-base leading-relaxed">All temperature conversion runs entirely in your browser — nothing is sent to any server.</p>
+              <p className="text-lg leading-relaxed"><strong>Celsius to Fahrenheit Converter Online</strong> is a free browser-based tool for instant temperature conversion between <strong>Celsius (°C)</strong>, <strong>Fahrenheit (°F)</strong>, <strong>Kelvin (K)</strong>, and <strong>Rankine (°R)</strong>. Type a value in any field and all three other scales update simultaneously — no button to press. The Celsius to Fahrenheit conversion formula is °F = (°C × 9/5) + 32; the reverse is °C = (°F − 32) × 5/9.</p>
+              <p className="text-lg leading-relaxed">All four temperature scales are supported: Celsius and Fahrenheit for everyday weather and cooking use, Kelvin for science and physics, and Rankine for US engineering thermodynamics. Common reference points — freezing point, boiling point, body temperature, absolute zero — are available as one-click presets.</p>
+              <p className="text-lg leading-relaxed">All temperature conversion runs entirely in your browser — nothing is sent to any server.</p>
             </>}
             useCasesTitle="Common Temperature Conversion Use Cases"
             useCases={[
@@ -168,12 +168,12 @@ export default function TemperatureConverterPage() {
                 intro: 'Quick reference table for common Celsius to Fahrenheit conversions. Use the calculator above for any value not listed here.',
                 items: [
                   <div key="chart" className="overflow-x-auto">
-                    <table className="w-full text-sm font-mono border-collapse">
+                    <table className="w-full text-base font-mono border-collapse">
                       <thead>
                         <tr>
-                          <th className="text-left pb-2 pr-8 text-xs font-semibold uppercase tracking-wider" style={{ color: 'var(--color-web)' }}>Celsius (°C)</th>
-                          <th className="text-left pb-2 pr-8 text-xs font-semibold uppercase tracking-wider" style={{ color: '#f472b6' }}>Fahrenheit (°F)</th>
-                          <th className="text-left pb-2 text-xs font-semibold uppercase tracking-wider" style={{ color: '#facc15' }}>Kelvin (K)</th>
+                          <th className="text-left pb-2 pr-8 text-sm font-semibold uppercase tracking-wider" style={{ color: 'var(--color-web)' }}>Celsius (°C)</th>
+                          <th className="text-left pb-2 pr-8 text-sm font-semibold uppercase tracking-wider" style={{ color: '#f472b6' }}>Fahrenheit (°F)</th>
+                          <th className="text-left pb-2 text-sm font-semibold uppercase tracking-wider" style={{ color: '#facc15' }}>Kelvin (K)</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -198,7 +198,7 @@ export default function TemperatureConverterPage() {
                             <td className="py-1.5 pr-8" style={{ color: 'var(--color-web)' }}>{c}°C</td>
                             <td className="py-1.5 pr-8" style={{ color: '#f472b6' }}>{f}°F</td>
                             <td className="py-1.5 pr-8" style={{ color: '#facc15' }}>{k} K</td>
-                            <td className="py-1.5 text-xs hidden sm:table-cell" style={{ color: 'rgba(255,255,255,0.4)' }}>{note}</td>
+                            <td className="py-1.5 text-sm hidden sm:table-cell" style={{ color: 'rgba(255,255,255,0.4)' }}>{note}</td>
                           </tr>
                         ))}
                       </tbody>
@@ -235,16 +235,16 @@ export default function TemperatureConverterPage() {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
                     <span
-                      className="text-xs font-bold px-2 py-0.5 rounded font-mono"
+                      className="text-sm font-bold px-2 py-0.5 rounded font-mono"
                       style={{ background: `${color}20`, color }}
                     >
                       {unit.symbol}
                     </span>
-                    <span className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>
+                    <span className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>
                       {unit.label}
                     </span>
                   </div>
-                  <span className="text-xs" style={{ color: 'rgba(255,255,255,0.35)' }}>{unit.fullName}</span>
+                  <span className="text-sm" style={{ color: 'rgba(255,255,255,0.35)' }}>{unit.fullName}</span>
                 </div>
 
                 {/* Input */}
@@ -264,7 +264,7 @@ export default function TemperatureConverterPage() {
                     }}
                     placeholder={`Enter ${unit.label}…`}
                     spellCheck={false}
-                    className="flex-1 min-w-0 rounded-lg px-3 py-2.5 text-base font-mono outline-none transition-all placeholder:text-white/50"
+                    className="flex-1 min-w-0 rounded-lg px-3 py-2.5 text-lg font-mono outline-none transition-all placeholder:text-white/50"
                     style={{
                       background: 'rgba(0,0,0,0.35)',
                       border: `2px solid ${isActive ? color : 'var(--border-web)'}`,
@@ -284,8 +284,8 @@ export default function TemperatureConverterPage() {
             className="rounded-xl px-5 py-8 flex flex-col items-center gap-2 text-center"
             style={{ background: 'var(--surface)', border: '1px dashed rgba(255,255,255,0.1)' }}
           >
-            <p className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.6)' }}>Type a temperature in any field to convert</p>
-            <p className="text-sm" style={{ color: 'rgba(255,255,255,0.45)' }}>°C, °F, K, and °R all update simultaneously</p>
+            <p className="text-lg font-semibold" style={{ color: 'rgba(255,255,255,0.6)' }}>Type a temperature in any field to convert</p>
+            <p className="text-base" style={{ color: 'rgba(255,255,255,0.45)' }}>°C, °F, K, and °R all update simultaneously</p>
           </div>
         )}
 
@@ -296,9 +296,9 @@ export default function TemperatureConverterPage() {
             style={{ background: 'rgba(16,185,129,0.07)', border: '2px solid var(--border-web-idle)' }}
           >
             <div>
-              <p className="text-xs font-medium uppercase tracking-widest mb-1" style={{ color: 'rgba(255,255,255,0.5)' }}>Kelvin (absolute scale)</p>
+              <p className="text-sm font-medium uppercase tracking-widest mb-1" style={{ color: 'rgba(255,255,255,0.5)' }}>Kelvin (absolute scale)</p>
               <p className="text-lg font-mono font-semibold" style={{ color: 'var(--color-web)' }}>
-                {formatResult(kelvin)} <span className="text-sm font-normal" style={{ color: 'rgba(255,255,255,0.6)' }}>K</span>
+                {formatResult(kelvin)} <span className="text-base font-normal" style={{ color: 'rgba(255,255,255,0.6)' }}>K</span>
               </p>
             </div>
             <CopyButton text={formatResult(kelvin)} />
@@ -310,7 +310,7 @@ export default function TemperatureConverterPage() {
           <div className="flex justify-end">
             <button
               onClick={clearAll}
-              className="text-sm px-3 py-1.5 rounded-lg transition-all"
+              className="text-base px-3 py-1.5 rounded-lg transition-all"
               style={{ color: 'rgba(255,255,255,0.55)', background: 'rgba(255,255,255,0.06)', border: '2px solid var(--border-web-idle)' }}
               onMouseEnter={(e) => { e.currentTarget.style.color = 'rgba(255,255,255,0.9)'; e.currentTarget.style.background = 'rgba(255,255,255,0.12)' }}
               onMouseLeave={(e) => { e.currentTarget.style.color = 'rgba(255,255,255,0.55)'; e.currentTarget.style.background = 'rgba(255,255,255,0.06)' }}
@@ -325,7 +325,7 @@ export default function TemperatureConverterPage() {
           className="rounded-xl p-4 space-y-3"
           style={{ background: 'var(--surface)', border: '2px solid var(--border-web-idle)' }}
         >
-          <p className="text-xs font-medium uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.55)' }}>Common Reference Points</p>
+          <p className="text-sm font-medium uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.55)' }}>Common Reference Points</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
             {PRESETS.map((preset) => {
               const activeCVal = kelvin !== null ? formatResult(UNIT_MAP['C'].fromKelvin(kelvin)) : null
@@ -342,8 +342,8 @@ export default function TemperatureConverterPage() {
                   onMouseEnter={(e) => { if (!isSelected) e.currentTarget.style.borderColor = 'var(--border-web)' }}
                   onMouseLeave={(e) => { if (!isSelected) e.currentTarget.style.borderColor = 'var(--border-web-idle)' }}
                 >
-                  <p className="text-sm font-medium mb-1" style={{ color: 'rgba(255,255,255,0.85)' }}>{preset.label}</p>
-                  <p className="text-xs font-mono" style={{ color: 'rgba(255,255,255,0.45)' }}>
+                  <p className="text-base font-medium mb-1" style={{ color: 'rgba(255,255,255,0.85)' }}>{preset.label}</p>
+                  <p className="text-sm font-mono" style={{ color: 'rgba(255,255,255,0.45)' }}>
                     {preset.C}°C · {preset.F}°F · {preset.K} K
                   </p>
                 </button>
@@ -357,14 +357,14 @@ export default function TemperatureConverterPage() {
           className="rounded-xl p-4 space-y-3"
           style={{ background: 'var(--surface)', border: '2px solid var(--border-web-idle)' }}
         >
-          <p className="text-xs font-medium uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.55)' }}>Conversion Formulas</p>
+          <p className="text-sm font-medium uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.55)' }}>Conversion Formulas</p>
           <div className="overflow-x-auto">
-            <table className="w-full text-sm border-collapse">
+            <table className="w-full text-base border-collapse">
               <thead>
                 <tr>
-                  <th className="text-left pb-2 pr-6 text-xs font-semibold uppercase tracking-wider" style={{ color: 'rgba(255,255,255,0.5)' }}>From</th>
-                  <th className="text-left pb-2 pr-6 text-xs font-semibold uppercase tracking-wider" style={{ color: 'rgba(255,255,255,0.5)' }}>To</th>
-                  <th className="text-left pb-2 text-xs font-semibold uppercase tracking-wider" style={{ color: 'rgba(255,255,255,0.5)' }}>Formula</th>
+                  <th className="text-left pb-2 pr-6 text-sm font-semibold uppercase tracking-wider" style={{ color: 'rgba(255,255,255,0.5)' }}>From</th>
+                  <th className="text-left pb-2 pr-6 text-sm font-semibold uppercase tracking-wider" style={{ color: 'rgba(255,255,255,0.5)' }}>To</th>
+                  <th className="text-left pb-2 text-sm font-semibold uppercase tracking-wider" style={{ color: 'rgba(255,255,255,0.5)' }}>Formula</th>
                 </tr>
               </thead>
               <tbody>
@@ -379,7 +379,7 @@ export default function TemperatureConverterPage() {
                   <tr key={i} className="border-t" style={{ borderColor: 'rgba(255,255,255,0.05)' }}>
                     <td className="py-1.5 pr-6 font-mono font-semibold" style={{ color: fColor }}>{from}</td>
                     <td className="py-1.5 pr-6 font-mono font-semibold" style={{ color: tColor }}>{to}</td>
-                    <td className="py-1.5 font-mono text-sm" style={{ color: 'rgba(255,255,255,0.7)' }}>{formula}</td>
+                    <td className="py-1.5 font-mono text-base" style={{ color: 'rgba(255,255,255,0.7)' }}>{formula}</td>
                   </tr>
                 ))}
               </tbody>

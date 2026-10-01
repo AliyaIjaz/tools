@@ -25,7 +25,7 @@ export default function CopyButton({ text, className, label }: Props) {
     <button
       onClick={handleCopy}
       className={cn(
-        'inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium transition-all duration-150',
+        'inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-sm font-medium transition-all duration-150',
         copied
           ? 'text-emerald-400'
           : 'text-white/75 hover:text-white',

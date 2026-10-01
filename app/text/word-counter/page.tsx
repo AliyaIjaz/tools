@@ -35,8 +35,8 @@ export default function WordCounterPage() {
         <SeoSection
           aboutTitle="About this tool"
           about={<>
-            <p className="text-base leading-relaxed">Word Counter Online is a free text analysis tool that instantly counts words, characters, characters without spaces, sentences, paragraphs, and estimated reading time. Simply paste or type your text, and all statistics update live as you edit. Whether you&apos;re writing an essay, blog post, report, email, resume, social media caption, or marketing copy, this tool helps you stay within word or character limits while understanding the overall structure of your content.</p>
-            <p className="text-base leading-relaxed">The tool runs entirely in your browser, so your text is never uploaded to a server, ensuring complete privacy. There are no sign-ups, downloads, or character limits, making it suitable for both short snippets and long documents. Writers, students, bloggers, copywriters, marketers, SEO professionals, and anyone working with text can use this online word counter to quickly analyze content before publishing or submitting it.</p>
+            <p className="text-lg leading-relaxed">Word Counter Online is a free text analysis tool that instantly counts words, characters, characters without spaces, sentences, paragraphs, and estimated reading time. Simply paste or type your text, and all statistics update live as you edit. Whether you&apos;re writing an essay, blog post, report, email, resume, social media caption, or marketing copy, this tool helps you stay within word or character limits while understanding the overall structure of your content.</p>
+            <p className="text-lg leading-relaxed">The tool runs entirely in your browser, so your text is never uploaded to a server, ensuring complete privacy. There are no sign-ups, downloads, or character limits, making it suitable for both short snippets and long documents. Writers, students, bloggers, copywriters, marketers, SEO professionals, and anyone working with text can use this online word counter to quickly analyze content before publishing or submitting it.</p>
           </>}
           useCasesTitle="Common use cases"
           useCases={[
@@ -58,7 +58,7 @@ export default function WordCounterPage() {
             { q: 'Is my text uploaded to a server?', a: 'No. Everything is processed locally in your browser. Your text remains private and is never uploaded or stored.' },
             {
               q: 'What statistics does the tool provide?',
-              a: <><p className="text-base leading-relaxed mb-2">The tool displays: word count, character count (with spaces), character count (without spaces), sentence count, paragraph count, and estimated reading time.</p><p className="text-base leading-relaxed">All statistics update instantly as you type or edit your text.</p></>,
+              a: <><p className="text-lg leading-relaxed mb-2">The tool displays: word count, character count (with spaces), character count (without spaces), sentence count, paragraph count, and estimated reading time.</p><p className="text-lg leading-relaxed">All statistics update instantly as you type or edit your text.</p></>,
             },
             { q: 'How is word count calculated?', a: 'Words are identified by separating text using spaces and common word boundaries. This provides an accurate count for most everyday writing, including essays, articles, emails, and blog posts.' },
             { q: 'Does character count include spaces?', a: 'Both values are shown. You can view the total number of characters including spaces as well as the count excluding spaces.' },
@@ -82,7 +82,7 @@ export default function WordCounterPage() {
     >
       <div className="space-y-5">
         <div>
-          <label className="text-sm font-medium mb-1.5 block" style={{ color: 'rgba(255,255,255,0.7)' }}>
+          <label className="text-base font-medium mb-1.5 block" style={{ color: 'rgba(255,255,255,0.7)' }}>
             Your text
           </label>
           <textarea
@@ -90,7 +90,7 @@ export default function WordCounterPage() {
             onChange={(e) => setText(e.target.value)}
             rows={10}
             placeholder="Type or paste text here…"
-            className="w-full resize-y rounded-xl px-4 py-3 text-sm outline-none transition-all placeholder:text-white/50"
+            className="w-full resize-y rounded-xl px-4 py-3 text-base outline-none transition-all placeholder:text-white/50"
             style={{
               background: 'var(--surface)',
               border: '2px solid var(--border-text-idle)',
@@ -119,7 +119,7 @@ export default function WordCounterPage() {
               >
                 {value}
               </div>
-              <div className="text-sm" style={{ color: 'rgba(255,255,255,0.6)' }}>
+              <div className="text-base" style={{ color: 'rgba(255,255,255,0.6)' }}>
                 {label}
               </div>
             </div>

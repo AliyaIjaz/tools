@@ -26,7 +26,7 @@ export default function ContactPage() {
         Contact Us
       </h1>
 
-      <p className="text-base leading-relaxed mb-10" style={{ color: 'rgba(255,255,255,0.75)' }}>
+      <p className="text-lg leading-relaxed mb-10" style={{ color: 'rgba(255,255,255,0.75)' }}>
         Have a question, suggestion, or found a bug? We&apos;re happy to hear from you. Reach out and we&apos;ll get
         back to you as soon as we can.
       </p>
@@ -46,10 +46,10 @@ export default function ContactPage() {
             <Mail size={18} style={{ color: 'var(--color-image)' }} />
           </div>
           <div className="flex-1 min-w-0">
-            <p className="text-sm font-medium mb-1" style={{ color: 'rgba(255,255,255,0.5)' }}>Email</p>
+            <p className="text-base font-medium mb-1" style={{ color: 'rgba(255,255,255,0.5)' }}>Email</p>
             <a
               href="mailto:thesaturndevelopers@gmail.com"
-              className="text-base font-medium text-white underline break-all"
+              className="text-lg font-medium text-white underline break-all"
               style={{ color: 'var(--color-image)' }}
             >
               thesaturndevelopers@gmail.com
@@ -57,7 +57,7 @@ export default function ContactPage() {
             <div className="mt-3">
               <button
                 onClick={copyEmail}
-                className="text-sm px-3 py-1.5 rounded-lg transition-colors"
+                className="text-base px-3 py-1.5 rounded-lg transition-colors"
                 style={{
                   background: copied ? 'color-mix(in srgb, var(--color-web) 15%, transparent)' : 'rgba(255,255,255,0.07)',
                   border: `1px solid ${copied ? 'color-mix(in srgb, var(--color-web) 30%, transparent)' : 'rgba(255,255,255,0.1)'}`,
@@ -84,8 +84,8 @@ export default function ContactPage() {
             <MessageSquare size={18} style={{ color: 'var(--color-dev)' }} />
           </div>
           <div>
-            <p className="text-sm font-medium mb-1" style={{ color: 'rgba(255,255,255,0.5)' }}>What to include</p>
-            <ul className="text-base space-y-1" style={{ color: 'rgba(255,255,255,0.75)' }}>
+            <p className="text-base font-medium mb-1" style={{ color: 'rgba(255,255,255,0.5)' }}>What to include</p>
+            <ul className="text-lg space-y-1" style={{ color: 'rgba(255,255,255,0.75)' }}>
               <li>The tool you were using (if applicable)</li>
               <li>A short description of your question or issue</li>
               <li>Your browser and OS if reporting a bug</li>
@@ -94,7 +94,7 @@ export default function ContactPage() {
         </div>
       </div>
 
-      <p className="text-sm mt-8" style={{ color: 'rgba(255,255,255,0.4)' }}>
+      <p className="text-base mt-8" style={{ color: 'rgba(255,255,255,0.4)' }}>
         We typically respond within 1–3 business days.
       </p>
     </div>

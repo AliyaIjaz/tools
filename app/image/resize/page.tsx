@@ -281,11 +281,11 @@ export default function ImageResizePage() {
                 <p className="text-lg font-semibold" style={{ color: 'rgba(255,255,255,0.9)' }}>
                   {dragging ? 'Drop to upload' : 'Click or drag images here'}
                 </p>
-                <p className="text-base mt-1.5" style={{ color: 'var(--color-image)' }}>
+                <p className="text-lg mt-1.5" style={{ color: 'var(--color-image)' }}>
                   PNG, JPG, WebP · up to 10 images
                 </p>
               </div>
-              <p className="text-sm px-6 py-2 rounded-full text-center"
+              <p className="text-base px-6 py-2 rounded-full text-center"
                 style={{ background: 'rgba(255,255,255,0.05)', border: '2px solid var(--border-image-idle)', color: 'var(--color-image)' }}>
                 Your images never leave your browser — 100% private
               </p>
@@ -295,7 +295,7 @@ export default function ImageResizePage() {
           <>
             {/* Limit warning */}
             {limitWarning && (
-              <p className="text-sm font-medium px-4 py-2.5 rounded-lg" style={{ background: 'rgba(239,68,68,0.1)', border: '1px solid rgba(239,68,68,0.3)', color: 'rgb(239,68,68)' }}>
+              <p className="text-base font-medium px-4 py-2.5 rounded-lg" style={{ background: 'rgba(239,68,68,0.1)', border: '1px solid rgba(239,68,68,0.3)', color: 'rgb(239,68,68)' }}>
                 {limitWarning}
               </p>
             )}
@@ -309,8 +309,8 @@ export default function ImageResizePage() {
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img src={entry.src} alt="source" className="w-16 h-16 rounded-lg object-cover flex-shrink-0" style={{ border: '2px solid var(--border-image-idle)' }} />
                     <div className="min-w-0 flex-1">
-                      <p className="text-base font-semibold text-white truncate">{entry.fileName}</p>
-                      <p className="text-base mt-1">
+                      <p className="text-lg font-semibold text-white truncate">{entry.fileName}</p>
+                      <p className="text-lg mt-1">
                         <span style={{ color: 'rgba(255,255,255,0.9)' }}>{entry.origW} × {entry.origH} px · {formatBytes(entry.origSize)}</span>
                         <span style={{ color: 'rgba(255,255,255,0.65)' }}> → </span>
                         <span className="font-semibold text-white">{w} × {h} px</span>
@@ -338,7 +338,7 @@ export default function ImageResizePage() {
             {/* Add more */}
             {images.length < MAX_IMAGES && (
               <button onClick={() => addMoreRef.current?.click()}
-                className="add-more-btn flex items-center gap-2 text-base font-semibold px-5 py-2.5 rounded-xl transition-all"
+                className="add-more-btn flex items-center gap-2 text-lg font-semibold px-5 py-2.5 rounded-xl transition-all"
                 style={{ background: 'var(--surface)', border: '2px solid var(--border-image)', color: 'rgba(255,255,255,0.85)' }}>
                 <Plus size={16} /> Add more images
               </button>
@@ -356,9 +356,9 @@ export default function ImageResizePage() {
             `}</style>
             <div className="flex flex-col items-center gap-3 w-full">
               <div className="flex items-center justify-between w-1/2">
-                <span className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.9)' }}>Social Media Presets</span>
+                <span className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.9)' }}>Social Media Presets</span>
                 {activePreset && (
-                  <button onClick={() => setActivePreset(null)} className="preset-clear text-sm transition-all" style={{ color: 'rgba(255,255,255,0.5)' }}>
+                  <button onClick={() => setActivePreset(null)} className="preset-clear text-base transition-all" style={{ color: 'rgba(255,255,255,0.5)' }}>
                     Clear
                   </button>
                 )}
@@ -366,14 +366,14 @@ export default function ImageResizePage() {
               <div className="flex flex-col gap-2" style={{ width: '50%' }}>
                 {PRESETS.map((group) => (
                   <div key={group.group} className="flex items-center gap-2 overflow-x-auto" style={{ flexWrap: 'nowrap' }}>
-                    <span className="text-sm font-medium flex-shrink-0" style={{ color: 'rgb(96,165,250)', width: '72px' }}>{group.group}</span>
+                    <span className="text-base font-medium flex-shrink-0" style={{ color: 'rgb(96,165,250)', width: '72px' }}>{group.group}</span>
                     {group.items.map((preset) => {
                       const isActive = activePreset?.label === preset.label && activePreset?.w === preset.w && activePreset?.h === preset.h
                       return (
                         <button
                           key={preset.label}
                           onClick={() => setActivePreset(isActive ? null : preset)}
-                          className="preset-btn flex-shrink-0 text-sm px-3 py-1.5 rounded-lg transition-all"
+                          className="preset-btn flex-shrink-0 text-base px-3 py-1.5 rounded-lg transition-all"
                           style={{
                             background: isActive ? 'var(--color-image-dim)' : 'var(--surface)',
                             border: `1px solid ${isActive ? 'var(--color-image)' : 'var(--border)'}`,
@@ -381,7 +381,7 @@ export default function ImageResizePage() {
                           }}
                         >
                           {preset.label}
-                          <span className="preset-dims ml-1.5 font-mono text-xs" style={{ color: isActive ? 'var(--color-image)' : 'rgba(255,255,255,0.4)' }}>
+                          <span className="preset-dims ml-1.5 font-mono text-sm" style={{ color: isActive ? 'var(--color-image)' : 'rgba(255,255,255,0.4)' }}>
                             {preset.w}×{preset.h}
                           </span>
                         </button>
@@ -397,8 +397,8 @@ export default function ImageResizePage() {
               <div className="flex flex-col items-center gap-5">
                 <div className="flex flex-col items-center gap-2 w-full">
                   <div className="flex items-center justify-between w-1/2">
-                    <label className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.9)' }}>Dimensions</label>
-                    <span className="text-sm font-mono font-semibold" style={{ color: 'rgba(255,255,255,0.95)' }}>{scale}%</span>
+                    <label className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.9)' }}>Dimensions</label>
+                    <span className="text-base font-mono font-semibold" style={{ color: 'rgba(255,255,255,0.95)' }}>{scale}%</span>
                   </div>
                   <input type="range" min={1} max={100} value={scale}
                     onChange={(e) => setScale(Number(e.target.value))}
@@ -410,13 +410,13 @@ export default function ImageResizePage() {
             {/* Quality slider — always visible */}
             <div className="flex flex-col items-center gap-2 w-full">
               <div className="flex items-center justify-between w-1/2">
-                <label className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.9)' }}>Quality</label>
-                <span className="text-sm font-mono font-semibold" style={{ color: 'rgba(255,255,255,0.95)' }}>{quality}%</span>
+                <label className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.9)' }}>Quality</label>
+                <span className="text-base font-mono font-semibold" style={{ color: 'rgba(255,255,255,0.95)' }}>{quality}%</span>
               </div>
               <input type="range" min={1} max={100} value={quality}
                 onChange={(e) => setQuality(Number(e.target.value))}
                 style={sliderStyle} />
-              <p className="text-sm font-medium" style={{ color: quality < 40 ? 'rgb(239,68,68)' : quality < 75 ? 'rgb(234,179,8)' : 'rgb(34,197,94)' }}>
+              <p className="text-base font-medium" style={{ color: quality < 40 ? 'rgb(239,68,68)' : quality < 75 ? 'rgb(234,179,8)' : 'rgb(34,197,94)' }}>
                 {quality < 40 ? 'Low' : quality < 75 ? 'Medium' : 'High'}
               </p>
             </div>

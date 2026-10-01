@@ -65,10 +65,10 @@ export default function EpubToPdfPage() {
           aboutTitle="About This Free Online EPUB to PDF Converter"
           about={
             <>
-              <p className="text-base leading-relaxed"><strong className="text-white">EPUB to PDF Converter</strong> turns EPUB eBooks into PDF documents you can print, share, or read on any device. It reads the book&apos;s chapters in order and rebuilds them as clean A4 pages with a cover, title page, headings, paragraphs, lists, and images.</p>
-              <p className="text-base leading-relaxed">The whole conversion runs <strong className="text-white">locally in your browser</strong>. Your eBook is <strong className="text-white">never uploaded</strong> to a server, and there is no registration, watermark, or file-size paywall.</p>
-              <p className="text-base leading-relaxed">Need to go the other way? Try the <Link href="/convertor/pdf-to-epub" className="underline" style={{ color: 'var(--color-convertor)' }}>PDF to EPUB converter</Link> to turn a PDF into an eBook for Kindle, Kobo, or Apple Books.</p>
-              <p className="text-base leading-relaxed">PDFs created here use standard Latin fonts, so books in languages such as Chinese, Japanese, Arabic, or Russian will lose characters the PDF fonts cannot display. DRM-protected eBooks (for example from Kindle or Adobe Digital Editions) cannot be converted.</p>
+              <p className="text-lg leading-relaxed"><strong className="text-white">EPUB to PDF Converter</strong> turns EPUB eBooks into PDF documents you can print, share, or read on any device. It reads the book&apos;s chapters in order and rebuilds them as clean A4 pages with a cover, title page, headings, paragraphs, lists, and images.</p>
+              <p className="text-lg leading-relaxed">The whole conversion runs <strong className="text-white">locally in your browser</strong>. Your eBook is <strong className="text-white">never uploaded</strong> to a server, and there is no registration, watermark, or file-size paywall.</p>
+              <p className="text-lg leading-relaxed">Need to go the other way? Try the <Link href="/convertor/pdf-to-epub" className="underline" style={{ color: 'var(--color-convertor)' }}>PDF to EPUB converter</Link> to turn a PDF into an eBook for Kindle, Kobo, or Apple Books.</p>
+              <p className="text-lg leading-relaxed">PDFs created here use standard Latin fonts, so books in languages such as Chinese, Japanese, Arabic, or Russian will lose characters the PDF fonts cannot display. DRM-protected eBooks (for example from Kindle or Adobe Digital Editions) cannot be converted.</p>
             </>
           }
           useCases={[
@@ -112,13 +112,13 @@ export default function EpubToPdfPage() {
             style={{ background: 'var(--surface)', border: '2px solid var(--border-convertor-idle)' }}
           >
             <div className="min-w-0">
-              <p className="text-base font-semibold text-white truncate">{file.name}</p>
-              <p className="text-sm mt-1" style={{ color: 'rgba(255,255,255,0.65)' }}>{formatBytes(file.size)}</p>
+              <p className="text-lg font-semibold text-white truncate">{file.name}</p>
+              <p className="text-base mt-1" style={{ color: 'rgba(255,255,255,0.65)' }}>{formatBytes(file.size)}</p>
             </div>
             <button
               onClick={reset}
               disabled={busy}
-              className="inline-flex items-center gap-1.5 text-sm disabled:opacity-50"
+              className="inline-flex items-center gap-1.5 text-base disabled:opacity-50"
               style={{ color: 'rgba(255,255,255,0.65)' }}
             >
               <RotateCcw size={14} /> Change file
@@ -129,7 +129,7 @@ export default function EpubToPdfPage() {
             <button
               onClick={convert}
               disabled={busy}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-base font-semibold text-white disabled:opacity-60 transition-opacity"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-lg font-semibold text-white disabled:opacity-60 transition-opacity"
               style={{ background: 'var(--color-convertor)' }}
             >
               {busy ? <Loader2 size={18} className="animate-spin" /> : null}
@@ -142,7 +142,7 @@ export default function EpubToPdfPage() {
               <div className="h-2 rounded-full overflow-hidden" style={{ background: 'var(--color-convertor-dim)' }}>
                 <div className="h-full transition-all" style={{ width: `${Math.round(progress * 100)}%`, background: 'var(--color-convertor)' }} />
               </div>
-              <p className="text-sm" style={{ color: 'rgba(255,255,255,0.65)' }}>{status}</p>
+              <p className="text-base" style={{ color: 'rgba(255,255,255,0.65)' }}>{status}</p>
             </div>
           )}
 
@@ -152,20 +152,20 @@ export default function EpubToPdfPage() {
               style={{ background: 'var(--surface)', border: '2px solid var(--border-convertor)' }}
             >
               <div>
-                <p className="text-base font-semibold text-white">{result.title}</p>
-                <p className="text-sm mt-1" style={{ color: 'rgba(255,255,255,0.65)' }}>
+                <p className="text-lg font-semibold text-white">{result.title}</p>
+                <p className="text-base mt-1" style={{ color: 'rgba(255,255,255,0.65)' }}>
                   {result.pages} pages · {result.chapters} sections · {formatBytes(result.blob.size)}
                 </p>
               </div>
               {result.droppedChars > 0 && (
-                <p className="text-sm flex items-start gap-2" style={{ color: 'rgba(255,255,255,0.75)' }}>
+                <p className="text-base flex items-start gap-2" style={{ color: 'rgba(255,255,255,0.75)' }}>
                   <AlertTriangle size={16} className="shrink-0 mt-0.5" style={{ color: 'var(--color-text-tool)' }} />
                   {result.droppedChars.toLocaleString()} characters outside the Latin character set could not be included in the PDF.
                 </p>
               )}
               <button
                 onClick={() => downloadBlob(result.blob, outName)}
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-base font-semibold text-white"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-lg font-semibold text-white"
                 style={{ background: 'var(--color-convertor)' }}
               >
                 <Download size={18} /> Download PDF
@@ -176,7 +176,7 @@ export default function EpubToPdfPage() {
       )}
 
       {error && (
-        <p className="text-sm mt-4" style={{ color: '#f87171' }}>{error}</p>
+        <p className="text-base mt-4" style={{ color: '#f87171' }}>{error}</p>
       )}
     </ToolLayout>
   )

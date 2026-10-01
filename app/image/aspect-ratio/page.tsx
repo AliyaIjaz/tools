@@ -117,9 +117,9 @@ export default function AspectRatioPage() {
       seoContent={
         <SeoSection
           about={<>
-            <p className="text-base leading-relaxed"><strong>Aspect Ratio Calculator Online</strong> is a free browser-based tool for working with image and video dimensions. Enter a width and height to instantly get the simplified aspect ratio, decimal ratio, and a full table of scaled sizes. Or enter a ratio and one known dimension to calculate the other — perfect for resizing images while keeping them proportional.</p>
-            <p className="text-base leading-relaxed">The tool includes presets for all major AI image generation formats (Midjourney, DALL-E, Stable Diffusion), social media platforms (Instagram, Twitter, YouTube, LinkedIn, OG image), video resolutions (720p, 1080p, 4K, cinema), and devices (iPhone, iPad). Click any preset to load its dimensions instantly.</p>
-            <p className="text-base leading-relaxed">All calculations run in your browser — no server, no upload, no signup.</p>
+            <p className="text-lg leading-relaxed"><strong>Aspect Ratio Calculator Online</strong> is a free browser-based tool for working with image and video dimensions. Enter a width and height to instantly get the simplified aspect ratio, decimal ratio, and a full table of scaled sizes. Or enter a ratio and one known dimension to calculate the other — perfect for resizing images while keeping them proportional.</p>
+            <p className="text-lg leading-relaxed">The tool includes presets for all major AI image generation formats (Midjourney, DALL-E, Stable Diffusion), social media platforms (Instagram, Twitter, YouTube, LinkedIn, OG image), video resolutions (720p, 1080p, 4K, cinema), and devices (iPhone, iPad). Click any preset to load its dimensions instantly.</p>
+            <p className="text-lg leading-relaxed">All calculations run in your browser — no server, no upload, no signup.</p>
           </>}
           useCases={[
             'Find the correct aspect ratio for Midjourney --ar flag before generating images.',
@@ -150,7 +150,7 @@ export default function AspectRatioPage() {
             <button
               key={m}
               onClick={() => setMode(m)}
-              className="px-4 py-2 rounded-lg text-sm font-semibold transition-all capitalize"
+              className="px-4 py-2 rounded-lg text-base font-semibold transition-all capitalize"
               style={mode === m
                 ? { background: 'var(--color-image)', color: '#fff' }
                 : btnGhost}
@@ -168,15 +168,15 @@ export default function AspectRatioPage() {
             className="rounded-xl p-4 space-y-4"
             style={{ background: 'var(--surface)', border: '2px solid var(--border-image-idle)' }}
           >
-            <label className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>Enter Dimensions</label>
+            <label className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>Enter Dimensions</label>
             <div className="flex items-center gap-3 flex-wrap">
               <div className="flex flex-col gap-1">
-                <span className="text-xs" style={{ color: 'rgba(255,255,255,0.4)' }}>Width (px)</span>
+                <span className="text-sm" style={{ color: 'rgba(255,255,255,0.4)' }}>Width (px)</span>
                 <input
                   type="number" min={1} value={width}
                   onChange={(e) => setWidth(e.target.value)}
                   placeholder="1920"
-                  className="w-32 rounded-lg px-3 py-2.5 text-sm outline-none font-mono placeholder:text-white/50 transition-all"
+                  className="w-32 rounded-lg px-3 py-2.5 text-base outline-none font-mono placeholder:text-white/50 transition-all"
                   style={{ background: 'rgba(0,0,0,0.35)', border: '2px solid var(--border-image)', color: 'rgba(255,255,255,0.92)' }}
                   onFocus={(e) => { e.currentTarget.style.borderColor = 'var(--color-image)' }}
                   onBlur={(e) => { e.currentTarget.style.borderColor = 'var(--border-image-idle)' }}
@@ -184,12 +184,12 @@ export default function AspectRatioPage() {
               </div>
               <span className="mt-5 text-lg" style={{ color: 'rgba(255,255,255,0.3)' }}>×</span>
               <div className="flex flex-col gap-1">
-                <span className="text-xs" style={{ color: 'rgba(255,255,255,0.4)' }}>Height (px)</span>
+                <span className="text-sm" style={{ color: 'rgba(255,255,255,0.4)' }}>Height (px)</span>
                 <input
                   type="number" min={1} value={height}
                   onChange={(e) => setHeight(e.target.value)}
                   placeholder="1080"
-                  className="w-32 rounded-lg px-3 py-2.5 text-sm outline-none font-mono placeholder:text-white/50 transition-all"
+                  className="w-32 rounded-lg px-3 py-2.5 text-base outline-none font-mono placeholder:text-white/50 transition-all"
                   style={{ background: 'rgba(0,0,0,0.35)', border: '2px solid var(--border-image)', color: 'rgba(255,255,255,0.92)' }}
                   onFocus={(e) => { e.currentTarget.style.borderColor = 'var(--color-image)' }}
                   onBlur={(e) => { e.currentTarget.style.borderColor = 'var(--border-image-idle)' }}
@@ -208,7 +208,7 @@ export default function AspectRatioPage() {
                   {dimValid && <CopyButton text={ratioStr} />}
                 </div>
                 {dimValid && (
-                  <span className="text-xs font-mono" style={{ color: 'rgba(255,255,255,0.35)' }}>
+                  <span className="text-sm font-mono" style={{ color: 'rgba(255,255,255,0.35)' }}>
                     decimal: {decimalStr}
                   </span>
                 )}
@@ -219,7 +219,7 @@ export default function AspectRatioPage() {
             {dimValid && (
               <div className="flex items-center gap-4 pt-2">
                 <div
-                  className="rounded-lg flex items-center justify-center text-xs font-mono flex-shrink-0"
+                  className="rounded-lg flex items-center justify-center text-sm font-mono flex-shrink-0"
                   style={{
                     width: decimalRatio >= 1 ? '120px' : `${Math.round(120 * decimalRatio)}px`,
                     height: decimalRatio >= 1 ? `${Math.round(120 / decimalRatio)}px` : '120px',
@@ -232,7 +232,7 @@ export default function AspectRatioPage() {
                 >
                   {sw}:{sh}
                 </div>
-                <p className="text-sm" style={{ color: 'rgba(255,255,255,0.45)' }}>
+                <p className="text-base" style={{ color: 'rgba(255,255,255,0.45)' }}>
                   {width} × {height} px · ratio {ratioStr} · {decimalStr}:1
                 </p>
               </div>
@@ -246,15 +246,15 @@ export default function AspectRatioPage() {
             className="rounded-xl p-4 space-y-4"
             style={{ background: 'var(--surface)', border: '2px solid var(--border-image-idle)' }}
           >
-            <label className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>Enter Ratio &amp; Known Dimension</label>
+            <label className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>Enter Ratio &amp; Known Dimension</label>
             <div className="flex items-end gap-3 flex-wrap">
               {/* Ratio inputs */}
               <div className="flex flex-col gap-1">
-                <span className="text-xs" style={{ color: 'rgba(255,255,255,0.4)' }}>Ratio W</span>
+                <span className="text-sm" style={{ color: 'rgba(255,255,255,0.4)' }}>Ratio W</span>
                 <input
                   type="number" min={1} value={ratioW}
                   onChange={(e) => setRatioW(e.target.value)}
-                  className="w-20 rounded-lg px-3 py-2.5 text-sm outline-none font-mono placeholder:text-white/50 transition-all"
+                  className="w-20 rounded-lg px-3 py-2.5 text-base outline-none font-mono placeholder:text-white/50 transition-all"
                   style={{ background: 'rgba(0,0,0,0.35)', border: '2px solid var(--border-image)', color: 'rgba(255,255,255,0.92)' }}
                   onFocus={(e) => { e.currentTarget.style.borderColor = 'var(--color-image)' }}
                   onBlur={(e) => { e.currentTarget.style.borderColor = 'var(--border-image-idle)' }}
@@ -262,28 +262,28 @@ export default function AspectRatioPage() {
               </div>
               <span className="pb-2.5 text-lg font-bold" style={{ color: 'rgba(255,255,255,0.3)' }}>:</span>
               <div className="flex flex-col gap-1">
-                <span className="text-xs" style={{ color: 'rgba(255,255,255,0.4)' }}>Ratio H</span>
+                <span className="text-sm" style={{ color: 'rgba(255,255,255,0.4)' }}>Ratio H</span>
                 <input
                   type="number" min={1} value={ratioH}
                   onChange={(e) => setRatioH(e.target.value)}
-                  className="w-20 rounded-lg px-3 py-2.5 text-sm outline-none font-mono placeholder:text-white/50 transition-all"
+                  className="w-20 rounded-lg px-3 py-2.5 text-base outline-none font-mono placeholder:text-white/50 transition-all"
                   style={{ background: 'rgba(0,0,0,0.35)', border: '2px solid var(--border-image)', color: 'rgba(255,255,255,0.92)' }}
                   onFocus={(e) => { e.currentTarget.style.borderColor = 'var(--color-image)' }}
                   onBlur={(e) => { e.currentTarget.style.borderColor = 'var(--border-image-idle)' }}
                 />
               </div>
 
-              <span className="pb-2.5 text-sm" style={{ color: 'rgba(255,255,255,0.3)' }}>·</span>
+              <span className="pb-2.5 text-base" style={{ color: 'rgba(255,255,255,0.3)' }}>·</span>
 
               {/* Known dim toggle */}
               <div className="flex flex-col gap-1">
-                <span className="text-xs" style={{ color: 'rgba(255,255,255,0.4)' }}>I know the</span>
+                <span className="text-sm" style={{ color: 'rgba(255,255,255,0.4)' }}>I know the</span>
                 <div className="flex rounded-lg overflow-hidden" style={{ border: '2px solid var(--border-image)' }}>
                   {(['w', 'h'] as const).map((d) => (
                     <button
                       key={d}
                       onClick={() => setKnownDim(d)}
-                      className="px-4 py-2.5 text-sm font-medium transition-all"
+                      className="px-4 py-2.5 text-base font-medium transition-all"
                       style={knownDim === d
                         ? { background: 'var(--color-image)', color: '#fff' }
                         : { background: 'transparent', color: 'rgba(255,255,255,0.45)' }}
@@ -297,12 +297,12 @@ export default function AspectRatioPage() {
               </div>
 
               <div className="flex flex-col gap-1">
-                <span className="text-xs" style={{ color: 'rgba(255,255,255,0.4)' }}>{knownDim === 'w' ? 'Width' : 'Height'} (px)</span>
+                <span className="text-sm" style={{ color: 'rgba(255,255,255,0.4)' }}>{knownDim === 'w' ? 'Width' : 'Height'} (px)</span>
                 <input
                   type="number" min={1} value={knownVal}
                   onChange={(e) => setKnownVal(e.target.value)}
                   placeholder="1920"
-                  className="w-32 rounded-lg px-3 py-2.5 text-sm outline-none font-mono placeholder:text-white/50 transition-all"
+                  className="w-32 rounded-lg px-3 py-2.5 text-base outline-none font-mono placeholder:text-white/50 transition-all"
                   style={{ background: 'rgba(0,0,0,0.35)', border: '2px solid var(--border-image)', color: 'rgba(255,255,255,0.92)' }}
                   onFocus={(e) => { e.currentTarget.style.borderColor = 'var(--color-image)' }}
                   onBlur={(e) => { e.currentTarget.style.borderColor = 'var(--border-image-idle)' }}
@@ -315,7 +315,7 @@ export default function AspectRatioPage() {
                 className="rounded-lg px-4 py-3 flex items-center gap-4"
                 style={{ background: 'rgba(59,130,246,0.1)', border: '1px solid rgba(59,130,246,0.25)' }}
               >
-                <span className="text-sm" style={{ color: 'rgba(255,255,255,0.6)' }}>
+                <span className="text-base" style={{ color: 'rgba(255,255,255,0.6)' }}>
                   {knownDim === 'w' ? `Width ${knownVal}px` : `Height ${knownVal}px`} at {ratioW}:{ratioH}
                 </span>
                 <ArrowRight size={14} style={{ color: 'rgba(255,255,255,0.3)' }} />
@@ -335,7 +335,7 @@ export default function AspectRatioPage() {
             style={{ background: 'var(--surface)', border: '2px solid var(--border-image-idle)' }}
           >
             <div className="px-4 py-3" style={{ borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
-              <span className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>
+              <span className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>
                 Scaled Sizes at {ratioStr}
               </span>
             </div>
@@ -348,7 +348,7 @@ export default function AspectRatioPage() {
                   onMouseEnter={(e) => { e.currentTarget.style.background = 'rgba(255,255,255,0.04)' }}
                   onMouseLeave={(e) => { e.currentTarget.style.background = 'var(--surface)' }}
                 >
-                  <span className="text-sm font-mono" style={{ color: 'rgba(255,255,255,0.8)' }}>
+                  <span className="text-base font-mono" style={{ color: 'rgba(255,255,255,0.8)' }}>
                     {tw} × {th}
                   </span>
                   <CopyButton text={`${tw}x${th}`} />
@@ -364,13 +364,13 @@ export default function AspectRatioPage() {
           style={{ background: 'var(--surface)', border: '2px solid var(--border-image-idle)' }}
         >
           <div className="flex items-center justify-between flex-wrap gap-2">
-            <span className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>Common Presets</span>
+            <span className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>Common Presets</span>
             <div className="flex rounded-lg overflow-hidden" style={{ border: '2px solid var(--border-image-idle)' }}>
               {PRESET_TAGS.map((tag) => (
                 <button
                   key={tag}
                   onClick={() => setActiveTag(tag)}
-                  className="px-3 py-1.5 text-xs font-medium transition-all"
+                  className="px-3 py-1.5 text-sm font-medium transition-all"
                   style={activeTag === tag
                     ? { background: 'var(--color-image)', color: '#fff' }
                     : { background: 'transparent', color: 'rgba(255,255,255,0.45)' }}
@@ -393,9 +393,9 @@ export default function AspectRatioPage() {
                 onMouseEnter={(e) => { e.currentTarget.style.background = 'rgba(59,130,246,0.1)'; e.currentTarget.style.borderColor = 'rgba(59,130,246,0.3)' }}
                 onMouseLeave={(e) => { e.currentTarget.style.background = 'rgba(0,0,0,0.25)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)' }}
               >
-                <p className="text-sm font-medium" style={{ color: 'rgba(255,255,255,0.82)' }}>{p.label}</p>
-                <p className="text-xs font-mono" style={{ color: 'var(--color-image)' }}>{p.ratio}</p>
-                <p className="text-xs font-mono" style={{ color: 'rgba(255,255,255,0.35)' }}>{p.w} × {p.h}</p>
+                <p className="text-base font-medium" style={{ color: 'rgba(255,255,255,0.82)' }}>{p.label}</p>
+                <p className="text-sm font-mono" style={{ color: 'var(--color-image)' }}>{p.ratio}</p>
+                <p className="text-sm font-mono" style={{ color: 'rgba(255,255,255,0.35)' }}>{p.w} × {p.h}</p>
               </button>
             ))}
           </div>

@@ -90,7 +90,7 @@ export default function DiffViewerPage() {
         {/* Inputs */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <label className="text-sm font-semibold mb-2 block" style={{ color: 'rgba(255,255,255,0.75)' }}>
+            <label className="text-base font-semibold mb-2 block" style={{ color: 'rgba(255,255,255,0.75)' }}>
               Original
             </label>
             <textarea
@@ -108,7 +108,7 @@ export default function DiffViewerPage() {
             />
           </div>
           <div>
-            <label className="text-sm font-semibold mb-2 block" style={{ color: 'rgba(255,255,255,0.75)' }}>
+            <label className="text-base font-semibold mb-2 block" style={{ color: 'rgba(255,255,255,0.75)' }}>
               Modified
             </label>
             <textarea
@@ -131,13 +131,13 @@ export default function DiffViewerPage() {
         {(left || right) && (
           <div className="flex items-center gap-3 flex-wrap">
             <div
-              className="flex items-center gap-1.5 text-sm font-semibold px-3 py-1.5 rounded-full"
+              className="flex items-center gap-1.5 text-base font-semibold px-3 py-1.5 rounded-full"
               style={{ background: 'rgba(52,211,153,0.12)', border: '1.5px solid rgba(52,211,153,0.35)', color: '#34d399' }}
             >
               +{added} added
             </div>
             <div
-              className="flex items-center gap-1.5 text-sm font-semibold px-3 py-1.5 rounded-full"
+              className="flex items-center gap-1.5 text-base font-semibold px-3 py-1.5 rounded-full"
               style={{ background: 'rgba(239,68,68,0.12)', border: '1.5px solid rgba(239,68,68,0.35)', color: '#f87171' }}
             >
               −{removed} removed
@@ -148,7 +148,7 @@ export default function DiffViewerPage() {
         {/* Diff output */}
         {diffs.length > 0 && (
           <div>
-            <label className="text-sm font-semibold mb-2 block" style={{ color: 'rgba(255,255,255,0.75)' }}>
+            <label className="text-base font-semibold mb-2 block" style={{ color: 'rgba(255,255,255,0.75)' }}>
               Diff
             </label>
             <div

@@ -48,7 +48,7 @@ export default function AboutPage() {
         About Zenveel
       </h1>
 
-      <p className="text-base leading-relaxed mb-12" style={{ color: 'rgba(255,255,255,0.75)' }}>
+      <p className="text-lg leading-relaxed mb-12" style={{ color: 'rgba(255,255,255,0.75)' }}>
         Zenveel is a free collection of browser-based utility tools built for developers, designers, and everyday users.
         Whether you need to format code, convert images, encode text, or generate UUIDs — everything is available
         instantly, right in your browser, with no account required.
@@ -70,8 +70,8 @@ export default function AboutPage() {
             >
               <Icon size={18} style={{ color }} />
             </div>
-            <h2 className="text-base font-semibold text-white mb-1">{title}</h2>
-            <p className="text-sm leading-relaxed" style={{ color: 'rgba(255,255,255,0.65)' }}>
+            <h2 className="text-lg font-semibold text-white mb-1">{title}</h2>
+            <p className="text-base leading-relaxed" style={{ color: 'rgba(255,255,255,0.65)' }}>
               {body}
             </p>
           </div>
@@ -86,7 +86,7 @@ export default function AboutPage() {
         }}
       >
         <h2 className="text-lg font-semibold text-white mb-3">Our Mission</h2>
-        <p className="text-base leading-relaxed" style={{ color: 'rgba(255,255,255,0.75)' }}>
+        <p className="text-lg leading-relaxed" style={{ color: 'rgba(255,255,255,0.75)' }}>
           The web is full of tools that make you sign up, show you ads before you can do anything, or upload your data
           to a server you don&apos;t control. We think that&apos;s unnecessary for most utility tasks. Zenveel exists
           to offer a fast, clean, and private alternative — tools that respect your time and your data.
@@ -94,7 +94,7 @@ export default function AboutPage() {
       </div>
 
       <div className="mt-10" style={{ color: 'rgba(255,255,255,0.55)' }}>
-        <p className="text-sm leading-relaxed">
+        <p className="text-base leading-relaxed">
           Have a suggestion or found a bug? We&apos;d love to hear from you —{' '}
           <a
             href="/contact"

@@ -18,10 +18,10 @@ export default function PngToWebpPage() {
         <SeoSection
           aboutTitle="About This PNG to WebP Converter"
           about={<>
-            <p className="text-base leading-relaxed">Convert PNG images to WebP online for free. WebP offers excellent image quality with significantly smaller file sizes, making it one of the best formats for modern websites.</p>
-            <p className="text-base leading-relaxed">All conversions happen directly in your browser using the HTML5 Canvas API, so your images remain private and are never uploaded to a server.</p>
-            <p className="text-base leading-relaxed">WebP is widely supported by modern browsers and helps improve website loading speed by reducing image payloads.</p>
-            <p className="text-base leading-relaxed">Need to convert between other formats? Try the <Link href="/image/convert" className="underline" style={{ color: 'var(--color-image)' }}>Image Converter</Link> for more options.</p>
+            <p className="text-lg leading-relaxed">Convert PNG images to WebP online for free. WebP offers excellent image quality with significantly smaller file sizes, making it one of the best formats for modern websites.</p>
+            <p className="text-lg leading-relaxed">All conversions happen directly in your browser using the HTML5 Canvas API, so your images remain private and are never uploaded to a server.</p>
+            <p className="text-lg leading-relaxed">WebP is widely supported by modern browsers and helps improve website loading speed by reducing image payloads.</p>
+            <p className="text-lg leading-relaxed">Need to convert between other formats? Try the <Link href="/image/convert" className="underline" style={{ color: 'var(--color-image)' }}>Image Converter</Link> for more options.</p>
           </>}
           useCasesTitle="Common Use Cases"
           useCases={[

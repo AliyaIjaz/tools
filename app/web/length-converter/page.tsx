@@ -127,9 +127,9 @@ export default function LengthConverterPage() {
           <SeoSection
             aboutTitle="km to Miles, Feet to Meters & Length Converter — Metric & Imperial Explained"
             about={<>
-              <p className="text-base leading-relaxed"><strong>km to Miles & Length Converter Online</strong> is a free browser-based tool for instant length conversion between all common metric and imperial units. Convert <strong>kilometers to miles</strong> (or miles to km), <strong>feet to meters</strong> (or meters to feet), <strong>cm to inches</strong>, and more — type in any field and all others update simultaneously. Supported units: <strong>mm, cm, m, km, in, ft, yd, mi, nmi</strong>.</p>
-              <p className="text-base leading-relaxed">Metric and imperial length units are used in parallel across different countries and industries — kilometers in Europe, miles in the US, nautical miles at sea, millimeters in engineering. The km-to-miles conversion (1 km = 0.621371 mi) and feet-to-meters conversion (1 ft = 0.3048 m) are among the most common unit conversions in everyday use. This tool handles all nine units simultaneously, grouped by system for easy comparison.</p>
-              <p className="text-base leading-relaxed">All length conversion runs entirely in your browser — nothing is sent to any server.</p>
+              <p className="text-lg leading-relaxed"><strong>km to Miles & Length Converter Online</strong> is a free browser-based tool for instant length conversion between all common metric and imperial units. Convert <strong>kilometers to miles</strong> (or miles to km), <strong>feet to meters</strong> (or meters to feet), <strong>cm to inches</strong>, and more — type in any field and all others update simultaneously. Supported units: <strong>mm, cm, m, km, in, ft, yd, mi, nmi</strong>.</p>
+              <p className="text-lg leading-relaxed">Metric and imperial length units are used in parallel across different countries and industries — kilometers in Europe, miles in the US, nautical miles at sea, millimeters in engineering. The km-to-miles conversion (1 km = 0.621371 mi) and feet-to-meters conversion (1 ft = 0.3048 m) are among the most common unit conversions in everyday use. This tool handles all nine units simultaneously, grouped by system for easy comparison.</p>
+              <p className="text-lg leading-relaxed">All length conversion runs entirely in your browser — nothing is sent to any server.</p>
             </>}
             useCasesTitle="Common km to Miles & Length Conversions"
             useCases={[
@@ -148,12 +148,12 @@ export default function LengthConverterPage() {
                 intro: 'Quick reference for km to miles — the most-searched length conversion. All values rounded to 3 decimal places.',
                 items: [
                   <div key="km-miles-chart" className="overflow-x-auto">
-                    <table className="w-full text-sm font-mono border-collapse">
+                    <table className="w-full text-base font-mono border-collapse">
                       <thead>
                         <tr>
-                          <th className="text-left pb-2 pr-8 text-xs font-semibold uppercase tracking-wider" style={{ color: METRIC_COLOR }}>Kilometers (km)</th>
-                          <th className="text-left pb-2 pr-8 text-xs font-semibold uppercase tracking-wider" style={{ color: IMPERIAL_COLOR }}>Miles (mi)</th>
-                          <th className="text-left pb-2 text-xs font-semibold uppercase tracking-wider hidden sm:table-cell" style={{ color: 'rgba(255,255,255,0.4)' }}>Context</th>
+                          <th className="text-left pb-2 pr-8 text-sm font-semibold uppercase tracking-wider" style={{ color: METRIC_COLOR }}>Kilometers (km)</th>
+                          <th className="text-left pb-2 pr-8 text-sm font-semibold uppercase tracking-wider" style={{ color: IMPERIAL_COLOR }}>Miles (mi)</th>
+                          <th className="text-left pb-2 text-sm font-semibold uppercase tracking-wider hidden sm:table-cell" style={{ color: 'rgba(255,255,255,0.4)' }}>Context</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -175,7 +175,7 @@ export default function LengthConverterPage() {
                           <tr key={km} className="border-t" style={{ borderColor: 'rgba(255,255,255,0.05)' }}>
                             <td className="py-1.5 pr-8" style={{ color: METRIC_COLOR }}>{km}</td>
                             <td className="py-1.5 pr-8" style={{ color: IMPERIAL_COLOR }}>{mi}</td>
-                            <td className="py-1.5 text-xs hidden sm:table-cell" style={{ color: 'rgba(255,255,255,0.4)' }}>{ctx}</td>
+                            <td className="py-1.5 text-sm hidden sm:table-cell" style={{ color: 'rgba(255,255,255,0.4)' }}>{ctx}</td>
                           </tr>
                         ))}
                       </tbody>
@@ -188,13 +188,13 @@ export default function LengthConverterPage() {
                 intro: 'Quick reference for common length conversions between meters, centimeters, inches, and feet.',
                 items: [
                   <div key="metric-imperial-chart" className="overflow-x-auto">
-                    <table className="w-full text-sm font-mono border-collapse">
+                    <table className="w-full text-base font-mono border-collapse">
                       <thead>
                         <tr>
-                          <th className="text-left pb-2 pr-6 text-xs font-semibold uppercase tracking-wider" style={{ color: METRIC_COLOR }}>Meters (m)</th>
-                          <th className="text-left pb-2 pr-6 text-xs font-semibold uppercase tracking-wider" style={{ color: METRIC_COLOR }}>cm</th>
-                          <th className="text-left pb-2 pr-6 text-xs font-semibold uppercase tracking-wider" style={{ color: IMPERIAL_COLOR }}>Inches (in)</th>
-                          <th className="text-left pb-2 text-xs font-semibold uppercase tracking-wider" style={{ color: IMPERIAL_COLOR }}>Feet (ft)</th>
+                          <th className="text-left pb-2 pr-6 text-sm font-semibold uppercase tracking-wider" style={{ color: METRIC_COLOR }}>Meters (m)</th>
+                          <th className="text-left pb-2 pr-6 text-sm font-semibold uppercase tracking-wider" style={{ color: METRIC_COLOR }}>cm</th>
+                          <th className="text-left pb-2 pr-6 text-sm font-semibold uppercase tracking-wider" style={{ color: IMPERIAL_COLOR }}>Inches (in)</th>
+                          <th className="text-left pb-2 text-sm font-semibold uppercase tracking-wider" style={{ color: IMPERIAL_COLOR }}>Feet (ft)</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -233,7 +233,7 @@ export default function LengthConverterPage() {
           className="rounded-xl p-4 space-y-3"
           style={{ background: 'var(--surface)', border: '2px solid var(--border-web-idle)' }}
         >
-          <p className="text-xs font-medium uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.5)' }}>
+          <p className="text-sm font-medium uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.5)' }}>
             Metric&nbsp;&nbsp;<span style={{ color: 'rgba(255,255,255,0.3)' }}>mm · cm · m · km</span>
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
@@ -260,7 +260,7 @@ export default function LengthConverterPage() {
           className="rounded-xl p-4 space-y-3"
           style={{ background: 'var(--surface)', border: '2px solid var(--border-web-idle)' }}
         >
-          <p className="text-xs font-medium uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.5)' }}>
+          <p className="text-sm font-medium uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.5)' }}>
             Imperial / US&nbsp;&nbsp;<span style={{ color: 'rgba(255,255,255,0.3)' }}>in · ft · yd · mi · nmi</span>
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
@@ -288,8 +288,8 @@ export default function LengthConverterPage() {
             className="rounded-xl px-5 py-8 flex flex-col items-center gap-2 text-center"
             style={{ background: 'var(--surface)', border: '1px dashed rgba(255,255,255,0.1)' }}
           >
-            <p className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.6)' }}>Type a value in any field to convert</p>
-            <p className="text-sm" style={{ color: 'rgba(255,255,255,0.45)' }}>Metric and imperial units all update simultaneously</p>
+            <p className="text-lg font-semibold" style={{ color: 'rgba(255,255,255,0.6)' }}>Type a value in any field to convert</p>
+            <p className="text-base" style={{ color: 'rgba(255,255,255,0.45)' }}>Metric and imperial units all update simultaneously</p>
           </div>
         )}
 
@@ -300,9 +300,9 @@ export default function LengthConverterPage() {
             style={{ background: 'rgba(16,185,129,0.07)', border: '2px solid var(--border-web-idle)' }}
           >
             <div>
-              <p className="text-xs font-medium uppercase tracking-widest mb-1" style={{ color: 'rgba(255,255,255,0.5)' }}>Exact meter value</p>
+              <p className="text-sm font-medium uppercase tracking-widest mb-1" style={{ color: 'rgba(255,255,255,0.5)' }}>Exact meter value</p>
               <p className="text-lg font-mono font-semibold" style={{ color: 'var(--color-web)' }}>
-                {formatResult(meters, UNIT_MAP['m'])} <span className="text-sm font-normal" style={{ color: 'rgba(255,255,255,0.6)' }}>m</span>
+                {formatResult(meters, UNIT_MAP['m'])} <span className="text-base font-normal" style={{ color: 'rgba(255,255,255,0.6)' }}>m</span>
               </p>
             </div>
             <CopyButton text={formatResult(meters, UNIT_MAP['m'])} />
@@ -314,7 +314,7 @@ export default function LengthConverterPage() {
           <div className="flex justify-end">
             <button
               onClick={clearAll}
-              className="text-sm px-3 py-1.5 rounded-lg transition-all"
+              className="text-base px-3 py-1.5 rounded-lg transition-all"
               style={{ color: 'rgba(255,255,255,0.55)', background: 'rgba(255,255,255,0.06)', border: '2px solid var(--border-web-idle)' }}
               onMouseEnter={(e) => { e.currentTarget.style.color = 'rgba(255,255,255,0.9)'; e.currentTarget.style.background = 'rgba(255,255,255,0.12)' }}
               onMouseLeave={(e) => { e.currentTarget.style.color = 'rgba(255,255,255,0.55)'; e.currentTarget.style.background = 'rgba(255,255,255,0.06)' }}
@@ -329,7 +329,7 @@ export default function LengthConverterPage() {
           className="rounded-xl p-4 space-y-3"
           style={{ background: 'var(--surface)', border: '2px solid var(--border-web-idle)' }}
         >
-          <p className="text-xs font-medium uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.55)' }}>Common Reference Values</p>
+          <p className="text-sm font-medium uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.55)' }}>Common Reference Values</p>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
             {PRESETS.map((preset) => {
               const isSelected = activeUnit === preset.unit && inputValue === preset.value
@@ -345,8 +345,8 @@ export default function LengthConverterPage() {
                   onMouseEnter={(e) => { if (!isSelected) e.currentTarget.style.borderColor = 'var(--border-web)' }}
                   onMouseLeave={(e) => { if (!isSelected) e.currentTarget.style.borderColor = 'var(--border-web-idle)' }}
                 >
-                  <p className="text-sm font-medium" style={{ color: 'rgba(255,255,255,0.85)' }}>{preset.label}</p>
-                  <p className="text-xs font-mono mt-0.5" style={{ color: 'rgba(255,255,255,0.4)' }}>{preset.value} {UNIT_MAP[preset.unit].symbol}</p>
+                  <p className="text-base font-medium" style={{ color: 'rgba(255,255,255,0.85)' }}>{preset.label}</p>
+                  <p className="text-sm font-mono mt-0.5" style={{ color: 'rgba(255,255,255,0.4)' }}>{preset.value} {UNIT_MAP[preset.unit].symbol}</p>
                 </button>
               )
             })}
@@ -358,14 +358,14 @@ export default function LengthConverterPage() {
           className="rounded-xl p-4 space-y-3"
           style={{ background: 'var(--surface)', border: '2px solid var(--border-web-idle)' }}
         >
-          <p className="text-xs font-medium uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.55)' }}>Conversion Factors — Base Unit: Meter</p>
+          <p className="text-sm font-medium uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.55)' }}>Conversion Factors — Base Unit: Meter</p>
           <div className="overflow-x-auto">
-            <table className="w-full text-sm font-mono border-collapse">
+            <table className="w-full text-base font-mono border-collapse">
               <thead>
                 <tr>
-                  <th className="text-left pb-2 pr-6 text-xs font-semibold uppercase tracking-wider" style={{ color: 'rgba(255,255,255,0.5)' }}>Unit</th>
-                  <th className="text-left pb-2 pr-6 text-xs font-semibold uppercase tracking-wider" style={{ color: 'rgba(255,255,255,0.5)' }}>Symbol</th>
-                  <th className="text-left pb-2 text-xs font-semibold uppercase tracking-wider" style={{ color: 'rgba(255,255,255,0.5)' }}>Meters</th>
+                  <th className="text-left pb-2 pr-6 text-sm font-semibold uppercase tracking-wider" style={{ color: 'rgba(255,255,255,0.5)' }}>Unit</th>
+                  <th className="text-left pb-2 pr-6 text-sm font-semibold uppercase tracking-wider" style={{ color: 'rgba(255,255,255,0.5)' }}>Symbol</th>
+                  <th className="text-left pb-2 text-sm font-semibold uppercase tracking-wider" style={{ color: 'rgba(255,255,255,0.5)' }}>Meters</th>
                 </tr>
               </thead>
               <tbody>
@@ -406,10 +406,10 @@ function UnitField({ unit, value, isActive, color, onChange, onFocus }: UnitFiel
       }}
     >
       <div className="flex items-center justify-between">
-        <span className="text-xs font-semibold" style={{ color: isActive ? color : 'rgba(255,255,255,0.55)' }}>
+        <span className="text-sm font-semibold" style={{ color: isActive ? color : 'rgba(255,255,255,0.55)' }}>
           {unit.label}
         </span>
-        <span className="text-xs font-mono" style={{ color: 'rgba(255,255,255,0.3)' }}>{unit.symbol}</span>
+        <span className="text-sm font-mono" style={{ color: 'rgba(255,255,255,0.3)' }}>{unit.symbol}</span>
       </div>
       <div className="flex items-center gap-1.5">
         <input
@@ -425,7 +425,7 @@ function UnitField({ unit, value, isActive, color, onChange, onFocus }: UnitFiel
             if (!isActive) e.currentTarget.style.borderColor = 'var(--border-web)'
           }}
           placeholder="0"
-          className="flex-1 min-w-0 rounded-md px-2.5 py-1.5 text-base font-mono outline-none transition-all placeholder:text-white/50"
+          className="flex-1 min-w-0 rounded-md px-2.5 py-1.5 text-lg font-mono outline-none transition-all placeholder:text-white/50"
           style={{
             background: 'rgba(0,0,0,0.35)',
             border: `2px solid ${isActive ? color : 'var(--border-web)'}`,

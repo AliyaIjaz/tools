@@ -206,8 +206,8 @@ export default function YamlJsonPage() {
       seoContent={
         <SeoSection
           about={<>
-            <p className="text-base leading-relaxed"><strong>YAML to JSON Converter Online</strong> is a free, browser-based tool for converting YAML to JSON and JSON to YAML instantly. Whether you are working with Kubernetes configs, Docker Compose files, GitHub Actions workflows, LangChain agents, or any other YAML-based configuration, this tool converts between formats with full fidelity — preserving types, nested structures, arrays, and booleans.</p>
-            <p className="text-base leading-relaxed">Paste your YAML or JSON directly, drag and drop a file, or upload a <code>.yaml</code>, <code>.yml</code>, or <code>.json</code> file. Output is syntax-highlighted for easy reading and can be copied or downloaded in one click. All conversion runs entirely in your browser using the <strong>js-yaml</strong> library — your data is never sent to any server.</p>
+            <p className="text-lg leading-relaxed"><strong>YAML to JSON Converter Online</strong> is a free, browser-based tool for converting YAML to JSON and JSON to YAML instantly. Whether you are working with Kubernetes configs, Docker Compose files, GitHub Actions workflows, LangChain agents, or any other YAML-based configuration, this tool converts between formats with full fidelity — preserving types, nested structures, arrays, and booleans.</p>
+            <p className="text-lg leading-relaxed">Paste your YAML or JSON directly, drag and drop a file, or upload a <code>.yaml</code>, <code>.yml</code>, or <code>.json</code> file. Output is syntax-highlighted for easy reading and can be copied or downloaded in one click. All conversion runs entirely in your browser using the <strong>js-yaml</strong> library — your data is never sent to any server.</p>
           </>}
           useCases={[
             'Convert Kubernetes YAML manifests to JSON for use with kubectl or API clients.',
@@ -241,7 +241,7 @@ export default function YamlJsonPage() {
             <button
               key={m}
               onClick={() => handleMode(m)}
-              className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold transition-all"
+              className="flex items-center gap-2 px-4 py-2 rounded-lg text-base font-semibold transition-all"
               style={mode === m
                 ? { background: 'var(--color-dev)', color: '#fff' }
                 : btnGhost}
@@ -268,7 +268,7 @@ export default function YamlJsonPage() {
             onDrop={handleDrop}
           >
             <div className="flex items-center justify-between mb-3">
-              <label className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>
+              <label className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>
                 {mode === 'yaml-to-json' ? 'YAML' : 'JSON'} Input
               </label>
               <div className="flex items-center gap-2">
@@ -281,7 +281,7 @@ export default function YamlJsonPage() {
                 />
                 <button
                   onClick={loadExample}
-                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-all"
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-base font-medium transition-all"
                   style={btnGhost}
                   onMouseEnter={(e) => onHover(e, true)}
                   onMouseLeave={(e) => onHover(e, false)}
@@ -290,7 +290,7 @@ export default function YamlJsonPage() {
                 </button>
                 <button
                   onClick={() => fileRef.current?.click()}
-                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-all"
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-base font-medium transition-all"
                   style={btnGhost}
                   onMouseEnter={(e) => onHover(e, true)}
                   onMouseLeave={(e) => onHover(e, false)}
@@ -300,7 +300,7 @@ export default function YamlJsonPage() {
                 {input && (
                   <button
                     onClick={clear}
-                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-all"
+                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-base font-medium transition-all"
                     style={btnGhost}
                     onMouseEnter={(e) => onHover(e, true)}
                     onMouseLeave={(e) => onHover(e, false)}
@@ -317,7 +317,7 @@ export default function YamlJsonPage() {
                 ? 'name: Alice\nage: 30\nenabled: true'
                 : '{\n  "name": "Alice",\n  "age": 30\n}'}
               rows={18}
-              className="w-full resize-y rounded-lg px-3 py-3 text-sm outline-none transition-all duration-150 placeholder:text-white/50"
+              className="w-full resize-y rounded-lg px-3 py-3 text-base outline-none transition-all duration-150 placeholder:text-white/50"
               style={{
                 background: 'rgba(0,0,0,0.35)',
                 border: '2px solid var(--border-dev)',
@@ -329,7 +329,7 @@ export default function YamlJsonPage() {
               onBlur={(e) => { e.currentTarget.style.borderColor = 'var(--border-dev-idle)' }}
             />
             {isDragging && (
-              <p className="mt-2 text-sm text-center" style={{ color: 'var(--color-dev)' }}>Drop file to load</p>
+              <p className="mt-2 text-base text-center" style={{ color: 'var(--color-dev)' }}>Drop file to load</p>
             )}
           </div>
 
@@ -340,16 +340,16 @@ export default function YamlJsonPage() {
           >
             <div className="flex items-center justify-between mb-3">
               <div className="flex items-center gap-2">
-                <label className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>
+                <label className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>
                   {mode === 'yaml-to-json' ? 'JSON' : 'YAML'} Output
                 </label>
                 {status === 'success' && (
-                  <span className="flex items-center gap-1 text-xs font-medium text-emerald-400">
+                  <span className="flex items-center gap-1 text-sm font-medium text-emerald-400">
                     <CheckCircle size={12} /> Done
                   </span>
                 )}
                 {status === 'error' && (
-                  <span className="flex items-center gap-1 text-xs font-medium text-red-400">
+                  <span className="flex items-center gap-1 text-sm font-medium text-red-400">
                     <XCircle size={12} /> Error
                   </span>
                 )}
@@ -358,7 +358,7 @@ export default function YamlJsonPage() {
                 <div className="flex items-center gap-2">
                   <button
                     onClick={downloadOutput}
-                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-all"
+                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-base font-medium transition-all"
                     style={btnGhost}
                     onMouseEnter={(e) => onHover(e, true)}
                     onMouseLeave={(e) => onHover(e, false)}
@@ -372,7 +372,7 @@ export default function YamlJsonPage() {
 
             {status === 'error' && error && (
               <div
-                className="rounded-lg px-4 py-3 text-sm font-mono leading-relaxed mb-3"
+                className="rounded-lg px-4 py-3 text-base font-mono leading-relaxed mb-3"
                 style={{ background: 'rgba(239,68,68,0.1)', border: '1px solid rgba(239,68,68,0.3)', color: '#fca5a5' }}
               >
                 {error}
@@ -381,7 +381,7 @@ export default function YamlJsonPage() {
 
             {output ? (
               <pre
-                className="flex-1 rounded-lg px-3 py-3 text-sm overflow-auto leading-relaxed"
+                className="flex-1 rounded-lg px-3 py-3 text-base overflow-auto leading-relaxed"
                 style={{
                   background: 'rgba(0,0,0,0.35)',
                   border: '2px solid var(--border-dev-idle)',
@@ -402,7 +402,7 @@ export default function YamlJsonPage() {
                 }}
               >
                 <ArrowLeftRight size={24} style={{ color: 'var(--color-dev)', opacity: 0.3 }} />
-                <p className="text-sm" style={{ color: 'rgba(255,255,255,0.25)' }}>
+                <p className="text-base" style={{ color: 'rgba(255,255,255,0.25)' }}>
                   Output will appear here
                 </p>
               </div>

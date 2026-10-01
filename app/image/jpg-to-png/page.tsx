@@ -18,9 +18,9 @@ export default function JpgToPngPage() {
         <SeoSection
           aboutTitle="About This JPG to PNG Converter"
           about={<>
-            <p className="text-base leading-relaxed">Convert JPG (JPEG) images to PNG online without installing any software. This free browser-based converter lets you change image formats instantly while keeping your files private because everything happens on your device.</p>
-            <p className="text-base leading-relaxed">PNG is commonly used for graphics, logos, illustrations, screenshots, and images that benefit from lossless quality. While converting a JPG to PNG does not restore lost image quality, it allows future editing without introducing additional JPEG compression.</p>
-            <p className="text-base leading-relaxed">Need to convert between other formats? Try the <Link href="/image/convert" className="underline" style={{ color: 'var(--color-image)' }}>Image Converter</Link> for more options.</p>
+            <p className="text-lg leading-relaxed">Convert JPG (JPEG) images to PNG online without installing any software. This free browser-based converter lets you change image formats instantly while keeping your files private because everything happens on your device.</p>
+            <p className="text-lg leading-relaxed">PNG is commonly used for graphics, logos, illustrations, screenshots, and images that benefit from lossless quality. While converting a JPG to PNG does not restore lost image quality, it allows future editing without introducing additional JPEG compression.</p>
+            <p className="text-lg leading-relaxed">Need to convert between other formats? Try the <Link href="/image/convert" className="underline" style={{ color: 'var(--color-image)' }}>Image Converter</Link> for more options.</p>
           </>}
           useCasesTitle="Common Use Cases"
           useCases={[

@@ -104,9 +104,9 @@ export default function DataSizeConverterPage() {
           <SeoSection
             aboutTitle="How to Convert File Sizes: MB, GB, TB Explained"
             about={<>
-              <p className="text-base leading-relaxed"><strong>File Size Converter Online</strong> is a free browser-based tool that instantly converts between all standard storage units — both <strong>SI (decimal)</strong> units like KB, MB, GB, TB, PB and <strong>IEC (binary)</strong> units like KiB, MiB, GiB, TiB, PiB. Type a value in any unit and all others update instantly.</p>
-              <p className="text-base leading-relaxed">Understanding the difference matters: a hard drive manufacturer calls 1 GB = 1,000,000,000 bytes (SI), while an operating system may report 1 GiB = 1,073,741,824 bytes (IEC). This tool makes both crystal clear side by side.</p>
-              <p className="text-base leading-relaxed">All conversion runs entirely in your browser — nothing is sent to any server.</p>
+              <p className="text-lg leading-relaxed"><strong>File Size Converter Online</strong> is a free browser-based tool that instantly converts between all standard storage units — both <strong>SI (decimal)</strong> units like KB, MB, GB, TB, PB and <strong>IEC (binary)</strong> units like KiB, MiB, GiB, TiB, PiB. Type a value in any unit and all others update instantly.</p>
+              <p className="text-lg leading-relaxed">Understanding the difference matters: a hard drive manufacturer calls 1 GB = 1,000,000,000 bytes (SI), while an operating system may report 1 GiB = 1,073,741,824 bytes (IEC). This tool makes both crystal clear side by side.</p>
+              <p className="text-lg leading-relaxed">All conversion runs entirely in your browser — nothing is sent to any server.</p>
             </>}
             useCasesTitle="When to Use a File Size Converter"
             useCases={[
@@ -131,7 +131,7 @@ export default function DataSizeConverterPage() {
           className="rounded-xl p-4 space-y-3"
           style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)' }}
         >
-          <p className="text-xs font-medium uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.5)' }}>
+          <p className="text-sm font-medium uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.5)' }}>
             SI — Decimal&nbsp;&nbsp;<span style={{ color: 'rgba(255,255,255,0.3)' }}>powers of 1,000</span>
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
@@ -158,7 +158,7 @@ export default function DataSizeConverterPage() {
           className="rounded-xl p-4 space-y-3"
           style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)' }}
         >
-          <p className="text-xs font-medium uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.5)' }}>
+          <p className="text-sm font-medium uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.5)' }}>
             IEC — Binary&nbsp;&nbsp;<span style={{ color: 'rgba(255,255,255,0.3)' }}>powers of 1,024</span>
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
@@ -187,9 +187,9 @@ export default function DataSizeConverterPage() {
             style={{ background: 'rgba(139,92,246,0.08)', border: '2px solid var(--border-dev-idle)' }}
           >
             <div>
-              <p className="text-xs font-medium uppercase tracking-widest mb-1" style={{ color: 'rgba(255,255,255,0.5)' }}>Exact byte count</p>
+              <p className="text-sm font-medium uppercase tracking-widest mb-1" style={{ color: 'rgba(255,255,255,0.5)' }}>Exact byte count</p>
               <p className="text-lg font-mono font-semibold" style={{ color: 'var(--color-dev)' }}>
-                {bytes.toLocaleString()} <span className="text-sm font-normal" style={{ color: 'rgba(255,255,255,0.6)' }}>bytes</span>
+                {bytes.toLocaleString()} <span className="text-base font-normal" style={{ color: 'rgba(255,255,255,0.6)' }}>bytes</span>
               </p>
             </div>
             <CopyButton text={bytes.toString()} />
@@ -201,7 +201,7 @@ export default function DataSizeConverterPage() {
           <div className="flex justify-end">
             <button
               onClick={clearAll}
-              className="text-sm px-3 py-1.5 rounded-lg transition-all"
+              className="text-base px-3 py-1.5 rounded-lg transition-all"
               style={{ color: 'rgba(255,255,255,0.55)', background: 'rgba(255,255,255,0.06)', border: '2px solid var(--border-dev-idle)' }}
               onMouseEnter={(e) => { e.currentTarget.style.color = 'rgba(255,255,255,0.9)'; e.currentTarget.style.background = 'rgba(255,255,255,0.12)' }}
               onMouseLeave={(e) => { e.currentTarget.style.color = 'rgba(255,255,255,0.55)'; e.currentTarget.style.background = 'rgba(255,255,255,0.06)' }}
@@ -217,8 +217,8 @@ export default function DataSizeConverterPage() {
             className="rounded-xl px-5 py-8 flex flex-col items-center gap-2 text-center"
             style={{ background: 'var(--surface)', border: '1px dashed rgba(255,255,255,0.1)' }}
           >
-            <p className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.6)' }}>Type a value in any unit to convert</p>
-            <p className="text-sm" style={{ color: 'rgba(255,255,255,0.45)' }}>SI (KB/MB/GB) and IEC (KiB/MiB/GiB) update simultaneously</p>
+            <p className="text-lg font-semibold" style={{ color: 'rgba(255,255,255,0.6)' }}>Type a value in any unit to convert</p>
+            <p className="text-base" style={{ color: 'rgba(255,255,255,0.45)' }}>SI (KB/MB/GB) and IEC (KiB/MiB/GiB) update simultaneously</p>
           </div>
         )}
 
@@ -227,15 +227,15 @@ export default function DataSizeConverterPage() {
           className="rounded-xl p-4 space-y-3"
           style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)' }}
         >
-          <p className="text-xs font-medium uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.55)' }}>Quick Reference — SI vs IEC</p>
+          <p className="text-sm font-medium uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.55)' }}>Quick Reference — SI vs IEC</p>
           <div className="overflow-x-auto">
-            <table className="w-full text-sm font-mono border-collapse">
+            <table className="w-full text-base font-mono border-collapse">
               <thead>
                 <tr>
-                  <th className="text-left pb-2 pr-6 text-xs font-semibold uppercase tracking-wider" style={{ color: SI_COLOR }}>SI Unit</th>
-                  <th className="text-left pb-2 pr-6 text-xs font-semibold uppercase tracking-wider" style={{ color: SI_COLOR }}>Bytes (SI)</th>
-                  <th className="text-left pb-2 pr-6 text-xs font-semibold uppercase tracking-wider" style={{ color: IEC_COLOR }}>IEC Unit</th>
-                  <th className="text-left pb-2 text-xs font-semibold uppercase tracking-wider" style={{ color: IEC_COLOR }}>Bytes (IEC)</th>
+                  <th className="text-left pb-2 pr-6 text-sm font-semibold uppercase tracking-wider" style={{ color: SI_COLOR }}>SI Unit</th>
+                  <th className="text-left pb-2 pr-6 text-sm font-semibold uppercase tracking-wider" style={{ color: SI_COLOR }}>Bytes (SI)</th>
+                  <th className="text-left pb-2 pr-6 text-sm font-semibold uppercase tracking-wider" style={{ color: IEC_COLOR }}>IEC Unit</th>
+                  <th className="text-left pb-2 text-sm font-semibold uppercase tracking-wider" style={{ color: IEC_COLOR }}>Bytes (IEC)</th>
                 </tr>
               </thead>
               <tbody>
@@ -282,7 +282,7 @@ function UnitField({ unit, value, isActive, color, onChange, onFocus }: UnitFiel
         boxShadow: isActive ? `0 0 0 1px ${color}22` : 'none',
       }}
     >
-      <span className="text-xs font-semibold" style={{ color: isActive ? color : 'rgba(255,255,255,0.55)' }}>
+      <span className="text-sm font-semibold" style={{ color: isActive ? color : 'rgba(255,255,255,0.55)' }}>
         {unit.label}
       </span>
       <div className="flex items-center gap-1.5">
@@ -299,7 +299,7 @@ function UnitField({ unit, value, isActive, color, onChange, onFocus }: UnitFiel
             if (!isActive) e.currentTarget.style.borderColor = 'var(--border-dev)'
           }}
           placeholder="0"
-          className="flex-1 min-w-0 rounded-md px-2.5 py-1.5 text-base font-mono outline-none transition-all placeholder:text-white/50"
+          className="flex-1 min-w-0 rounded-md px-2.5 py-1.5 text-lg font-mono outline-none transition-all placeholder:text-white/50"
           style={{
             background: 'rgba(0,0,0,0.35)',
             border: `2px solid ${isActive ? color : 'var(--border-dev)'}`,

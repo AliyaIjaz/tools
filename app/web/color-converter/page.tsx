@@ -130,8 +130,8 @@ export default function ColorConverterPage() {
         <SeoSection
           aboutTitle="Color Converter Online"
           about={<>
-            <p className="text-base leading-relaxed">Convert colors instantly between HEX, RGB, HSL, and OKLCH with this free online Color Converter. Enter a color in any supported format and all other formats update automatically in real time. Whether you&apos;re designing a website, creating a design system, or writing CSS, this tool makes it easy to translate colors accurately between modern color formats.</p>
-            <p className="text-base leading-relaxed">Everything runs entirely in your browser, providing fast, private, and accurate color conversion without uploading or storing any data.</p>
+            <p className="text-lg leading-relaxed">Convert colors instantly between HEX, RGB, HSL, and OKLCH with this free online Color Converter. Enter a color in any supported format and all other formats update automatically in real time. Whether you&apos;re designing a website, creating a design system, or writing CSS, this tool makes it easy to translate colors accurately between modern color formats.</p>
+            <p className="text-lg leading-relaxed">Everything runs entirely in your browser, providing fast, private, and accurate color conversion without uploading or storing any data.</p>
           </>}
           extraSections={[
             {
@@ -160,32 +160,32 @@ export default function ColorConverterPage() {
               title: 'Supported Color Formats',
               items: [
                 <div key="hex" className="space-y-1.5">
-                  <p className="text-base font-medium text-white">HEX</p>
-                  <p className="text-base leading-relaxed">HEX (Hexadecimal) is the most common color format used on the web. It represents colors using six hexadecimal digits that define the red, green, and blue components.</p>
-                  <p className="text-sm" style={{color:'rgba(255,255,255,0.5)'}}>Example:</p>
-                  <pre className="text-sm font-mono px-3 py-2 rounded-lg" style={{background:'rgba(255,255,255,0.05)',color:'rgba(255,255,255,0.8)'}}>{'#3B82F6'}</pre>
-                  <p className="text-base leading-relaxed">HEX is widely used in HTML, CSS, design tools, and branding guidelines.</p>
+                  <p className="text-lg font-medium text-white">HEX</p>
+                  <p className="text-lg leading-relaxed">HEX (Hexadecimal) is the most common color format used on the web. It represents colors using six hexadecimal digits that define the red, green, and blue components.</p>
+                  <p className="text-base" style={{color:'rgba(255,255,255,0.5)'}}>Example:</p>
+                  <pre className="text-base font-mono px-3 py-2 rounded-lg" style={{background:'rgba(255,255,255,0.05)',color:'rgba(255,255,255,0.8)'}}>{'#3B82F6'}</pre>
+                  <p className="text-lg leading-relaxed">HEX is widely used in HTML, CSS, design tools, and branding guidelines.</p>
                 </div>,
                 <div key="rgb" className="space-y-1.5">
-                  <p className="text-base font-medium text-white">RGB</p>
-                  <p className="text-base leading-relaxed">RGB stands for Red, Green, Blue. Each color channel ranges from 0 to 255, allowing over 16 million possible color combinations.</p>
-                  <p className="text-sm" style={{color:'rgba(255,255,255,0.5)'}}>Example:</p>
-                  <pre className="text-sm font-mono px-3 py-2 rounded-lg" style={{background:'rgba(255,255,255,0.05)',color:'rgba(255,255,255,0.8)'}}>{'rgb(59, 130, 246)'}</pre>
-                  <p className="text-base leading-relaxed">RGB is commonly used for CSS, Canvas, SVG, and digital displays.</p>
+                  <p className="text-lg font-medium text-white">RGB</p>
+                  <p className="text-lg leading-relaxed">RGB stands for Red, Green, Blue. Each color channel ranges from 0 to 255, allowing over 16 million possible color combinations.</p>
+                  <p className="text-base" style={{color:'rgba(255,255,255,0.5)'}}>Example:</p>
+                  <pre className="text-base font-mono px-3 py-2 rounded-lg" style={{background:'rgba(255,255,255,0.05)',color:'rgba(255,255,255,0.8)'}}>{'rgb(59, 130, 246)'}</pre>
+                  <p className="text-lg leading-relaxed">RGB is commonly used for CSS, Canvas, SVG, and digital displays.</p>
                 </div>,
                 <div key="hsl" className="space-y-1.5">
-                  <p className="text-base font-medium text-white">HSL</p>
-                  <p className="text-base leading-relaxed">HSL stands for Hue, Saturation, and Lightness. It provides a more intuitive way to modify colors compared to RGB because you can independently adjust hue, saturation, and brightness.</p>
-                  <p className="text-sm" style={{color:'rgba(255,255,255,0.5)'}}>Example:</p>
-                  <pre className="text-sm font-mono px-3 py-2 rounded-lg" style={{background:'rgba(255,255,255,0.05)',color:'rgba(255,255,255,0.8)'}}>{'hsl(217, 91%, 60%)'}</pre>
-                  <p className="text-base leading-relaxed">HSL is popular for creating themes, hover effects, and dark/light mode color variations.</p>
+                  <p className="text-lg font-medium text-white">HSL</p>
+                  <p className="text-lg leading-relaxed">HSL stands for Hue, Saturation, and Lightness. It provides a more intuitive way to modify colors compared to RGB because you can independently adjust hue, saturation, and brightness.</p>
+                  <p className="text-base" style={{color:'rgba(255,255,255,0.5)'}}>Example:</p>
+                  <pre className="text-base font-mono px-3 py-2 rounded-lg" style={{background:'rgba(255,255,255,0.05)',color:'rgba(255,255,255,0.8)'}}>{'hsl(217, 91%, 60%)'}</pre>
+                  <p className="text-lg leading-relaxed">HSL is popular for creating themes, hover effects, and dark/light mode color variations.</p>
                 </div>,
                 <div key="oklch" className="space-y-1.5">
-                  <p className="text-base font-medium text-white">OKLCH</p>
-                  <p className="text-base leading-relaxed">OKLCH is a modern perceptual color space that represents colors using L (Lightness), C (Chroma / color intensity), and H (Hue).</p>
-                  <p className="text-sm" style={{color:'rgba(255,255,255,0.5)'}}>Example:</p>
-                  <pre className="text-sm font-mono px-3 py-2 rounded-lg" style={{background:'rgba(255,255,255,0.05)',color:'rgba(255,255,255,0.8)'}}>{'oklch(0.65 0.17 255)'}</pre>
-                  <p className="text-base leading-relaxed">Unlike older color models, OKLCH is designed so equal numerical adjustments produce visually consistent changes, making it especially useful for accessible color palettes, design systems, and modern CSS workflows.</p>
+                  <p className="text-lg font-medium text-white">OKLCH</p>
+                  <p className="text-lg leading-relaxed">OKLCH is a modern perceptual color space that represents colors using L (Lightness), C (Chroma / color intensity), and H (Hue).</p>
+                  <p className="text-base" style={{color:'rgba(255,255,255,0.5)'}}>Example:</p>
+                  <pre className="text-base font-mono px-3 py-2 rounded-lg" style={{background:'rgba(255,255,255,0.05)',color:'rgba(255,255,255,0.8)'}}>{'oklch(0.65 0.17 255)'}</pre>
+                  <p className="text-lg leading-relaxed">Unlike older color models, OKLCH is designed so equal numerical adjustments produce visually consistent changes, making it especially useful for accessible color palettes, design systems, and modern CSS workflows.</p>
                 </div>,
               ],
             },
@@ -278,7 +278,7 @@ export default function ColorConverterPage() {
             style={{ background: error ? '#333' : hex, borderColor: 'var(--border)' }}
           />
           <div className="flex-1 flex flex-col gap-2">
-            <label className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>HEX</label>
+            <label className="text-lg font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>HEX</label>
             <div className="flex items-center gap-2">
               <input
                 type="text"
@@ -295,17 +295,17 @@ export default function ColorConverterPage() {
                 style={{ background: 'var(--surface)', border: '2px solid var(--border-web-idle)', padding: '2px' }}
               />
             </div>
-            {error && <p className="text-sm mt-0.5" style={{ color: '#f87171' }}>{error}</p>}
+            {error && <p className="text-base mt-0.5" style={{ color: '#f87171' }}>{error}</p>}
           </div>
         </div>
 
         {/* RGB sliders */}
         {rgb && (
           <div className="rounded-xl p-5 space-y-4" style={{ background: 'var(--surface)', border: '2px solid var(--border-web-idle)' }}>
-            <p className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>RGB</p>
+            <p className="text-lg font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>RGB</p>
             {(['r', 'g', 'b'] as (keyof RGB)[]).map((ch) => (
               <div key={ch} className="flex items-center gap-3">
-                <span className="text-sm uppercase font-mono font-semibold w-4 flex-shrink-0" style={{ color: 'rgba(255,255,255,0.6)' }}>{ch}</span>
+                <span className="text-base uppercase font-mono font-semibold w-4 flex-shrink-0" style={{ color: 'rgba(255,255,255,0.6)' }}>{ch}</span>
                 <input
                   type="range" min={0} max={255}
                   value={rgb[ch]}
@@ -326,21 +326,21 @@ export default function ColorConverterPage() {
         {/* HSL sliders */}
         {hsl && (
           <div className="rounded-xl p-5 space-y-4" style={{ background: 'var(--surface)', border: '2px solid var(--border-web-idle)' }}>
-            <p className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>HSL</p>
+            <p className="text-lg font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>HSL</p>
             {([
               { ch: 'h' as keyof HSL, max: 360, unit: '°' },
               { ch: 's' as keyof HSL, max: 100, unit: '%' },
               { ch: 'l' as keyof HSL, max: 100, unit: '%' },
             ]).map(({ ch, max, unit }) => (
               <div key={ch} className="flex items-center gap-3">
-                <span className="text-sm uppercase font-mono font-semibold w-4 flex-shrink-0" style={{ color: 'rgba(255,255,255,0.6)' }}>{ch}</span>
+                <span className="text-base uppercase font-mono font-semibold w-4 flex-shrink-0" style={{ color: 'rgba(255,255,255,0.6)' }}>{ch}</span>
                 <input
                   type="range" min={0} max={max}
                   value={hsl[ch]}
                   onChange={(e) => handleHslChange(ch, e.target.value)}
                   className="flex-1 accent-white"
                 />
-                <span className="text-sm font-mono w-14 text-right" style={{ color: 'rgba(255,255,255,0.85)' }}>
+                <span className="text-base font-mono w-14 text-right" style={{ color: 'rgba(255,255,255,0.85)' }}>
                   {hsl[ch]}{unit}
                 </span>
               </div>
@@ -353,10 +353,10 @@ export default function ColorConverterPage() {
           {formats.map(({ label, value }) => (
             <div key={label} className="rounded-xl px-4 py-4" style={{ background: 'var(--surface)', border: '2px solid var(--border-web-idle)' }}>
               <div className="flex items-center justify-between mb-2">
-                <span className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>{label}</span>
+                <span className="text-lg font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>{label}</span>
                 <CopyButton text={value} />
               </div>
-              <code className="text-sm" style={{ color: 'rgba(255,255,255,0.75)', fontFamily: 'var(--font-geist-mono), monospace' }}>
+              <code className="text-base" style={{ color: 'rgba(255,255,255,0.75)', fontFamily: 'var(--font-geist-mono), monospace' }}>
                 {value}
               </code>
             </div>

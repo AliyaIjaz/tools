@@ -47,7 +47,7 @@ export default function HomePage() {
         />
 
         <div
-          className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium mb-6"
+          className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm font-medium mb-6"
           style={{
             background: 'var(--color-dev-dim)',
             border: '1px solid oklch(0.6 0.2 290 / 0.3)',
@@ -80,7 +80,7 @@ export default function HomePage() {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search tools…"
-            className="w-full pl-10 pr-4 py-3 rounded-xl text-base outline-none transition-all"
+            className="w-full pl-10 pr-4 py-3 rounded-xl text-lg outline-none transition-all"
             style={{
               background: 'var(--surface)',
               border: '2px solid var(--border)',
@@ -95,7 +95,7 @@ export default function HomePage() {
       {/* Search results */}
       {isSearching && (
         <div className="mb-12">
-          <p className="text-sm font-medium uppercase tracking-widest mb-4" style={{ color: 'rgba(255,255,255,0.3)' }}>
+          <p className="text-base font-medium uppercase tracking-widest mb-4" style={{ color: 'rgba(255,255,255,0.3)' }}>
             {searchResults.length} result{searchResults.length !== 1 ? 's' : ''} for &ldquo;{query}&rdquo;
           </p>
           {searchResults.length > 0 ? (
@@ -109,7 +109,7 @@ export default function HomePage() {
               className="rounded-xl p-8 text-center"
               style={{ background: 'var(--surface)', border: '2px solid var(--border)' }}
             >
-              <p className="text-base" style={{ color: 'rgba(255,255,255,0.35)' }}>
+              <p className="text-lg" style={{ color: 'rgba(255,255,255,0.35)' }}>
                 No tools match &ldquo;{query}&rdquo;
               </p>
             </div>
@@ -137,14 +137,14 @@ export default function HomePage() {
                   </div>
                   <div>
                     <h2 className="text-lg font-semibold text-white">{meta.label}</h2>
-                    <p className="text-sm" style={{ color: 'rgba(255,255,255,0.35)' }}>
+                    <p className="text-base" style={{ color: 'rgba(255,255,255,0.35)' }}>
                       {tools.length} tools
                     </p>
                   </div>
                 </div>
                 <Link
                   href={meta.href}
-                  className="flex items-center gap-1 text-sm font-medium transition-colors"
+                  className="flex items-center gap-1 text-base font-medium transition-colors"
                   style={{ color: meta.color }}
                   onMouseEnter={(e) => (e.currentTarget.style.opacity = '0.7')}
                   onMouseLeave={(e) => (e.currentTarget.style.opacity = '1')}
@@ -167,13 +167,13 @@ export default function HomePage() {
           <SeoSection
             aboutTitle="About Zenveel"
             about={<>
-              <p className="text-base leading-relaxed">
+              <p className="text-lg leading-relaxed">
                 <strong>Zenveel</strong> is a collection of {TOOLS.length}+ free online utility tools for developers, designers, and anyone who needs a quick task done without installing software. Every tool — from JSON formatters to image compressors — runs entirely inside your browser using JavaScript and the Web APIs built into modern browsers.
               </p>
-              <p className="text-base leading-relaxed">
+              <p className="text-lg leading-relaxed">
                 That means your files, text, and data are never uploaded to a server. Nothing is stored, logged, or transmitted anywhere. Close the tab and everything you processed is gone — Zenveel simply has no backend to send it to.
               </p>
-              <p className="text-base leading-relaxed">
+              <p className="text-lg leading-relaxed">
                 There&apos;s no signup, no account, and no paywall. Tools are organized into categories — Developer, Text, Web, Image, Convertor, and Typing — so you can jump straight to what you need or use the search bar above to find a specific tool by name or keyword.
               </p>
             </>}

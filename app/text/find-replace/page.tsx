@@ -52,9 +52,9 @@ export default function FindReplacePage() {
         <SeoSection
           aboutTitle="About this tool"
           about={<>
-            <p className="text-base leading-relaxed">Find and Replace Online is a free text editing tool that lets you quickly search for specific words, phrases, or patterns and replace them throughout your text in seconds. Simply paste your content, enter the text you want to find, specify the replacement, and see the updated result instantly. Whether you&apos;re editing plain text, source code, Markdown, HTML, CSV files, or documentation, this tool helps automate repetitive text changes and saves valuable time.</p>
-            <p className="text-base leading-relaxed">The tool supports both standard text matching and <strong>JavaScript regular expressions (regex)</strong>, allowing you to perform advanced search-and-replace operations using capture groups, pattern matching, and replacement references such as <strong>$1</strong>, <strong>$2</strong>, and more. This makes it useful for simple edits as well as complex text transformations.</p>
-            <p className="text-base leading-relaxed">Everything runs locally in your browser, so your text is never uploaded or stored. There are no registrations, downloads, or character limits, making the tool suitable for everything from short notes to large documents and code snippets. Whether you&apos;re a developer, writer, editor, student, SEO professional, or data analyst, this online Find and Replace tool provides a fast, secure, and efficient way to edit text in bulk.</p>
+            <p className="text-lg leading-relaxed">Find and Replace Online is a free text editing tool that lets you quickly search for specific words, phrases, or patterns and replace them throughout your text in seconds. Simply paste your content, enter the text you want to find, specify the replacement, and see the updated result instantly. Whether you&apos;re editing plain text, source code, Markdown, HTML, CSV files, or documentation, this tool helps automate repetitive text changes and saves valuable time.</p>
+            <p className="text-lg leading-relaxed">The tool supports both standard text matching and <strong>JavaScript regular expressions (regex)</strong>, allowing you to perform advanced search-and-replace operations using capture groups, pattern matching, and replacement references such as <strong>$1</strong>, <strong>$2</strong>, and more. This makes it useful for simple edits as well as complex text transformations.</p>
+            <p className="text-lg leading-relaxed">Everything runs locally in your browser, so your text is never uploaded or stored. There are no registrations, downloads, or character limits, making the tool suitable for everything from short notes to large documents and code snippets. Whether you&apos;re a developer, writer, editor, student, SEO professional, or data analyst, this online Find and Replace tool provides a fast, secure, and efficient way to edit text in bulk.</p>
           </>}
           useCasesTitle="Common use cases"
           useCases={[
@@ -96,10 +96,10 @@ export default function FindReplacePage() {
         {/* Input text */}
         <div className="flex flex-col gap-2">
           <div className="flex items-center justify-between">
-            <label className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>
+            <label className="text-lg font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>
               Input text
             </label>
-            <span className="text-sm" style={{ color: 'rgba(255,255,255,0.4)' }}>
+            <span className="text-base" style={{ color: 'rgba(255,255,255,0.4)' }}>
               {text.length} chars
             </span>
           </div>
@@ -131,7 +131,7 @@ export default function FindReplacePage() {
         {/* Find / Replace inputs */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="flex flex-col gap-2">
-            <label className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>
+            <label className="text-lg font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>
               Find
             </label>
             <input
@@ -145,7 +145,7 @@ export default function FindReplacePage() {
             />
           </div>
           <div className="flex flex-col gap-2">
-            <label className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>
+            <label className="text-lg font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>
               Replace with
             </label>
             <input
@@ -181,13 +181,13 @@ export default function FindReplacePage() {
               >
                 {state && <span style={{ color: 'var(--color-text-tool)', fontSize: '11px', lineHeight: 1 }}>✓</span>}
               </span>
-              <span className="text-base font-medium">{label}</span>
+              <span className="text-lg font-medium">{label}</span>
             </button>
           ))}
 
           {find && text && (
             <span
-              className="ml-auto text-sm font-semibold px-3 py-1 rounded-full"
+              className="ml-auto text-base font-semibold px-3 py-1 rounded-full"
               style={{
                 background: matchCount > 0 ? 'var(--color-text-tool-dim)' : 'rgba(255,255,255,0.06)',
                 color: matchCount > 0 ? 'var(--color-text-tool)' : 'rgba(255,255,255,0.4)',
@@ -201,7 +201,7 @@ export default function FindReplacePage() {
 
         {error && (
           <div
-            className="rounded-xl px-5 py-3 text-base"
+            className="rounded-xl px-5 py-3 text-lg"
             style={{ background: 'rgba(239,68,68,0.1)', border: '1px solid rgba(239,68,68,0.25)', color: '#f87171' }}
           >
             {error}
@@ -211,7 +211,7 @@ export default function FindReplacePage() {
         {result && text && (
           <div className="flex flex-col gap-2">
             <div className="flex items-center justify-between">
-              <label className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>Result</label>
+              <label className="text-lg font-semibold" style={{ color: 'rgba(255,255,255,0.85)' }}>Result</label>
               <CopyButton text={result} />
             </div>
             <Textarea value={result} readOnly rows={8} />

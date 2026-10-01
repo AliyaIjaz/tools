@@ -121,9 +121,9 @@ export default function TimeDurationConverterPage() {
           <SeoSection
             aboutTitle="How to Convert Time Durations: ms, Seconds, Minutes, Hours"
             about={<>
-              <p className="text-base leading-relaxed"><strong>Milliseconds to Seconds Converter</strong> is a free browser-based tool that instantly converts between all common time units — milliseconds, seconds, minutes, hours, days, weeks, months, and years. Type any value and every other unit updates live.</p>
-              <p className="text-base leading-relaxed">Useful for developers working with API timeouts, Redis TTLs, JWT token expiry, rate limits, cache durations, and cron job intervals. All conversion runs in your browser — nothing is sent to any server.</p>
-              <p className="text-base leading-relaxed">Common reference values: <strong>1 second = 1,000 ms</strong> · <strong>1 minute = 60 seconds = 60,000 ms</strong> · <strong>1 hour = 3,600 seconds = 3,600,000 ms</strong> · <strong>1 day = 86,400 seconds</strong>. Conversion formulas: ms ÷ 1,000 = seconds · seconds ÷ 60 = minutes · minutes ÷ 60 = hours.</p>
+              <p className="text-lg leading-relaxed"><strong>Milliseconds to Seconds Converter</strong> is a free browser-based tool that instantly converts between all common time units — milliseconds, seconds, minutes, hours, days, weeks, months, and years. Type any value and every other unit updates live.</p>
+              <p className="text-lg leading-relaxed">Useful for developers working with API timeouts, Redis TTLs, JWT token expiry, rate limits, cache durations, and cron job intervals. All conversion runs in your browser — nothing is sent to any server.</p>
+              <p className="text-lg leading-relaxed">Common reference values: <strong>1 second = 1,000 ms</strong> · <strong>1 minute = 60 seconds = 60,000 ms</strong> · <strong>1 hour = 3,600 seconds = 3,600,000 ms</strong> · <strong>1 day = 86,400 seconds</strong>. Conversion formulas: ms ÷ 1,000 = seconds · seconds ÷ 60 = minutes · minutes ÷ 60 = hours.</p>
             </>}
             useCasesTitle="When to Use a Time Duration Converter"
             useCases={[
@@ -148,7 +148,7 @@ export default function TimeDurationConverterPage() {
           className="rounded-xl p-4 space-y-3"
           style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)' }}
         >
-          <p className="text-xs font-medium uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.5)' }}>
+          <p className="text-sm font-medium uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.5)' }}>
             Duration Units
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2">
@@ -176,9 +176,9 @@ export default function TimeDurationConverterPage() {
             style={{ background: 'rgba(139,92,246,0.08)', border: '2px solid var(--border-dev-idle)' }}
           >
             <div>
-              <p className="text-xs font-medium uppercase tracking-widest mb-1" style={{ color: 'rgba(255,255,255,0.5)' }}>Exact millisecond count</p>
+              <p className="text-sm font-medium uppercase tracking-widest mb-1" style={{ color: 'rgba(255,255,255,0.5)' }}>Exact millisecond count</p>
               <p className="text-lg font-mono font-semibold" style={{ color: DEV_COLOR }}>
-                {totalMs.toLocaleString()} <span className="text-sm font-normal" style={{ color: 'rgba(255,255,255,0.6)' }}>ms</span>
+                {totalMs.toLocaleString()} <span className="text-base font-normal" style={{ color: 'rgba(255,255,255,0.6)' }}>ms</span>
               </p>
             </div>
             <CopyButton text={totalMs.toString()} />
@@ -190,7 +190,7 @@ export default function TimeDurationConverterPage() {
           <div className="flex justify-end">
             <button
               onClick={clearAll}
-              className="text-sm px-3 py-1.5 rounded-lg transition-all"
+              className="text-base px-3 py-1.5 rounded-lg transition-all"
               style={{ color: 'rgba(255,255,255,0.55)', background: 'rgba(255,255,255,0.06)', border: '2px solid var(--border-dev-idle)' }}
               onMouseEnter={(e) => { e.currentTarget.style.color = 'rgba(255,255,255,0.9)'; e.currentTarget.style.background = 'rgba(255,255,255,0.12)' }}
               onMouseLeave={(e) => { e.currentTarget.style.color = 'rgba(255,255,255,0.55)'; e.currentTarget.style.background = 'rgba(255,255,255,0.06)' }}
@@ -206,8 +206,8 @@ export default function TimeDurationConverterPage() {
             className="rounded-xl px-5 py-8 flex flex-col items-center gap-2 text-center"
             style={{ background: 'var(--surface)', border: '1px dashed rgba(255,255,255,0.1)' }}
           >
-            <p className="text-base font-semibold" style={{ color: 'rgba(255,255,255,0.6)' }}>Type a value in any unit to convert</p>
-            <p className="text-sm" style={{ color: 'rgba(255,255,255,0.45)' }}>All units update simultaneously</p>
+            <p className="text-lg font-semibold" style={{ color: 'rgba(255,255,255,0.6)' }}>Type a value in any unit to convert</p>
+            <p className="text-base" style={{ color: 'rgba(255,255,255,0.45)' }}>All units update simultaneously</p>
           </div>
         )}
 
@@ -216,13 +216,13 @@ export default function TimeDurationConverterPage() {
           className="rounded-xl p-4 space-y-3"
           style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)' }}
         >
-          <p className="text-xs font-medium uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.55)' }}>Common Durations</p>
+          <p className="text-sm font-medium uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.55)' }}>Common Durations</p>
           <div className="flex flex-wrap gap-2">
             {COMMON_DURATIONS.map(({ label, ms }) => (
               <button
                 key={label}
                 onClick={() => handlePreset(ms)}
-                className="text-sm px-3 py-1.5 rounded-lg transition-all"
+                className="text-base px-3 py-1.5 rounded-lg transition-all"
                 style={{ color: 'rgba(255,255,255,0.7)', background: 'rgba(139,92,246,0.08)', border: '2px solid var(--border-dev-idle)' }}
                 onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--color-dev)'; e.currentTarget.style.borderColor = 'var(--color-dev)' }}
                 onMouseLeave={(e) => { e.currentTarget.style.color = 'rgba(255,255,255,0.7)'; e.currentTarget.style.borderColor = 'var(--border-dev-idle)' }}
@@ -238,14 +238,14 @@ export default function TimeDurationConverterPage() {
           className="rounded-xl p-4 space-y-3"
           style={{ background: 'var(--surface)', border: '2px solid var(--border-dev-idle)' }}
         >
-          <p className="text-xs font-medium uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.55)' }}>Quick Reference</p>
+          <p className="text-sm font-medium uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.55)' }}>Quick Reference</p>
           <div className="overflow-x-auto">
-            <table className="w-full text-sm font-mono border-collapse">
+            <table className="w-full text-base font-mono border-collapse">
               <thead>
                 <tr>
-                  <th className="text-left pb-2 pr-6 text-xs font-semibold uppercase tracking-wider" style={{ color: DEV_COLOR }}>Unit</th>
-                  <th className="text-left pb-2 pr-6 text-xs font-semibold uppercase tracking-wider" style={{ color: DEV_COLOR }}>In Seconds</th>
-                  <th className="text-left pb-2 text-xs font-semibold uppercase tracking-wider" style={{ color: DEV_COLOR }}>In Milliseconds</th>
+                  <th className="text-left pb-2 pr-6 text-sm font-semibold uppercase tracking-wider" style={{ color: DEV_COLOR }}>Unit</th>
+                  <th className="text-left pb-2 pr-6 text-sm font-semibold uppercase tracking-wider" style={{ color: DEV_COLOR }}>In Seconds</th>
+                  <th className="text-left pb-2 text-sm font-semibold uppercase tracking-wider" style={{ color: DEV_COLOR }}>In Milliseconds</th>
                 </tr>
               </thead>
               <tbody>
@@ -291,7 +291,7 @@ function UnitField({ unit, value, isActive, onChange, onFocus }: UnitFieldProps)
         boxShadow: isActive ? `0 0 0 1px ${DEV_COLOR}22` : 'none',
       }}
     >
-      <span className="text-xs font-semibold" style={{ color: isActive ? DEV_COLOR : 'rgba(255,255,255,0.55)' }}>
+      <span className="text-sm font-semibold" style={{ color: isActive ? DEV_COLOR : 'rgba(255,255,255,0.55)' }}>
         {unit.label}
       </span>
       <div className="flex items-center gap-1.5">
@@ -308,7 +308,7 @@ function UnitField({ unit, value, isActive, onChange, onFocus }: UnitFieldProps)
             if (!isActive) e.currentTarget.style.borderColor = 'var(--border-dev)'
           }}
           placeholder="0"
-          className="flex-1 min-w-0 rounded-md px-2.5 py-1.5 text-base font-mono outline-none transition-all placeholder:text-white/50"
+          className="flex-1 min-w-0 rounded-md px-2.5 py-1.5 text-lg font-mono outline-none transition-all placeholder:text-white/50"
           style={{
             background: 'rgba(0,0,0,0.35)',
             border: `2px solid ${isActive ? DEV_COLOR : 'var(--border-dev)'}`,
