@@ -1,4 +1,4 @@
-export type Category = 'image' | 'dev' | 'web' | 'text' | 'typing' | 'convertor'
+export type Category = 'image' | 'dev' | 'web' | 'text' | 'typing' | 'convertor' | 'generator'
 
 export type ToolDefinition = {
   id: string

@@ -17,6 +17,7 @@ const NAV_LINKS: { category: Category; label: string; href: string }[] = [
   { category: 'web', label: 'Web Dev', href: '/web' },
   { category: 'dev', label: 'Developer', href: '/dev' },
   { category: 'convertor', label: 'Convertor', href: '/convertor' },
+  { category: 'generator', label: 'Generator', href: '/generator' },
   { category: 'typing', label: 'Typing', href: '/typing' },
 ]
 

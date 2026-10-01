@@ -52,6 +52,14 @@ export const CATEGORIES: Record<Category, CategoryMeta> = {
     dimColor: 'var(--color-text-tool-dim)',
     href: '/typing',
   },
+  generator: {
+    label: 'Generator Tools Online',
+    description: 'Generate QR codes, barcodes, and more — customize, preview, and download. Runs in your browser.',
+    iconName: 'QrCode',
+    color: 'var(--color-generator)',
+    dimColor: 'var(--color-generator-dim)',
+    href: '/generator',
+  },
   convertor: {
     label: 'Converter Tools Online',
     description: 'Convert eBooks and documents between formats — EPUB to PDF, PDF to EPUB, and more. Runs in your browser.',
@@ -62,4 +70,4 @@ export const CATEGORIES: Record<Category, CategoryMeta> = {
   },
 }
 
-export const CATEGORY_ORDER: Category[] = ['image', 'text', 'web', 'dev', 'convertor', 'typing']
+export const CATEGORY_ORDER: Category[] = ['image', 'text', 'web', 'dev', 'convertor', 'generator', 'typing']

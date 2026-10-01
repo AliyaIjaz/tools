@@ -589,6 +589,26 @@ export const TOOLS: ToolDefinition[] = [
     keywords: ['gif', 'gif to images', 'gif to png', 'gif to jpg', 'gif frame extractor', 'split gif', 'extract frames', 'animated', 'zip', 'convert', 'converter'],
     new: true,
   },
+  {
+    id: 'qr-code-generator',
+    name: 'QR Code Generator Online',
+    description: 'Create custom QR codes for links, text, Wi-Fi, email, and more — download as PNG or SVG',
+    href: '/generator/qr-code-generator',
+    category: 'generator',
+    iconName: 'QrCode',
+    keywords: ['qr', 'qr code', 'qrcode', 'generator', 'wifi qr', 'url qr', 'vcard', 'svg', 'png', 'scan'],
+    new: true,
+  },
+  {
+    id: 'barcode-generator',
+    name: 'Barcode Generator Online',
+    description: 'Create Code 128, EAN-13, UPC-A, Code 39, and more barcodes — download as PNG or SVG',
+    href: '/generator/barcode-generator',
+    category: 'generator',
+    iconName: 'Barcode',
+    keywords: ['barcode', 'bar code', 'code128', 'code 128', 'ean13', 'ean-13', 'upc', 'code39', 'itf14', 'generator', 'svg', 'png', 'label'],
+    new: true,
+  },
 ]
 
 export const AVAILABLE_HREFS = new Set([
@@ -657,6 +677,8 @@ export const AVAILABLE_HREFS = new Set([
   '/convertor/pdf-to-epub',
   '/convertor/images-to-gif',
   '/convertor/gif-to-images',
+  '/generator/qr-code-generator',
+  '/generator/barcode-generator',
 ])
 
 export function getToolsByCategory(category: string) {
