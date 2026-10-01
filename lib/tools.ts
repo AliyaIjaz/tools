@@ -569,6 +569,26 @@ export const TOOLS: ToolDefinition[] = [
     keywords: ['pdf', 'epub', 'ebook', 'convert', 'book', 'kindle', 'reader', 'converter'],
     new: true,
   },
+  {
+    id: 'convertor-images-to-gif',
+    name: 'Images to GIF Converter Online',
+    description: 'Combine multiple images into an animated GIF in your browser — no server, no registration',
+    href: '/convertor/images-to-gif',
+    category: 'convertor',
+    iconName: 'Images',
+    keywords: ['gif', 'images to gif', 'png to gif', 'jpg to gif', 'gif maker', 'animated gif', 'animation', 'zip', 'frames', 'convert', 'converter'],
+    new: true,
+  },
+  {
+    id: 'convertor-gif-to-images',
+    name: 'GIF to Images Converter Online',
+    description: 'Extract every frame of an animated GIF as PNG, JPG, or WebP — no server, no registration',
+    href: '/convertor/gif-to-images',
+    category: 'convertor',
+    iconName: 'Film',
+    keywords: ['gif', 'gif to images', 'gif to png', 'gif to jpg', 'gif frame extractor', 'split gif', 'extract frames', 'animated', 'zip', 'convert', 'converter'],
+    new: true,
+  },
 ]
 
 export const AVAILABLE_HREFS = new Set([
@@ -635,6 +655,8 @@ export const AVAILABLE_HREFS = new Set([
   '/typing/typing-practice',
   '/convertor/epub-to-pdf',
   '/convertor/pdf-to-epub',
+  '/convertor/images-to-gif',
+  '/convertor/gif-to-images',
 ])
 
 export function getToolsByCategory(category: string) {

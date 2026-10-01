@@ -1,3 +1,4 @@
+import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import * as LucideIcons from 'lucide-react'
@@ -58,16 +59,41 @@ export default function ToolLayout({ toolId, title, description, category, iconN
     { src: '/fast.jpeg', label: 'Fast' },
     { src: '/privacy.jpeg', label: '100% Private' },
   ]
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'WebApplication',
-    name: `${title} Online`,
-    description,
-    url: `${BASE_URL}${toolHref}`,
-    applicationCategory: 'UtilitiesApplication',
-    operatingSystem: 'Web',
-    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-  }
+  const faqs = React.isValidElement<{ faqs?: { q: string; a: unknown }[] }>(seoContent)
+    ? (seoContent.props.faqs ?? []).filter((f) => typeof f.a === 'string')
+    : []
+  const jsonLd = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'WebApplication',
+      name: `${title} Online`,
+      description,
+      url: `${BASE_URL}${toolHref}`,
+      applicationCategory: 'UtilitiesApplication',
+      operatingSystem: 'Web',
+      offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: `${BASE_URL}/` },
+        { '@type': 'ListItem', position: 2, name: categoryMeta.label, item: `${BASE_URL}${categoryMeta.href}` },
+        { '@type': 'ListItem', position: 3, name: title, item: `${BASE_URL}${toolHref}` },
+      ],
+    },
+    ...(faqs.length
+      ? [{
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: faqs.map((f) => ({
+            '@type': 'Question',
+            name: f.q,
+            acceptedAnswer: { '@type': 'Answer', text: f.a as string },
+          })),
+        }]
+      : []),
+  ]
 
   return (
     <div className="min-h-screen">

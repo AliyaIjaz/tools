@@ -6,6 +6,8 @@ import { cn } from '@/lib/utils'
 
 type Props = {
   onFile: (file: File) => void
+  onFiles?: (files: File[]) => void
+  multiple?: boolean
   accept?: string
   label?: string
   hint?: string
@@ -16,6 +18,8 @@ type Props = {
 
 export default function FileDropZone({
   onFile,
+  onFiles,
+  multiple = false,
   accept = 'image/*',
   label = 'Drop an image or click to upload',
   hint = 'PNG, JPG, WebP, GIF',
@@ -29,8 +33,9 @@ export default function FileDropZone({
   function handleDrop(e: React.DragEvent) {
     e.preventDefault()
     setDragging(false)
-    const file = e.dataTransfer.files[0]
-    if (file) onFile(file)
+    const files = Array.from(e.dataTransfer.files)
+    if (multiple && onFiles) { if (files.length) onFiles(files) }
+    else if (files[0]) onFile(files[0])
   }
 
   return (
@@ -53,8 +58,13 @@ export default function FileDropZone({
         <p className="text-lg font-semibold" style={{ color: 'rgba(255,255,255,0.9)' }}>{label}</p>
         <p className="text-base mt-1.5" style={{ color }}>{hint}</p>
       </div>
-      <input ref={inputRef} type="file" accept={accept} className="hidden"
-        onChange={(e) => { if (e.target.files?.[0]) onFile(e.target.files[0]) }} />
+      <input ref={inputRef} type="file" accept={accept} className="hidden" multiple={multiple}
+        onChange={(e) => {
+          const files = Array.from(e.target.files ?? [])
+          if (multiple && onFiles) { if (files.length) onFiles(files) }
+          else if (files[0]) onFile(files[0])
+          e.target.value = ''
+        }} />
     </div>
   )
 }

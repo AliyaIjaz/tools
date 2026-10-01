@@ -5,6 +5,9 @@ import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import AdSlot from '@/components/ui/AdSlot'
 import { BASE_URL } from '@/lib/constants'
+import { TOOLS } from '@/lib/tools'
+
+const TOOL_COUNT = `${Math.floor(TOOLS.length / 10) * 10}+`
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -28,13 +31,13 @@ export const metadata: Metadata = {
     default: 'Zenveel — Free Online Tools for Developers',
     template: '%s — Zenveel',
   },
-  description: '60+ free browser-based utility tools for developers and creators. No signup. Everything runs in your browser.',
+  description: `${TOOL_COUNT} free browser-based utility tools for developers and creators. No signup. Everything runs in your browser.`,
   alternates: {
     canonical: `${BASE_URL}/`,
   },
   openGraph: {
     title: 'Zenveel — Free Online Tools for Developers',
-    description: '60+ free browser-based utility tools for developers and creators. No signup. Everything runs in your browser.',
+    description: `${TOOL_COUNT} free browser-based utility tools for developers and creators. No signup. Everything runs in your browser.`,
     url: '/',
     siteName: 'Zenveel',
     type: 'website',
@@ -43,7 +46,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Zenveel — Free Online Tools for Developers',
-    description: '60+ free browser-based utility tools for developers and creators. No signup. Everything runs in your browser.',
+    description: `${TOOL_COUNT} free browser-based utility tools for developers and creators. No signup. Everything runs in your browser.`,
     images: ['/og-image.png'],
   },
 }
